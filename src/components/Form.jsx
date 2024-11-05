@@ -42,12 +42,12 @@ function RegisterForm() {
       //   .update(subscriber.email_address.toLowerCase())
       //   .digest('hex');
      
-      const res = await fetch(`https://${dc}.api.mailchimp.com/3.0/lists/${audience}/members/${subscriber}`, {
+      const res = await fetch(`https://us9.api.mailchimp.com/3.0/lists/12bee7680b/`, {
         //`https://${dc}.api.mailchimp.com/3.0/lists/${audience}/members/${subscriber}`, {
           method: 'PUT',          
           headers: {
             'mode': 'no-cors',
-            'Access-Control-Allow-Origin': 'http://localhost:4321/',
+            'Access-Control-Allow-Origin': 'no-cors',
             'Access-Control-Allow-Headers': 'Content-Type',
             'Access-Control-Allow-Methods': 'POST, PUT, GET',
             'Content-Type': 'application/json',
