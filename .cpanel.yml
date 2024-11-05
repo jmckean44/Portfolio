@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/riverscape/public_html/    
+    - npm install   
+    - npm run build
+    - /bin/cp index.html $DEPLOYPATH
+
