@@ -5,6 +5,9 @@
 .astro/
 .git/
 .vscode/
+**/.vscode/
+.vscode/settings.json
+.vscode/sftp.json
 
 # dependencies
 node_modules/
