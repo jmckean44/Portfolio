@@ -1,10 +1,4 @@
 import { useForm } from "react-hook-form";
-import mailchimp from '@mailchimp/mailchimp_marketing';
-
-mailchimp.setConfig({
-  apiKey: import.meta.env.API_KEY,
-  server: import.meta.env.DATA_CENTER,
-});
 
 function RegisterForm() {
   const {
