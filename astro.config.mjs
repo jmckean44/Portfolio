@@ -1,5 +1,5 @@
 import { defineConfig, envField } from 'astro/config';
-import node from '@astrojs/node';
+//import node from '@astrojs/node';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 import icon from 'astro-icon';
@@ -29,11 +29,11 @@ export default defineConfig({
 				context: 'server',
 				access: 'secret',
 			}),
-			PORT: envField.number({
-				context: 'server',
-				access: 'public',
-				default: 4321,
-			}),
+			// PORT: envField.number({
+			// 	context: 'server',
+			// 	access: 'public',
+			// 	default: 4321,
+			// }),
 		},
 	},
 });

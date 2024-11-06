@@ -1,5 +1,10 @@
-import React from "react";
 import { useForm } from "react-hook-form";
+import mailchimp from '@mailchimp/mailchimp_marketing';
+
+mailchimp.setConfig({
+  apiKey: import.meta.env.API_KEY,
+  server: import.meta.env.DATA_CENTER,
+});
 
 function RegisterForm() {
   const {
@@ -18,6 +23,7 @@ function RegisterForm() {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            'apiKey': import.meta.env.API_KEY,
           },
           body: JSON.stringify(data),
         });

@@ -1,10 +1,5 @@
 import mailchimp from '@mailchimp/mailchimp_marketing';
 
-mailchimp.setConfig({
-	apiKey: import.meta.env.API_KEY,
-	server: import.meta.env.DATA_CENTER,
-});
-
 export default async (req, res) => {
 	if (req.method === 'POST') {
 		const { email, firstName, lastName, phone, hear, broker, comments } = req.body;
@@ -23,7 +18,12 @@ export default async (req, res) => {
 				},
 			});
 
-			res.status(200).json({ success: true, response });
+			res.status(200).json({
+				success: true,
+				response,
+			});
+
+			console.log(response);
 		} catch (error) {
 			res.status(500).json({ success: false, error: error.message });
 		}
