@@ -1,6 +1,6 @@
 import { renderers } from './renderers.mjs';
 import { c as createExports, s as serverEntrypointModule } from './chunks/_@astrojs-ssr-adapter_ZcjynQKp.mjs';
-import { manifest } from './manifest_Dm76k8iL.mjs';
+import { manifest } from './manifest_QYtFP1rS.mjs';
 
 const _page0 = () => import('./pages/_image.astro.mjs');
 const _page1 = () => import('./pages/privacy.astro.mjs');
@@ -24,7 +24,7 @@ const _args = {
     "mode": "standalone",
     "client": "file:///Users/design3/Jeff/www/Riverscape/www%20MC/dist/client/",
     "server": "file:///Users/design3/Jeff/www/Riverscape/www%20MC/dist/server/",
-    "host": false,
+    "host": true,
     "port": 4321,
     "assets": "_astro"
 };

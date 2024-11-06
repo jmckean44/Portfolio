@@ -6,8 +6,8 @@ import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-	server: { port: parseInt(process.env.PORT) || 4321, host: true },
-	site: 'https://staging.riverscape.ca',
+	server: { port: parseInt(import.meta.env.PORT) || 4321, host: true },
+	site: 'https://riverscape.ca',
 	// build: {
 	// 	serverEntry: 'app.js',
 	// },
