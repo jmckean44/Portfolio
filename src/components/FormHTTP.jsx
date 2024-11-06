@@ -1,19 +1,4 @@
-//import "dotenv/config";
-import React from "react";
 import { useForm } from "react-hook-form";
-import express from "express";
-import bodyParser from "body-parser";
-import request from "request";
-import https from "node:https";
-
-const app = express();
-
-app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html");
-});
 
 function RegisterForm() {
   const {
@@ -24,108 +9,33 @@ function RegisterForm() {
   } = useForm();
 
   const onSubmit = async (data) => {    
-    try {		
-
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      console.log(JSON.stringify(data));
-
-      const apiKey = "9ae3a523bae7f03d82d138a966f0a93a-us9";
-      const audience = "12bee7680b";
-      const auth = Buffer.from(`anystring:${apiKey}`).toString("base64");
-
-
-      app.post("/", (req, res) => {
-        const firstName = req.body.firstname;
-        const lastName = req.body.lastname;
-        const email = req.body.email;
-        const phone = req.body.phone;
-        const hear = req.body.hear;
-        const broker = req.body.broker;
-        const comments = req.body.comments;
-
-        const data = {
-            members: [{
-                    email_address: email,
-                    status: "subscribed",
-                    merge_fields: {
-                        FNAME: firstName,
-                        LNAME: lastName,
-                        EMAIL: email,
-                        PHONE: phone,
-                        HEAR: hear,
-                        BROKER: broker,
-                        COMMENTS: comments,
-                    } 
-                }]
-        };
-
-        const jsonData = JSON.stringify(data);
-
-        const url = "https://usX.api.mailchimp.com/3.0/lists/" + listID;
-        const options = {
-            method: "POST",
-            auth: "archit:apiKey"
-        }
-
-        const request =  https.request(url, options, (response) => {
-            response.on("data", (data) => {
-                console.log(JSON.parse(data));
-            });
+  
+      try {		
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        
+        const response = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
         });
 
-        request.write(jsonData);
-        request.end();
-      });
-
-      app.listen("3000", (req, res) => {
-        console.log("Server is running on port 3000.");
-      });
-
-      
-
-      // const apiKey = import.meta.env.MAILCHIMP_API_KEY;
-      // const audience = import.meta.env.MAILCHIMP_LIST_ID;
-      // const auth = Buffer.from(`anystring:${apiKey}`).toString("base64");
-
-      // const subscriberHash = crypto
-      //   .createHash("md5")
-      //   .update(subscriber.email_address.toLowerCase())
-      //   .digest("hex");
-     
-      const response = await fetch(
-        `https://us9.api.mailchimp.com/3.0/lists/${audience}/members/${subscriberHash}`, {
-          body: JSON.stringify(subscriber),
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Headers": "Content-Type",
-            "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
-            "Content-Type": "application/json",
-            Accept: "application/json",          
-            Authorization: `auth ${apiKey}`         
-          },
-          method: "PUT",
+        const result = await response.json();
+  
+        if (result.success) {
+          console.log(result.response);
+        } else {
+          throw new Error(result.error);
         }
-      );
-      console.log(response);
-      console.log(data);
-
-      if (response.ok) {
-        return { 
-          statusCode: response.status, 
-          body: response.statusText 
-        };
-      } else {
-        throw new Error("Error requesting Mailchimp API");
-      } 
-    } catch (error) {
-      setError("root", {
-        message: "You have already subscribed",
-      });
-    }
-  };
+      } catch (error) {
+        console.error(error);
+        setError('api', { message: 'Failed to subscribe' });
+      }
+    };  
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="grid" id="mc-embedded-subscribe-form">
+    <form onSubmit={handleSubmit(onSubmit)} id="mc-embedded-subscribe-form">
       <div>
         <label htmlFor="firstName" className="visuallyhidden">
           First Name
@@ -197,14 +107,14 @@ function RegisterForm() {
         </select>
       </div>
 
-      <div class="radio-inputs">       
+      <div className="radio-inputs">       
       <p>Are You A Broker?</p> 
-        <label class="label" for="broker">                
-        <input {...register("RADIO", { required: false })} class="radio-input" type="radio" value="Yes" />       
+        <label className="label" htmlFor="broker">                
+        <input {...register("RADIO", { required: false })} className="radio-input" type="radio" value="Yes" />       
         YES
         </label>
-        <label class="label" for="broker">
-        <input {...register("RADIO", { required: false })} class="radio-input" type="radio" value="No" />
+        <label className="label" htmlFor="broker">
+        <input {...register("RADIO", { required: false })} className="radio-input" type="radio" value="No" />
         NO
         </label>       
       </div>
@@ -217,7 +127,7 @@ function RegisterForm() {
         <span className="helperText">Comments</span>
       </div>
 
-      <div class="submit-button">
+      <div className="submit-button">
         {errors.root && <p className="errorMsg">{errors.root.message}</p>}
         <button type="submit" className="button" disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Submit"}

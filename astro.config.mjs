@@ -4,19 +4,16 @@ import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 import icon from 'astro-icon';
 
+import netlify from '@astrojs/netlify';
+
 // https://astro.build/config
 export default defineConfig({
 	server: { port: parseInt(import.meta.env.PORT) || 4321, host: true },
 	site: 'https://riverscape.ca',
-	// build: {
-	// 	serverEntry: 'app.js',
-	// },
 	output: 'hybrid',
 	prefetch: true,
 	integrations: [sitemap(), icon(), react()],
-	adapter: node({
-		mode: 'standalone',
-	}),
+	adapter: netlify(),
 	env: {
 		schema: {
 			API_KEY: envField.string({
