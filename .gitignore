@@ -4,6 +4,7 @@
 # generated types
 .astro/
 .git/
+.vscode/
 
 # dependencies
 node_modules/
