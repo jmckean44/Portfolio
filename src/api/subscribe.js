@@ -1,8 +1,8 @@
-const mailchimp = require('@mailchimp/mailchimp_marketing');
+import mailchimp from '@mailchimp/mailchimp_marketing';
 
 mailchimp.setConfig({
-	apiKey: process.env.API_KEY,
-	server: process.env.DATA_CENTER,
+	apiKey: import.meta.env.API_KEY,
+	server: import.meta.env.DATA_CENTER,
 });
 
 export default async (req, res) => {
@@ -10,7 +10,7 @@ export default async (req, res) => {
 		const { email, firstName, lastName, phone, hear, broker, comments } = req.body;
 
 		try {
-			const response = await mailchimp.lists.addListMember(process.env.LIST_ID, {
+			const response = await mailchimp.lists.addListMember(process.env.MAILCHIMP_LIST_ID, {
 				email_address: email,
 				status: 'subscribed',
 				merge_fields: {
