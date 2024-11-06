@@ -1,16 +1,16 @@
 import mailchimp from '@mailchimp/mailchimp_marketing';
 
 mailchimp.setConfig({
-	apiKey: import.meta.env.API_KEY,
-	server: import.meta.env.DATA_CENTER,
+	apiKey: process.env.MAILCHIMP_API_KEY,
+	server: process.env.MAILCHIMP_SERVER_PREFIX,
 });
 
-export default async (req, res) => {
-	if (req.method === 'POST') {
-		const { email, firstName, lastName, phone, hear, broker, comments } = req.body;
+exports.handler = async (event, context) => {
+	if (event.httpMethod === 'POST') {
+		const { email, firstName, lastName, phone, hear, broker, comments } = JSON.parse(event.body);
 
 		try {
-			const response = await mailchimp.lists.addListMember(import.meta.env.LIST_ID, {
+			const response = await mailchimp.lists.addListMember(process.env.MAILCHIMP_LIST_ID, {
 				email_address: email,
 				status: 'subscribed',
 				merge_fields: {
@@ -23,16 +23,20 @@ export default async (req, res) => {
 				},
 			});
 
-			res.status(200).json({
-				success: true,
-				response,
-			});
-
-			console.log(response);
+			return {
+				statusCode: 200,
+				body: JSON.stringify({ success: true, response }),
+			};
 		} catch (error) {
-			res.status(500).json({ success: false, error: error.message });
+			return {
+				statusCode: 500,
+				body: JSON.stringify({ success: false, error: error.message }),
+			};
 		}
 	} else {
-		res.status(405).json({ success: false, message: 'Method not allowed' });
+		return {
+			statusCode: 405,
+			body: JSON.stringify({ success: false, message: 'Method not allowed' }),
+		};
 	}
 };
