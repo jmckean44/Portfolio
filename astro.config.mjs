@@ -5,11 +5,10 @@ import react from '@astrojs/react';
 import icon from 'astro-icon';
 import netlify from '@astrojs/netlify';
 
-// https://astro.build/config
 export default defineConfig({
 	server: { port: parseInt(import.meta.env.PORT) || 4321, host: true },
 	site: 'https://riverscape.ca',
-	output: 'server',
+	output: 'hybrid',
 	adapter: netlify({
 		edgeMiddleware: true,
 	}),
@@ -29,11 +28,6 @@ export default defineConfig({
 				context: 'server',
 				access: 'secret',
 			}),
-			// PORT: envField.number({
-			// 	context: 'server',
-			// 	access: 'public',
-			// 	default: 4321,
-			// }),
 		},
 	},
 });
