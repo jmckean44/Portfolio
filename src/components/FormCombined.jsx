@@ -1,4 +1,11 @@
+import React from "react";
 import { useForm } from "react-hook-form";
+import mailchimp from '@mailchimp/mailchimp_marketing';
+
+mailchimp.setConfig({
+  apiKey: import.meta.env.API_KEY,
+  server: import.meta.env.DATA_CENTER,
+});
 
 function RegisterForm() {
   const {
@@ -9,39 +16,38 @@ function RegisterForm() {
   } = useForm();
 
   const onSubmit = async (data) => {    
-  
-      try {		
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {		
 
-        console.log(JSON.stringify(data));    
-        
-        const response = await fetch('/api/subscribe', {
-          method: 'POST',
-          headers: {
-            'Access-Control-Allow-Headers': 'Content-Type',
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',            
-            'Access-Control-Allow-Methods': 'POST, PUT, GET',            
-          },
-          body: JSON.stringify(data),
-        });
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      
+      console.log(JSON.stringify(data));      
 
-        if (!response.ok) {
-          throw new Error('There was a Network error');
-        }
+      const response = await mailchimp.lists.addListMember("12bee7680b", {
+        email_address: data.email,
+        status: 'subscribed',
+        merge_fields: {
+          FNAME: data.firstName,
+          LNAME: data.lastName,
+          PHONE: data.phone,
+          HEAR: data.hear,
+          BROKER: data.broker,
+          COMMENTS: data.comments,
+        },
+      });
 
-        const result = await response.json();        
-  
-        if (result.success) {
-          console.log(result.response);
-        } else {
-          throw new Error(console.log(result.error));          
-        }
-      } catch (error) {
-        console.error(error);
-        setError('api', { message: 'Failed to subscribe' });
-      }
-    };  
+      if (response.status !== 'subscribed') {
+        throw new Error('Failed to subscribe');
+      }   
+
+      console.log(response);
+    
+    } catch (error) {
+      console.log(error);
+      setError("root", {        
+        message: "You have already subscribed",
+      });
+    } 
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} id="mc-embedded-subscribe-form">
@@ -90,7 +96,7 @@ function RegisterForm() {
           placeholder="Email *"
           {...register("EMAIL", {
             required: "Email is required",
-            pattern: { value: /^\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,8}\b$/i, message: "Please enter a valid email" },
+            pattern: { value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/, message: "Please enter a valid email" },
           })}
         />
         <span className="helperText">Email</span>
