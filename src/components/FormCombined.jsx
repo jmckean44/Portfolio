@@ -4,7 +4,7 @@ import mailchimp from '@mailchimp/mailchimp_marketing';
 
 mailchimp.setConfig({
   apiKey: import.meta.env.API_KEY,
-  server: import.meta.env.DATA_CENTER,
+  server: "us9",
 });
 
 function RegisterForm() {
@@ -22,7 +22,7 @@ function RegisterForm() {
       
       console.log(JSON.stringify(data));      
 
-      const response = await mailchimp.lists.addListMember("12bee7680b", {
+      const response = await mailchimp.lists.addListMember(import.meta.env.LIST_ID, {
         email_address: data.email,
         status: 'subscribed',
         merge_fields: {
