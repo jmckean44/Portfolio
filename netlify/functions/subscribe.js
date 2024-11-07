@@ -28,14 +28,26 @@ export default async (req, res) => {
 				response,
 			});
 
+			return {
+				statusCode: 200,
+				body: JSON.stringify({ success: true, response }),
+			};
+
 			console.log(res);
 			console.log(response);
 		} catch (error) {
 			res.status(500).json({ success: false, error: error.message });
+			return {
+				statusCode: 500,
+				body: JSON.stringify({ success: false, error: error.message }),
+			};
 			console.log(res);
 		}
 	} else {
-		res.status(405).json({ success: false, message: 'Method not allowed' });
+		return {
+			statusCode: 405,
+			body: JSON.stringify({ success: false, message: 'Method not allowed' }),
+		};
 		console.log(res);
 	}
 };

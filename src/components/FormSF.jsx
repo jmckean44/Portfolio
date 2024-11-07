@@ -12,11 +12,16 @@ function RegisterForm() {
   
       try {		
         await new Promise((resolve) => setTimeout(resolve, 1000));
+
+        console.log(JSON.stringify(data));    
         
-        const response = await fetch('/api/subscribe', {
+        const response = await fetch('/netlify/functions/subscribe', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',            
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',            
+            'Access-Control-Allow-Methods': 'POST, PUT, GET',            
           },
           body: JSON.stringify(data),
         });
@@ -25,14 +30,12 @@ function RegisterForm() {
           throw new Error('There was a Network error');
         }
 
-        const result = await response.json();
-
-        console.log(JSON.stringify(result));    
+        const result = await response.json();        
   
         if (result.success) {
           console.log(result.response);
         } else {
-          throw new Error(result.error);
+          throw new Error(console.log(result.error));          
         }
       } catch (error) {
         console.error(error);
