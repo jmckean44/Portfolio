@@ -23,6 +23,13 @@ function RegisterForm() {
       console.log(JSON.stringify(data));      
 
       const response = await mailchimp.lists.addListMember("12bee7680b", {
+        method: 'POST',
+        headers: {
+          'Access-Control-Allow-Headers': 'Content-Type',
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',            
+          'Access-Control-Allow-Methods': 'POST, PUT, GET',            
+        },
         email_address: data.email,
         status: 'subscribed',
         merge_fields: {
@@ -33,6 +40,7 @@ function RegisterForm() {
           BROKER: data.broker,
           COMMENTS: data.comments,
         },
+        body: JSON.stringify(data),
       });
 
       if (response.status !== 'subscribed') {
