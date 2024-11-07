@@ -21,7 +21,12 @@ function RegisterForm() {
           body: JSON.stringify(data),
         });
 
+        if (!response.ok) {
+          throw new Error('There was a Network error');
+        }
+
         const result = await response.json();
+
         console.log(JSON.stringify(result));    
   
         if (result.success) {
