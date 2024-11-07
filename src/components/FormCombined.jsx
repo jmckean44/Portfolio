@@ -22,7 +22,7 @@ function RegisterForm() {
       
       console.log(JSON.stringify(data));      
 
-      const response = await mailchimp.lists.addListMember(import.meta.env.LIST_ID, {
+      const response = await mailchimp.lists.addListMember("12bee7680b", {
         email_address: data.email,
         status: 'subscribed',
         merge_fields: {
