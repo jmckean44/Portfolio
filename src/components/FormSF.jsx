@@ -16,13 +16,11 @@ function RegisterForm() {
 
         console.log(JSON.stringify(data));    
         
-        const response = await fetch('/netlify/functions/subscribe', {
+        const response = await fetch('/pages/api/subscribe', {
           method: 'POST',
-          headers: {
-            'Access-Control-Allow-Headers': 'Content-Type',
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',            
-            'Access-Control-Allow-Methods': 'POST, PUT, GET',            
+          headers: {            
+            'Content-Type': 'application/json',            
+            'Authorization': `Basic ${Buffer.from(`anystring:${apiKey}`).toString('base64')}`,                        
           },
           body: JSON.stringify(data),
         });

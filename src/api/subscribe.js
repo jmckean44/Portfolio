@@ -1,3 +1,4 @@
+import { config } from 'dotenv';
 import mailchimp from '@mailchimp/mailchimp_marketing';
 
 mailchimp.setConfig({

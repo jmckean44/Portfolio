@@ -1,4 +1,3 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 
 function RegisterForm() {
@@ -12,25 +11,25 @@ function RegisterForm() {
   const onSubmit = async (data) => {
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
-  
-      console.log(JSON.stringify(data));
-      console.log(import.meta.env.MODE);
-  
-      const subscriber = {
-        email_address: data.email,
-        status: 'subscribed',
-        merge_fields: {
-          FNAME: data.firstName,
-          LNAME: data.lastName,
-          PHONE: data.phone,
-          HEAR: data.hear,
-          BROKER: data.broker,
-          COMMENTS: data.comments,
+
+      console.log(JSON.stringify(data));         
+
+      const response = await fetch('/server.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-      };
-  
-      const response = await mailchimp.lists.addListMember("12bee7680b", subscriber);
-      console.log(response);
+        body: JSON.stringify(data),
+      });
+
+      //console.log(response);
+
+      if (response.ok) {
+        console.log('Subscriber added successfully');
+      } else {
+        const errorData = await response.json();
+        console.error('Error adding subscriber:', errorData);
+      }
     } catch (error) {
       console.error(error);
       setError("api", { message: "Failed to subscribe" });
@@ -112,11 +111,11 @@ return (
 
     <div className="radio-inputs">       
     <p>Are You A Broker?</p> 
-      <label className="label" for="broker">                
+      <label className="label" htmlFor="broker">                
       <input {...register("RADIO", { required: false })} className="radio-input" type="radio" value="Yes" />       
       YES
       </label>
-      <label className="label" for="broker">
+      <label className="label" htmlFor="broker">
       <input {...register("RADIO", { required: false })} className="radio-input" type="radio" value="No" />
       NO
       </label>       
