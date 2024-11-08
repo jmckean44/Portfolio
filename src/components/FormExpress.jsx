@@ -14,15 +14,13 @@ function RegisterForm() {
 
       console.log(JSON.stringify(data));         
 
-      const response = await fetch('/server.js', {
+      const response = await fetch('/netlify/functions/subscribe.js', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
-      });
-
-      //console.log(response);
+      });      
 
       if (response.ok) {
         console.log('Subscriber added successfully');

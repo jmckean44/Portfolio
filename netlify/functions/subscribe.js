@@ -11,7 +11,7 @@ export default async (req, res) => {
 		const { email, firstName, lastName, phone, hear, broker, comments } = req.body;
 
 		try {
-			const response = await mailchimp.lists.addListMember('12bee7680b', {
+			const response = await mailchimp.lists.addListMember(import.meta.env.LIST_ID, {
 				email_address: email,
 				status: 'subscribed',
 				merge_fields: {

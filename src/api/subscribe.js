@@ -1,4 +1,4 @@
-import { config } from 'dotenv';
+import 'dotenv/config';
 import mailchimp from '@mailchimp/mailchimp_marketing';
 
 mailchimp.setConfig({
@@ -29,14 +29,24 @@ export default async (req, res) => {
 				response,
 			});
 
-			console.log(res);
+			console.log(res) + '<br>';
 			console.log(response);
+
+			return {
+				statusCode: 200,
+				body: JSON.stringify({ success: true, response }),
+			};
 		} catch (error) {
 			res.status(500).json({ success: false, error: error.message });
-			console.log(res);
+			return {
+				statusCode: 500,
+				body: JSON.stringify({ success: false, error: error.message }),
+			};
 		}
 	} else {
-		res.status(405).json({ success: false, message: 'Method not allowed' });
-		console.log(res);
+		return {
+			statusCode: 405,
+			body: JSON.stringify({ success: false, message: 'Method not allowed' }),
+		};
 	}
 };
