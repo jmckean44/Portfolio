@@ -14,7 +14,7 @@ function RegisterForm() {
 
       console.log(JSON.stringify(data));         
 
-      const response = await fetch('/src/api/subscribe.js', {
+      const response = await fetch('/api/subscribe.js', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
