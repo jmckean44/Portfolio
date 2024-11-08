@@ -1,18 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-import express from 'express';
-import cors from 'cors';
-const app = express();
-
-app.use(cors());
-
-mailchimp.setConfig({
-  apiKey: import.meta.env.API_KEY,
-  server: import.meta.env.DATA_CENTER,
-});
-
-
 function RegisterForm() {
   const {
     register,

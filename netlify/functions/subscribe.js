@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import mailchimp from '@mailchimp/mailchimp_marketing';
 
 mailchimp.setConfig({
@@ -10,7 +11,7 @@ export default async (req, res) => {
 		const { email, firstName, lastName, phone, hear, broker, comments } = req.body;
 
 		try {
-			const response = await mailchimp.lists.addListMember(import.meta.env.LIST_ID, {
+			const response = await mailchimp.lists.addListMember('12bee7680b', {
 				email_address: email,
 				status: 'subscribed',
 				merge_fields: {
@@ -28,26 +29,24 @@ export default async (req, res) => {
 				response,
 			});
 
+			console.log(res) + '<br>';
+			console.log(response);
+
 			return {
 				statusCode: 200,
 				body: JSON.stringify({ success: true, response }),
 			};
-
-			console.log(res);
-			console.log(response);
 		} catch (error) {
 			res.status(500).json({ success: false, error: error.message });
 			return {
 				statusCode: 500,
 				body: JSON.stringify({ success: false, error: error.message }),
 			};
-			console.log(res);
 		}
 	} else {
 		return {
 			statusCode: 405,
 			body: JSON.stringify({ success: false, message: 'Method not allowed' }),
 		};
-		console.log(res);
 	}
 };
