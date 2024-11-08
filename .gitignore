@@ -30,3 +30,5 @@ pnpm-debug.log*
 
 # gsap
 .npmrc
+# Local Netlify folder
+.netlify
