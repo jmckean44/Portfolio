@@ -1,11 +1,5 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import mailchimp from '@mailchimp/mailchimp_marketing';
-import 'dotenv/config';
-
-mailchimp.setConfig({
-  apiKey: import.meta.env.API_KEY,  
-});
 
 function RegisterForm() {
   const {
@@ -25,8 +19,7 @@ function RegisterForm() {
         const response = await fetch('/.netlify/functions/subscribe', {
           method: 'POST',
           headers: {            
-            'Content-Type': 'application/json',            
-            'Authorization': `Basic ${apiKey}`,                        
+            'Content-Type': 'application/json',                           
           },
           body: JSON.stringify(data),
         });
