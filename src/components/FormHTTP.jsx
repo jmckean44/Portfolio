@@ -1,3 +1,4 @@
+import React from "react";
 import { useForm } from "react-hook-form";
 
 function RegisterForm() {
@@ -8,34 +9,31 @@ function RegisterForm() {
     formState: { errors, isSubmitting },
   } = useForm();
 
-  const onSubmit = async (data) => {
-    try {
+  const onSubmit = async (data) => {    
+    try {		
       await new Promise((resolve) => setTimeout(resolve, 1000));
+      console.log(JSON.stringify(data));
 
-      console.log(JSON.stringify(data));         
-
-      const response = await fetch('/api/subscribe.js', {
-        method: 'POST',
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Headers': 'Content-Type',
-          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });      
-
-      if (response.ok) {
-        console.log('Subscriber added successfully');
-      } else {
-        const errorData = await response.json();
-        console.error('Error adding subscriber:', errorData);
-      }
-    } catch (error) {
-      console.error(error);
-      setError("api", { message: "Failed to subscribe" });
-    }
-  };
+      const onSubmit = async (data) => {
+        try {
+          const response = await fetch('/.netlify/functions/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          });
+      
+          if (response.ok) {
+            console.log('Subscriber added successfully');
+          } else {
+            const errorData = await response.json();
+            console.error('Error adding subscriber:', errorData);
+          }
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      };
 
 return (
   <form onSubmit={handleSubmit(onSubmit)} id="mc-embedded-subscribe-form">
