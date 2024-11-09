@@ -4,8 +4,7 @@ import mailchimp from '@mailchimp/mailchimp_marketing';
 import 'dotenv/config';
 
 mailchimp.setConfig({
-  apiKey: import.meta.env.API_KEY,
-  server: import.meta.env.DATA_CENTER,
+  apiKey: import.meta.env.API_KEY,  
 });
 
 function RegisterForm() {
