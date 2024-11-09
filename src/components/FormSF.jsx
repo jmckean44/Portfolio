@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import mailchimp from '@mailchimp/mailchimp_marketing';
+import 'dotenv/config';
 
 mailchimp.setConfig({
   apiKey: import.meta.env.API_KEY,
