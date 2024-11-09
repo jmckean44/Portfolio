@@ -20,7 +20,7 @@ function RegisterForm() {
           method: 'POST',
           headers: {            
             'Content-Type': 'application/json',            
-            'Authorization': `Basic ${Buffer.from(`anystring:${apiKey}`).toString('base64')}`,                        
+            'Authorization': `Basic ${apiKey}`,                        
           },
           body: JSON.stringify(data),
         });
