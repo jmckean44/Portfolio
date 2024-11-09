@@ -24,12 +24,12 @@ export default async (req, res) => {
 				},
 			});
 
-			// res.status(200).json({
-			// 	success: true,
-			// 	response,
-			// });
+			res.status(200).json({
+				success: true,
+				response,
+			});
 
-			//console.log(res) + '<br>';
+			console.log(res) + '<br>';
 			console.log(response);
 
 			return {
@@ -37,7 +37,7 @@ export default async (req, res) => {
 				body: JSON.stringify({ success: true, response }),
 			};
 		} catch (error) {
-			//res.status(500).json({ success: false, error: error.message });
+			res.status(500).json({ success: false, error: error.message });
 			return {
 				statusCode: 500,
 				body: JSON.stringify({ success: false, error: error.message }),
