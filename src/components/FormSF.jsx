@@ -16,7 +16,7 @@ function RegisterForm() {
 
         console.log(JSON.stringify(data));    
         
-        const response = await fetch('/pages/api/subscribe', {
+        const response = await fetch('/.netlify/functions/subscribe', {
           method: 'POST',
           headers: {            
             'Content-Type': 'application/json',            
@@ -25,17 +25,13 @@ function RegisterForm() {
           body: JSON.stringify(data),
         });
 
-        if (!response.ok) {
-          throw new Error('There was a Network error');
-        }
-
-        const result = await response.json();        
-  
-        if (result.success) {
-          console.log(result.response);
+        if (response.ok) {
+          console.log('Subscriber added successfully');
+          console.log(response) + '<br>' + console.log(data);
         } else {
-          throw new Error(console.log(result.error));          
-        }
+          const errorData = await response.json();
+          console.error('Error adding subscriber:', errorData);
+        }  
       } catch (error) {
         console.error(error);
         setError('api', { message: 'Failed to subscribe' });

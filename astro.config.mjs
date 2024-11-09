@@ -8,7 +8,7 @@ import netlify from '@astrojs/netlify';
 export default defineConfig({
 	server: { port: parseInt(import.meta.env.PORT) || 4321, host: true },
 	site: 'https://riverscape.ca',
-	output: 'hybrid',
+	output: 'server',
 	adapter: netlify({
 		edgeMiddleware: true,
 	}),
