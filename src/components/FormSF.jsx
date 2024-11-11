@@ -15,7 +15,7 @@ function RegisterForm() {
 
         console.log(JSON.stringify(data));    
         
-        const response = await fetch('/netlify/functions/subscribe.js', {
+        const response = await fetch('/src/api/subscribe.js', {
           method: 'POST',
           headers: {            
             'Content-Type': 'application/json',                           
