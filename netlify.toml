@@ -3,6 +3,6 @@
   command = "pnpm run build"
 
 [[redirects]]
-from = "/.netlify/functions/subscribe.js"
+from = "/src/api/*"
 to = "/.netlify/functions/subscribe.js 200"
 status = 200
