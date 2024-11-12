@@ -4,5 +4,5 @@
 
 [[redirects]]
 from = "/netlify/functions/subscribe.js"
-to = "/.netlify/functions/subscribe.js"
+to = "/.netlify/functions/subscribe"
 status = 200
