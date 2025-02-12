@@ -1,0 +1,196 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<title></title>
+</head>
+<body>
+
+  <main>
+    <h1 class="sectoin-heading">Latest Products</h1>
+    <div class="product-list">
+      <article class="product">
+        <img loading="lazy" src="https://assets.codepen.io/467/image-49.jpg" alt=" " />
+        <h1 class="product-name primary-headline">Nike Metcon 7</h1>
+        <p class="product-price">$130</p>
+        <p class="product-category meta">Women’s Training Shoes</p>
+      </article>
+      <article class="product">
+        <img loading="lazy" src="https://assets.codepen.io/467/image-50.jpg" alt=" " />
+        <h1 class="product-name primary-headline">Nike Free Metcon 4</h1>
+        <p class="product-price">$120</p>
+        <p class="product-category meta">Women’s Training Shoes</p>
+      </article>
+      <article class="product">
+        <img loading="lazy" src="https://assets.codepen.io/467/image-51.jpg" alt=" " />
+        <h1 class="product-name primary-headline">Nike Space Hippie 04</h1>
+        <p class="product-price">$130</p>
+        <p class="product-category meta">Men’s Shoes</p>
+      </article>
+      <article class="product">
+        <img loading="lazy" src="https://assets.codepen.io/467/image-52.jpg" alt=" " />
+        <h1 class="product-name primary-headline">Nike Air Max 90</h1>
+        <p class="product-price">$140</p>
+        <p class="product-category meta">Women’s Shoes</p>
+      </article>
+      <article class="product">
+        <img loading="lazy" src="https://assets.codepen.io/467/image-57.jpg" alt=" " />
+        <h1 class="product-name primary-headline">
+          Nike ZoomX Invincible Run Flyknit
+        </h1>
+        <p class="product-price">$180</p>
+        <p class="product-category meta">Women’s Running Shoes</p>
+      </article>
+      <article class="product">
+        <img loading="lazy" src="https://assets.codepen.io/467/image-53.jpg" alt=" " />
+        <h1 class="product-name primary-headline">Zoom Freak 3</h1>
+        <p class="product-price">$100</p>
+        <p class="product-category meta">Basketball Shoes</p>
+      </article>
+      <article class="product">
+        <img loading="lazy" src="https://assets.codepen.io/467/image-54.jpg" alt=" " />
+        <h1 class="product-name primary-headline">Nike Sportswear Club</h1>
+        <p class="product-price">$85</p>
+        <p class="product-category meta">Men’s Pullover Hoodie</p>
+      </article>
+      <article class="product">
+        <img loading="lazy" src="https://assets.codepen.io/467/image-55.jpg" alt=" " />
+        <h1 class="product-name primary-headline">
+          Nike React Phantom Run Flyknit 2
+        </h1>
+        <p class="product-price">$145</p>
+        <p class="product-category meta">Women’s Running Shoes</p>
+      </article>
+      <article class="product">
+        <img loading="lazy" src="https://assets.codepen.io/467/image-56.jpg" alt=" " />
+        <h1 class="product-name primary-headline">Nike Air Max 2021</h1>
+        <p class="product-price">$180</p>
+        <p class="product-category meta">Women’s Shoes</p>
+      </article>
+      <article class="product">
+        <img loading="lazy" src="https://assets.codepen.io/467/image-59.jpg" alt=" " />
+        <h1 class="product-name primary-headline">Nike Wildhorse 7</h1>
+        <p class="product-price">$130</p>
+        <p class="product-category meta">Men’s Trail Running Shoes</p>
+      </article>
+      <article class="product">
+        <img loading="lazy" src="https://assets.codepen.io/467/image-60.jpg" alt=" " />
+        <h1 class="product-name primary-headline">Nike Max Genome</h1>
+        <p class="product-price">$170</p>
+        <p class="product-category meta">Men’s Shoes</p>
+      </article>
+      <article class="product">
+        <img loading="lazy" src="https://assets.codepen.io/467/image-61.jpg" alt=" " />
+        <h1 class="product-name primary-headline">Nike Air</h1>
+        <p class="product-price">$50</p>
+        <p class="product-category meta">Women’s woven high-rise shorts</p>
+      </article>
+    </div>
+  </main>
+
+  <style>
+    html {
+      --max-width: 80rem;
+      --margin: 2rem;
+      --gutter: 2px;
+      --font: Fraunces, serif;
+      --hue: 340deg;
+      --background: hsl(var(--hue) 20% 94%);
+      --background-alt: hsl(var(--hue) 20% 100%);
+      --text: hsl(var(--hue) 80% 45%);
+
+      font-family: var(--font);
+      font-size: min(
+        120%,
+        5vw
+      ); /* Scale text down to avoid reflow errors on VERY small screens */
+      line-height: 1.25;
+      color: var(--text);
+      background: var(--background);
+    }
+    html,
+    main,
+    article {
+      container-type: inline-size;
+    }
+
+    /* Query units! */
+    h1,
+    .product-price {
+      font-size: max(1.25rem, 12cqi - 1rem);
+      font-weight: 700;
+      line-height: 1;
+      margin: 0;
+      mix-blend-mode: multiply;
+    }
+
+    /* Layout */
+    main {
+      width: min(100% - (var(--margin) * 2), var(--max-width));
+      margin: var(--margin) auto;
+      filter: drop-shadow(0 0.33rem 0.33rem hsl(var(--hue) 50% 90%));
+    }
+    .product {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto 2rem;
+      background: var(--background-alt);
+      border-radius: 0.33rem;
+      overflow: hidden;
+      transition: all 0.2s ease-in-out;
+    }
+    .product:nth-child(7n-6) {
+      grid-column-end: span 2;
+      grid-row-end: span 2;
+    }
+    .product img {
+      display: block;
+      grid-column-start: 1;
+      grid-row-start: 1;
+      grid-column-end: span 2;
+      grid-row-end: span 2;
+      width: 100%;
+      height: calc(100% - 0.8rem);
+      object-fit: cover;
+    }
+    .product-name {
+      grid-column-start: 1;
+      grid-row-start: 2;
+      align-self: end;
+      margin-left: 1rem;
+    }
+    .product-price {
+      grid-row-start: 2;
+      grid-column-start: 2;
+      font-weight: 100;
+      margin: 0 1rem;
+      align-self: end;
+      text-align: right;
+      opacity: 0.8;
+    }
+    .product-category {
+      grid-column-end: span 2;
+      grid-row-start: 3;
+      margin: 0.5rem 1rem 1rem;
+      line-height: 1.2;
+      opacity: 0.5;
+    }
+
+    .product-list {
+      display: grid;
+      grid-auto-flow: dense;
+      grid-template-columns: 1fr;
+      gap: var(--gutter);
+    }
+    @media (min-width: 50em) {
+      .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      }
+      .product {
+        margin-bottom: 0;
+      }
+    }
+  </style>
+
+</body>
+
+</html>

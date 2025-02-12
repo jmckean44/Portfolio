@@ -1,0 +1,11 @@
+---
+import { Image } from 'astro:assets';
+import banner from '../img/banner.jpg';
+---
+
+<swiper-container class="swiper" slides-per-view="1" speed="500" loop="true" navigation="true" effect="fade">
+	<swiper-slide><Image src={banner} loading="lazy" alt="Banner Image" /></swiper-slide>
+	<!-- <swiper-slide><Image src={banner2} loading="lazy" alt="Banner Image" /></swiper-slide> -->
+</swiper-container>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>

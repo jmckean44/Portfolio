@@ -1,0 +1,330 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Picture } from 'astro:assets';
+//import Swiper from 'swiper';
+import '../styles/swiper.scss';
+
+import { Image } from 'astro:assets';
+import { getImage } from 'astro:assets';
+import bunny from '../img/drawings/bunny.jpg';
+import triad from '../img/drawings/triad.jpg';
+import dad from '../img/drawings/dad-carry-me.jpg';
+import spring from '../img/drawings/spring.jpg';
+import ok from '../img/drawings/everything-is-going-to-be-ok.jpg';
+import birdman from '../img/drawings/quiet-birdman-association.jpg';
+import butterfly from '../img/drawings/butterly-elder.jpg';
+import involuntary from '../img/drawings/involuntary-melancholia.jpg';
+import hoba from '../img/drawings/hobaman.jpg';
+import dreaming from '../img/drawings/dreaming-of-mt-vesuvius.jpg';
+import timothy from '../img/drawings/timothy.jpg';
+import alright from '../img/drawings/alright.jpg';
+import jealous from '../img/drawings/jealous.jpg';
+import cheezWhiz from '../img/drawings/cheez-whiz.jpg';
+import sleepingBuddies from '../img/drawings/sleeping-buddies.jpg';
+import slug from '../img/drawings/slug.jpg';
+import stund from '../img/drawings/stund.jpg';
+import summer from '../img/drawings/summer.jpg';
+import drNeptune from '../img/drawings/dr-neptune.jpg';
+
+import lebanonRoad from '../img/landscapes/lebanon-road.jpg';
+import flynns from '../../src/img/landscapes/flynns.jpg';
+import macdonell from '../img/landscapes/macdonell.jpg';
+import filmores from '../img/landscapes/filmores.jpg';
+
+import simona01 from '../../src/img/portraits/simona-2014.jpg';
+import misa1 from '../img/portraits/misa-01.jpg';
+import misa2 from '../img/portraits/misa-02.jpg';
+import misa2016 from '../img/portraits/misa-2016.jpg';
+import wes from '../img/portraits/wes.jpg';
+import simona2015 from '../img/portraits/simona-2015.jpg';
+import mrferron from '../img/portraits/mr-ferron.jpg';
+import misahanging from '../img/portraits/misa-hanging.jpg';
+import liam01 from '../img/portraits/liam-01.jpg';
+import liam2011 from '../img/portraits/liam-2011.jpg';
+import liam2016 from '../img/portraits/liam-2016.jpg';
+import grenville from '../img/portraits/grenville-noreen.jpg';
+import gerard from '../img/portraits/gerard.jpg';
+import marydaisy from '../img/portraits/mary-daisy.jpg';
+
+import anv from '../img/sites/anv.webp';
+import loki from '../img/sites/loki.webp';
+import terraplus from '../img/sites/terraplus.webp';
+import thundermin from '../img/sites/thr.webp';
+import rockcliff from '../img/sites/rockcliff.webp';
+import queenston from '../img/sites/qmi.webp';
+import riva from '../img/sites/riva.webp';
+import pdac from '../img/sites/pdac.webp';
+import harp from '../img/sites/harp.webp';
+---
+
+<Layout pageTitle="About" pageSiteTitles="" title="" details="" description="" description="" website="" image="">
+	<section>
+		<div class="container top-of-page">
+			<div id="intro" class="spacing-btm">
+				<p class="width">The following compressed timeline begins with a carousel of brochure websites, which was my introduction to HTML, CSS, and jQuery.</p>
+				<p class="width">Prior to that, I worked in video production and post-production during my university years.</p>
+				<p class="width">And lastly, a gallery of drawings and paintings inspired by my kids interest in markers and pencils... on the cusp of the cell phone age.</p>
+			</div>
+
+			<div class="flex padding-x align-middle borders">
+				<div class="cell small-18 medium-9 small-order-2 medium-order-1">
+					<div class="swiper elink">
+						<div class="swiper-wrapper" id="mining">
+							<div class="swiper-slide"><Picture src={anv} formats={['avif', 'webp']} alt="Allied Nevada" /></div>
+							<div class="swiper-slide"><Picture src={loki} formats={['avif', 'webp']} alt="Loki Innovations" /></div>
+							<div class="swiper-slide"><Picture src={terraplus} formats={['avif', 'webp']} alt="Terraplus" /></div>
+							<div class="swiper-slide"><Picture src={thundermin} formats={['avif', 'webp']} alt="Thundermin" /></div>
+							<div class="swiper-slide"><Picture src={rockcliff} formats={['avif', 'webp']} alt="Rockcliff" /></div>
+							<div class="swiper-slide"><Picture src={queenston} formats={['avif', 'webp']} alt="Queenston Engineering" /></div>
+							<div class="swiper-slide"><Picture src={riva} formats={['avif', 'webp']} alt="Riva Modeling" /></div>
+							<div class="swiper-slide"><Picture src={pdac} formats={['avif', 'webp']} alt="PDAC" /></div>
+							<div class="swiper-slide"><Picture src={harp} formats={['avif', 'webp']} alt="Harp Capital" /></div>
+						</div>
+					</div>
+				</div>
+				<div class="cell small-18 medium-9 small-order-1 medium-order-2">
+					<h1>Tabled Days</h1>
+					<p>
+						This carousel of dated beauties marks the beginning of a somewhat unexpected career in frontend web development, starting as a web designer. Apart from enjoying the work, the immediacy of
+						creating something that could be seen by the world almost instantly was impressive.
+					</p>
+					<p>
+						These sites were built with Microsoft FrontPage during my time with Exploration Link Ltd., a boutique web design company that provided web related services to companies in the Mining and
+						Exploration Industry.
+					</p>
+					<p>
+						<a target="_blank" class="underline" href="https://www.linkedin.com/in/doug-webster-7a82a12/">Doug Webster</a>, a Geogologist and musician, started the company in the late 90's to meet the
+						growing demand for an online presence for companies in the investor relations industry. I was responsible for designing and building tabled websites, posting news releases, video and image
+						editing, Adobe Flash animations, and branding for print and trade show booths.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="line-vert right"></div>
+
+	<section>
+		<div class="container">
+			<div class="flex padding-x align-middle borders">
+				<div class="cell small-18 medium-9 intro">
+					<h1>Analog to Digital</h1>
+					<p class="slideInUp">My son and daughters curiosity about how something "real in our world" could also be on a piece of paper gave the kitchen table another purpose.</p>
+					<p>
+						It started with drawing their oversized "Littlist Petshop" anime figurines and a plush bunny rabbit hung on the clothesline and developed into a series of b+w cartoon'ish illustrations.
+					</p>
+				</div>
+				<div class="cell small-18 medium-9">
+					<div class="swiper examples">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><Picture src={bunny} formats={['avif', 'webp']} alt="Bunny" /><p>Bunny</p></div>
+							<div class="swiper-slide"><Picture src={sleepingBuddies} formats={['avif', 'webp']} alt="Sleeping Buddies" /><p>Sleeping Buddies</p></div>
+							<div class="swiper-slide"><Picture src={cheezWhiz} formats={['avif', 'webp']} alt="Cheese Whiz" /><p>Cheese Whiz</p></div>
+							<div class="swiper-slide"><Picture src={drNeptune} formats={['avif', 'webp']} alt="Dr Neptunes Delicious Elixir" /><p>Dr Neptunes Delicious Elixir</p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="line-vert left"></div>
+
+		<section id="slideshow-container">
+			<div class="container">
+				<div class="flex padding-x align-middle borders">
+					<div class="cell small-18 medium-9">
+						<div class="flex">
+							<div class="cell small-18 medium-9" id="swiper-vertical-nav">
+								<div class="swiper-pagination swiper-pagination-v"></div>
+							</div>
+							<div class="cell small-18">
+								<div class="swiper-container swiper-container-v">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="swiper-container swiper-container-h">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<Picture src={simona01} formats={['avif', 'webp']} alt="Wife" />
+														<p>Prague Selfie</p>
+													</div>
+													<div class="swiper-slide">
+														<Picture src={misa1} formats={['avif', 'webp']} alt="Mish Collage" /><p>Misa Collage</p>
+													</div>
+													<div class="swiper-slide"><Picture src={liam2016} formats={['avif', 'webp']} alt="Liam" /><p>Liam</p></div>
+													<div class="swiper-slide"><Picture src={gerard} formats={['avif', 'webp']} alt="Gerard" /><p>Gerard</p></div>
+													<div class="swiper-slide"><Picture src={timothy} formats={['avif', 'webp']} alt="" /><p>Timothy (from Christchurch, New Zealand)</p></div>
+													<div class="swiper-slide"><Picture src={misa2} formats={['avif', 'webp']} alt="Misa" /><p>Misa</p></div>
+													<div class="swiper-slide"><Picture src={liam01} formats={['avif', 'webp']} alt="Misa" /><p>Misa</p></div>
+													<div class="swiper-slide"><Picture src={misa2016} formats={['avif', 'webp']} alt="Misa" /><p>Misa</p></div>
+													<div class="swiper-slide"><Picture src={wes} formats={['avif', 'webp']} alt="" /><p></p></div>
+													<div class="swiper-slide"><Picture src={simona2015} formats={['avif', 'webp']} alt="" /><p></p></div>
+													<div class="swiper-slide"><Picture src={liam2011} formats={['avif', 'webp']} alt="Liam" /><p>Liam</p></div>
+													<div class="swiper-slide"><Picture src={liam2016} formats={['avif', 'webp']} alt="Liam" /><p>Liam</p></div>
+													<div class="swiper-slide"><Picture src={mrferron} formats={['avif', 'webp']} alt="Mr Ferron" /><p>Mr Ferron</p></div>
+													<div class="swiper-slide"><Picture src={marydaisy} formats={['avif', 'webp']} alt="Mary Daisy" /><p>Mary Daisy</p></div>
+													<div class="swiper-slide"><Picture src={grenville} formats={['avif', 'webp']} alt="Grenville" /><p>Grenville</p></div>
+													<div class="swiper-slide"><Picture src={misahanging} formats={['avif', 'webp']} alt="Misa Hanging" /><p>Misa Hanging</p></div>
+												</div>
+												<div class="swiper-pagination swiper-pagination-h"></div>
+											</div>
+										</div>
+
+										<div class="swiper-slide">
+											<div class="swiper-container swiper-container-h">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<Picture src={lebanonRoad} formats={['avif', 'webp']} alt="" />
+														<p>
+															<strong>GOOGLE MAPS</strong><br />God's House, Lebanon Rd, Pembroke, Giles, Virginia<br />
+															<a target="_blank" href="https://maps.app.goo.gl/shfugEJfF2Eb86dX6">Coordinates</a>
+														</p>
+													</div>
+													<div class="swiper-slide">
+														<Picture src={flynns} formats={['avif', 'webp']} alt="" /><p><strong>GOOGLE MAPS</strong><br />Flynns General Store & Gas<br />29 County Rd 507, Buckhorn, ON K0L 1J0</p>
+													</div>
+													<div class="swiper-slide"><Picture src={filmores} formats={['avif', 'webp']} alt="" /><p>Filmores</p></div>
+													<div class="swiper-slide"><Picture src={macdonell} formats={['avif', 'webp']} alt="" /><p>MacDonell</p></div>
+												</div>
+												<div class="swiper-pagination swiper-pagination-h"></div>
+											</div>
+										</div>
+
+										<div class="swiper-slide">
+											<div class="swiper-container swiper-container-h">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide"><Picture src={triad} formats={['avif', 'webp']} alt="Triad" /><p>Triad</p></div>
+													<div class="swiper-slide"><Picture src={butterfly} formats={['avif', 'webp']} alt="Butterfly Elder" /><p>Butterfly Elder</p></div>
+													<div class="swiper-slide"><Picture src={involuntary} formats={['avif', 'webp']} alt="Involuntary Melancholia" /><p>Involuntary Melancholia</p></div>
+													<div class="swiper-slide"><Picture src={dreaming} formats={['avif', 'webp']} alt="Dreaming of Mount Vesuvius" /><p>Dreaming of Mount Vesuvius</p></div>
+													<div class="swiper-slide"><Picture src={birdman} formats={['avif', 'webp']} alt="Quiet Birdman Assocation" /><p>Quiet Birdman Assocation</p></div>
+													<div class="swiper-slide"><Picture src={summer} formats={['avif', 'webp']} alt="Summer" /><p>Summer</p></div>
+													<div class="swiper-slide"><Picture src={jealous} formats={['avif', 'webp']} alt="Dr Jealous Divine" /><p>Dr Jealous Divine</p></div>
+													<div class="swiper-slide"><Picture src={hoba} formats={['avif', 'webp']} alt="Hoba Man" /><p>Hoba Man (Black Forest)</p></div>
+													<div class="swiper-slide"><Picture src={spring} formats={['avif', 'webp']} alt="spring" /><p>Spring</p></div>
+													<div class="swiper-slide"><Picture src={dad} formats={['avif', 'webp']} alt="Dad, carry me" /><p>Dad, carry me</p></div>
+													<div class="swiper-slide"><Picture src={ok} formats={['avif', 'webp']} alt="Everything is going to be ok" /><p>Everything is going to be ok</p></div>
+													<div class="swiper-slide"><Picture src={alright} formats={['avif', 'webp']} alt="Alright, I won't leave you" /><p>Alright, I won't leave you</p></div>
+													<div class="swiper-slide"><Picture src={slug} formats={['avif', 'webp']} alt="Slug" /><p>Slug</p></div>
+													<div class="swiper-slide"><Picture src={stund} formats={['avif', 'webp']} alt="Stund Moment" /><p>Stund Moment</p></div>
+													<!-- <div class="swiper-slide"><Picture src={cactus} formats={['avif', 'webp']} alt="Metamorphosis" /><p>Metamorphosis</p></div>
+													<div class="swiper-slide"><Picture src={stump} formats={['avif', 'webp']} alt="Stump" /><p>Stump</p></div>
+													<div class="swiper-slide"><Picture src={cravenly} formats={['avif', 'webp']} alt="Cravenly Dependant" /><p>Cravenly Dependant</p></div> -->
+												</div>
+												<div class="swiper-pagination swiper-pagination-h"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cell small-18 medium-9">
+						<h1>Ideas in HB</h1>
+						<p>
+							The landscape examples are a from a series of Google Maps inspired paintings.XXXX are various past personal pursuits in illustration, portraiture, urban landscape, and include a couple
+							of examples of found locations that evolved out of an interest in Google Maps... when the option to puruse the streets of the world became available.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="line-vert right"></div>
+
+		<section>
+			<div class="container btm">
+				<div class="flex padding-x align-middle borders">
+					<div class="cell small-18 medium-9">
+						<h1>Favourite Films</h1>
+						<p>ddd</p>
+					</div>
+					<div class="cell small-18 medium-9">fdgf</div>
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<!-- Swiper JS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script is:inline src="../src/scripts/swiper.js"></script>
+
+	<style>
+		#swiper-vertical-nav .swiper-pagination {
+			margin-left: 0.5rem;
+		}
+		.swiper-pagination {
+			text-align: left !important;
+		}
+		#swiper-vertical-nav .swiper-pagination {
+			justify-content: auto !important;
+		}
+	</style>
+
+	<script>
+		var swiper = new Swiper('.elink', {
+			mousewheel: true,
+			keyboard: true,
+			autoplay: true,
+			speed: 1000,
+			delay: 5000,
+			effect: 'fade',
+			pagination: {
+				pagination: '.swiper-pagination-h',
+				el: '.swiper-pagination-h',
+				clickable: true,
+				renderBullet: function (index: number, className: string) {
+					return '<span class="' + className + '">' + direction[index] + '</span>';
+				},
+			},
+		});
+
+		var swiper = new Swiper('.examples', {
+			mousewheel: true,
+			keyboard: true,
+			autoplay: true,
+			speed: 1000,
+			delay: 50000,
+			effect: 'fade',
+			autoHeight: true,
+		});
+
+		// IMAGES
+		var floor = ['Portraits', 'Landscape', 'Drawings'];
+		var direction = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
+
+		var swiperV = new Swiper('.swiper-container-v', {
+			pagination: {
+				el: '.swiper-pagination-v',
+				clickable: true,
+				autoHeight: true,
+				renderBullet: function (index: number, className: string) {
+					return '<span class="' + className + '">' + floor[index] + '</span>';
+				},
+			},
+			speed: 1000,
+			direction: 'vertical',
+			autoHeight: true,
+			spaceBetween: 0,
+		});
+
+		var swiperH = new Swiper('.swiper-container-h', {
+			lazy: true,
+			pagination: {
+				pagination: '.swiper-pagination-h',
+				el: '.swiper-pagination-h',
+				clickable: true,
+				//autoHeight: true,
+				renderBullet: function (index: number, className: string) {
+					return '<span class="' + className + '">' + direction[index] + '</span>';
+				},
+			},
+			speed: 1000,
+			//autoplay: true,
+
+			direction: 'horizontal',
+			effect: 'fade',
+			spaceBetween: 0,
+			nested: true,
+		});
+	</script>
+</Layout>

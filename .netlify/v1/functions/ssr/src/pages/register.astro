@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RegisterForm from '../components/FormExpress.jsx';
+
+const title = '';
+---
+
+<Layout {title}>
+	<section id="register">
+		<div class="container top btm">
+			<div id="form-container">
+				<RegisterForm client:visible />
+			</div>
+		</div>
+	</section>
+</Layout>

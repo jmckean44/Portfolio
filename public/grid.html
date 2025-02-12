@@ -1,0 +1,529 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<title></title>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="box1">One</div>
+    <div class="box2">Two</div>
+    <div class="box3">Three</div>
+    <div class="box4">Four</div>
+    <div class="box5">Five</div>
+  </div>
+
+<style>
+  .wrapper {
+    display: grid;
+    grid-template-columns: auto 500px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+  }
+
+  .box1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .box2 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+  }
+
+  .wrapper > div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+  }
+
+  .nested {
+    border: 2px solid #ffec99;
+    border-radius: 5px;
+    background-color: #fff9db;
+    padding: 1em;
+  }
+
+</style>
+
+
+
+<br><br>
+<br><br><br>
+
+
+
+  <style type="text/css">
+    #header .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .main-nav ul {
+      margin: 1em 0 .5em;
+      text-align: center;
+      border:1px red solid;
+    }
+    .main-nav li {
+      display: inline;
+    }
+    .main-nav a {
+      display: inline-block;
+      padding: .5em 1.5em;
+    }   
+  </style>
+
+  <header id="header">
+    <div class="container">
+    
+     <img src="https://flexbox.ninja/assets/images/logo-flexbox-ninja.png">
+ 
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About us</a>
+          </li>
+          <li>
+            <a href="#">Our clients</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <br><br>
+  <br><br><br>
+
+<style>
+  #header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+  }
+  nav {
+    border:1px red solid;
+  } 
+  .menu,
+  .submenu {
+    list-style-type: none;
+  }
+  .logo {
+    max-width:100px;
+    padding: 7.5px 10px 7.5px 0;
+    text-align: left;
+  }
+  .item {
+    padding: 10px;
+  }
+  .item.button {
+    padding: 9px 5px;
+  }
+  .item:not(.button) a:hover,
+  .item a:hover::after {
+    color: #ccc;
+  }
+  /* Mobile menu */
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu li a {
+    display: block;
+    padding: 15px 5px;
+  }
+  .menu li.subitem a {
+    padding: 15px;
+  }
+  .toggle {
+    order: 1;
+    font-size: 20px;
+  }
+  .item.button {
+    order: 2;
+  }
+  .item {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+  .active .item {
+    display: block;
+  }
+  .button.secondary {
+    /* divider between buttons and menu links */
+    border-bottom: 1px #444 solid;
+  }
+  /* Submenu up from mobile screens */
+  .submenu {
+    display: none;
+  }
+  .submenu-active .submenu {
+    display: block;
+  }
+  .has-submenu i {
+    font-size: 12px;
+  }
+  .has-submenu > a::after {
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 900;
+    content: "\f078";
+    color: white;
+    padding-left: 5px;
+  }
+  .subitem a {
+    padding: 10px 15px;
+  }
+  .submenu-active {
+    background-color: #111;
+    border-radius: 3px;
+  }
+
+  /* Tablet menu */
+  @media all and (min-width: 700px) {
+    .menu {
+      justify-content: center;
+    }
+    .logo {
+      flex: 1;
+    }
+    .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+    }
+    .toggle {
+      flex: 1;
+      text-align: right;
+      order: 2;
+    }
+    /* Button up from tablet screen */
+    .menu li.button a {
+      padding: 10px 15px;
+      margin: 5px 0;
+    }
+    .button a {
+      background: #0080ff;
+      border: 1px royalblue solid;
+    }
+    .button.secondary {
+      border: 0;
+    }
+    .button.secondary a {
+      background: transparent;
+      border: 1px #0080ff solid;
+    }
+    .button a:hover {
+      text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+      background: royalblue;
+      border-color: darkblue;
+    }
+  }
+
+  @media all and (min-width: 960px) {
+    .menu {
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      background: none;
+    }
+    .logo {
+      order: 0;
+    }
+    .item {
+      order: 1;
+      position: relative;
+      display: block;
+      width: auto;
+    }
+    .button {
+      order: 2;
+    }
+    .submenu-active .submenu {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 68px;
+      background: #111;
+    }
+    .toggle {
+      display: none;
+    }
+    .submenu-active {
+      border-radius: 0;
+    }
+  }
+</style>
+
+
+<header id="header">
+
+<div class="logo"><a href="#">LOGO</a></div>
+
+<nav>
+  <ul class="menu">
+    <!-- <li class="logo"><a href="#">LOGO</a></li> -->
+    <li class="item"><a href="#">Home</a></li>
+    <li class="item"><a href="#">About</a></li>
+    <li class="item has-submenu">
+      <a tabindex="0">Services</a>
+      <ul class="submenu">
+        <li class="subitem"><a href="#">Design</a></li>
+        <li class="subitem"><a href="#">Development</a></li>
+        <li class="subitem"><a href="#">SEO</a></li>
+        <li class="subitem"><a href="#">Copywriting</a></li>
+      </ul>
+    </li>
+    <li class="item has-submenu">
+      <a tabindex="0">Plans</a>
+      <ul class="submenu">
+        <li class="subitem"><a href="#">Freelancer</a></li>
+        <li class="subitem"><a href="#">Startup</a></li>
+        <li class="subitem"><a href="#">Enterprise</a></li>
+      </ul>
+    </li>
+    <li class="item"><a href="#">Blog</a></li>
+    <li class="item"><a href="#">Contact</a>
+    </li>   
+  </ul>
+</nav>
+
+</header>
+
+<br><br>
+<br><br><br>
+
+
+<style>
+  /* FLEXBOX */
+  .container-flex {
+    display: flex;
+    flex-wrap: wrap; /* default nowrap */
+    flex-direction: row; /* default: row, column, column-reverse */    
+    justify-content: flex-start; /* (works when leftover space) center, flex-start, flex-end, space-between, space-evenly, space-around  */ 
+    align-items: stretch; /* default: stretch, start, end, center */
+    gap: 1rem;   
+    border:10px green solid;  
+    padding:1rem; 
+  }
+
+  .container-flex > * {    
+    flex-grow: 1;       /* default: 0 = collapse, 1 = grow  */
+    flex-shrink: 1;     /* default: 1 shrink, 0 = shrink off */
+    flex-basis: 0;      /* default: auto stretches, 0 = collapses */   
+    flex: 1;            /* grow: 1, shrink: 1, basis: auto (BUT sets to 0) */     
+    flex: 1 1 auto;     /* grow, no shrink, stretch */   
+    flex: 1 1 0;        /* grow, no shrink, collapse */
+    padding:1rem;   
+    width:100%;
+    background:pink;
+  }  
+</style>
+
+<div class="container-flex">
+  <div>Flexbox item 1</div>
+  <div>Flexbox item 2</div>
+  <div>Flexbox item 3 Learn flexbox the easy way</div>
+  <div>Flexbox item 4 Learn flexbox the easy way Learn flexbox the easy way</div>
+  <div>Flexbox item 5</div>
+</div>
+
+<br><br>
+<br><br><br>
+
+<style>
+  .container-flex-navLogo {
+    display: flex;
+    flex-wrap: wrap; /* default nowrap */
+    flex-direction: row; /* default: row, column, column-reverse */    
+    justify-content: space-between; /* (works when leftover space) center, flex-start, flex-end, space-between, space-evenly, space-around  */ 
+    align-items: center; /* default: stretch, start, end, center */
+    gap: 1rem;   
+    border:10px green solid;  
+    padding:1rem; 
+  }
+  .container-flex-navLogo div:first-child {    
+    flex-grow: 0;       /* default: 0 collapse, 1 = grow  */
+    flex-shrink: 1;     /* default: 1 shrink allowed, 0 = shrink off */
+    flex-basis: 0;      /* default: auto stretches, 0 = collapses */      
+    flex: 1 1 0;
+    padding:1rem;   
+    width:100%;
+    background:pink;
+  }  
+
+  .container-flex-navLogo div:nth-child(n+2) {    
+    flex-grow: 0;       /* default: 0 collapse, 1 = grow  */
+    flex-shrink: 1;     /* default: 1 shrink, 0 = shrink off */
+    flex-basis: 0;      /* default: auto stretches, 0 = collapses */    
+    flex: 0 1 0; 
+    padding:1rem;   
+    width:100%;
+    background:pink;
+  }  
+</style>
+
+<div class="container-flex-navLogo">
+<div>Logo</div>
+<div>HOME</div>
+<div>ABOUT</div>
+<div>FEATURES</div>
+<div>CONTACT</div>
+</div>
+
+<br><br>
+<br><br><br>
+
+<style>
+  /* GRID */
+  .container-grid {
+    display: grid;   
+    grid-auto-flow: column; 
+    grid-auto-columns: 1fr;
+    gap: 1rem;  
+    border:10px green solid;  
+    padding:1rem; 
+  }
+  
+  .container-grid > * {
+    padding:1rem;   
+    width:100%; 
+    border:1px red solid;
+  }
+</style>
+
+<div class="container-grid">
+  <div>Grid item 1 </div>
+  <div>Grid item 2</div>
+  <div>Grid item 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+  <div>Grid item 4 Learn flexbox the easy way Learn flexbox the easy way</div>
+  <div>Grid item 5</div>
+</div>
+
+
+
+
+<br><br>
+<br><br><br>
+
+
+
+<style>
+
+grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+
+grid-template-columns: repeat( auto-fi11, minmax(250px, 1fr) );
+
+  /* GRID PARENT / FLEXBOX CHILDREN */
+  .grid-row {
+    display: grid;
+    width: 100%;
+    justify-items: stretch;
+    gap: 1rem; 
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr)); 
+  }
+  
+  .flex-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;      
+    padding:1rem;    
+    border:1px red solid;
+  }
+
+  .button-container {
+    text-align:center;
+  }
+
+  .button {
+    background: red;
+    padding: .5rem 1rem;
+    color:#ddd;
+    border-radius:5px;
+    text-decoration:none;
+  }
+</style>
+
+<div class="grid-row">
+  <div class="flex-item">        
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+    </p>      
+    <p class="button-container">
+      <a class="button" href="">BUTTON</a>
+    </p>
+  </div>
+
+  <div class="flex-item">        
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+    </p>      
+    <p class="button-container">
+      <a class="button" href="">BUTTON</a>
+    </p>
+  </div>
+
+   <div class="flex-item">        
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>      
+    <p class="button-container">
+      <a class="button" href="">BUTTON</a>
+    </p>
+  </div>
+
+</div>
+
+<div class="grid-row">
+  <div class="flex-item">        
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+    </p>      
+    <p class="button-container">
+      <a class="button" href="">BUTTON</a>
+    </p>
+  </div>
+
+  <div class="flex-item">        
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+    </p>      
+    <p class="button-container">
+      <a class="button" href="">BUTTON</a>
+    </p>
+  </div>
+
+
+</div>
+
+</body>
+
+</html>

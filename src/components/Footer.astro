@@ -1,0 +1,36 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+	<div>
+		<!-- <Navigation /> -->
+	</div>
+	<div></div>
+	<div>
+		<p>Copyright {currentYear}</p>
+	</div>
+</footer>
+
+<script src="../scripts/headroom.js"></script>
+<script src="../scripts/lenis.js"></script>
+<script src="../scripts/scripts.js"></script>
+
+<script src="../scripts/wow.js"></script>
+<script>
+	var wow = new WOW({
+		boxClass: 'wow',
+		animateClass: 'animated',
+		offset: 0,
+		mobile: true,
+		live: true,
+	});
+	wow.init();
+</script>
+
+<script>
+	import '../scripts/menu.js';
+	window.addEventListener('navigate', () => {
+		console.log('navigated');
+	});
+</script>

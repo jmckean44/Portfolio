@@ -1,0 +1,63 @@
+[
+	{
+		"suiteNumber": "305",
+		"residenceName": "<span>D1</span> Suite 305",
+		"numOfRooms": "2 BEDROOM<span>|</span>164.9 m<sup>2</sup>",
+		"floorplanURL": "/D1-305.webp",
+		"floorplanAlt": "D1 Suite 305 Floor Plan",
+		"siteplanURL": "/D1-siteplan.webp",
+		"siteplanAlt": "D1 Suite 305 Site Plan",
+		"viewBookURL": "",
+		"downloadURL": "/D1-305.pdf"
+	},
+	{
+		"suiteNumber": "306",
+		"residenceName": "<span>D1</span> Suite 306",
+		"numOfRooms": "2 BEDROOM<span>|</span>164.9 m<sup>2</sup>",
+		"floorplanURL": "/D1-306.webp",
+		"floorplanAlt": "D1 Suite 306 Floor Plan",
+		"siteplanURL": "/D1-siteplan.webp",
+		"siteplanAlt": "D1 Suite 306 Site Plan",
+		"viewBookURL": "",
+		"downloadURL": "/D1-306.pdf"
+	},
+	{
+		"suiteNumber": "403",
+		"residenceName": "<span>D1</span> Suite 403",
+		"numOfRooms": "2 BEDROOM<span>|</span>164.9 m<sup>2</sup>",
+		"floorplanURL": "/D1-403.webp",
+		"floorplanAlt": "D1 Suite 403 Floor Plan",
+		"siteplanURL": "/D1-siteplan.webp",
+		"siteplanAlt": "D1 Suite 403 Site Plan",
+		"viewBookURL": "",
+		"downloadURL": "/D1-403.pdf"
+	},
+	{
+		"suiteNumber": "601",
+		"residenceName": "<span>D1</span> Suite 601",
+		"numOfRooms": "2 BEDROOM<span>|</span>164.9 m<sup>2</sup>",
+		"floorplanURL": "/D1-601.webp",
+		"floorplanAlt": "D1 Suite 601 Floor Plan",
+		"siteplanURL": "/D1-siteplan.webp",
+		"siteplanAlt": "D1 Suite 601 Site Plan",
+		"viewBookURL": "https://www.flipsnack.com/6C9F85AA9F7/terraced-residence-d1/full-view.html",
+		"downloadURL": "/D1-601.pdf"
+	},
+	{
+		"suiteNumber": "A1",
+		"residenceName": "Villa Lanterna",
+		"villaName": "A1-SEASIDE VILLA RESIDENCE",
+		"numOfRooms": "4 BEDROOM<span>|</span>922.7 m<sup>2</sup>",
+		"viewBookURL": "https://www.flipsnack.com/6C9F85AA9F7/villa-lanterna/full-view.html",
+		"downloadURL": "/A1-Villa-Lanterna.pdf",
+		"siteplanURL": "/A1-siteplan.webp",
+		"floorplanURL": "/A1-Villa-Lanterna-Ground.webp",
+		"floorplanAlt": "A1 Villa Lanterna Ground Level",
+		"gardenURL": "/A1-Villa-Lanterna-Garden.webp",
+		"gardenAlt": "A1 Villa Lanterna Garden Level",
+		"upperURL": "/A1-Villa-Lanterna-Upper.webp",
+		"upperAlt": "A1 Villa Lanterna Upper Level",
+		"rooftopURL": "/A1-Villa-Lanterna-Rooftop.webp",
+		"rooftopAlt": "A1 Villa Lanterna Rooftop Level"
+	}
+]

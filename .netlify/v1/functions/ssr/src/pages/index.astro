@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+//import { Image } from 'astro:assets';
+//import logoWh from '../img/logo-lrg.svg';
+import { Picture } from 'astro:assets';
+import aerial from '../img/aerial.webp';
+
+const title = '';
+---
+
+<Layout {title}>
+	<section id="wasaga">
+		<Picture src={aerial} formats={['avif', 'webp']} loading="eager" alt="Riverscape A Natural Wasaga Enclave" />
+	</section>
+</Layout>

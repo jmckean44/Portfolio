@@ -1,0 +1,48 @@
+---
+export interface Props {
+	dark?: boolean;
+}
+
+const { dark = false } = Astro.props as Props;
+---
+
+<div class={`card ${dark && 'dark'}`}>
+	<slot />
+</div>
+
+<style is:global>
+	.flex {
+		gap: var(--gap-med);
+	}
+	.flex > div {
+		flex: 1 1 0;
+	}
+	.card {
+		background: #fff;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		margin-bottom: 20px;
+	}
+	.dark {
+		background: var(--theme-clr);
+		color: #fff;
+	}
+	.btn {
+		background: var(--theme-clr);
+		padding: 0.25rem 1rem;
+		color: #fff;
+		border-radius: 3px;
+		text-decoration: none;
+		margin-top: 1rem;
+		display: inline-block;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 0.7rem;
+	}
+	@media (max-width: 800px) {
+		.flex {
+			flex-direction: column;
+		}
+	}
+</style>

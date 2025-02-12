@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/residences.scss';
+import PictureComponent from '../components/PictureComponent.astro';
+
+import { Image } from 'astro:assets';
+import { getImage } from 'astro:assets';
+import { Picture } from 'astro:assets';
+
+import placeholder from '../img/residences-placeholder.webp';
+import placeholderMobile from '../img/residences-placeholder-mobile.webp';
+---
+
+<Layout pageTitle="Learning Curve" pageSiteTitles="" title="" details="" description="" description="" website="" image="">
+	<section>
+		<div class="container top-of-page">
+			<div class="flex padding-x" id="intro">
+				<div class="cell small-18 medium-9">
+					<!-- <h1>Courses</h1> -->
+					<p class="slideInUp">
+						The projects below were created as part of a 37 hour <a target="_blank" class="underline" href="https://www.traversymedia.com/modern-javascript-2-0">Modern JavaScript From The Beginning</a
+						> course and my ongoing interest in learning Javascript, PHP, and SQL.
+					</p>
+				</div>
+				<div class="cell small-18 medium-9">
+					<!-- <p>They are also in my <a target="_blank" class="underline" href="https://github.com/jmckean44">Github</a> account.</p> -->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container btm">
+			<div class="flex padding-x">
+				<div class="cell small-18 medium-9 project">
+					<h2>Shopping List</h2>
+					<p class="slideInUp">Add, delete, and filter through your list of shopping to-do's.</p>
+					<form id="item-form">
+						<div class="form-control">
+							<input type="text" class="form-input" id="item-input" name="item" placeholder="Enter Item" />
+						</div>
+						<div class="form-control">
+							<button type="submit" class="btn">
+								<i class="fa-solid fa-plus"></i> Add Item
+							</button>
+						</div>
+					</form>
+					<script src="../scripts/shopping-cart.js"></script>
+
+					<div class="filter">
+						<input type="text" class="form-input-filter" id="filter" placeholder="Filter Items" />
+					</div>
+
+					<ul id="item-list" class="items"></ul>
+
+					<button id="clear" class="btn-clear">CLEAR ALL</button>
+				</div>
+				<div class="cell small-18 medium-9 project"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 
+	<section id="sitemap">
+		<mapplic-map data-json="/sitemap/data-res.json"></mapplic-map>
+	</section>
+	<script is:inline src="/sitemap/mapplic.js"></script> -->
+
+	<div class="line-btm"></div>
+
+	<section id="floorplan-ui">
+		<div class="container top btm-sm">
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h2>Floor Plan UI</h2>
+				</div>
+			</div>
+
+			<div class="flex padding-x">
+				<div class="cell small-18 medium-9">
+					<p class="width">
+						I was asked to create a User Interface for the floor plans page of a <a href="https://marinaresortcavtat.com/" class="underline" target="_blank">Croatian resort website</a> that would intuitively
+						guide users through the floor plan selection process. The functionality was designed by our Art Director.
+						<p>
+							The idea was to start with disabled select menus until a NUMBER OF BEDROOMS was chosen, followed by a <strong>RESIDENCE TYPE</strong> and then a <strong>SUITE NUMBER</strong>, which
+							would load the floor plans, site plans and <strong>Key Features</strong> for that suite.
+						</p>
+					</p>
+				</div>
+				<div class="cell small-18 medium-9">
+					<p class="width">The functionality was written in Javascript, which fetches a JSON file of Objects that contain the image urls and Key Features content.</p>
+					<p>Two examples were available to the client.</p>
+					<ul>
+						<li>2 Bedroom - D1 - 601</li>
+						<li>4 Bedroom - Seaside Villas - A1</li>
+					</ul>
+					<button><a href="https://marinaresortcavtat.com/" target="_blank">marinaresortcavtat.com</a></button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="floorplans">
+		<div class="select-below">
+			<h3>Select A Bedroom Number</h3>
+		</div>
+		<div class="residence-choice">
+			<select name="bedroomNumber" id="bedroomNumber">
+				<option value="disabled">NUMBER OF BEDROOMS</option>
+				<option value="1 Bedroom">1 Bedroom</option>
+				<option value="2 Bedrooms">2 Bedrooms</option>
+				<option value="3 Bedrooms">3 Bedrooms</option>
+				<option value="4 Bedrooms">4 Bedrooms</option>
+			</select>
+			<select name="residenceType" id="residenceType" disabled>
+				<option value="disabled">RESIDENCE TYPE</option>
+			</select>
+			<select name="suites" id="suites" disabled>
+				<option value="disabled">SELECT SUITE</option>
+			</select>
+		</div>
+
+		<div class="residence-plans">
+			<PictureComponent mobileImgUrl={placeholderMobile} desktopImgUrl={placeholder} loading="lazy" className="clip-image" alt="Marina Resort Cavtat" />
+		</div>
+	</section>
+	<script is:inline src="/residences.js"></script>
+
+	<style>
+		.edit-mode {
+			color: #ccc;
+		}
+
+		/* Form & Input */
+		.form-input {
+			width: 100%;
+			font-size: 18px;
+			margin-bottom: 0.5rem;
+			padding: 0.75rem 0.75rem 0.65rem;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			line-height: 1;
+			outline: none;
+			max-width: 300px;
+		}
+
+		.form-input-filter {
+			margin-top: 20px;
+			width: 100%;
+			font-size: 18px;
+			margin-bottom: 20px;
+			padding: 10px 0 5px;
+			border: none;
+			border-bottom: 1px solid #ccc;
+			background: transparent;
+			outline: none;
+		}
+
+		.item-list {
+			margin: 0 !important;
+		}
+
+		/* Buttons */
+		.btn {
+			background-color: #333;
+			display: inline-block;
+			color: #fff;
+			border: none;
+			border-radius: 3px;
+			padding: 10px 15px;
+			cursor: pointer;
+		}
+
+		button {
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		button.remove-item {
+			background: url('../src/img/icon-close.svg') no-repeat right center;
+			background-size: 15px;
+			width: 100px !important;
+			height: 30px !important;
+			border: 1px red solid !important;
+			display: block !important;
+			padding: 10px !important;
+			cursor: pointer;
+		}
+
+		.btn:hover {
+			background-color: #444;
+		}
+
+		.btn-clear {
+			margin-top: 3rem;
+			font-size: 1.2rem;
+			background: rgba(255, 255, 255, 0.8);
+			color: #333;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			padding: 10px 20px;
+			display: inline-block;
+			cursor: pointer;
+		}
+
+		.btn-clear:hover {
+			background-color: #f1f1f1;
+		}
+
+		.text-red {
+			color: red;
+		}
+
+		/* Items */
+
+		.items {
+			margin: 2rem 0 0 0;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.items li {
+			display: flex;
+			justify-content: space-between;
+			width: 45%;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			padding: 10px 15px;
+			margin: 0 5px 20px;
+			font-weight: 700;
+			cursor: pointer;
+		}
+
+		@media (max-width: 500px) {
+			.items li {
+				width: 100%;
+			}
+		}
+	</style>
+</Layout>

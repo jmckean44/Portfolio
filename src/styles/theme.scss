@@ -1,0 +1,180 @@
+@use 'variables.scss' as var;
+
+/* =============================================
+   PAGE BACKGROUND LIGHT/DARK
+================================================ */
+html {
+	scroll-behavior: smooth;
+}
+
+html.dark {
+	background: var.$dark;
+}
+
+html.dark #header {
+	transition: 1s ease all;
+}
+
+html #header {
+	//background: rgba(255, 255, 255, 0.5);
+	transition: 1s ease all;
+	//backdrop-filter: blur(10px);
+}
+
+html.dark body {
+	background: var.$dark !important;
+}
+
+html body {
+	background: var.$light;
+}
+
+html.dark #nav-desktop .nav-links > li a {
+	color: var.$theme-clr;
+	background: #fff;
+}
+
+html.dark .nav-links > li > a.active span,
+html.dark .nav-links > li > a:hover span {
+	color: var.$theme-clr;
+}
+
+html.dark a {
+	color: #fff;
+}
+
+html.dark a:hover {
+	color: var.$theme-clr;
+}
+
+html.dark .nav-links li a.active,
+html.dark .nav-links li a:hover,
+html.dark .work-thumbs h2 {
+	color: #fff;
+}
+
+html.dark p {
+	color: var.$font-clr-dark;
+}
+
+html .nav-links li a.active,
+html .nav-links li a:hover {
+	color: var.$dark;
+}
+
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6 {
+	color: var.$theme-clr;
+}
+
+html.dark #home .work-thumbs,
+html.dark .grid.work {
+	background: rgba(000, 000, 000, 0.6);
+}
+
+html.dark .line-btm {
+	border-bottom: 1px #555 solid;
+}
+
+html.dark .borders {
+	border: 1px #555 solid;
+}
+
+html.dark .line-vert {
+	background: repeating-linear-gradient(90deg, #26262d, #555 1.5px, #26262d 0, #26262d);
+}
+
+html.dark #new .project.border {
+	background: #555;
+	border: 1px solid #888;
+}
+
+html.dark #new .project {
+	background: #555;
+	border: 1rem solid #888;
+	border-radius: 3px;
+	padding: 2rem 1.75rem;
+}
+
+html.dark ul,
+html.dark #new #floorplans h3 {
+	color: #fff;
+}
+
+html.dark #new #floorplans {
+	background: #33333d;
+}
+
+html.dark #graveyard .graveyard .cell img {
+	border: 1px solid #555;
+}
+
+html.dark #header.headroom--not-bottom.headroom--not-top .nav-links li a {
+	background: #26262d;
+	color: #fff;
+	border: 1px solid #555;
+}
+
+/* =============================================
+   THEME TOGGLE
+================================================ */
+.controls {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	right: 1rem;
+	top: 0.5rem;
+	z-index: 9999999999;
+	transition: 0.5s ease all;
+}
+
+#themeToggle {
+	height: 25px;
+	width: 25px;
+	cursor: pointer;
+	background: none;
+	padding: 0;
+	display: block;
+	margin: 0;
+}
+
+.github {
+	width: 20px;
+}
+
+.linkedin {
+	width: 20px;
+	margin-left: 1rem;
+	margin-right: 0.75rem;
+}
+
+.sun {
+	fill: var.$theme-clr;
+	width: 20px;
+}
+.moon {
+	fill: transparent;
+}
+
+:global(.dark) .sun {
+	fill: transparent;
+}
+:global(.dark) .moon {
+	fill: white;
+}
+:global(.dark) {
+	color-scheme: dark;
+}
+
+@media (max-width: 800px) {
+	.controls {
+		position: absolute;
+		left: auto;
+		top: 85px;
+	}
+}

@@ -1,0 +1,23 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove first "/"
+import ThemeIcon from '../components/ThemeIcon.astro';
+---
+
+<ThemeIcon />
+<nav>
+	<ul class="nav-links">
+		<li>
+			<a class={currentPath === '' ? 'active' : ''} href="/"><span>Previous & Live</span>Work</a>
+		</li>
+		<li>
+			<a class={currentPath === 'new' ? 'active' : ''} href="/new"><span>Learning</span>Curve</a>
+		</li>
+		<li>
+			<a class={currentPath === 'about' ? 'active' : ''} href="/about"><span>A Brief</span>History</a>
+		</li>
+		<li>
+			<a class={currentPath === 'contact' ? 'active' : ''} href="/contact"><span>Send a</span>MSG</a>
+		</li>
+	</ul>
+</nav>

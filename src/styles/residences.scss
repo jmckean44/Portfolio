@@ -1,0 +1,377 @@
+@use 'variables.scss' as var;
+
+/* ===========================
+	 SITE PLAN
+=============================== */
+#sitemap {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding-bottom: 125px;
+}
+
+// #sitemap .gradient {
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 100vh;
+// 	background: rgb(255, 0, 0);
+// 	background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 0, 0) 48%, rgba(255, 0, 0, 1) 100%);
+// 	z-index: 99999999999;
+// }
+
+/* ===========================
+	 SELECT PLANS
+=============================== */
+#floorplan-ui {
+	ul {
+		margin: 0 0 1rem 1.5rem;
+		list-style: outside;
+	}
+}
+
+#floorplans {
+	background: #f2f2f2;
+	padding: 125px 1.25rem;
+	max-width: 1350px;
+	margin: 0 auto;
+	border-radius: 3px;
+}
+
+#floorplans .select-below {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+#floorplans .select-below h3 {
+	color: var.$dark;
+	font-family: var.$theme-font;
+	font-size: 2.5rem;
+	font-weight: 600;
+	font-style: normal;
+	text-transform: uppercase;
+	border-bottom: 1px var.$dark solid;
+	padding-bottom: 0.6rem;
+	margin-bottom: 1.75rem;
+	letter-spacing: 0.5px;
+}
+
+#floorplans .residence-choice {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+#floorplans .residence-choice select {
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 0.5rem 1rem 0.4rem;
+	background: var.$theme-clr url('../img/arrow-down-select-wh.svg') no-repeat right 10px center;
+	background-size: 17px;
+	margin: 0 0 0.45rem;
+	width: 100%;
+	font-family: var.$font-sans-serif;
+	text-transform: uppercase;
+	border: 0;
+	appearance: none;
+	letter-spacing: 1px;
+}
+
+@media (max-width: 800px) {
+	#floorplans .residence-choice {
+		flex-direction: column;
+		margin: 0;
+		gap: 0;
+		max-width: 350px;
+	}
+}
+
+/* ===========================
+	 RESIDENCES PLAN DETAILS
+=============================== */
+#floorplans .residence-plans {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+#floorplans .residence-plans .details {
+	width: 35%;
+	//max-width: 500px;
+	padding-right: 2rem;
+	position: relative;
+	margin-top: 4rem;
+	visibility: visible;
+	animation: fadeIn 0.5s forwards;
+}
+
+#floorplans .residence-plans .details .select-plan {
+	display: inline-block;
+	border: 1px red solid;
+}
+
+#floorplans .residence-plans .details ul {
+	list-style: none;
+	margin-left: 0.5rem;
+}
+
+#floorplans .residence-plans .details ul li {
+	margin-bottom: 0.7rem;
+}
+
+#floorplans .residence-plans .details ul li:before {
+	content: '• ';
+	font-size: 11pt;
+	padding-left: 0.25rem;
+	margin-left: -0.6rem;
+}
+
+#floorplans .residence-plans .details h3 {
+	font-family: var.$theme-font;
+	color: var.$dark;
+	font-size: min(max(2.2rem, 2.5vw), 40px);
+	margin-bottom: 0;
+}
+
+#floorplans .residence-plans .details h3 span {
+	font-family: var.$theme-font;
+	font-style: normal;
+}
+
+#floorplans .residence-plans .details h4 {
+	color: var.$dark;
+	font-family: var.$font-sans-serif;
+	font-size: 1.2rem;
+	font-style: normal;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	letter-spacing: 1px;
+}
+
+#floorplans .residence-plans .details h5 {
+	color: var.$dark;
+	font-family: var.$theme-font;
+	font-size: 1.5rem;
+	font-style: normal;
+	margin-bottom: 0;
+	letter-spacing: 1px;
+	display: block;
+	padding-top: 1.25rem;
+	padding-bottom: 0;
+}
+
+#floorplans .residence-plans .details h5.features {
+	font-family: var.$theme-font;
+	border-top: 1px var.$theme-clr solid;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+
+#floorplans .residence-plans .details h5.number-rooms {
+	border-bottom: var.$theme-clr 1px solid;
+	padding-bottom: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+#floorplans .residence-plans .details h5.select-level {
+	margin: 0 0 1rem 0.9rem;
+	padding-bottom: 0;
+}
+
+#floorplans .residence-plans .details h5 span {
+	font-weight: 400;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+#floorplans .residence-plans .details h5 sup {
+	font-size: 0.7rem;
+}
+
+#floorplans .residence-plans .details #floorLevel {
+	color: #fff;
+	font-size: 0.9rem;
+	padding: 0.6rem 1rem;
+	background: var.$dark url(../img/arrow-down-select-wh.svg) no-repeat right 10px center;
+	background-size: 17px;
+	margin: 0 0 1rem;
+	border: 0;
+	font-family: var.$font-sans-serif;
+	font-weight: 500;
+	line-height: 1.2;
+	border: 0;
+	appearance: none;
+	width: 100%;
+	max-width: 200px;
+	letter-spacing: 1px;
+}
+
+@media (max-width: 800px) {
+	#floorplans .residence-plans .details #floorLevel {
+		max-width: 350px;
+	}
+}
+
+#floorplans .residence-plans .details .viewbook,
+#floorplans .residence-plans .details .floorplan,
+#floorplans .residence-plans .details .download,
+#floorplans .residence-plans .details .siteplan {
+	font-weight: 600;
+	max-width: 150px;
+	font-size: 1.1rem;
+	width: 100%;
+	color: var.$dark;
+	transition: all ease 0.3s;
+	cursor: pointer;
+}
+
+#floorplans .residence-plans .details .viewbook:hover,
+#floorplans .residence-plans .details .floorplan:hover,
+#floorplans .residence-plans .details .download:hover,
+#floorplans .residence-plans .details .siteplan:hover,
+#floorplans .residence-plans .details .active {
+	color: var.$theme-clr;
+}
+
+#floorplans .residence-plans .details .plan-links .divider {
+	padding: 0 0.25rem;
+}
+
+#floorplans .residence-plans .details .viewbook {
+	background: url('../img/icon-external-link.svg') no-repeat right 4px center;
+	background-size: 14px;
+	font-weight: 500;
+	margin-bottom: 1.5rem;
+	padding: 0.2rem 1.75rem 0.2rem 0;
+	//border: 1px red solid;
+}
+
+#floorplans .residence-plans .details .viewbook:hover {
+	background: url('../img/icon-external-link.svg') no-repeat right 1px center;
+	background-size: 14px;
+}
+
+#floorplans .residence-plans .details .download {
+	display: inline-block;
+	background: url('../img/residence-arrow-download.svg') no-repeat right center;
+	background-size: 25px;
+	font-weight: 500;
+	padding: 0.2rem 0.5rem 0.2rem 0;
+	//border: 1px red solid;
+}
+
+#floorplans .residence-plans .details .download:hover {
+	background: url('../img/residence-arrow-download.svg') no-repeat right bottom 5px;
+	background-size: 25px;
+	color: var.$theme-clr;
+}
+
+#floorplans .residence-plans .plan {
+	text-align: center;
+	width: 65%;
+	margin-top: 4rem;
+	visibility: visible;
+	animation: fadeIn 0.5s forwards;
+}
+
+#floorplans .residence-plans .plan-image {
+}
+
+#floorplans .residence-plans .plan-image.fadeIn {
+	width: 100%;
+	animation: fadeIn 0.5s forwards;
+}
+
+#floorplans .residence-plans .plan-image.fadeOut {
+	width: 100%;
+	animation: fadeOut 0.5s forwards;
+}
+
+#floorplans .residence-plans .plan img.rooftop {
+	max-width: 75%;
+}
+
+#floorplans .residence-plans img[src='img/D1-601.svg'] {
+	max-width: 90%;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.fadeIn {
+	animation: fadeIn 0.5s forwards;
+}
+
+.fadeOut {
+	animation: fadeOut 0.5s forwards;
+}
+
+@media (max-width: 850px) {
+	#floorplans {
+		padding: 100px 1.25rem;
+	}
+	#floorplans .residence-plans .plan-image {
+		max-width: 100%;
+	}
+	#floorplans .residence-plans {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	#floorplans .residence-plans .details {
+		width: 100%;
+		padding-right: 0;
+		margin-top: 3rem;
+	}
+	#floorplans .residence-plans .plan {
+		width: 100%;
+		margin-top: 2rem;
+	}
+	#floorplans .residence-plans .details ul {
+		columns: 2 150px;
+		column-gap: 2rem;
+	}
+}
+
+@media (max-width: 600px) {
+	#floorplans .residence-plans .details ul {
+		columns: 1 150px;
+		column-gap: 0;
+	}
+}
+
+/* ===========================
+	 BEFORE FOOTER
+=============================== */
+#before-footer div {
+	top: 20%;
+	left: 10%;
+	width: auto;
+	max-width: 700px;
+	padding-right: 0;
+}
+
+#before-footer h3 {
+	color: #fff;
+}
+
+#before-footer div h3:first-child span:last-child {
+	background: url('../img/line-right-wh.svg') repeat-x bottom right;
+}
