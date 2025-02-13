@@ -1,8 +1,0 @@
-[build]
-  publish = "dist"
-  command = "pnpm run build"
-
-[[redirects]]
-from = "/netlify/functions/subscribe.js"
-to = "/.netlify/functions/subscribe"
-status = 200

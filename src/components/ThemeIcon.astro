@@ -79,18 +79,25 @@ import logoLinkedIn from '../img/icon-linkedin.svg';
 </div>
 
 <script is:inline>
-	const theme = (() => {
-		const localStorageTheme = localStorage?.getItem('theme') ?? '';
-		if (['dark', 'light'].includes(localStorageTheme)) {
-			return localStorageTheme;
+	function applyTheme() {
+		localStorage.theme === 'dark' ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
+		if (localStorage.getItem('theme').includes('dark')) {
+			document.getElementsByTagName('path')[0].setAttribute('fill', '#fff');
+			document.getElementsByTagName('path')[1].setAttribute('fill', '#fff');
+			document.getElementsByTagName('path')[2].setAttribute('fill', '#fff');
+			document.getElementsByTagName('path')[3].setAttribute('fill', '#fff');
+			document.getElementsByTagName('path')[1].setAttribute('stroke', '#fff');
+		} else {
+			document.getElementsByTagName('path')[0].setAttribute('fill', '#26262d');
+			document.getElementsByTagName('path')[1].setAttribute('fill', '#26262d');
+			document.getElementsByTagName('path')[2].setAttribute('fill', '#26262d');
+			document.getElementsByTagName('path')[3].setAttribute('fill', '#26262d');
+			document.getElementsByTagName('path')[1].setAttribute('stroke', '#26262d');
 		}
-		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			return 'dark';
-		}
-		return 'light';
-	})();
+	}
 
-	window.localStorage.setItem('theme', theme);
+	document.addEventListener('astro:after-swap', applyTheme);
+	applyTheme();
 
 	const handleToggleClick = () => {
 		const element = document.documentElement;
@@ -114,7 +121,7 @@ import logoLinkedIn from '../img/icon-linkedin.svg';
 		}
 	};
 
-	document.getElementById('themeToggle')?.addEventListener('click', handleToggleClick);
+	document.getElementById('themeToggle').addEventListener('click', handleToggleClick);
 
 	document.addEventListener('astro:page-load', () => {
 		handleToggleClick();

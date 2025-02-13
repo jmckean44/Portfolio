@@ -1,21 +1,21 @@
 ---
-import type { Product } from '../data';
+import type { Item } from '../data';
 
 interface Props {
-	product: Product;
+	item: Item;
 }
 
-const { product } = Astro.props;
-const transitionName = product.slug;
+const { item } = Astro.props;
+const transitionName = item.slug;
 ---
 
-<a href={`/${product.slug}`} class="work-thumbs">
+<a href={`/${item.slug}`} class="work-thumbs">
 	<div>
-		<img src={product.image} alt={product.name} transition:name={`${transitionName} image`} class="work-img" />
+		<img src={item.image} alt={item.name} transition:name={`${transitionName} image`} class="work-img" />
 	</div>
 	<div>
 		<h2 transition:name={`${transitionName} title`}>
-			{product.name}
+			{item.name}
 		</h2>
 	</div>
 </a>
@@ -27,7 +27,6 @@ const transitionName = product.slug;
 		border-radius: 3px;
 		padding: 1rem;
 		margin-top: 0;
-		/* max-width: 440px; */
 		text-decoration: none !important;
 	}
 	@media (max-width: 600px) {

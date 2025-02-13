@@ -1,9 +1,9 @@
-export enum ProductCategory {
+export enum ItemCategory {
 	Projects = 'Projects',
 	Websites = 'websites',
 }
 
-export interface Product {
+export interface Item {
 	id: number;
 	name: string;
 	slug: string;
@@ -13,10 +13,10 @@ export interface Product {
 	website: string;
 	image: string;
 	featured: string;
-	category: ProductCategory;
+	category: ItemCategory;
 }
 
-export const products: Product[] = [
+export const items: Item[] = [
 	{
 		id: 1,
 		name: 'Marina Resort Cavtat',
@@ -27,7 +27,7 @@ export const products: Product[] = [
 		website: 'https://marinaresortcavtat.com/',
 		featured: '#featured',
 		image: '/src/img/sites/mrc.webp',
-		category: ProductCategory.Projects,
+		category: ItemCategory.Projects,
 	},
 	{
 		id: 2,
@@ -39,7 +39,7 @@ export const products: Product[] = [
 		details: 'jQuery, PHP, HTML, CSS, Adobe Suite, MailChimp',
 		link: 'junctionrentals.ca',
 		image: '/src/img/sites/diamond.webp',
-		category: ProductCategory.Projects,
+		category: ItemCategory.Projects,
 	},
 	{
 		id: 3,
@@ -51,7 +51,7 @@ export const products: Product[] = [
 		website: 'https://7dale.com',
 		featured: '',
 		image: '/src/img/sites/no7dale.webp',
-		category: ProductCategory.Projects,
+		category: ItemCategory.Projects,
 	},
 
 	{
@@ -64,7 +64,7 @@ export const products: Product[] = [
 		website: 'https://platinumvista.ca',
 		featured: '',
 		image: '/src/img/sites/platinumVista.webp',
-		category: ProductCategory.Projects,
+		category: ItemCategory.Projects,
 	},
 	{
 		id: 5,
@@ -76,7 +76,7 @@ export const products: Product[] = [
 		website: 'https://mellema.ca',
 		featured: '',
 		image: '/src/img/sites/mellema.webp',
-		category: ProductCategory.Projects,
+		category: ItemCategory.Projects,
 	},
 	{
 		id: 6,
@@ -88,7 +88,7 @@ export const products: Product[] = [
 		website: 'https://260highpark.com/',
 		featured: '',
 		image: '/src/img/sites/260HP.webp',
-		category: ProductCategory.Projects,
+		category: ItemCategory.Projects,
 	},
 	{
 		id: 7,
@@ -100,7 +100,7 @@ export const products: Product[] = [
 		website: 'https://fieldgateconstruction.com/',
 		featured: '',
 		image: '/src/img/sites/fieldgate.webp',
-		category: ProductCategory.Projects,
+		category: ItemCategory.Projects,
 	},
 	{
 		id: 8,
@@ -113,7 +113,7 @@ export const products: Product[] = [
 		website: 'https://kingswaybytheriver.ca/',
 		featured: '',
 		image: '/src/img/sites/kingsway.webp',
-		category: ProductCategory.Projects,
+		category: ItemCategory.Projects,
 	},
 	{
 		id: 9,
@@ -125,7 +125,7 @@ export const products: Product[] = [
 		website: 'https://www.cleanroomsplus.ca/',
 		featured: '',
 		image: '/src/img/sites/cleanrooms.webp',
-		category: ProductCategory.Projects,
+		category: ItemCategory.Projects,
 	},
 	{
 		id: 10,
@@ -137,6 +137,6 @@ export const products: Product[] = [
 		website: 'https://www.wilkinsonconstruction.ca',
 		featured: '',
 		image: '/src/img/sites/wilkinson.webp',
-		category: ProductCategory.Projects,
+		category: ItemCategory.Projects,
 	},
 ];

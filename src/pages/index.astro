@@ -11,8 +11,8 @@ import htmlMRC from '../img/htmls/mrc.jpg';
 import htmlDiamond from '../img/htmls/diamond.jpg';
 import htmlWinslow from '../img/htmls/winslow.jpg';
 import htmlVanguard from '../img/htmls/vanguard.jpg';
-import { products } from '../data/index.ts';
-import ProductCard from '../components/ProductCard.astro';
+import { items } from '../data/index.ts';
+import ProductCard from '../components/ItemCard.astro';
 //import Tooltip from '../components/Tooltip.jsx';
 //import Popover from '../components/Popover.jsx';
 //import TabsDemo from '../components/Tabs.jsx';
@@ -53,30 +53,36 @@ import arthaus from '../img/sites/arthaus.webp';
 import thomas from '../img/sites/7stthomas.webp';
 ---
 
-<Layout pageTitle="Past & Current Work" pageSiteTitles="" title="" details="" description="" description="" website="" image="">
+<Layout pageTitle="Past & Current Work" pageSiteTitles="">
 	<section>
 		<div class="container top-of-page btm" id="intro">
 			<div class="flex padding-x">
 				<div class="cell small-18">
 					<h1 id="greeting" class="slideInUp"></h1>
-					<p class="width">
+				</div>
+			</div>
+			<div class="flex padding-x">
+				<div class="cell small-18 medium-9">
+					<p>
 						This site was built using the <strong><a target="_blank" class="underline" href="https://astro.build/">Astro JS</a></strong> framework with <a
 							class="underline"
 							target="_blank"
 							href="https://www.radix-ui.com/">Radix UI</a
-						>, in places, Lenis native-browser smooth scrolling, and some parallaxing using the <a class="underline" target="_blank" href="https://gsap.com/">GSAP</a> animation library.
+						>, Lenis native-browser smooth scrolling, and some parallaxing using the <a class="underline" target="_blank" href="https://gsap.com/">GSAP</a> animation library.
 					</p>
-					<p class="width">
-						The following examples showcase some of the custom designed brochure websites XXXX for real estate development industry. Typcially, each project starts with a single registration page with
-						a form to capture leads for the sales team, followed by a full version of the site with interactive floor and site plan plan UI, as well as featured and location amenities, photo
-						galleries,and builder related information.
+					<p>The following custom designed brochure site examples for created for P&B Marketing Ltd., a marketing agency that provides services to developers in real estate development industry.</p>
+				</div>
+				<div class="cell small-18 medium-9">
+					<p>
+						Typcially, each project starts with a single registration that capture leads for the sales team, followed by a full version of the site with interactive floor and site plan plan UI, as
+						well as featured and location amenities, photo galleries, and builder related information.
 					</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<div class="line-btm"></div>
+	<!-- <div class="line-btm"></div> -->
 
 	<section>
 		<div class="container top btm" id="current-sites">
@@ -92,7 +98,7 @@ import thomas from '../img/sites/7stthomas.webp';
 					<br />
 
 					<div class="flex">
-						{products.map((product) => <ProductCard {product} />)}
+						{items.map((item) => <ProductCard {item} />)}
 					</div>
 				</div>
 			</div>
@@ -477,14 +483,33 @@ import thomas from '../img/sites/7stthomas.webp';
 	</script>
 
 	<script is:inline>
-		document.addEventListener('DOMContentLoaded', () => {
-			const video = document.querySelector('.fireworks');
-			const themeToggle = document.querySelector('#themeToggle');
-			themeToggle.addEventListener('click', () => {
-				if (video.getAttribute('src') === '/fireworks-drk.mp4') {
-					video.setAttribute('src', '/fireworks-wh.mp4');
-				} else video.setAttribute('src', '/fireworks-drk.mp4');
-			});
+		const video = document.querySelector('.fireworks');
+
+		document.getElementById('themeToggle').addEventListener('click', () => {
+			if (localStorage.getItem('theme') && localStorage.getItem('theme').includes('dark')) {
+				video.setAttribute('src', '/fireworks-drk.mp4');
+			} else {
+				video.setAttribute('src', '/fireworks-wh.mp4');
+			}
+			// if (localStorage.getItem('theme').includes('dark')) {
+			// 	video.setAttribute('src', '/fireworks-drk.mp4');
+			// } else {
+			// 	video.setAttribute('src', '/fireworks-wh.mp4');
+			// }
+		});
+
+		document.addEventListener('astro:page-load', () => {
+			if (localStorage.getItem('theme').includes('dark')) {
+				video.setAttribute('src', '/fireworks-drk.mp4');
+			} else {
+				video.setAttribute('src', '/fireworks-wh.mp4');
+			}
+
+			// if (video.getAttribute('src') === '/fireworks-drk.mp4') {
+			// 	video.setAttribute('src', '/fireworks-wh.mp4');
+			// } else {
+			// 	video.setAttribute('src', '/fireworks-drk.mp4');
+			// }
 		});
 	</script>
 

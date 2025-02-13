@@ -88,14 +88,23 @@ html.dark .line-vert {
 	background: repeating-linear-gradient(90deg, #26262d, #555 1.5px, #26262d 0, #26262d);
 }
 
-html.dark #new .project.border {
-	background: #555;
-	border: 1px solid #888;
+html.dark .swiper-slide {
+	background: var.$dark;
+}
+
+html .swiper-slide {
+	background: #fff;
 }
 
 html.dark #new .project {
-	background: #555;
-	border: 1rem solid #888;
+	background: #33333d;
+	border: none;
+	padding: 2rem 1.75rem;
+}
+
+html.dark #new .project .btm {
+	background: var.$theme-clr;
+	border: 1px solid #888;
 	border-radius: 3px;
 	padding: 2rem 1.75rem;
 }
@@ -113,7 +122,7 @@ html.dark #graveyard .graveyard .cell img {
 	border: 1px solid #555;
 }
 
-html.dark #header.headroom--not-bottom.headroom--not-top .nav-links li a {
+html html.dark #header.headroom--not-bottom.headroom--not-top .nav-links li a {
 	background: #26262d;
 	color: #fff;
 	border: 1px solid #555;
@@ -130,7 +139,7 @@ html.dark #header.headroom--not-bottom.headroom--not-top .nav-links li a {
 	right: 1rem;
 	top: 0.5rem;
 	z-index: 9999999999;
-	transition: 0.5s ease all;
+	transition: 1s ease all;
 }
 
 #themeToggle {
