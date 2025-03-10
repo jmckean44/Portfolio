@@ -21,8 +21,9 @@ export const items: Item[] = [
 		id: 1,
 		name: 'Marina Resort Cavtat',
 		slug: 'mrc',
-		description: 'Marina Resort Cavtat is a waterfront resort in the Dubrovnik Riviera area of Croatia with residences including Seaside Villas, Waterfront Apartments, and a Penthouse Collection.',
-		details: 'Javascript, PHP, HTML, CSS, Adobe Suite, multi-language, Salesforce',
+		description: 'Marina Resort Cavtat is a waterfront resort in the Dubrovnik Riviera area of Croatia.',
+		details:
+			'I was asked to create a multi-language website incorporating video, parallax effects, animation, and.... . The site has alot of high resolution images and video. I customized Astros Picture Component to manage responsive image sizing for desktop and mobile cropped formatting/aspect ratios for mobile, with options to serve (in order) avif, webp, and jpg fallback image versions. Videos and animtations were created with Adobe Animate, edited with Adobe Premiere, compressed with Handbrake, and croppped desktop and mobile aspect ratios. I used GSAP, ScrollTrigger, ScrollSmoother, and SplitText to create the effects according to the Art Directors direction. The form submits to Onyx Technologies, a real estate developer software  Salesforce PHP.... swiper... animated video, ',
 		link: 'marinaresortcavtat.com',
 		website: 'https://marinaresortcavtat.com/',
 		featured: '#featured',

@@ -1,22 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const pageTitle = 'Work • Front-end Web Developer • Jeff McKean';
 import { Picture } from 'astro:assets';
-//import Tooltips from '../components/Tooltip.jsx';
-//import banner1 from '../img/banner-1.jpg';
-import banner2 from '../img/banner-2.jpg';
-import lebanonRoad from '../img/paintings/lebanon-road.jpg';
 import html7Dale from '../img/htmls/7dale.jpg';
 import htmlMRC from '../img/htmls/mrc.jpg';
 import htmlDiamond from '../img/htmls/diamond.jpg';
 import htmlWinslow from '../img/htmls/winslow.jpg';
 import htmlVanguard from '../img/htmls/vanguard.jpg';
 import { items } from '../data/index.ts';
-import ProductCard from '../components/ItemCard.astro';
-//import Tooltip from '../components/Tooltip.jsx';
-//import Popover from '../components/Popover.jsx';
-//import TabsDemo from '../components/Tabs.jsx';
-//import Accordion from '../components/Accordion.jsx';
+import ItemCard from '../components/ItemCard.astro';
 import CheckboxGroup from '../components/Checkbox.jsx';
 
 // const obj = {
@@ -70,13 +61,13 @@ import thomas from '../img/sites/7stthomas.webp';
 							href="https://www.radix-ui.com/">Radix UI</a
 						>, Lenis native-browser smooth scrolling, and some parallaxing using the <a class="underline" target="_blank" href="https://gsap.com/">GSAP</a> animation library.
 					</p>
-					<p>The following custom designed brochure site examples for created for P&B Marketing Ltd., a marketing agency that provides services to developers in real estate development industry.</p>
+					<p>
+						The following custom designed brochure site examples were created for P&B Marketing Ltd., a marketing agency that provides services to developers in the real estate development industry.
+					</p>
 				</div>
 				<div class="cell small-18 medium-9">
-					<p>
-						Typcially, each project starts with a single registration that capture leads for the sales team, followed by a full version of the site with interactive floor and site plan plan UI, as
-						well as featured and location amenities, photo galleries, and builder related information.
-					</p>
+					<p>Although similiar structurally, each site has a unique set of design, UI, and lead capture requirements, which are listed in the details. Click on eat site for...</p>
+					<p>For more background information, please visit the <a class="underline" href="/about">Brief History</a> page.</p>
 				</div>
 			</div>
 		</div>
@@ -89,16 +80,16 @@ import thomas from '../img/sites/7stthomas.webp';
 			<div class="flex">
 				<div class="cell small-18">
 					<h1 class="staggerText">Active Sites</h1>
-					<p class="width">Apart from the first few, the following sites were built using the PHP file extension and PHP include expressions for centralizing components.</p>
+					<p class="width">The following more recent sites were built using the Astro JS Framework. Prior sites used the PHP file extension and PHP include expressions for centralizing components.</p>
 					<p class="width">
 						They were designed by a highly imaginative and long-time collaborator, <a target="_blank" class="underline" href="https://ca.linkedin.com/in/yosi-shrem-4444047">Yosi Shrem</a>, the
 						Creative Art Director at <a target="
-						_blank" class="underline" href="https://pbmarketing.ca"> P&B Marketing Ltd</a>.
+						_blank" class="underline" href="https://pbmarketing.ca/work.php"> P&B Marketing Ltd</a>.
 					</p>
 					<br />
 
 					<div class="flex">
-						{items.map((item) => <ProductCard {item} />)}
+						{items.map((item) => <ItemCard {item} />)}
 					</div>
 				</div>
 			</div>
@@ -327,7 +318,7 @@ import thomas from '../img/sites/7stthomas.webp';
 		</section>
 
 		<section id="timeline">
-			<video class="timeline" autoplay playsinline muted loop poster="">
+			<video class="timeline" autoplay playsinline muted loop poster="/timeline-poster.webp">
 				<source src="/timeline.mp4" type="video/mp4" />
 			</video>
 		</section>
@@ -337,7 +328,7 @@ import thomas from '../img/sites/7stthomas.webp';
 				<div class="flex padding-x">
 					<div class="cell">
 						<h1>Web Limbo</h1>
-						<p class="width">A number of the Real Estate projects below have been retired, although some have samples of the marketing materials if you click on them.</p>
+						<p class="width">A number of P&B Real Estate developer projects below have been retired, although some are still active and or have samples of marketing materials if you click on them.</p>
 						<p class="width">
 							On top of the list below, other web projects that I have developed can be seen <a target="_blank" class="underline" href="https://pbmarketing.ca/work.php">here</a>.
 

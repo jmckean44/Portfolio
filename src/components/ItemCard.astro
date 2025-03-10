@@ -9,9 +9,9 @@ const { item } = Astro.props;
 const transitionName = item.slug;
 ---
 
-<a href={`/${item.slug}`} class="work-thumbs">
+<a href={`/${item.slug}`}>
 	<div>
-		<img src={item.image} alt={item.name} transition:name={`${transitionName} image`} class="work-img" />
+		<img src={item.image} alt={item.name} transition:name={`${transitionName} image`} class="image" />
 	</div>
 	<div>
 		<h2 transition:name={`${transitionName} title`}>
@@ -41,10 +41,7 @@ const transitionName = item.slug;
 		margin-top: 1.5rem;
 		margin-bottom: 0;
 	}
-	.work-img {
+	.image {
 		border-radius: 3px;
-	}
-	.work-thumbs {
-		/* max-width: 440px; */
 	}
 </style>

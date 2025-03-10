@@ -21,12 +21,12 @@ html #header {
 	//backdrop-filter: blur(10px);
 }
 
-html.dark body {
-	background: var.$dark !important;
-}
-
 html body {
 	background: var.$light;
+}
+
+html.dark body {
+	background: var.$dark !important;
 }
 
 html.dark #nav-desktop .nav-links > li a {
@@ -49,12 +49,19 @@ html.dark a:hover {
 
 html.dark .nav-links li a.active,
 html.dark .nav-links li a:hover,
-html.dark .work-thumbs h2 {
+html.dark .work-thumbs h2,
+html.dark #new .filter input {
 	color: #fff;
 }
 
 html.dark p {
 	color: var.$font-clr-dark;
+}
+
+html.dark #new .project .btn,
+html.dark #new .project .btn-clear {
+	background: var.$theme-clr !important;
+	border: 0;
 }
 
 html .nav-links li a.active,
@@ -94,6 +101,10 @@ html.dark .swiper-slide {
 
 html .swiper-slide {
 	background: #fff;
+}
+
+html.dark #about p {
+	color: #fff !important;
 }
 
 html.dark #new .project {

@@ -1,33 +1,30 @@
 // HEADROOM
 import Headroom from 'headroom.js';
 
-var myElement = document.querySelector('#header');
-//console.log(myElement); // Debugging log
-var headroom = new Headroom(myElement);
-headroom.init();
-
-(function () {
-	var header = document.querySelector('#header');
-	//console.log(header); // Debugging log
-	if (window.location.hash) {
-		header.classList.add('headroom--unpinned');
-	}
-	var headroomDesktop = new Headroom(header, {
-		tolerance: {
-			up: 50,
-			down: 5,
-		},
-		offset: 75,
-	});
-
-	headroomDesktop.init();
-})();
-
 document.addEventListener('astro:page-load', () => {
+	var myElement = document.querySelector('#header');
+	var headroom = new Headroom(myElement);
+	headroom.init();
+
+	(function () {
+		var header = document.querySelector('#header');
+		if (window.location.hash) {
+			header.classList.add('headroom--unpinned');
+		}
+		var headroomDesktop = new Headroom(header, {
+			tolerance: {
+				down: 100,
+				up: 20,
+			},
+			offset: 100,
+		});
+
+		headroomDesktop.init();
+	})();
+
 	// HEADROOM.JS MOBILE SLIDE UP ON SCROLL
 	(function () {
 		var logoMobile = document.querySelector('.moveUp');
-		//console.log(logoMobile); // Debugging log
 		if (logoMobile) {
 			if (window.location.hash) {
 				logoMobile.classList.add('headroom--unpinned');
@@ -37,7 +34,7 @@ document.addEventListener('astro:page-load', () => {
 					down: 0,
 					up: 0,
 				},
-				offset: 150,
+				offset: 200,
 			});
 
 			headroomMobile.init();
@@ -73,7 +70,6 @@ document.addEventListener('astro:page-load', () => {
 	};
 
 	var elems = document.querySelectorAll('.reveal');
-	//console.log(elems); // Debugging log
 	var Offset = 40;
 
 	forEach(elems, function (element) {

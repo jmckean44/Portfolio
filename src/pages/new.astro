@@ -14,16 +14,24 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 <Layout pageTitle="Learning Curve" pageSiteTitles="">
 	<section>
 		<div class="container top-of-page">
-			<div class="flex padding-x" id="intro">
-				<div class="cell small-18 medium-9">
-					<!-- <h1>Courses</h1> -->
-					<p class="slideInUp">
-						The projects below were created as part of a 37 hour <a target="_blank" class="underline" href="https://www.traversymedia.com/modern-javascript-2-0">Modern JavaScript From The Beginning</a
-						> course and my ongoing interest in learning Javascript, PHP, and SQL.
-					</p>
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h1>Recently Learned</h1>
 				</div>
-				<div class="cell small-18 medium-9">
-					<!-- <p>They are also in my <a target="_blank" class="underline" href="https://github.com/jmckean44">Github</a> account.</p> -->
+			</div>
+
+			<div class="cell small-18 medium-9">
+				<div class="flex padding-x" id="intro">
+					<div class="cell small-18 medium-9">
+						<p class="slideInUp">The components below were created and function according to design requirements provided by XXXX.</p>
+					</div>
+					<div class="cell small-18 medium-9">
+						<p>
+							The other projects are listed as... and were part of a 37 hour <a target="_blank" class="underline" href="https://www.traversymedia.com/modern-javascript-2-0"
+								>Modern JavaScript From The Beginning</a
+							> course and my ongoing interest in learning Javascript, PHP, and SQL.
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -72,7 +80,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 		<div class="container top btm-sm">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h2>Floor Plan UI</h2>
+					<h2>Floor Plan UI for a Resort Site</h2>
 				</div>
 			</div>
 
@@ -167,7 +175,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 			color: #fff;
 			border: none;
 			border-radius: 3px;
-			padding: 10px 15px;
+			padding: 0.5rem 0.75rem;
 			cursor: pointer;
 		}
 
@@ -194,11 +202,11 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 		.btn-clear {
 			margin-top: 3rem;
 			font-size: 1.2rem;
-			background: rgba(255, 255, 255, 0.8);
-			color: #333;
+			background: var.$theme-color;
+			color: #fff;
 			border: 1px solid #ccc;
 			border-radius: 3px;
-			padding: 10px 20px;
+			padding: 0.5rem 0.75rem;
 			display: inline-block;
 			cursor: pointer;
 		}
@@ -215,8 +223,8 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 
 		.items {
 			margin: 2rem 0 0 0;
-			display: flex;
-			flex-wrap: wrap;
+			/* display: flex;
+			flex-wrap: wrap; */
 		}
 
 		.items li {

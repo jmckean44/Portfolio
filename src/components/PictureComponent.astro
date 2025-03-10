@@ -6,27 +6,37 @@ interface Props {
 	mobileImgUrl: string | ImageMetadata;
 	desktopImgUrl: string | ImageMetadata;
 	className: string;
-	loading: string | ImageMetadata;
+	loading: string;
 	alt: string;
 }
 
 const { mobileImgUrl, desktopImgUrl, className, loading, alt } = Astro.props;
 
-const mobileImg = await getImage({
+const mobileImgWebp = await getImage({
 	src: mobileImgUrl,
 	format: 'webp',
-	loading: 'lazy | eager',
 });
 
-const desktopImg = await getImage({
+const mobileImgAvif = await getImage({
+	src: mobileImgUrl,
+	format: 'avif',
+});
+
+const desktopImgWebp = await getImage({
 	src: desktopImgUrl,
 	format: 'webp',
-	loading: 'lazy | eager',
+});
+
+const desktopImgAvif = await getImage({
+	src: desktopImgUrl,
+	format: 'avif',
 });
 ---
 
 <picture>
-	<source media="(max-width: 800px)" srcset={mobileImg.src} />
-	<source media="(min-width: 801px)" srcset={desktopImg.src} />
-	<img src={desktopImg.src} class={className} loading={loading as 'eager' | 'lazy'} alt={alt} />
+	<source type="image/avif" media="(max-width: 800px)" srcset={mobileImgAvif.src} />
+	<source type="image/webp" media="(max-width: 800px)" srcset={mobileImgWebp.src} />
+	<source type="image/avif" media="(min-width: 801px)" srcset={desktopImgAvif.src} />
+	<source type="image/webp" media="(min-width: 801px)" srcset={desktopImgWebp.src} />
+	<img src={desktopImgWebp.src} class={className} loading={loading as 'eager' | 'lazy'} alt={alt} width={desktopImgWebp.attributes.width} height={desktopImgWebp.attributes.height} />
 </picture>
