@@ -55,11 +55,13 @@ import thomas from '../img/sites/7stthomas.webp';
 			<div class="flex padding-x">
 				<div class="cell small-18 medium-9">
 					<p>
-						This site was built using the <strong><a target="_blank" class="underline" href="https://astro.build/">Astro JS</a></strong> framework with <a
+						This site was built using the <strong><a target="_blank" href="https://astro.build/" class="underline" aria-label="offsite link to Astro.build">Astro JS</a></strong> framework with <a
 							class="underline"
+							aria-label="offsite link to radix-ui.com"
 							target="_blank"
 							href="https://www.radix-ui.com/">Radix UI</a
-						>, Lenis native-browser smooth scrolling, and some parallaxing using the <a class="underline" target="_blank" href="https://gsap.com/">GSAP</a> animation library.
+						>, Lenis native-browser smooth scrolling, and some parallaxing using the <a class="underline" target="_blank" href="https://gsap.com/" aria-label="offsite link to gsap.com">GSAP</a> animation
+						library.
 					</p>
 					<p>
 						The following custom designed brochure site examples were created for P&B Marketing Ltd., a marketing agency that provides services to developers in the real estate development industry.
@@ -80,13 +82,25 @@ import thomas from '../img/sites/7stthomas.webp';
 			<div class="flex">
 				<div class="cell small-18">
 					<h1 class="staggerText">Active Sites</h1>
-					<p class="width">The following more recent sites were built using the Astro JS Framework. Prior sites used the PHP file extension and PHP include expressions for centralizing components.</p>
 					<p class="width">
-						They were designed by a highly imaginative and long-time collaborator, <a target="_blank" class="underline" href="https://ca.linkedin.com/in/yosi-shrem-4444047">Yosi Shrem</a>, the
-						Creative Art Director at <a target="
-						_blank" class="underline" href="https://pbmarketing.ca/work.php"> P&B Marketing Ltd</a>.
+						The following more recent sites were built using the Astro JS Framework for <a
+							target="
+						_blank"
+							href="https://pbmarketing.ca/work.php"
+							class="underline"
+							aria-label="offsite link to pbmarketing.ca">
+							P&B Marketing Ltd</a
+						>. Prior to using Astro, PHP was used for centralizing components.
 					</p>
 					<br />
+
+					<div id="filter-sites">
+						<ul>
+							<li>PHP</li>
+							<li>Astro</li>
+							<li>CMS</li>
+						</ul>
+					</div>
 
 					<div class="flex">
 						{items.map((item) => <ItemCard {item} />)}
@@ -133,7 +147,7 @@ import thomas from '../img/sites/7stthomas.webp';
 					</div>
 					<div class="cell small-18">
 						<p class="width">
-							The following selection of recent <strong>Email campaigns</strong> were hand-coded in Visusal Studio Code, tested in Litmus, and deployed through Mailchimp.
+							The following selection of <strong>HTML Email campaigns</strong> were hand-coded in Visusal Studio Code, tested in Litmus, and deployed through Mailchimp.
 						</p>
 						<div class="cell small-18">
 							<p class="width">To receive an example HTML in your inbox, select one, enter your email address, and click send.</p>
@@ -144,27 +158,27 @@ import thomas from '../img/sites/7stthomas.webp';
 					<div>
 						<CheckboxGroup />
 						<Picture src={html7Dale} formats={['avif', 'webp']} quality="" alt="7 Dale" />
-						<button><a href="">SEND</a></button>
+						<button>SEND</button>
 					</div>
 					<div>
 						<CheckboxGroup />
 						<Picture src={htmlMRC} formats={['avif', 'webp']} quality="" alt="Marina Resort Cavtat" />
-						<button><a href="">SEND</a></button>
+						<button>SEND</button>
 					</div>
 					<div>
 						<CheckboxGroup />
 						<Picture src={htmlWinslow} formats={['avif', 'webp']} quality="" alt="The Winslow" />
-						<button><a href="">SEND</a></button>
+						<button>SEND</button>
 					</div>
 					<div>
 						<CheckboxGroup />
 						<Picture src={htmlVanguard} formats={['avif', 'webp']} quality="" alt="The Vanguard" />
-						<button><a href="">SEND</a></button>
+						<button>SEND</button>
 					</div>
 					<div>
 						<CheckboxGroup />
 						<Picture src={htmlDiamond} formats={['avif', 'webp']} quality="" alt="The Diamond Rentals" />
-						<button><a href="">SEND</a></button>
+						<button>SEND</button>
 					</div>
 				</div>
 			</div>
@@ -266,7 +280,7 @@ import thomas from '../img/sites/7stthomas.webp';
 						<source src="/Fortune-District-Ad-1.mp4" type="video/mp4" />
 					</video>
 					<h4>Commercial Space</h4>
-					<button><a target="_blank" href="https://fortunedistrict.ca">fortunedistrict.ca</a></button>
+					<button><a target="_blank" href="https://fortunedistrict.ca" aria-label="offsite link to fortunedistrict.ca">fortunedistrict.ca</a></button>
 				</div>
 				<div>
 					<video playsinline muted poster="">
@@ -279,28 +293,28 @@ import thomas from '../img/sites/7stthomas.webp';
 						<source src="/MRC-Facebook.mp4" type="video/mp4" />
 					</video>
 					<h4>Croatian Resort</h4>
-					<button><a target="_blank" href="https://marinaresortcavtat.com/">marinaresortcavtat.com</a></button>
+					<button><a target="_blank" href="https://marinaresortcavtat.com/" aria-label="offsite link to marinaresortcavtat.com">marinaresortcavtat.com</a></button>
 				</div>
 				<div>
 					<video playsinline muted controls poster="">
 						<source src="/Greenhaus-sky.mp4" type="video/mp4" />
 					</video>
 					<h4>Condominiums</h4>
-					<button><a target="_blank" href="https://fortunedistrict.ca">fortunedistrict.ca</a></button>
+					<button><a target="_blank" href="https://fortunedistrict.ca" aria-label="offsite link to fortunedistrict.ca">fortunedistrict.ca</a></button>
 				</div>
 				<div>
 					<video playsinline muted controls poster="">
 						<source src="/MRC-Ad-1.mp4" type="video/mp4" />
 					</video>
 					<h4>Croatian Resort</h4>
-					<button><a target="_blank" href="https://marinaresortcavtat.com/">marinaresortcavtat.com</a></button>
+					<button><a target="_blank" href="https://marinaresortcavtat.com/" aria-label="offsite link to marinaresortcavtat.com">marinaresortcavtat.com</a></button>
 				</div>
 				<div>
 					<video playsinline muted controls poster="">
 						<source src="/MRC-Ad-7.mp4" type="video/mp4" />
 					</video>
 					<h4>Croatian Resort Ad</h4>
-					<button><a target="_blank" href="https://marinaresortcavtat.com/">marinaresortcavtat.com</a></button>
+					<button><a target="_blank" href="https://marinaresortcavtat.com/" aria-label="offsite link to marinaresortcavtat.com">marinaresortcavtat.com</a></button>
 				</div>
 				<div>
 					<video playsinline muted controls poster="">
@@ -330,7 +344,12 @@ import thomas from '../img/sites/7stthomas.webp';
 						<h1>Web Limbo</h1>
 						<p class="width">A number of P&B Real Estate developer projects below have been retired, although some are still active and or have samples of marketing materials if you click on them.</p>
 						<p class="width">
-							On top of the list below, other web projects that I have developed can be seen <a target="_blank" class="underline" href="https://pbmarketing.ca/work.php">here</a>.
+							On top of the list below, other web projects that I have developed can be seen <a
+								target="_blank"
+								class="underline"
+								href="https://pbmarketing.ca/work.php"
+								aria-label="offsite link to pbmarketing.ca">here</a
+							>.
 
 							<p>They were also built using PHP, jQuery, HTML, and SCSS/CSS.</p>
 							<br />
@@ -339,25 +358,25 @@ import thomas from '../img/sites/7stthomas.webp';
 				</div>
 				<div class="flex padding-x small-up-2 medium-up-3 large-up-4 graveyard">
 					<div class="cell">
-						<a href="https://theravine.ca/" target="_blank">
+						<a href="https://theravine.ca/" target="_blank" aria-label="offsite link to theravine.ca">
 							<Image src={ravine} class="" alt="The Ravine" />
 							<p>The Ravine</p>
 						</a>
 					</div>
 					<div class="cell">
-						<a href="https://pbmarketing.ca/work-arthaus.php" target="_blank">
+						<a href="https://pbmarketing.ca/work-arthaus.php" target="_blank" aria-label="offsite link to work-arthaus.php">
 							<Image src={arthaus} class="" alt="Arthaus" />
 							<p>Arthaus</p>
 						</a>
 					</div>
 					<div class="cell">
-						<a href="https://pbmarketing.ca/work-shiplake.php" target="_blank">
+						<a href="https://pbmarketing.ca/work-shiplake.php" target="_blank" aria-label="offsite link to work-shiplake.php">
 							<Image src={shiplake} class="" alt="Shiplake Rental Management" />
 							<p>Shiplake Rental Mgmt.</p>
 						</a>
 					</div>
 					<div class="cell">
-						<a href="https://pbmarketing.ca/work-7stThomas.php" target="_blank">
+						<a href="https://pbmarketing.ca/work-7stThomas.php" target="_blank" aria-label="offsite link to work-7stThomas.php">
 							<Image src={thomas} class="" alt="7 St. Thomas" />
 							<p>7 St. Thomas</p>
 						</a>
@@ -371,7 +390,7 @@ import thomas from '../img/sites/7stthomas.webp';
 						<p>The Barrington</p>
 					</div>
 					<div class="cell">
-						<a href="https://pbmarketing.ca/work-boathaus.php" target="_blank">
+						<a href="https://pbmarketing.ca/work-boathaus.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-boathaus.php">
 							<Image src={boathaus} class="" alt="Boathaus" />
 							<p>Boathaus</p>
 						</a>
@@ -381,7 +400,7 @@ import thomas from '../img/sites/7stthomas.webp';
 						<p>Brownstones</p>
 					</div>
 					<div class="cell">
-						<a href="https://pbmarketing.ca/work-delisle.php" target="_blank">
+						<a href="https://pbmarketing.ca/work-delisle.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-delisle.php">
 							<Image src={delisle} class="" alt="Delisle Dentistry" />
 							<p>Delisle Dentistry</p>
 						</a>
@@ -403,7 +422,7 @@ import thomas from '../img/sites/7stthomas.webp';
 						<p>Guildwood Condos</p>
 					</div>
 					<div class="cell">
-						<a href="http://jacjacobson.com" target="_blank">
+						<a href="http://jacjacobson.com" target="_blank" aria-label="offsite link to jacjacobson.com">
 							<Image src={jac} class="" alt="Jack Jacobson Photography" />
 							<p>Jack Jacobson Photography</p>
 						</a>
@@ -413,7 +432,7 @@ import thomas from '../img/sites/7stthomas.webp';
 						<p>Aquavil</p>
 					</div>
 					<div class="cell">
-						<a href="https://kingswaybytheriver.ca/" target="_blank">
+						<a href="https://kingswaybytheriver.ca/" target="_blank" aria-label="offsite link to kingswaybytheriver.ca">
 							<Image src={kingsway} class="" alt="Kingsway By The River" />
 							<p>Kingsway By The River</p>
 						</a>
@@ -776,36 +795,4 @@ import thomas from '../img/sites/7stthomas.webp';
 			margin: 0 auto;
 		}
 	</style>
-	<!-- 
-<script is:inline>
-	const video = document.querySelectorAll('video');
-	const playBtn = document.querySelectorAll('play-btn');
-
-	document.addEventListener('DOMContentLoaded', () => {
-		const videoContainer = document.querySelector('.video-container');
-		const video = document.querySelectorAll('video');
-		const overlay = document.querySelector('.overlay');
-
-		function playVideo() {
-			(video as HTMLVideoElement).play();
-			if (overlay) {
-				(overlay as HTMLElement).style.opacity = '0';
-			}
-		}
-
-		function pauseVideo() {
-			(video as HTMLVideoElement).pause();
-			(overlay as HTMLElement).style.opacity = '1';
-		}
-
-		videoContainer.forEach((video) => {
-			video.addEventListener('mouseenter', playVideo);
-			video.addEventListener('mouseleave', pauseVideo);
-
-			// Add touch support for mobile devices
-			video.addEventListener('touchstart', playVideo);
-			video.addEventListener('touchend', pauseVideo);
-		});
-	});
-</script> -->
 </Layout>

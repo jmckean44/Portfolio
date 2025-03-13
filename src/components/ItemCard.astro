@@ -9,7 +9,7 @@ const { item } = Astro.props;
 const transitionName = item.slug;
 ---
 
-<a href={`/${item.slug}`}>
+<a href={`/${item.slug}`} class={item.type}>
 	<div>
 		<img src={item.image} alt={item.name} transition:name={`${transitionName} image`} class="image" />
 	</div>
@@ -22,7 +22,7 @@ const transitionName = item.slug;
 
 <style>
 	a {
-		flex: 1 1 400px;
+		flex: 1 1 300px;
 		background: #f5f5f5;
 		border-radius: 3px;
 		padding: 1rem;

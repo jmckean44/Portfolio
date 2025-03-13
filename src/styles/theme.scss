@@ -120,6 +120,18 @@ html.dark #new .project .btm {
 	padding: 2rem 1.75rem;
 }
 
+html.dark #new #floorplans .residence-plans .details h3,
+html.dark #new #floorplans .residence-plans .details h4,
+html.dark #new #floorplans .residence-plans .details h5,
+html.dark #new #floorplans .residence-plans .details a,
+html.dark #new #floorplans .residence-plans .details .divider {
+	color: #fff;
+}
+
+html.dark #new .residence-plans img {
+	filter: invert(1);
+}
+
 html.dark ul,
 html.dark #new #floorplans h3 {
 	color: #fff;

@@ -28,14 +28,14 @@
 	src: url('../fonts/calibrii.eot') format('embedded-opentype'), url('../fonts/calibrii.woff') format('woff'), url('../fonts/calibrii.ttf') format('truetype'),
 		url('../fonts/calibrii.svg') format('svg');
 	font-weight: normal;
-	font-style: normal;
+	font-style: italic;
 	font-display: block;
 }
 @font-face {
 	font-family: 'CalibriBold';
 	src: url('../fonts/calibrib.eot') format('embedded-opentype'), url('../fonts/calibrib.woff') format('woff'), url('../fonts/calibrib.ttf') format('truetype'),
 		url('../fonts/calibrib.svg') format('svg');
-	font-weight: normal;
+	font-weight: bold;
 	font-style: normal;
 	font-display: block;
 }
@@ -273,6 +273,11 @@ p {
 	text-wrap: pretty;
 }
 
+.bold {
+	font-family: 'CalibriBold', sans-serif;
+	font-weight: bold;
+}
+
 /* =============================================
 	 IMAGES
 ================================================ */
@@ -482,16 +487,6 @@ section {
 	padding: 300px 1.25rem 100px;
 }
 
-// @media (max-width: 1500px) {
-// 	.container.top-of-page {
-// 		padding: 20% 1.25rem 0;
-// 	}
-
-// 	.container.top-of-page.btm {
-// 		padding: 20% 1.25rem 100px;
-// 	}
-// }
-
 @media (max-width: var.$mobile) {
 	.container.top {
 		padding: 70px 1.25rem 0;
@@ -598,14 +593,14 @@ p a {
 	text-decoration: underline;
 }
 
-/* =============================================
-	  		E-LINK SITES
-================================================ */
-// #mining img {
-// 	border: 1px #ccc solid;
-// 	border-radius: 5px;
-// 	padding: 10px;
-// }
+/* =================================
+	 CURRENT SITES SORTING BUTTONS
+==================================== */
+#home #filter-sites ul {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 2rem;
+}
 
 /* =============================================
 	 FEATURES 
@@ -784,6 +779,10 @@ p a {
 /* =============================================
 	NEW PAGE
 ================================================ */
+#new .curve {
+	display: none;
+}
+
 #new .project {
 	padding: 3rem 1.75rem 2rem;
 	background: #eff3eb;
@@ -796,6 +795,11 @@ p a {
 	background: #fff;
 	border-radius: 3px;
 	border: 1px #ccc solid;
+}
+
+#new .project#generate-user img {
+	max-width: 150px;
+	margin-bottom: 1rem;
 }
 
 /* =============================================

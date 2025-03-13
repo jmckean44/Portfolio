@@ -8,7 +8,7 @@ import icon from 'astro-icon';
 export default defineConfig({
 	//server: { port: parseInt(import.meta.env.PORT) || 4321, host: true },
 	site: 'https://jmckean44.netlify.com',
-	output: 'server',
+	output: 'static',
 	integrations: [sitemap(), icon(), react()],
 	prefetch: true,
 	adapter: node({
