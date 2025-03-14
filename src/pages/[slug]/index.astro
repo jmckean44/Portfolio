@@ -39,7 +39,7 @@ if (!item) {
 				<p class="link" transition:name={`${slug} link`}>
 					<a href={item.website} target="_blank">{item.link}</a>
 				</p>
-				<p transition:name={`${slug} description`}>
+				<p class="description" transition:name={`${slug} description`}>
 					{item.description}
 				</p>
 				<p class="details" transition:name={`${slug} details`}>
@@ -114,15 +114,22 @@ if (!item) {
 			}
 		}
 		h1 {
+			font-size: min(max(2.5rem, 3.5vw), 50px);
 			margin-bottom: 0.25rem;
 			/* border: 1px red solid; */
 		}
 		.link {
 			font-size: 1rem;
+			font-style: italic;
 		}
 		.details {
-			font-weight: bold;
+			font-family: 'CalibriBold', sans-serif;
+			font-size: 0.95rem;
 		}
+		.description {
+			font-size: 1.1rem;
+		}
+
 		.website {
 			color: #fff;
 			background: #ff9000;

@@ -1,24 +1,19 @@
 @use 'variables' as var;
 
-$input-font: var.$theme-font;
+$input-font: var.$font-sans-serif;
 $input-font-size: 0.85rem !important;
 $input-font-size-button: 14px;
 $input-font-clr: var.$dark !important;
-$input-font-weight: bold !important;
 $input-font-spacing: 1px;
 $input-background-clr: transparent;
 $input-background-focus: transparent;
 $input-boxshadow: 0 #ccc 5px;
-$input-button-padding: 1rem 1.25rem;
-$input-button-margin: 0 0 1rem 0;
-$input-button-bg: var.$theme-clr;
 $input-button-clr: #fff;
-$input-button-clr-hover: #000;
 $input-button-border: 2px #fff solid;
 $input-border-radius: 2px !important;
-$input-border: 1px var.$theme-clr solid;
+$input-border: 1px var.$dark solid;
 $input-span-bg: #fff;
-$input-padding: 0.6rem 0.9rem !important;
+$input-padding: 0.7rem 1rem 0.6rem !important;
 
 $input-line-height: 1;
 
@@ -55,7 +50,7 @@ form p {
 	font-style: italic;
 }
 
-#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+.form div.error {
 	margin: 0rem 0 0.5rem !important;
 	padding: 0 !important;
 	background-color: transparent !important;
@@ -67,11 +62,7 @@ form p {
 	color: var.$theme-clr !important;
 }
 
-#mc_embed_signup .mc-field-group input {
-	text-indent: 0 !important;
-}
-
-#mc_embed_signup div.response {
+.form div.response {
 	font-family: var.$theme-font !important;
 	margin: 0 !important;
 	padding: 0 !important;
@@ -81,33 +72,6 @@ form p {
 	color: var.$dark !important;
 	font-weight: 600 !important;
 	text-transform: none;
-}
-
-#mc_embed_signup div#mce-responses {
-	top: 0 !important;
-	padding: 0 !important;
-	width: 100% !important;
-	margin: 1rem 0 2rem !important;
-}
-
-#mc_embed_signup #mce-success-response {
-	color: var.$dark !important;
-}
-
-#mc_embed_signup .button,
-form .button {
-	border: 0;
-	padding: 0.25rem 1.5rem !important;
-	background: var.$theme-clr !important;
-	color: #fff;
-	font-weight: 600 !important;
-	letter-spacing: 1px;
-	cursor: pointer;
-	margin: 5px 0 0 !important;
-	height: auto !important;
-	text-transform: uppercase;
-	font-family: var.$theme-font;
-	border-radius: $input-border-radius;
 }
 
 form span.helperText {
@@ -134,11 +98,11 @@ form .message {
 	font-weight: bold;
 }
 
-#mc-embedded-subscribe-form div {
+.form div {
 	position: relative;
 }
 
-#mc-embedded-subscribe-form span {
+.form span {
 	position: absolute;
 	top: 3px;
 	right: 3px;
@@ -152,13 +116,13 @@ form .message {
 	opacity: 0;
 }
 
-#mc-embedded-subscribe-form input:focus + span,
-#mc-embedded-subscribe-form textarea:focus + span,
-#mc-embedded-subscribe-form input:focus ~ label + span {
+.form input:focus + span,
+.form textarea:focus + span,
+.form input:focus ~ label + span {
 	opacity: 1 !important;
 }
 
-#mc-embedded-subscribe-form input ~ label + span {
+.form input ~ label + span {
 	opacity: 0 !important;
 }
 
@@ -203,11 +167,11 @@ label {
 	cursor: pointer;
 }
 
-#mc_embed_signup .mc-field-group.input-group label {
+.form .mc-field-group.input-group label {
 	display: flex !important;
 }
 
-#mc_embed_signup .mc-field-group label {
+.form .mc-field-group label {
 	margin-bottom: 0 !important;
 }
 
@@ -218,7 +182,7 @@ form input:focus ~ label + span {
 	transition: $input-transition;
 }
 
-#mc-embedded-subscribe-form label.error {
+.form label.error {
 	margin: -10px 0 1rem 0 !important;
 	padding: 0 !important;
 	background-color: transparent !important;
@@ -244,6 +208,35 @@ textarea::placeholder {
 [placeholder]:focus::-webkit-input-placeholder {
 	transition: opacity 0.2s 0.2s ease;
 	opacity: 0;
+}
+
+/* ====================================
+	 BUTTONS
+======================================= */
+button {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.btn {
+	background: #26262d;
+	display: block;
+	width: 100%;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	padding: 0.4rem 1rem 0.3rem;
+	cursor: pointer;
+	margin-top: 1rem;
+	text-align: center;
+	font-size: 0.9rem;
+	font-family: 'CalibriBold', sans-serif;
+	transition: all ease 0.5s;
+}
+
+.btn:hover {
+	background: #ff9000;
+	color: #fff;
 }
 
 /* =============================================
@@ -273,9 +266,8 @@ textarea {
 	width: 100%;
 	padding: $input-padding;
 	margin: $input-margin;
-	font-family: $input-font !important;
+	font-family: 'Calibribold', sans-serif;
 	font-size: $input-font-size;
-	font-weight: $input-font-weight;
 	color: var.$dark !important;
 	-webkit-text-fill-color: var.$dark !important;
 	text-transform: uppercase;
@@ -317,7 +309,7 @@ textarea {
 	height: auto;
 	font-family: inherit;
 	margin: $input-margin;
-	font-weight: $input-font-weight;
+	font-family: 'Calibribold', sans-serif;
 	background: $input-background-clr;
 	border-radius: $input-border-radius;
 }
@@ -332,7 +324,7 @@ select {
 	margin-bottom: 0.5rem;
 	font-size: $input-font-size;
 	text-transform: uppercase !important;
-	font-weight: $input-font-weight;
+	font-family: 'Calibribold', sans-serif;
 	font-family: $input-font !important;
 	letter-spacing: $input-font-spacing;
 	color: var.$dark !important;
@@ -451,33 +443,6 @@ label {
 	font-size: 1rem;
 	font-weight: 600;
 	color: var.$dark;
-}
-
-input[type='radio'] {
-	--s: 1em; /* control the size */
-	height: var(--s);
-	aspect-ratio: 1;
-	border: calc(var(--s) / 8) solid $input-button-bg;
-	padding: calc(var(--s) / 8);
-	background: radial-gradient(farthest-side, $input-button-bg 94%, #0000) 50%/0 0 no-repeat content-box;
-	border-radius: 50%;
-	outline-offset: calc(var(--s) / 10);
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	cursor: pointer;
-	font-size: inherit;
-	transition: 0.3s;
-}
-input[type='radio']:checked {
-	border-color: var.$theme-clr;
-	background-size: 100% 100%;
-}
-
-input[type='radio']:disabled {
-	background: linear-gradient(#939393 0 0) 50%/100% 20% no-repeat content-box;
-	opacity: 0.5;
-	cursor: not-allowed;
 }
 
 .submit-button {

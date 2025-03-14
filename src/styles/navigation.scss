@@ -7,7 +7,7 @@
 nav {
 	max-width: 1400px;
 	margin: 0 auto;
-	padding: 0 1.25rem;
+	//padding: 0 3%;
 	text-align: center;
 	position: relative;
 	z-index: 99999999;
@@ -17,16 +17,21 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	transition: all ease-out 0.5s;
+}
+
+.nav-links li {
+	text-align: center;
 }
 
 .nav-links li a {
 	font-family: 'SteelfishRegular';
-	font-size: min(max(2rem, 6vw), 100px);
+	font-size: min(max(1.5rem, 6vw), 100px);
 	color: var.$font-clr;
 	display: inline-block;
 	text-align: center;
 	border: 1px solid transparent;
-	padding: 3.5rem 0 0.75rem;
+	padding: 2.5rem 0 0.75rem;
 	text-decoration: none;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -41,6 +46,7 @@ nav {
 	font-size: 30%;
 	display: block;
 	letter-spacing: 1px;
+	margin-bottom: 3px;
 	color: #98999e;
 }
 
@@ -53,9 +59,10 @@ nav {
 	background-size: auto 3%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
 	.nav-links li a {
 		padding: 1rem 0 0.75rem;
+		//border: 1px red solid;
 	}
 }
 

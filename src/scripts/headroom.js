@@ -13,10 +13,10 @@ document.addEventListener('astro:page-load', () => {
 		}
 		var headroomDesktop = new Headroom(header, {
 			tolerance: {
-				down: 100,
+				down: 50,
 				up: 20,
 			},
-			offset: 100,
+			offset: 50,
 		});
 
 		headroomDesktop.init();

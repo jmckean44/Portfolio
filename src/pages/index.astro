@@ -1,25 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Picture } from 'astro:assets';
+import { Image } from 'astro:assets';
+import { items } from '../data/index.ts';
+import '../styles/form.scss';
+import ItemCard from '../components/ItemCard.astro';
 import html7Dale from '../img/htmls/7dale.jpg';
 import htmlMRC from '../img/htmls/mrc.jpg';
 import htmlDiamond from '../img/htmls/diamond.jpg';
 import htmlWinslow from '../img/htmls/winslow.jpg';
 import htmlVanguard from '../img/htmls/vanguard.jpg';
-import { items } from '../data/index.ts';
-import ItemCard from '../components/ItemCard.astro';
 import CheckboxGroup from '../components/Checkbox.jsx';
-
-// const obj = {
-// 	listItems: ['first item', 'seconds item', 'third item'],
-// };
-// const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5');
-// const data = await response.json();
-
-import { Image } from 'astro:assets';
 import laptop from '../img/laptop.png';
 import mobile from '../img/mobile.png';
-
+import fact from '../img/fact.webp';
 import aquavil from '../img/sites/aquavil.jpg';
 import barrington from '../img/sites/barrington.jpg';
 import boathaus from '../img/sites/boathaus.jpg';
@@ -53,427 +47,357 @@ import thomas from '../img/sites/7stthomas.webp';
 				</div>
 			</div>
 			<div class="flex padding-x">
-				<div class="cell small-18 medium-9">
-					<p>
-						This site was built using the <strong><a target="_blank" href="https://astro.build/" class="underline" aria-label="offsite link to Astro.build">Astro JS</a></strong> framework with <a
-							class="underline"
-							aria-label="offsite link to radix-ui.com"
-							target="_blank"
-							href="https://www.radix-ui.com/">Radix UI</a
-						>, Lenis native-browser smooth scrolling, and some parallaxing using the <a class="underline" target="_blank" href="https://gsap.com/" aria-label="offsite link to gsap.com">GSAP</a> animation
-						library.
-					</p>
-					<p>
-						The following custom designed brochure site examples were created for P&B Marketing Ltd., a marketing agency that provides services to developers in the real estate development industry.
-					</p>
-				</div>
-				<div class="cell small-18 medium-9">
-					<p>Although similiar structurally, each site has a unique set of design, UI, and lead capture requirements, which are listed in the details. Click on eat site for...</p>
-					<p>For more background information, please visit the <a class="underline" href="/about">Brief History</a> page.</p>
+				<div class="cell small-18">
+					<div class="columns-list">
+						<p>
+							<strong class="bold"
+								>With a foundation in composition, design, and motion, I apply principles from these disciplines towards the meticulous nature of creating visually compelling digital content that
+								functions on all devices.</strong
+							>
+							<p>
+								My experience working for smaller agencies as the principal front-end web developer and multimedia specialist has given me the opportunity to work on a diverse range of
+								responsibilities related to digital marketing communications.
+							</p>
+							<p>
+								From coding custom designed registration sites connected to <span class="bold">cloud database systems</span>, constructing and deploying responsive <span class="bold"
+									>HTML Email Ad campaigns</span
+								>, conceptualizing <span class="bold">animations for web and social media</span> platforms, <span class="bold">video editing</span>, effects, and compression to managing client <span
+									class="bold">Google Cloud Platform</span
+								> and Meta integrations, hosting, domains, DNS, and accounts for third party services connected with our company and client sites.
+							</p>
+						</p>
+						<Image src={fact} class="fact" alt="Fact" />
+						<p class="fact-details">
+							This site was built using the <strong><a target="_blank" href="https://astro.build/" class="underline" aria-label="offsite link to Astro.build">Astro JS</a></strong> framework with <a
+								class="underline"
+								aria-label="offsite link to radix-ui.com"
+								target="_blank"
+								href="https://www.radix-ui.com/">Radix UI</a
+							>, Lenis native-browser smooth scrolling, and some parallaxing using the <a class="underline" target="_blank" href="https://gsap.com/" aria-label="offsite link to gsap.com">GSAP</a> animation
+							library.
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- <div class="line-btm"></div> -->
-
-	<section>
-		<div class="container top btm" id="current-sites">
-			<div class="flex">
-				<div class="cell small-18">
-					<h1 class="staggerText">Active Sites</h1>
-					<p class="width">
-						The following more recent sites were built using the Astro JS Framework for <a
-							target="
-						_blank"
-							href="https://pbmarketing.ca/work.php"
-							class="underline"
-							aria-label="offsite link to pbmarketing.ca">
-							P&B Marketing Ltd</a
-						>. Prior to using Astro, PHP was used for centralizing components.
+	<section id="current-sites">
+		<div class="container top btm">
+			<div class="flex padding-x">
+				<div class="cell small-18 medium-9">
+					<h1>Active Sites</h1>
+					<p>
+						The following custom designed site examples were created for <a target=" _blank" href="https://pbmarketing.ca/" class="underline" aria-label="offsite link to
+						pbmarketing.ca"
+							>P&B Marketing</a
+						>, a full-service marketing agency that offers a comprehensive suite of marketing services, encompassing everything from strategy and planning to execution and analytics, covering both
+						digital and traditional channels to the developers in the real estate industry.
 					</p>
 					<br />
-
+				</div>
+				<div class="cell small-18">
+					<p class="bold">Filter sites by build type:</p>
 					<div id="filter-sites">
 						<ul>
-							<li>PHP</li>
-							<li>Astro</li>
-							<li>CMS</li>
+							<li><button class="filter-btn">PHP</button></li>
+							<li><button class="filter-btn">Astro</button></li>
+							<li><button class="filter-btn">CMS</button></li>
 						</ul>
 					</div>
 
-					<div class="flex">
+					<div class="flex" id="sites">
 						{items.map((item) => <ItemCard {item} />)}
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="line-btm"></div>
-
-		<!-- <section>
-		<div class="container top">
-			<div class="flex">
-				<div class="cell small-18 medium-9">
-					<Accordion client:visible />
-				</div>
-				<div class="cell small-18 medium-9">
-					<ul>
-						{obj.listItems.map((item) => <li>{item}</li>)}
-					</ul>
-					<ul>
-						{data.map((item) => <li>{item.title}</li>)}
-					</ul>
-				</div>
-				<div class="cell small-18 medium-9">
-					<TabsDemo client:visible />
-
-					<ul>
-						{obj.listItems.map((item) => <li>{item}</li>)}
-					</ul>
-					<ul>
-						{data.map((item) => <li>{item.title}</li>)}
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
-		<section id="htmls">
-			<div class="container top">
-				<div class="flex padding-x">
-					<div class="cell small-18">
-						<h2 class="staggerText">HTML Email Campaigns</h2>
-					</div>
-					<div class="cell small-18">
-						<p class="width">
-							The following selection of <strong>HTML Email campaigns</strong> were hand-coded in Visusal Studio Code, tested in Litmus, and deployed through Mailchimp.
-						</p>
-						<div class="cell small-18">
-							<p class="width">To receive an example HTML in your inbox, select one, enter your email address, and click send.</p>
-						</div>
-					</div>
-				</div>
-				<div id="campaigns">
-					<div>
-						<CheckboxGroup />
-						<Picture src={html7Dale} formats={['avif', 'webp']} quality="" alt="7 Dale" />
-						<button>SEND</button>
-					</div>
-					<div>
-						<CheckboxGroup />
-						<Picture src={htmlMRC} formats={['avif', 'webp']} quality="" alt="Marina Resort Cavtat" />
-						<button>SEND</button>
-					</div>
-					<div>
-						<CheckboxGroup />
-						<Picture src={htmlWinslow} formats={['avif', 'webp']} quality="" alt="The Winslow" />
-						<button>SEND</button>
-					</div>
-					<div>
-						<CheckboxGroup />
-						<Picture src={htmlVanguard} formats={['avif', 'webp']} quality="" alt="The Vanguard" />
-						<button>SEND</button>
-					</div>
-					<div>
-						<CheckboxGroup />
-						<Picture src={htmlDiamond} formats={['avif', 'webp']} quality="" alt="The Diamond Rentals" />
-						<button>SEND</button>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<div class="line-btm"></div>
-
-		<!-- <section>
-		<div class="container">
-			<div class="flex align-middle stagger-img">
-				<div class="cell small-18 clipInRight">
-					<Picture src={banner2} class="item" formats={['avif', 'webp']} quality="" alt="" />
-					<div class="absolute">
-						<h2 class="staggerText">Languages / Technologies</h2>
-						<p>jQuery • JavaScript • PHP • HTML • CSS/SASS (Flexbox & CSS Grid) • Astro JS • Radix UI • React Hook Forms • NPM • Node.js • Netlify • Git/GitHub/GitHub Actions • Visual Studio Code</p>
-					</div>
-				</div>			
-			</div>
-
-			<div class="container top btm">
-				<div class="flex padding-x align-middle stagger-img">
-					<div class="cell medium-18 large-8 txt-left">
-						<div>
-							<h2 class="staggerText">Software</h2>
-							<p>
-								Proficient in Mac and PC • Adobe Creative Cloud (Photoshop • Adobe Animate • Premiere Pro • After Effects • Illustrator • InDesign) • Handbrake Video Transcoder • Microsoft 365 Suite
-							</p>
-						</div>
-					</div>
-					<div class="cell medium-18 large-10 clipInUp">
-						<Picture src={banner2} class="item" formats={['avif', 'webp']} quality="" alt="" />
-					</div>
-				</div>
-			</div>
-
-			<div class="container top btm">
-				<div class="flex padding-x align-middle stagger-img">
-					<div class="cell medium-18 large-10 small-order-2 medium-order-2 large-order-1 clipInLeft">
-						<Picture src={banner2} class="item" formats={['avif', 'webp']} quality="" alt="" />
-					</div>
-					<div class="cell medium-18 large-8 small-order-1 medium-order-1 large-order-2 txt-right">
-						<div>
-							<h2 class="staggerText">Hosting & DNS Admin</h2>
-							<p>WHM/cPanel web and email hosting and management DNS/Nameserver management and troubleshooting</p>
-							<h2 class="staggerText">Testing Tools & Performance</h2>
-							<p>BrowserStack • Litmus Lighthouse/DevTools/PageSpeed Insights Privacy Sandbox Analysis Tool (PSAT) Google Tag Assistant Meta Pixel Helper</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
-		<section>
-			<div class="container top btm" id="featured">
-				<div class="flex">
-					<h2 class="staggerText">Featured Site</h2>
-				</div>
-
-				<div class="flex display-formats">
-					<div class="laptop-container">
-						<Image src={laptop} class="device-mask" alt="Laptop" />
-						<video class="site-video" autoplay playsinline muted loop poster="">
-							<source src="/mrc-laptop.mp4" type="video/mp4" />
-						</video>
-					</div>
-					<div class="mobile-container">
-						<Image src={mobile} class="device-mask" alt="Mobile Mask" />
-						<video class="mobile-video" autoplay playsinline muted loop poster="">
-							<source src="/mrc-mobile.mp4" type="video/mp4" />
-						</video>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<div class="line-btm left"></div>
-
-		<section id="features-container">
-			<div class="container top">
-				<div class="flex padding-x">
-					<div class="cell small-18">
-						<h2 class="staggerText">Video & Animation Ads</h2>
-						<!-- <h3>Video / Animation</h3> -->
-						<p>The following animations were are selections from a series of Facebook and Google Ad campaigns.</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="features">
-				<div class="overlay">
-					<svg class="play-button" viewBox="0 0 200 200">
-						<circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="#fff"></circle>
-						<polygon points="70, 55 70, 145 145, 100" fill="#fff"></polygon>
-					</svg>
-				</div>
-				<div class="video-container">
-					<video playsinline muted poster="">
-						<source src="/Fortune-District-Ad-1.mp4" type="video/mp4" />
-					</video>
-					<h4>Commercial Space</h4>
-					<button><a target="_blank" href="https://fortunedistrict.ca" aria-label="offsite link to fortunedistrict.ca">fortunedistrict.ca</a></button>
-				</div>
-				<div>
-					<video playsinline muted poster="">
-						<source src="/Greehaus-1080.mp4" type="video/mp4" />
-					</video>
-					<h4>Condos</h4>
-				</div>
-				<div>
-					<video playsinline muted controls poster="">
-						<source src="/MRC-Facebook.mp4" type="video/mp4" />
-					</video>
-					<h4>Croatian Resort</h4>
-					<button><a target="_blank" href="https://marinaresortcavtat.com/" aria-label="offsite link to marinaresortcavtat.com">marinaresortcavtat.com</a></button>
-				</div>
-				<div>
-					<video playsinline muted controls poster="">
-						<source src="/Greenhaus-sky.mp4" type="video/mp4" />
-					</video>
-					<h4>Condominiums</h4>
-					<button><a target="_blank" href="https://fortunedistrict.ca" aria-label="offsite link to fortunedistrict.ca">fortunedistrict.ca</a></button>
-				</div>
-				<div>
-					<video playsinline muted controls poster="">
-						<source src="/MRC-Ad-1.mp4" type="video/mp4" />
-					</video>
-					<h4>Croatian Resort</h4>
-					<button><a target="_blank" href="https://marinaresortcavtat.com/" aria-label="offsite link to marinaresortcavtat.com">marinaresortcavtat.com</a></button>
-				</div>
-				<div>
-					<video playsinline muted controls poster="">
-						<source src="/MRC-Ad-7.mp4" type="video/mp4" />
-					</video>
-					<h4>Croatian Resort Ad</h4>
-					<button><a target="_blank" href="https://marinaresortcavtat.com/" aria-label="offsite link to marinaresortcavtat.com">marinaresortcavtat.com</a></button>
-				</div>
-				<div>
-					<video playsinline muted controls poster="">
-						<source src="/BlueVista-Summer.mp4" type="video/mp4" />
-					</video>
-					<h4>Blue Vista / Residential Community</h4>
-				</div>
-				<div>
-					<video playsinline muted controls poster="">
-						<source src="/S2-Video-Wall.mp4" type="video/mp4" />
-					</video>
-					<h4>Sales Centre Video Wall</h4>
-				</div>
-			</div>
-		</section>
-
-		<section id="timeline">
-			<video class="timeline" autoplay playsinline muted loop poster="/timeline-poster.webp">
-				<source src="/timeline.mp4" type="video/mp4" />
-			</video>
-		</section>
-
-		<div id="graveyard">
-			<div class="container top btm">
-				<div class="flex padding-x">
-					<div class="cell">
-						<h1>Web Limbo</h1>
-						<p class="width">A number of P&B Real Estate developer projects below have been retired, although some are still active and or have samples of marketing materials if you click on them.</p>
-						<p class="width">
-							On top of the list below, other web projects that I have developed can be seen <a
-								target="_blank"
-								class="underline"
-								href="https://pbmarketing.ca/work.php"
-								aria-label="offsite link to pbmarketing.ca">here</a
-							>.
-
-							<p>They were also built using PHP, jQuery, HTML, and SCSS/CSS.</p>
-							<br />
-						</p>
-					</div>
-				</div>
-				<div class="flex padding-x small-up-2 medium-up-3 large-up-4 graveyard">
-					<div class="cell">
-						<a href="https://theravine.ca/" target="_blank" aria-label="offsite link to theravine.ca">
-							<Image src={ravine} class="" alt="The Ravine" />
-							<p>The Ravine</p>
-						</a>
-					</div>
-					<div class="cell">
-						<a href="https://pbmarketing.ca/work-arthaus.php" target="_blank" aria-label="offsite link to work-arthaus.php">
-							<Image src={arthaus} class="" alt="Arthaus" />
-							<p>Arthaus</p>
-						</a>
-					</div>
-					<div class="cell">
-						<a href="https://pbmarketing.ca/work-shiplake.php" target="_blank" aria-label="offsite link to work-shiplake.php">
-							<Image src={shiplake} class="" alt="Shiplake Rental Management" />
-							<p>Shiplake Rental Mgmt.</p>
-						</a>
-					</div>
-					<div class="cell">
-						<a href="https://pbmarketing.ca/work-7stThomas.php" target="_blank" aria-label="offsite link to work-7stThomas.php">
-							<Image src={thomas} class="" alt="7 St. Thomas" />
-							<p>7 St. Thomas</p>
-						</a>
-					</div>
-					<div class="cell">
-						<Image src={peterSt} class="" alt="117 Peter Street" />
-						<p>117 Peter Street</p>
-					</div>
-					<div class="cell">
-						<Image src={barrington} class="" alt="The Barrington" />
-						<p>The Barrington</p>
-					</div>
-					<div class="cell">
-						<a href="https://pbmarketing.ca/work-boathaus.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-boathaus.php">
-							<Image src={boathaus} class="" alt="Boathaus" />
-							<p>Boathaus</p>
-						</a>
-					</div>
-					<div class="cell">
-						<Image src={brownstones} class="" alt="Brownstones" />
-						<p>Brownstones</p>
-					</div>
-					<div class="cell">
-						<a href="https://pbmarketing.ca/work-delisle.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-delisle.php">
-							<Image src={delisle} class="" alt="Delisle Dentistry" />
-							<p>Delisle Dentistry</p>
-						</a>
-					</div>
-					<div class="cell">
-						<Image src={designhaus} class="" alt="Designhaus" />
-						<p>Designhaus</p>
-					</div>
-					<div class="cell">
-						<Image src={fuse} class="" alt="Fuse Consos" />
-						<p>Fuse Consos</p>
-					</div>
-					<div class="cell">
-						<Image src={genesis} class="" alt="Genesis Condos" />
-						<p>Genesis Condos</p>
-					</div>
-					<div class="cell">
-						<Image src={guildwood} class="" alt="Guildwood Condos" />
-						<p>Guildwood Condos</p>
-					</div>
-					<div class="cell">
-						<a href="http://jacjacobson.com" target="_blank" aria-label="offsite link to jacjacobson.com">
-							<Image src={jac} class="" alt="Jack Jacobson Photography" />
-							<p>Jack Jacobson Photography</p>
-						</a>
-					</div>
-					<div class="cell">
-						<Image src={aquavil} class="" alt="Aquavil" />
-						<p>Aquavil</p>
-					</div>
-					<div class="cell">
-						<a href="https://kingswaybytheriver.ca/" target="_blank" aria-label="offsite link to kingswaybytheriver.ca">
-							<Image src={kingsway} class="" alt="Kingsway By The River" />
-							<p>Kingsway By The River</p>
-						</a>
-					</div>
-					<div class="cell">
-						<Image src={northeast} class="" alt="Northeast Midstream Energ" />
-						<p>Northeast Midstream Energy</p>
-					</div>
-					<div class="cell">
-						<Image src={sunrise} class="" alt="Sunrise Condos" />
-						<p>Sunrise Condos</p>
-					</div>
-					<div class="cell">
-						<Image src={todm} class="" alt="Towns of Don Mills" />
-						<p>Towns of Don Mills</p>
-					</div>
-					<div class="cell">
-						<Image src={union} class="" alt="Union Villas" />
-						<p>Union Villas</p>
-					</div>
-					<div class="cell">
-						<Image src={url} class="" alt="URL Condos" />
-						<p>URL Condos</p>
-					</div>
-					<div class="cell">
-						<Image src={mcmurray} class="" alt="McMurray Residences" />
-						<p>McMurray Residences</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<video class="fireworks" src="/fireworks-wh.mp4" autoplay playsinline muted loop poster=""></video>
 	</section>
 
-	<script is:inline src="/gsap.min.js"></script>
-	<script is:inline src="/ScrollTrigger.min.js"></script>
-	<script is:inline src="/ScrollSmoother.min.js"></script>
-	<script is:inline src="/SplitText.min.js"></script>
+	<div class="line-btm"></div>
 
-	<script>
+	<section id="htmls">
+		<div class="container top">
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h2 class="staggerText">HTML Email Campaigns</h2>
+				</div>
+				<div class="cell small-18">
+					<p class="width">
+						The following selection of <strong>HTML Email campaigns</strong> were hand-coded in Visusal Studio Code, tested in Litmus, and deployed through Mailchimp.
+					</p>
+					<div class="cell small-18">
+						<p class="width">To receive an example HTML in your inbox, select one, enter your email address, and click send.</p>
+					</div>
+				</div>
+			</div>
+			<div id="campaigns">
+				<div>
+					<Picture src={html7Dale} formats={['avif', 'webp']} quality="" alt="7 Dale" />
+					<form method="POST" id="dale">
+						<input type="email" name="email" placeholder="Email" />
+						<input class="btn" name="submit" value="SUBMIT" />
+					</form>
+				</div>
+				<div>
+					<Picture src={htmlMRC} formats={['avif', 'webp']} quality="" alt="Marina Resort Cavtat" />
+					<form action="" method="POST" class="">
+						<input type="email" placeholder="Email" />
+						<input class="btn" name="submit" value="SUBMIT" />
+					</form>
+				</div>
+				<div>
+					<Picture src={htmlWinslow} formats={['avif', 'webp']} quality="" alt="The Winslow" />
+					<form action="" method="POST" class="">
+						<input type="email" placeholder="Email" />
+						<button class="btn">SEND</button>
+					</form>
+				</div>
+				<div>
+					<Picture src={htmlVanguard} formats={['avif', 'webp']} quality="" alt="The Vanguard" />
+					<form action="" method="POST" class="">
+						<input type="email" placeholder="Email" />
+						<button class="btn">SEND</button>
+					</form>
+				</div>
+				<div>
+					<Picture src={htmlDiamond} formats={['avif', 'webp']} quality="" alt="The Diamond Rentals" />
+					<form action="" method="POST" class="">
+						<input type="email" placeholder="Email" />
+						<button class="btn">SEND</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="line-btm"></div>
+
+	<section>
+		<div class="container top btm" id="featured">
+			<div class="flex">
+				<h2 class="staggerText">Featured Site</h2>
+			</div>
+
+			<p class="featured-details">
+				The <strong class="bold">Marina Resort Cavtat</strong> site is currently a two-page registration site. The full site will be available shortly and will include........
+			</p>
+
+			<div class="flex display-formats">
+				<div class="laptop-container">
+					<Image src={laptop} class="device-mask" alt="Laptop" />
+					<video class="site-video" autoplay playsinline muted loop poster="">
+						<source src="/mrc-laptop.mp4" type="video/mp4" />
+					</video>
+				</div>
+				<div class="mobile-container">
+					<Image src={mobile} class="device-mask" alt="Mobile Mask" />
+					<video class="mobile-video" autoplay playsinline muted loop poster="">
+						<source src="/mrc-mobile.mp4" type="video/mp4" />
+					</video>
+				</div>
+			</div>
+			<div id="timeline">
+				<video class="timeline" autoplay playsinline muted loop poster="/timeline-poster.webp">
+					<source src="/timeline.mp4" type="video/mp4" />
+				</video>
+			</div>
+		</div>
+	</section>
+
+	<section id="features-container">
+		<div class="container top">
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h2 class="staggerText">Video & Animation Ads</h2>
+					<p>The following animations are selections from a series of Facebook and Google Ad campaigns.</p>
+					<br />
+				</div>
+			</div>
+		</div>
+
+		<div class="features">
+			<div>
+				<svg class="play-button" viewBox="0 0 200 200">
+					<circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="#fff"></circle>
+					<polygon points="70, 55 70, 145 145, 100" fill="#fff"></polygon>
+				</svg>
+			</div>
+			<div>
+				<video playsinline muted controls poster="">
+					<source src="/Fortune-District-Ad-1.mp4" type="video/mp4" />
+				</video>
+				<h4>Commercial Space</h4>
+			</div>
+			<div>
+				<video playsinline muted controls poster="">
+					<source src="/Greehaus-1080.mp4" type="video/mp4" />
+				</video>
+				<h4>Condos</h4>
+			</div>
+			<div>
+				<video playsinline muted controls poster="">
+					<source src="/MRC-Facebook.mp4" type="video/mp4" />
+				</video>
+				<h4>Croatian Resort</h4>
+			</div>
+			<div>
+				<video playsinline muted controls poster="">
+					<source src="/Greenhaus-sky.mp4" type="video/mp4" />
+				</video>
+				<h4>Condominiums</h4>
+			</div>
+			<div>
+				<video playsinline muted controls poster="">
+					<source src="/MRC-Ad-1.mp4" type="video/mp4" />
+				</video>
+				<h4>Croatian Resort</h4>
+			</div>
+			<div>
+				<video playsinline muted controls poster="">
+					<source src="/BlueVista-Summer.mp4" type="video/mp4" />
+				</video>
+				<h4>Blue Vista / Residential Community</h4>
+			</div>
+		</div>
+	</section>
+
+	<section id="graveyard">
+		<div class="container top btm">
+			<div class="flex padding-x">
+				<div class="cell">
+					<h2 class="staggerText">Web Limbo</h2>
+					<p class="width">A number of P&B Real Estate developer projects below have been retired, although some are still active and or have samples of marketing materials if you click on them.</p>
+					<p class="width">
+						On top of the list below, other web projects that I have developed can be seen <a
+							target="_blank"
+							class="underline"
+							href="https://pbmarketing.ca/work.php"
+							aria-label="offsite link to pbmarketing.ca">here</a
+						>.
+					</p>
+					<br />
+				</div>
+			</div>
+			<div class="flex padding-x small-up-2 medium-up-3 large-up-4 graveyard">
+				<div class="cell">
+					<a href="https://theravine.ca/" target="_blank" aria-label="offsite link to theravine.ca">
+						<Image src={ravine} class="" alt="The Ravine" />
+						<p>The Ravine</p>
+					</a>
+				</div>
+				<div class="cell">
+					<a href="https://pbmarketing.ca/work-arthaus.php" target="_blank" aria-label="offsite link to work-arthaus.php">
+						<Image src={arthaus} class="" alt="Arthaus" />
+						<p>Arthaus</p>
+					</a>
+				</div>
+				<div class="cell">
+					<a href="https://pbmarketing.ca/work-shiplake.php" target="_blank" aria-label="offsite link to work-shiplake.php">
+						<Image src={shiplake} class="" alt="Shiplake Rental Management" />
+						<p>Shiplake Rental Mgmt.</p>
+					</a>
+				</div>
+				<div class="cell">
+					<a href="https://pbmarketing.ca/work-7stThomas.php" target="_blank" aria-label="offsite link to work-7stThomas.php">
+						<Image src={thomas} class="" alt="7 St. Thomas" />
+						<p>7 St. Thomas</p>
+					</a>
+				</div>
+				<div class="cell">
+					<Image src={peterSt} class="" alt="117 Peter Street" />
+					<p>117 Peter Street</p>
+				</div>
+				<div class="cell">
+					<Image src={barrington} class="" alt="The Barrington" />
+					<p>The Barrington</p>
+				</div>
+				<div class="cell">
+					<a href="https://pbmarketing.ca/work-boathaus.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-boathaus.php">
+						<Image src={boathaus} class="" alt="Boathaus" />
+						<p>Boathaus</p>
+					</a>
+				</div>
+				<div class="cell">
+					<Image src={brownstones} class="" alt="Brownstones" />
+					<p>Brownstones</p>
+				</div>
+				<div class="cell">
+					<a href="https://pbmarketing.ca/work-delisle.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-delisle.php">
+						<Image src={delisle} class="" alt="Delisle Dentistry" />
+						<p>Delisle Dentistry</p>
+					</a>
+				</div>
+				<div class="cell">
+					<Image src={designhaus} class="" alt="Designhaus" />
+					<p>Designhaus</p>
+				</div>
+				<div class="cell">
+					<Image src={fuse} class="" alt="Fuse Consos" />
+					<p>Fuse Consos</p>
+				</div>
+				<div class="cell">
+					<Image src={genesis} class="" alt="Genesis Condos" />
+					<p>Genesis Condos</p>
+				</div>
+				<div class="cell">
+					<Image src={guildwood} class="" alt="Guildwood Condos" />
+					<p>Guildwood Condos</p>
+				</div>
+				<div class="cell">
+					<a href="http://jacjacobson.com" target="_blank" aria-label="offsite link to jacjacobson.com">
+						<Image src={jac} class="" alt="Jack Jacobson Photography" />
+						<p>Jack Jacobson Photography</p>
+					</a>
+				</div>
+				<div class="cell">
+					<Image src={aquavil} class="" alt="Aquavil" />
+					<p>Aquavil</p>
+				</div>
+				<div class="cell">
+					<a href="https://kingswaybytheriver.ca/" target="_blank" aria-label="offsite link to kingswaybytheriver.ca">
+						<Image src={kingsway} class="" alt="Kingsway By The River" />
+						<p>Kingsway By The River</p>
+					</a>
+				</div>
+				<div class="cell">
+					<Image src={northeast} class="" alt="Northeast Midstream Energ" />
+					<p>Northeast Midstream Energy</p>
+				</div>
+				<div class="cell">
+					<Image src={sunrise} class="" alt="Sunrise Condos" />
+					<p>Sunrise Condos</p>
+				</div>
+				<div class="cell">
+					<Image src={todm} class="" alt="Towns of Don Mills" />
+					<p>Towns of Don Mills</p>
+				</div>
+				<div class="cell">
+					<Image src={union} class="" alt="Union Villas" />
+					<p>Union Villas</p>
+				</div>
+				<div class="cell">
+					<Image src={url} class="" alt="URL Condos" />
+					<p>URL Condos</p>
+				</div>
+				<div class="cell">
+					<Image src={mcmurray} class="" alt="McMurray Residences" />
+					<p>McMurray Residences</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<video class="fireworks" src="/fireworks-wh.mp4" autoplay playsinline muted loop poster=""></video>
+</Layout>
+
+<script is:inline src="/gsap.min.js"></script>
+<script is:inline src="/ScrollTrigger.min.js"></script>
+<script is:inline src="/ScrollSmoother.min.js"></script>
+<script is:inline src="/SplitText.min.js"></script>
+
+<script>
+	document.addEventListener('astro:page-load', () => {
 		const date = new Date();
 		const timeOfDay = date.getHours();
 		let greeting;
@@ -490,41 +414,23 @@ import thomas from '../img/sites/7stthomas.webp';
 		if (greetingElement) {
 			greetingElement.innerHTML = '<h1>' + greeting + '</h1>';
 		}
-	</script>
+	});
+</script>
 
-	<script is:inline>
-		const video = document.querySelector('.fireworks');
+<script is:inline>
+	document.addEventListener('astro:page-load', () => {
+		const fact = document.querySelector('.fact');
+		const factDetails = document.querySelector('.fact-details');
 
-		document.getElementById('themeToggle').addEventListener('click', () => {
-			if (localStorage.getItem('theme') && localStorage.getItem('theme').includes('dark')) {
-				video.setAttribute('src', '/fireworks-drk.mp4');
-			} else {
-				video.setAttribute('src', '/fireworks-wh.mp4');
-			}
-			// if (localStorage.getItem('theme').includes('dark')) {
-			// 	video.setAttribute('src', '/fireworks-drk.mp4');
-			// } else {
-			// 	video.setAttribute('src', '/fireworks-wh.mp4');
-			// }
+		fact.addEventListener('click', () => {
+			factDetails.classList.toggle('show');
 		});
+	});
+</script>
 
-		document.addEventListener('astro:page-load', () => {
-			if (localStorage.getItem('theme').includes('dark')) {
-				video.setAttribute('src', '/fireworks-drk.mp4');
-			} else {
-				video.setAttribute('src', '/fireworks-wh.mp4');
-			}
-
-			// if (video.getAttribute('src') === '/fireworks-drk.mp4') {
-			// 	video.setAttribute('src', '/fireworks-wh.mp4');
-			// } else {
-			// 	video.setAttribute('src', '/fireworks-drk.mp4');
-			// }
-		});
-	</script>
-
-	<script is:inline>
-		// FEATURES PINNED
+<script is:inline>
+	// FEATURES PINNED
+	document.addEventListener('astro:page-load', () => {
 		const features = document.querySelector('.features');
 
 		function getScrollAmount() {
@@ -565,234 +471,184 @@ import thomas from '../img/sites/7stthomas.webp';
 				start: 'left 0%',
 			});
 		});
-	</script>
+	});
+</script>
 
-	<script is:inline>
-		// CLIP PATH BIG IMAGES
-		const clipPaths = gsap.utils.toArray('.clip-path');
+<script is:inline>
+	document.addEventListener('astro:page-load', () => {
+		const filterButtons = document.querySelectorAll('.filter-btn');
+		const sites = document.querySelectorAll('#sites .site');
+		const filterSites = document.querySelector('#filter-sites ul');
 
-		clipPaths.forEach((element, index) => {
-			let clipImages = element.querySelectorAll('.clip-image');
+		function addAllButton() {
+			// Check if the "All" button already exists
+			if (!document.querySelector('.filter-btn-all')) {
+				const createLi = document.createElement('li');
+				const createFilterBtn = document.createElement('button');
+				createFilterBtn.classList.add('filter-btn', 'filter-btn-all');
+				createFilterBtn.textContent = 'All';
+				createLi.appendChild(createFilterBtn);
+				filterSites.insertBefore(createLi, filterSites.firstChild);
 
-			let tl = gsap.timeline({
-				scrollTrigger: {
-					trigger: element,
-					scrub: true,
-					duration: 5,
-					start: 'top 90%',
-					end: 'bottom 50%',
-				},
-			});
-
-			tl.fromTo(
-				clipImages,
-				{
-					autoAlpha: 1,
-					clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
-				},
-				{
-					autoAlpha: 1,
-					clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-				}
-			);
-		});
-
-		// STAGGER TEXT
-		function setupSplits() {
-			gsap.utils.toArray('.staggerText').forEach((el) => {
-				gsap.from(
-					SplitText.create(el, {
-						type: 'words, chars',
-					}).chars,
-					{
-						duration: 1,
-						opacity: 0,
-						id: 'chars',
-						y: -20,
-						ease: 'circ:out',
-						stagger: 0.5,
-						scrollTrigger: {
-							trigger: el,
-							start: 'top 100%',
-							end: 'top 80%',
-							scrub: 1,
-						},
-					}
-				);
-			});
-		}
-
-		setupSplits();
-		window.addEventListener('resize', setupSplits);
-
-		// FADE IN
-		const fadeIn = gsap.utils.toArray('.fadeIn');
-
-		fadeIn.forEach((element, index) => {
-			let items = element.querySelectorAll('.item');
-			let tl = gsap.timeline({
-				scrollTrigger: {
-					trigger: element,
-					scrub: true,
-					start: 'top 95%',
-					end: 'bottom 60%',
-				},
-			});
-
-			tl.fromTo(
-				items,
-				{
-					opacity: '0',
-				},
-				{
-					opacity: '1',
-				}
-			);
-		});
-
-		// CLIP PATH from LEFT
-		const clipInLeft = gsap.utils.toArray('.clipInLeft');
-
-		clipInLeft.forEach((element, index) => {
-			let items = element.querySelectorAll('.item');
-			let tl = gsap.timeline({
-				scrollTrigger: {
-					trigger: element,
-					scrub: true,
-					start: 'top 95%',
-					end: 'bottom 50%',
-				},
-			});
-
-			tl.fromTo(
-				items,
-				{
-					autoAlpha: 0,
-					clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)',
-				},
-				{
-					autoAlpha: 1,
-					clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-				}
-			);
-		});
-
-		// CLIP PATH from RIGHT
-		const clipInRight = gsap.utils.toArray('.clipInRight');
-
-		clipInRight.forEach((element, index) => {
-			let items = element.querySelectorAll('.item');
-			let tl = gsap.timeline({
-				scrollTrigger: {
-					trigger: element,
-					scrub: true,
-					start: 'top 80%',
-					end: 'bottom 40%',
-				},
-			});
-
-			tl.fromTo(
-				items,
-				{
-					clipPath: 'polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)',
-				},
-				{
-					clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-				}
-			);
-		});
-
-		// CLIP PATH UP
-		const clipInUp = gsap.utils.toArray('.clipInUp');
-
-		clipInUp.forEach((element, index) => {
-			let items = element.querySelectorAll('.item');
-			let tl = gsap.timeline({
-				scrollTrigger: {
-					trigger: element,
-					scrub: true,
-					start: 'top 100%',
-					end: 'bottom 80%',
-				},
-			});
-
-			tl.fromTo(
-				items,
-				{
-					clipPath: 'polygon(0% 90%, 100% 90%, 100% 100%, 0% 100%)',
-				},
-				{
-					clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-				}
-			);
-		});
-	</script>
-
-	<style>
-		.overlay {
-			position: relative;
-			text-align: center;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		.play-button {
-			max-width: 80px;
-			position: absolute;
-			left: 0;
-			right: 0;
-			margin: 0 auto;
-			opacity: 0.5;
-		}
-	</style>
-
-	<style>
-		/* .flex > a {
-			flex: 1 1 auto;
-		}
-		.flex img.website-img {
-			max-width: 100px;
-		} */
-
-		@media (max-width: 800px) {
-			.display-formats .laptop-container {
-				padding: 10% 0 50%;
+				// Add event listener to the "All" button
+				createFilterBtn.addEventListener('click', () => {
+					filterButtons.forEach((btn) => btn.classList.remove('active'));
+					createFilterBtn.classList.add('active');
+					sites.forEach((site) => (site.style.display = 'block'));
+				});
 			}
 		}
 
-		/* -------------------
+		filterButtons.forEach((button) => {
+			button.addEventListener('click', () => {
+				// Remove active class from all buttons and add to the clicked button
+				filterButtons.forEach((btn) => btn.classList.remove('active'));
+				button.classList.add('active');
+
+				const allButton = document.querySelector('.filter-btn-all');
+				if (allButton) {
+					allButton.classList.remove('active');
+				}
+
+				const filterType = button.textContent.trim();
+
+				// Filter sites based on the data-type attribute
+				sites.forEach((site) => {
+					const dataCategory = site.getAttribute('data-category');
+					if (dataCategory === filterType || filterType === 'All') {
+						site.style.display = 'block';
+					} else {
+						site.style.display = 'none';
+					}
+				});
+
+				// Add the "All" button
+				addAllButton();
+			});
+		});
+	});
+</script>
+
+<script is:inline>
+	async function sendData(data, url) {
+		try {
+			const request = await fetch(url, {
+				method: 'POST',
+				body: data,
+			});
+
+			const result = await request.json();
+			console.log(result);
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
+	const form = document.getElementById('dale');
+
+	form.addEventListener('submit', function (e) {
+		e.preventDefault();
+		var data = new FormData(document.forms.form);
+		sendData(data, '/htmls/dale.php');
+	});
+</script>
+
+<script is:inline>
+	document.addEventListener('astro:page-load', () => {
+		const video = document.querySelector('.fireworks');
+
+		document.getElementById('themeToggle').addEventListener('click', () => {
+			if (localStorage.getItem('theme') && localStorage.getItem('theme').includes('dark')) {
+				video.setAttribute('src', '/fireworks-drk.mp4');
+			} else {
+				video.setAttribute('src', '/fireworks-wh.mp4');
+			}
+		});
+
+		document.addEventListener('astro:page-load', () => {
+			if (localStorage.getItem('theme').includes('dark')) {
+				video.setAttribute('src', '/fireworks-drk.mp4');
+			} else {
+				video.setAttribute('src', '/fireworks-wh.mp4');
+			}
+		});
+	});
+</script>
+
+<script is:inline>
+	// STAGGER TEXT
+	function setupSplits() {
+		gsap.utils.toArray('.staggerText').forEach((el) => {
+			gsap.from(
+				SplitText.create(el, {
+					type: 'words, chars',
+				}).chars,
+				{
+					duration: 1,
+					opacity: 0,
+					id: 'chars',
+					y: -20,
+					ease: 'circ:out',
+					stagger: 0.5,
+					scrollTrigger: {
+						trigger: el,
+						start: 'top 100%',
+						end: 'top 80%',
+						scrub: 1,
+					},
+				}
+			);
+		});
+	}
+
+	setupSplits();
+	window.addEventListener('resize', setupSplits);
+</script>
+
+<style>
+	/* -------------------
 	 LAPTOP & MOBILE 
 	 ------------------- */
+	.display-formats {
+		align-items: center;
+		gap: 3rem;
+	}
+
+	.display-formats .laptop-container {
+		flex: 1 1 0;
+		position: relative;
+		padding: 10% 0;
+	}
+
+	.display-formats .mobile-container {
+		flex: 0 1 auto;
+		position: relative;
+		max-width: 250px;
+		padding: 50px 0;
+	}
+
+	.device-mask {
+		position: absolute;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.site-video {
+		width: 79%;
+		margin: 50px auto 0;
+		border-radius: 20px;
+	}
+
+	.mobile-video {
+		width: 98%;
+		margin: 25px auto 0;
+		border-radius: 30px;
+	}
+
+	@media (max-width: 1000px) {
 		.display-formats {
-			align-items: center;
+			flex-direction: column;
+			gap: 3rem;
 		}
-
-		.display-formats .laptop-container {
-			flex: 1 1 0;
-			position: relative;
-			overflow: hidden;
-			padding: 10% 0;
-			/* border: 1px red solid; */
-		}
-
-		.display-formats .mobile-container {
-			flex: 0 0 auto;
-			position: relative;
-			overflow: hidden;
-			max-width: 300px;
-			padding: 5% 0;
-			border: 1px red solid;
-		}
-
-		.device-mask {
-			position: absolute;
-			width: 100%;
-			margin: 0 auto;
-		}
-
-		.site-video {
-			width: 79%;
-			margin: 0 auto;
-		}
-	</style>
-</Layout>
+	}
+</style>

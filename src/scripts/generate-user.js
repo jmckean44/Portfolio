@@ -11,6 +11,7 @@ function fetchUser() {
 function displayUser(user) {
 	const userDisplay = document.querySelector('#user');
 	const placeholderBG = document.querySelector('#generate-user');
+	const themeBg = document.querySelector('html');
 
 	if (user.gender === 'female') {
 		placeholderBG.style.backgroundColor = '#e3ddcf';

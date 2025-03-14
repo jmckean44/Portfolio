@@ -146,7 +146,7 @@ html {
 body {
 	overflow-x: hidden !important;
 	line-height: 1.6;
-	padding: 0 2%;
+	//padding: 0 2%;
 	margin: 0;
 	font-family: var.$font-sans-serif;
 	font-weight: normal;
@@ -243,7 +243,7 @@ p {
 	text-rendering: optimizeSpeed;
 	text-wrap: pretty;
 	color: var.$dark;
-	//text-align: justify;
+	text-align: left;
 }
 
 a,
@@ -292,7 +292,7 @@ img {
 
 img[loading='lazy'],
 img[loading='eager'] {
-	transition: all ease 0.5s;
+	//transition: all ease 0.5s;
 }
 
 /* =============================================
@@ -448,61 +448,91 @@ section {
 	position: relative;
 }
 
-.container {
-	padding: 0 1.25rem;
-	max-width: 1400px;
-	margin: 0 auto;
-	width: 100%;
-}
+$container-padding: 1.25rem;
+$container-padding-mobile: 1.25rem;
 
 .container.images {
 	max-width: 600px !important;
 }
 
+.container {
+	padding: 0 $container-padding;
+	max-width: 1400px;
+	margin: 0 auto;
+	width: 100%;
+	transition: all ease 0.5s;
+}
+
 .container.top {
-	padding: 100px 1.25rem 0;
+	padding: 100px $container-padding 0;
 }
 
 .container.btm {
-	padding: 0 1.25rem 125px;
+	padding: 0 $container-padding 125px;
 }
 
 .container.top.btm-sm {
-	padding: 100px 1.25rem 50px;
+	padding: 100px $container-padding 50px;
 }
 
 .container.btm-sm {
-	padding: 0 1.25rem 50px;
+	padding: 0 $container-padding 50px;
 }
 
 .container.top.btm {
-	padding: 100px 1.25rem;
+	padding: 100px $container-padding;
 }
 
 .container.top-of-page {
-	padding: 300px 1.25rem 0;
+	padding: 300px $container-padding 0;
 }
 
 .container.top-of-page.btm {
-	padding: 300px 1.25rem 100px;
+	padding: 300px $container-padding 100px;
 }
 
-@media (max-width: var.$mobile) {
+@media (min-width: 1401px) {
+	.container.top-of-page,
+	.container.top-of-page.btm {
+		padding: 300px $container-padding 0;
+	}
+}
+
+@media (max-width: 1400px) {
+	.container.top-of-page,
+	.container.top-of-page.btm {
+		padding: 25% $container-padding 0;
+	}
+}
+
+@media (max-width: 700px) {
+	.container.top-of-page,
+	.container.top-of-page.btm {
+		padding: 150px $container-padding 0;
+	}
 	.container.top {
-		padding: 70px 1.25rem 0;
+		padding: 70px $container-padding 0;
 	}
 
 	.container.btm {
-		padding: 0 1.25rem 100px;
+		padding: 0 $container-padding 100px;
 	}
 
 	.container.top.btm {
-		padding: 70px 1.25rem;
+		padding: 70px $container-padding;
 	}
 }
 
+/* =================================
+	 COLOURS
+==================================== */
 #greeting {
 	color: var.$theme-clr;
+}
+
+#current-sites .container.top.btm {
+	padding: 60px $container-padding 100px;
+	//border: 1px red solid;
 }
 
 #current-sites .intro {
@@ -516,7 +546,6 @@ section {
 
 .slide-show {
 	margin: 0 auto;
-	//max-width: 600px !important;
 	border: 1px red dashed;
 }
 
@@ -528,6 +557,25 @@ section {
 }
 
 /* =================================
+	 NEWSPAPER COLUMNS
+==================================== */
+.columns-list {
+	columns: 2 150px;
+	column-gap: 2rem;
+}
+
+@media (max-width: 800px) {
+	.columns-list {
+		columns: 1 150px;
+		column-gap: 0;
+	}
+}
+
+.fun-fact {
+	max-width: 50px;
+}
+
+/* =================================
 	 INTRO
 ==================================== */
 
@@ -536,7 +584,7 @@ section {
 }
 
 #intro p {
-	font-size: min(max(1.2rem, 2vw), 24px);
+	font-size: min(max(1.2rem, 2vw), 22px);
 }
 
 .width {
@@ -599,18 +647,76 @@ p a {
 #home #filter-sites ul {
 	display: flex;
 	flex-direction: row;
-	margin-bottom: 2rem;
+	margin: 0 0 2rem 0;
+}
+
+#home #filter-sites ul button {
+	background: var.$theme-clr;
+	padding-inline: 0.7rem;
+	margin-inline: auto;
+	height: auto;
+	line-height: 1;
+	color: #fff;
+	border-radius: 3px;
+	margin-right: 1rem;
+	padding: 0.6rem 1rem 0.5rem;
+	cursor: pointer;
+	font-size: 0.9rem;
+	font-family: 'CalibriBold', sans-serif;
+	text-transform: uppercase;
+	transition: all ease 0.5s;
+}
+
+#home #filter-sites ul button.active,
+#home #filter-sites ul button:hover {
+	background: var.$dark;
+}
+
+#home .fact {
+	cursor: pointer;
+	width: 50px;
+	margin-bottom: 1.5rem;
+}
+
+#home .fact-details {
+	display: none;
+	position: absolute;
+	width: auto;
+	margin: 0 auto;
+	max-width: 400px;
+	background: #f2f2f2;
+	border-radius: 3px;
+	border: 1px #e0e0e0 solid;
+	padding: 1rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	font-size: 1.1rem;
+	z-index: 9999999999;
+}
+
+#home .fact-details.show {
+	display: block;
+	animation: fadeInOut ease 0.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeInOut {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 /* =============================================
 	 FEATURES 
 ================================================ */
 .features video {
-	max-width: 500px;
+	max-width: 450px;
 }
 
 .features {
-	//width: fit-content;
 	display: flex;
 	flex-wrap: nowrap;
 	align-content: center;
@@ -633,11 +739,12 @@ p a {
 }
 
 #timeline {
-	padding: 3rem 0;
-	margin: 150px auto 0;
+	margin: 0 auto;
 	background: #fff;
-	max-width: 100%;
+	max-width: 1400px;
 	width: 100%;
+	border: 1px #ccc solid;
+	border-radius: 3px;
 }
 
 #timeline .timeline {
@@ -657,6 +764,7 @@ p a {
 	justify-content: space-between;
 	grid-column-gap: 1.5rem;
 	grid-row-gap: 1.5rem;
+	margin-top: 2rem;
 }
 
 #htmls #campaigns > div {
@@ -673,20 +781,30 @@ p a {
 	width: 100%;
 	margin-bottom: 1.5rem;
 	border: 1px #ccc solid;
-	border-radius: 5px;
+	border-radius: 3px;
 }
 
 #resume {
 	text-align: center;
 }
 
-#htmls button {
-	margin-left: 0.5rem;
+/* =============================================
+		FEATURED SITE
+================================================ */
+#featured .flex {
+	justify-content: center;
+}
+
+#featured .featured-details {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 600px;
 }
 
 /* =============================================
 		VIDEOS
 ================================================ */
+
 // .video-container {
 // 	position: relative;
 // 	transition: transform 0.3s ease;
@@ -726,7 +844,7 @@ p a {
 }
 
 /* =============================================
-	 	WEB GRAVEYARD
+		WEB GRAVEYARD
 ================================================ */
 #graveyard .graveyard {
 	margin-bottom: 2rem;
@@ -779,13 +897,13 @@ p a {
 /* =============================================
 	NEW PAGE
 ================================================ */
-#new .curve {
-	display: none;
-}
+// #new .curve {
+// 	display: none;
+// }
 
 #new .project {
 	padding: 3rem 1.75rem 2rem;
-	background: #eff3eb;
+	background: #f9f9f9;
 	border-radius: 3px;
 	border: 1rem #fff solid;
 }
@@ -794,7 +912,7 @@ p a {
 	padding: 2rem 1.75rem;
 	background: #fff;
 	border-radius: 3px;
-	border: 1px #ccc solid;
+	//border: 1px #ccc solid;
 }
 
 #new .project#generate-user img {
