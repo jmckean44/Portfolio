@@ -26,20 +26,20 @@ export default defineConfig({
 			},
 		},
 	},
-	env: {
-		schema: {
-			API_KEY: envField.string({
-				context: 'server',
-				access: 'secret',
-			}),
-			LIST_ID: envField.string({
-				context: 'server',
-				access: 'secret',
-			}),
-			DATA_CENTER: envField.string({
-				context: 'server',
-				access: 'secret',
-			}),
-		},
-	},
+	// env: {
+	// 	schema: {
+	// 		API_KEY: envField.string({
+	// 			context: 'server',
+	// 			access: 'secret',
+	// 		}),
+	// 		LIST_ID: envField.string({
+	// 			context: 'server',
+	// 			access: 'secret',
+	// 		}),
+	// 		DATA_CENTER: envField.string({
+	// 			context: 'server',
+	// 			access: 'secret',
+	// 		}),
+	// 	},
+	// },
 });

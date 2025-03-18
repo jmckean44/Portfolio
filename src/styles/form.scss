@@ -4,7 +4,7 @@ $input-font: var.$font-sans-serif;
 $input-font-size: 0.85rem !important;
 $input-font-size-button: 14px;
 $input-font-clr: var.$dark !important;
-$input-font-spacing: 1px;
+$input-font-spacing: 0.5px;
 $input-background-clr: transparent;
 $input-background-focus: transparent;
 $input-boxshadow: 0 #ccc 5px;
@@ -215,13 +215,13 @@ textarea::placeholder {
 ======================================= */
 button {
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 
 .btn {
 	background: #26262d;
 	display: block;
-	width: 100%;
+	width: auto;
 	color: #fff;
 	border: none;
 	border-radius: 3px;

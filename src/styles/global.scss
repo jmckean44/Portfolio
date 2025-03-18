@@ -678,6 +678,15 @@ p a {
 	margin-bottom: 1.5rem;
 }
 
+.modal::backdrop {
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(5px);
+}
+
+dialog:popover-open:not([open]) {
+	overlay: auto !important;
+}
+
 #home .fact-details {
 	display: none;
 	position: absolute;
@@ -763,7 +772,6 @@ p a {
 	grid-template-columns: repeat(auto-fill, 210px);
 	justify-content: space-between;
 	grid-column-gap: 1.5rem;
-	grid-row-gap: 1.5rem;
 	margin-top: 2rem;
 }
 
@@ -773,13 +781,13 @@ p a {
 }
 
 #htmls #campaigns > div input {
-	margin-top: 1rem;
+	margin-top: 0.75rem;
 	margin-bottom: 0rem;
 }
 
 #htmls #campaigns img {
 	width: 100%;
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
 	border: 1px #ccc solid;
 	border-radius: 3px;
 }
@@ -791,6 +799,12 @@ p a {
 /* =============================================
 		FEATURED SITE
 ================================================ */
+#featured {
+	border: 2px #ccc solid;
+	padding: 3rem 2rem;
+	border-radius: 5px;
+}
+
 #featured .flex {
 	justify-content: center;
 }

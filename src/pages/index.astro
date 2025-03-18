@@ -66,6 +66,11 @@ import thomas from '../img/sites/7stthomas.webp';
 								> and Meta integrations, hosting, domains, DNS, and accounts for third party services connected with our company and client sites.
 							</p>
 						</p>
+						<button popovertarget="modal">Open Modal</button>
+						<dialog id="modal" popover="auto" class="max-w-2xl backdrop:backdrop-blur-sm">
+							<p>Click the "X" to close me.</p>
+							<button popovertarget="modal" popovertargetaction="hide">x</button>
+						</dialog>
 						<Image src={fact} class="fact" alt="Fact" />
 						<p class="fact-details">
 							This site was built using the <strong><a target="_blank" href="https://astro.build/" class="underline" aria-label="offsite link to Astro.build">Astro JS</a></strong> framework with <a
@@ -134,44 +139,42 @@ import thomas from '../img/sites/7stthomas.webp';
 			<div id="campaigns">
 				<div>
 					<Picture src={html7Dale} formats={['avif', 'webp']} quality="" alt="7 Dale" />
-					<form method="POST" id="dale">
+					<form action="/dale.php" method="POST" id="dale">
 						<input type="email" name="email" placeholder="Email" />
-						<input class="btn" name="submit" value="SUBMIT" />
+						<input class="btn" name="submit" type="submit" value="SUBMIT" />
 					</form>
 				</div>
 				<div>
 					<Picture src={htmlMRC} formats={['avif', 'webp']} quality="" alt="Marina Resort Cavtat" />
 					<form action="" method="POST" class="">
 						<input type="email" placeholder="Email" />
-						<input class="btn" name="submit" value="SUBMIT" />
+						<input class="btn" name="submit" type="submit" value="SUBMIT" />
 					</form>
 				</div>
 				<div>
 					<Picture src={htmlWinslow} formats={['avif', 'webp']} quality="" alt="The Winslow" />
 					<form action="" method="POST" class="">
 						<input type="email" placeholder="Email" />
-						<button class="btn">SEND</button>
+						<input class="btn" name="submit" type="submit" value="SUBMIT" />
 					</form>
 				</div>
 				<div>
 					<Picture src={htmlVanguard} formats={['avif', 'webp']} quality="" alt="The Vanguard" />
 					<form action="" method="POST" class="">
 						<input type="email" placeholder="Email" />
-						<button class="btn">SEND</button>
+						<input class="btn" name="submit" type="submit" value="SUBMIT" />
 					</form>
 				</div>
 				<div>
 					<Picture src={htmlDiamond} formats={['avif', 'webp']} quality="" alt="The Diamond Rentals" />
 					<form action="" method="POST" class="">
 						<input type="email" placeholder="Email" />
-						<button class="btn">SEND</button>
+						<input class="btn" name="submit" type="submit" value="SUBMIT" />
 					</form>
 				</div>
 			</div>
 		</div>
 	</section>
-
-	<div class="line-btm"></div>
 
 	<section>
 		<div class="container top btm" id="featured">
