@@ -67,7 +67,7 @@
 	font-size: 1rem;
 	font-weight: 600;
 	padding: 0.5rem 1rem 0.4rem;
-	background: var.$theme-clr url('../img/arrow-down-select-wh.svg') no-repeat right 10px center;
+	background: #bc955b url('../img/arrow-down-select-wh.svg') no-repeat right 10px center;
 	background-size: 17px;
 	margin: 0 0 0.45rem;
 	width: 100%;
@@ -165,13 +165,13 @@
 
 #floorplans .residence-plans .details h5.features {
 	font-family: var.$theme-font;
-	border-top: 1px var.$theme-clr solid;
+	border-top: 1px #bc955b solid;
 	margin-bottom: 1rem;
 	margin-top: 1rem;
 }
 
 #floorplans .residence-plans .details h5.number-rooms {
-	border-bottom: var.$theme-clr 1px solid;
+	border-bottom: #bc955b 1px solid;
 	padding-bottom: 0.75rem;
 	margin-bottom: 1rem;
 }
@@ -195,7 +195,7 @@
 	color: #fff;
 	font-size: 0.9rem;
 	padding: 0.6rem 1rem;
-	background: var.$dark url(../img/arrow-down-select-wh.svg) no-repeat right 10px center;
+	background: var.$dark url('../img/arrow-down-select-wh.svg') no-repeat right 10px center;
 	background-size: 17px;
 	margin: 0 0 1rem;
 	border: 0;
@@ -233,7 +233,7 @@
 #floorplans .residence-plans .details .download:hover,
 #floorplans .residence-plans .details .siteplan:hover,
 #floorplans .residence-plans .details .active {
-	color: var.$theme-clr;
+	color: #bc955b;
 }
 
 #floorplans .residence-plans .details .plan-links .divider {
@@ -266,7 +266,7 @@
 #floorplans .residence-plans .details .download:hover {
 	background: url('../img/residence-arrow-download.svg') no-repeat right bottom 5px;
 	background-size: 25px;
-	color: var.$theme-clr;
+	color: #bc955b;
 }
 
 #floorplans .residence-plans .plan {
@@ -278,23 +278,19 @@
 }
 
 #floorplans .residence-plans .plan-image {
-}
-
-#floorplans .residence-plans .plan-image.fadeIn {
 	width: 100%;
 	animation: fadeIn 0.5s forwards;
 }
 
-#floorplans .residence-plans .plan-image.fadeOut {
-	width: 100%;
-	animation: fadeOut 0.5s forwards;
-}
-
-#floorplans .residence-plans .plan img.rooftop {
+#floorplans .residence-plans img[src='/A1-Villa-Lanterna-Rooftop.webp'] {
 	max-width: 75%;
 }
 
-#floorplans .residence-plans img[src='img/D1-601.svg'] {
+#floorplans .residence-plans img[src='/D1-601.webp'] {
+	max-width: 90%;
+}
+
+#floorplans .residence-plans img[src='/A1-Villa-Lanterna-Ground.webp'] {
 	max-width: 90%;
 }
 
@@ -370,8 +366,4 @@
 
 #before-footer h3 {
 	color: #fff;
-}
-
-#before-footer div h3:first-child span:last-child {
-	background: url('../img/line-right-wh.svg') repeat-x bottom right;
 }
