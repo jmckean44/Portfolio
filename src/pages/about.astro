@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import { Picture } from 'astro:assets';
 import '../styles/swiper.scss';
 
-//import { Image } from 'astro:assets';
-//import { getImage } from 'astro:assets';
+import { Image } from 'astro:assets';
+import { getImage } from 'astro:assets';
 import bunny from '../img/drawings/bunny.webp';
 import triad from '../img/drawings/triad.webp';
 import dad from '../img/drawings/carry.webp';
@@ -15,14 +15,14 @@ import butterfly from '../img/drawings/elder.webp';
 import involuntary from '../img/drawings/melancholia.webp';
 import dreaming from '../img/drawings/dreaming.webp';
 import alright from '../img/drawings/alright.webp';
-//import cheezWhiz from '../img/drawings/cheez-whiz.webp';
+import cheezWhiz from '../img/drawings/cheez-whiz.webp';
 
 import lebanonRoad from '../img/landscapes/lebanon-road.webp';
 import flynns from '../img/landscapes/flynns.webp';
 
-////import misa2 from '../img/portraits/misa-02.webp';
+import misa2 from '../img/portraits/misa-02.webp';
 import mrferron from '../img/portraits/mr-ferron.webp';
-//import liam2011 from '../img/portraits/liam-2011.webp';
+import liam2011 from '../img/portraits/liam-2011.webp';
 
 import anv from '../img/sites/anv.webp';
 import loki from '../img/sites/loki.webp';
@@ -135,22 +135,18 @@ import harp from '../img/sites/harp.webp';
 											<div class="swiper-wrapper" id="portraits">
 												<div class="swiper-slide">
 													<div>
-														<!-- <Picture src={pragueSelfie} formats={['avif', 'webp']} alt="Wife" />
-														<p>Prague Selfie</p> -->
+														<Picture src={mrferron} formats={['avif', 'webp']} alt="Wife" />
+														<p>Prague Selfie</p>
 													</div>
 												</div>
 												<div class="swiper-slide">
-													<!-- <Picture src={misa1} formats={['avif', 'webp']} alt="Mish Collage" /><p>Misa Collage</p> -->
+													<Picture src={mrferron} formats={['avif', 'webp']} alt="Mish Collage" /><p>Misa Collage</p>
 												</div>
-												<!-- <div class="swiper-slide"><Picture src={liam2016} formats={['avif', 'webp']} alt="Liam" /><p>Liam</p></div>
-												<div class="swiper-slide"><Picture src={gerard} formats={['avif', 'webp']} alt="Gerard" /><p>Gerard</p></div>
-												<div class="swiper-slide"><Picture src={misa2} formats={['avif', 'webp']} alt="Misa" /><p>Misa</p></div> -->
-												<!-- <div class="swiper-slide"><Picture src={liam01} formats={['avif', 'webp']} alt="Misa" /><p>Misa</p></div> -->
-												<!-- <div class="swiper-slide"><Picture src={misa2016} formats={['avif', 'webp']} alt="Misa" /><p>Misa</p></div>
-												<div class="swiper-slide"><Picture src={simona2015} formats={['avif', 'webp']} alt="" /><p></p></div>
-												<div class="swiper-slide"><Picture src={liam2011} formats={['avif', 'webp']} alt="Liam" /><p>Liam</p></div>
-												<div class="swiper-slide"><Picture src={liam2016} formats={['avif', 'webp']} alt="Liam" /><p>Liam</p></div> -->
-												<div class="swiper-slide"><Picture src={mrferron} formats={['avif', 'webp']} alt="Mr Ferron" /><p>Mr Ferron</p></div>
+												<div class="swiper-slide"><Picture src={mrferron} formats={['avif', 'webp']} alt="Liam" /><p>Liam</p></div>
+												<div class="swiper-slide"><Picture src={mrferron} formats={['avif', 'webp']} alt="Gerard" /><p>Gerard</p></div>
+												<div class="swiper-slide"><Picture src={misa2} formats={['avif', 'webp']} alt="Misa" /><p>Misa</p></div>
+												<div class="swiper-slide"><Picture src={mrferron} formats={['avif', 'webp']} alt="Misa" /><p>Misa</p></div>
+												<div class="swiper-slide"><Picture src={mrferron} formats={['avif', 'webp']} alt="Misa" /><p>Misa</p></div>
 											</div>
 											<div class="swiper-pagination swiper-pagination-h"></div>
 										</div>
@@ -283,6 +279,7 @@ import harp from '../img/sites/harp.webp';
 			direction: 'horizontal',
 			effect: 'fade',
 			spaceBetween: 0,
+			autoHeight: true,
 			nested: true,
 		});
 	</script>
