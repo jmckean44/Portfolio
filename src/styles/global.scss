@@ -795,9 +795,10 @@ dialog:popover-open:not([open]) {
 		FEATURED SITE
 ================================================ */
 #featured {
-	border: 2px #ccc solid;
+	// border: 1px #ccc solid;
 	padding: 3rem 2rem;
 	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.05);
 }
 
 #featured .flex {

@@ -47,41 +47,33 @@ import thomas from '../img/sites/7stthomas.webp';
 				</div>
 			</div>
 			<div class="flex padding-x">
-				<div class="cell small-18">
-					<div class="columns-list">
-						<p>
-							<strong class="bold"
-								>With a foundation in composition, design, and motion, I apply principles from these disciplines towards the meticulous nature of creating visually compelling digital content that
-								functions on all devices.</strong
-							>
-							<p>
-								My experience working for smaller agencies as the principal front-end web developer and multimedia specialist has given me the opportunity to work on a diverse range of
-								responsibilities related to digital marketing communications.
-							</p>
-							<p>
-								From coding custom designed registration sites connected to <span class="bold">cloud database systems</span>, constructing and deploying responsive <span class="bold"
-									>HTML Email Ad campaigns</span
-								>, conceptualizing <span class="bold">animations for web and social media</span> platforms, <span class="bold">video editing</span>, effects, and compression to managing client <span
-									class="bold">Google Cloud Platform</span
-								> and Meta integrations, hosting, domains, DNS, and accounts for third party services connected with our company and client sites.
-							</p>
-						</p>
-						<button popovertarget="modal">Open Modal</button>
-						<dialog id="modal" popover="auto" class="max-w-2xl backdrop:backdrop-blur-sm">
-							<p>Click the "X" to close me.</p>
-							<button popovertarget="modal" popovertargetaction="hide">x</button>
-						</dialog>
-						<Image src={fact} class="fact" alt="Fact" />
-						<p class="fact-details">
-							This site was built using the <strong><a target="_blank" href="https://astro.build/" class="underline" aria-label="offsite link to Astro.build">Astro JS</a></strong> framework with <a
-								class="underline"
-								aria-label="offsite link to radix-ui.com"
-								target="_blank"
-								href="https://www.radix-ui.com/">Radix UI</a
-							>, Lenis native-browser smooth scrolling, and some parallaxing using the <a class="underline" target="_blank" href="https://gsap.com/" aria-label="offsite link to gsap.com">GSAP</a> animation
-							library.
-						</p>
-					</div>
+				<div class="cell small-18 medium-9">
+					<p>
+						My name is Jeff. I am a <strong class="bold">Frontend Web Developer</strong> with a background in the <strong class="bold">Visual Arts</strong>. I have a comprehensive understanding of the
+						fundamentals of composition and design and apply principles from these disciplines towards digital content creation.
+					</p>
+					<p>
+						My experience working for smaller marketing agencies as the principal frontend web developer and multimedia specialist has given me the opportunity to work on a diverse range of
+						responsibilities related to digital marketing communications.
+					</p>
+				</div>
+				<div class="cell small-18 medium-9">
+					<p>For more detailed information, please see my <a href="/Jeff-McKean-Resume.pdf" target="_blank" class="underline">resume</a>.</p>
+					<button popovertarget="modal">Open Modal</button>
+					<dialog id="modal" popover="auto" class="max-w-2xl backdrop:backdrop-blur-sm">
+						<p>Click the "X" to close me.</p>
+						<button popovertarget="modal" popovertargetaction="hide">x</button>
+					</dialog>
+					<Image src={fact} class="fact" alt="Fact" />
+					<p class="fact-details">
+						This site was built using the <strong><a target="_blank" href="https://astro.build/" class="underline" aria-label="offsite link to Astro.build">Astro JS</a></strong> framework with <a
+							class="underline"
+							aria-label="offsite link to radix-ui.com"
+							target="_blank"
+							href="https://www.radix-ui.com/">Radix UI</a
+						>, Lenis native-browser smooth scrolling, and some parallaxing using the <a class="underline" target="_blank" href="https://gsap.com/" aria-label="offsite link to gsap.com">GSAP</a> animation
+						library.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -183,7 +175,7 @@ import thomas from '../img/sites/7stthomas.webp';
 			</div>
 
 			<p class="featured-details">
-				The <strong class="bold">Marina Resort Cavtat</strong> site is currently a two-page registration site. The full site will be available shortly and will include........
+				The <strong class="bold">Marina Resort Cavtat</strong> site is currently a two-page multilingual registration website for an up and coming resort in Croatia. The full site will be available shortly.
 			</p>
 
 			<div class="flex display-formats">
@@ -391,8 +383,18 @@ import thomas from '../img/sites/7stthomas.webp';
 		</div>
 	</section>
 
-	<video class="fireworks" src="/fireworks-wh.mp4" autoplay playsinline muted loop poster=""></video>
+	<section id="next-page">
+		<div class="container btm">
+			<div class="flex padding-x">
+				<div class="cell">
+					<p>Go to <strong class="bold"><a href="/new" class="underline">Learning Curve</a></strong> or <strong class="bold"><a href="/about" class="underline">About</a></strong>.</p>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
+
+<video class="fireworks" src="/fireworks-wh.mp4" autoplay playsinline muted loop poster=""></video>
 
 <script is:inline src="/gsap.min.js"></script>
 <script is:inline src="/ScrollTrigger.min.js"></script>
