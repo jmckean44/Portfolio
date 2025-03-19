@@ -278,6 +278,10 @@ p {
 	font-weight: bold;
 }
 
+.justify {
+	text-align: justify;
+}
+
 /* =============================================
 	 IMAGES
 ================================================ */
@@ -526,7 +530,7 @@ $container-padding-mobile: 1.25rem;
 }
 
 #current-sites .container.top.btm {
-	padding: 60px $container-padding 100px;
+	padding: 100px $container-padding 100px;
 	//border: 1px red solid;
 }
 
@@ -667,19 +671,38 @@ p a {
 	background: var.$dark;
 }
 
-#home .fact {
-	cursor: pointer;
-	width: 50px;
-	margin-bottom: 1.5rem;
-}
-
-.modal::backdrop {
+#modal::backdrop {
 	background: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(5px);
 }
 
+.fact-img {
+	width: 50px;
+	background: rgba(255, 255, 255, 0);
+}
+
+#modal .fact-close {
+	background: #fff url('../img/icon-close.svg') no-repeat top right !important;
+	background-size: 20px;
+	float: right;
+	width: 26px;
+	height: 26px;
+	padding: 1rem;
+	margin-top: 0;
+	margin-left: 1rem;
+	border: 1px red solid;
+}
+
 dialog:popover-open:not([open]) {
 	overlay: auto !important;
+	margin: 0 auto;
+	padding: 1.5rem;
+	max-width: 500px;
+	left: 0;
+	right: 0;
+	top: 40%;
+	border: 0;
+	border-radius: 5px;
 }
 
 #home .fact-details {
@@ -702,6 +725,14 @@ dialog:popover-open:not([open]) {
 	animation: fadeInOut ease 0.5s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
+}
+
+#resume {
+	text-align: left !important;
+	background: #f2f2f2;
+	padding: 0.5rem 1rem;
+	border-radius: 3px;
+	display: inline-block;
 }
 
 @keyframes fadeInOut {
@@ -747,7 +778,7 @@ dialog:popover-open:not([open]) {
 	background: #fff;
 	max-width: 1400px;
 	width: 100%;
-	border: 1px #ccc solid;
+	border: 1px #f2f2f2 solid;
 	border-radius: 3px;
 }
 
@@ -795,10 +826,10 @@ dialog:popover-open:not([open]) {
 		FEATURED SITE
 ================================================ */
 #featured {
-	// border: 1px #ccc solid;
-	padding: 3rem 2rem;
+	padding: 100px 1.25rem 1.25rem;
 	border-radius: 5px;
-	background: rgba(0, 0, 0, 0.05);
+	background: rgba(255, 255, 255, 0.8);
+	border: 1px #f2f2f2 solid;
 }
 
 #featured .flex {
@@ -966,9 +997,13 @@ dialog:popover-open:not([open]) {
 }
 
 .line-btm {
-	border-bottom: 1px #ccc solid;
 	max-width: 1350px;
 	margin: 0 auto;
+	padding: 0 1.25rem;
+}
+
+.line-btm > div {
+	border-bottom: 1px #ccc solid;
 }
 
 /* =============================================

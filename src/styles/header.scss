@@ -69,13 +69,14 @@ header {
 	transition: all ease-out 0.5s;
 }
 
-#header.headroom.headroom--not-top.headroom--not-bottom,
-#header.headroom.headroom--not-bottom.headroom--not-top.headroom--pinned {
+#header.headroom.headroom--not-top.headroom--not-bottom .nav-links li a,
+#header.headroom.headroom--not-bottom.headroom--not-top.headroom--pinned .nav-links li a {
 	//border-bottom: 1px #ccc solid;
-	background: rgba(255, 255, 255, 0.9);
-	backdrop-filter: blur(10px);
+	// background: rgba(255, 255, 255, 0.9);
+	// backdrop-filter: blur(10px);
 	//box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	height: 65px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
 	transition: all ease-out 0.5s;
 }
 
@@ -84,9 +85,9 @@ header {
 	top: -6.5rem;
 }
 
-#header.headroom.headroom--not-bottom.headroom--not-top {
-	//background: rgba(255, 255, 255, 0.9);
+#header.headroom.headroom--not-bottom.headroom--not-top .nav-links li a {
 	backdrop-filter: blur(15px);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 html #header.headroom.headroom--top.headroom--not-bottom,
