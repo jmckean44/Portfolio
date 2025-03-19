@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('astro:page-load', () => {
 	const getResidenceData = async () => {
 		try {
 			const res = await fetch('/residences.json');

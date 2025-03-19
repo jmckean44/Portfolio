@@ -1,0 +1,272 @@
+{
+	"settings": {
+		"title": "Residential lots",
+		"mapWidth": 4114,
+		"mapHeight": 3679,
+		"maxZoom": "1.5",
+		"hoverTooltip": true,
+		"sidebar": true,
+		"layerSwitcher": "bottom-left",
+		"resetButton": "bottom-right",
+		"zoomButtons": "bottom-right",
+		"height": "800px",
+		"filters": false,
+		"thumbnails": false,
+		"ordered": false,
+		"csv": "",
+		"sidebarWidth": "",
+		"layer": "lot-map",
+		"portrait": "",
+		"zoom": true,
+		"toggleSidebar": false,
+		"sidebarClosed": false,
+		"primaryColor": "#021e42",
+		"portraitMinHeight": "1000px",
+		"fullscreen": false,
+		"moreText": "Reserve",
+		"csvEnabled": false,
+		"rightSidebar": false,
+		"groupBy": false,
+		"mouseWheel": false
+	},
+	"layers": [
+		{
+			"id": "lot-map",
+			"name": "Marina Resort Cavtat Location Map",
+			"file": "/sitemap/sitemap-res.webp"
+		}
+	],
+	"groups": [
+		{
+			"name": "Master Plan"
+		}
+	],
+	"locations": [
+		{
+			"id": "def",
+			"title": "Sitemap",
+			"group": [],
+			"action": "sidebar",
+			"link": "https://marinaresortcavtat.com/",
+			"phone": ""
+		},
+		{
+			"group": "",
+			"id": "headingSitePlan",
+			"title": "",
+			"zoom": "1",
+			"layer": ""
+		},
+		{
+			"group": "villas",
+			"id": "heading",
+			"title": "SEASIDE VILLAS",
+			"layer": ""
+		},
+		{
+			"id": "A1",
+			"title": "A1 - VILLA LANTERNA",
+			"layer": "lot-map",
+			"group": "residences",
+			"coord": [0.27, 0.435],
+			"zoom": "2",
+			"label": "A1",
+			"desc": ""
+		},
+		{
+			"id": "A2",
+			"title": "A2 - VILLA STONEPINE",
+			"layer": "lot-map",
+			"group": "residences",
+			"coord": [0.28, 0.38],
+			"zoom": "",
+			"label": "A2"
+		},
+		{
+			"id": "A3",
+			"title": "A3 - VILLA SEABREEZE",
+			"layer": "lot-map",
+			"group": "residences",
+			"coord": [0.31, 0.345],
+			"zoom": "",
+			"label": "A3"
+		},
+		{
+			"id": "A4",
+			"title": "A4 - VILLA GARDEN",
+			"layer": "lot-map",
+			"group": "residences",
+			"coord": [0.32, 0.3],
+			"zoom": "",
+			"label": "A4"
+		},
+		{
+			"id": "A5",
+			"title": "A5 - VILLA ATRIUM",
+			"layer": "lot-map",
+			"group": "residences",
+			"coord": [0.32, 0.245],
+			"zoom": "",
+			"label": "A5"
+		},
+		{
+			"id": "A6",
+			"title": "A6 - VILLA BELVEDERE",
+			"layer": "lot-map",
+			"group": "residences",
+			"coord": [0.394, 0.22],
+			"zoom": "3",
+			"label": "A6"
+		},
+		{
+			"id": "A7",
+			"title": "A7 - VILLA IRIS",
+			"layer": "lot-map",
+			"group": "residences",
+			"coord": [0.436, 0.22],
+			"zoom": "",
+			"label": "A7"
+		},
+		{
+			"id": "A8",
+			"title": "A8 - VILLA CYPRESS",
+			"layer": "lot-map",
+			"group": "residences",
+			"coord": [0.481, 0.23],
+			"zoom": "",
+			"label": "A8"
+		},
+		{
+			"id": "A9",
+			"title": "A9 - VILLA CASCADES",
+			"layer": "lot-map",
+			"group": "residences",
+			"coord": [0.51, 0.25],
+			"zoom": "",
+			"label": "A9"
+		},
+		{
+			"id": "A10",
+			"title": "A10 - VILLA CAMPANELLA",
+			"layer": "lot-map",
+			"group": "residences",
+			"coord": [0.558, 0.26],
+			"zoom": "",
+			"label": "A10"
+		},
+		{
+			"id": "heading",
+			"title": "LUNGOMARE APARTMENTS",
+			"layer": "lot-map",
+			"group": "",
+			"label": ""
+		},
+		{
+			"id": "E1",
+			"title": "E1 - LUNGOMARE RESIDENCE",
+			"layer": "lot-map",
+			"group": "residences",
+			"coord": [0.51, 0.59],
+			"zoom": "",
+			"label": "E1"
+		},
+		{
+			"id": "E2",
+			"title": "E2 - LUNGOMARE RESIDENCE",
+			"layer": "lot-map",
+			"group": "residences",
+			"coord": [0.598, 0.617],
+			"zoom": "",
+			"label": "E2"
+		},
+		{
+			"id": "heading",
+			"title": "WATERFRONT APARTMENTS",
+			"layer": "lot-map",
+			"group": "",
+			"label": ""
+		},
+		{
+			"id": "E3",
+			"title": "E3 - WATERFRONT RESIDENCES",
+			"layer": "lot-map",
+			"group": "residences",
+			"coord": [0.557, 0.5],
+			"zoom": "",
+			"label": "E3"
+		},
+		{
+			"id": "heading",
+			"title": "TERRACED - RESIDENCES",
+			"layer": "lot-map",
+			"group": "",
+			"label": ""
+		},
+		{
+			"id": "D1",
+			"title": "D1 - TERRACED RESIDENCES",
+			"layer": "lot-map",
+			"group": "residences",
+			"coord": [0.54, 0.36],
+			"zoom": "",
+			"label": "D1"
+		}
+	],
+	"filters": [
+		{
+			"type": "tags",
+			"name": "Phases",
+			"id": "phases"
+		},
+		{
+			"name": "Show available",
+			"type": "checkbox",
+			"logic": "l.style === 'available'",
+			"id": "available"
+		}
+	],
+	"styles": [
+		{
+			"marker": false,
+			"active-stroke": "#15803D",
+			"active-color": "#B4DEAD",
+			"class": "available",
+			"svg": true,
+			"hover-color": "#ffffff"
+		}
+	],
+	"breakpoints": [
+		{
+			"name": "all-screens",
+			"below": 8000,
+			"portrait": false,
+			"type": "list",
+			"column": 1,
+			"sidebar": 400
+		},
+		{
+			"name": "tablet",
+			"below": 1200,
+			"portrait": true,
+			"column": 2,
+			"sidebar": 300,
+			"type": "grid"
+		},
+		{
+			"name": "mobile",
+			"below": 600,
+			"column": 1,
+			"portrait": true
+		}
+	],
+	"routes": [],
+	"csv": [],
+	"samples": [
+		{
+			"id": "def",
+			"title": "Default",
+			"group": []
+		}
+	],
+	"target": "data-lots.json"
+}

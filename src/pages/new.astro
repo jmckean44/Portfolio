@@ -39,7 +39,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 	</section>
 
 	<section>
-		<div class="container btm">
+		<div class="container top btm">
 			<div class="flex padding-x">
 				<div class="cell small-18 medium-9 project">
 					<h2>Shopping List</h2>
@@ -78,19 +78,11 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 		</div>
 	</section>
 
-	<!-- 
-	<section id="sitemap">
-		<mapplic-map data-json="/sitemap/data-res.json"></mapplic-map>
-	</section>
-	<script is:inline src="/sitemap/mapplic.js"></script> -->
-
-	<div class="line-btm"></div>
-
 	<section id="floorplan-ui">
-		<div class="container top btm-sm">
+		<div class="container btm-sm">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h2>Floor Plan UI for a Resort Site</h2>
+					<h2>Resort: Floor Plan UI</h2>
 				</div>
 			</div>
 
@@ -99,19 +91,13 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 					<p class="width">
 						I was asked to create a User Interface for the floor plans page of a <a href="https://marinaresortcavtat.com/" class="underline" target="_blank">Croatian resort website</a> that would intuitively
 						guide users through the floor plan selection process. The functionality was designed by our Art Director.
-						<p>
-							The idea was to start with disabled select menus until a NUMBER OF BEDROOMS was chosen, followed by a <strong>RESIDENCE TYPE</strong> and then a <strong>SUITE NUMBER</strong>, which
-							would load the floor plans, site plans and <strong>Key Features</strong> for that suite.
-						</p>
 					</p>
 				</div>
 				<div class="cell small-18 medium-9">
-					<p class="width">The functionality was written in Javascript, which fetches a JSON file of Objects which contains the dynamic content, image urls, alt text, Key Features content.</p>
-					<p>Two examples were available to the client.</p>
-					<ul>
-						<li>2 Bedroom / D1 / 601</li>
-						<li>4 Bedroom / Seaside Villas / A1</li>
-					</ul>
+					<p>
+						The idea was to start with disabled select menus until a <strong class="bold">NUMBER OF BEDROOMS</strong> was chosen, followed by a <strong class="bold">RESIDENCE TYPE</strong> and then a
+						<strong class="bold">SUITE NUMBER</strong>, which would load the chosen floor plan and site plan location marker, as well as the Key Features for that suite, where applicable.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -141,16 +127,55 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 			<PictureComponent mobileImgUrl={placeholderMobile} desktopImgUrl={placeholder} loading="lazy" className="clip-image" alt="Marina Resort Cavtat" />
 		</div>
 	</section>
+
+	<div class="container top">
+		<div class="flex padding-x">
+			<div class="cell small-18">
+				<h2>Resort: Site Plan UI</h2>
+			</div>
+		</div>
+
+		<div class="flex padding-x">
+			<div class="cell small-18 medium-9">
+				<p>
+					The Site Plan UI, below, is a customized version of a real estate site plan <a href="https://mapplic.com/case-study/real-estate" target="_blank" class="underline">plugin</a> that offers potential
+					buyers a visual representation of the resort property, hotels, and amenities.
+				</p>
+				<p>The default plugin site plan image is a transparent svg, which works well (being that its a vector image) for zooming in close and to reduce the image file size.</p>
+				<p>
+					In this case, the original site map was a bitmap image, which was converted to a webp format with lazy loading enabled to help compensate for the client request to zoom in closely and avoid
+					pixelation, which required the image to be over 4000 pixels in height and width.
+				</p>
+			</div>
+			<div class="cell small-18 medium-9">
+				<p>The choice to use the dark coloured theme background in the site plan container was meant to frame the image when zoomed in.</p><p>
+					An alternative option was presented to the client: to manually define a zoom level for each site marker to avoid the zoomed-in image from passing the outer container border for markers that
+					were close to the top of the image. The client preferred the first option.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<section id="sitemap">
+		<div><mapplic-map data-json="/sitemap/data-res.json"></mapplic-map></div>
+	</section>
+	<script is:inline src="/sitemap/mapplic-res.js"></script>
 </Layout>
 
 <script is:inline src="/residences.js"></script>
 
 <style>
-	/* .curve {
-		background: url('../img/hello-world.jpg') no-repeat center center;
-		background-size: cover;
-	} */
+	#sitemap {
+		background: rgb(2, 30, 66);
+		max-width: 100%;
+		padding-bottom: 0;
+		margin-top: 50px;
+	}
 
+	#sitemap > div {
+		max-width: 1500px;
+		margin: 0 auto;
+	}
 	.edit-mode {
 		color: #ccc;
 	}
