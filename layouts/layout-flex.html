@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<title></title>
+</head>
+<body>
+
+<style>
+  .flex {
+    display: flex;
+    flex-wrap: wrap; /* default nowrap */
+    flex-direction: row; /* default: row, column, column-reverse */ 
+    align-items: center; /* VERTICAL > default: stretch, start, end, center */   
+    justify-content: flex-start; /* HORIZONTAL > center, flex-start, flex-end, space-between, space-evenly, space-around  */ 
+    /* align-content: flex-end; */
+    gap: 1rem;   
+    border:1px green solid;     
+  }
+
+  .flex > * {    
+    flex-grow: 1;       /* default: 0 = collapse, 1 = grow  */
+    flex-shrink: 1;     /* default: 1 = shrink on, 0 = shrink off */
+    flex-basis: 0;      /* default: auto = stretches, 0 = collapses */   
+    flex: 1;            /* grow: 1, shrink: 1, basis: auto (BUT sets to 0) */     
+    flex: 1 1 auto;     /* grow, shrink on, stretch */   
+    flex: 0 0 auto;          
+    width:100%;
+    padding:1rem;
+    background:pink;
+  } 
+
+  .auto {    
+    flex: 1 1 0px;
+  }
+  .shrink {  
+    flex: 0 0 auto;
+  }
+</style>
+
+<div class="flex">
+  <div>Flexbox item 1</div>
+  <div>Flexbox item 2</div>
+  <div>Flexbox item 3 Learn flexbox the easy way</div>
+  <div>Flexbox item 4 Learn flexbox the easy way Learn flexbox the easy way</div>
+  <div>Flexbox item 5</div>
+</div>
+
+<div class="flex">
+  <div class="shrink">Flexbox item 1</div>
+  <div class="auto">Flexbox item 2</div> 
+</div>
+
