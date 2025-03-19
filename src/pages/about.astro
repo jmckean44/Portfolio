@@ -7,14 +7,12 @@ import { Image } from 'astro:assets';
 import { getImage } from 'astro:assets';
 import bunny from '../img/drawings/bunny.webp';
 import triad from '../img/drawings/triad.webp';
-import dad from '../img/drawings/carry.webp';
+import dad from '../img/drawings/carry-me.webp';
 import spring from '../img/drawings/spring.webp';
-import ok from '../img/drawings/ok.webp';
-import birdman from '../img/drawings/quiet.webp';
-import butterfly from '../img/drawings/elder.webp';
-import involuntary from '../img/drawings/melancholia.webp';
+import birdmen from '../img/drawings/birdmen.webp';
+import elder from '../img/drawings/elder.webp';
+import melancholia from '../img/drawings/melancholia.webp';
 import dreaming from '../img/drawings/dreaming.webp';
-import alright from '../img/drawings/alright.webp';
 import cheezWhiz from '../img/drawings/cheez-whiz.webp';
 
 import lebanonRoad from '../img/landscapes/lebanon-road.webp';
@@ -40,7 +38,7 @@ import harp from '../img/sites/harp.webp';
 		<div class="container top-of-page">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h1>Investor Relations Marketing</h1>
+					<h1>Investor Relations: Marketing</h1>
 				</div>
 			</div>
 			<div id="intro" class="spacing-btm">
@@ -67,7 +65,7 @@ import harp from '../img/sites/harp.webp';
 					</div>
 				</div>
 				<div class="cell small-18 medium-8 small-order-1 medium-order-2">
-					<h1>Tabled Days</h1>
+					<h2>Tabled Days</h2>
 					<p>
 						The following carousel of brochure sites are examples from my initial introduction to HTML, CSS, jQuery, web-design, and content management for companies in the investor relations and
 						software development industries and were built with Microsoft FrontPage.
@@ -91,9 +89,9 @@ import harp from '../img/sites/harp.webp';
 
 	<section>
 		<div class="container">
-			<div class="flex padding-x align-middle borders grey-bg">
+			<div class="flex padding-x align-middle borders">
 				<div class="cell small-18 medium-9 intro">
-					<h1>Video Production</h1>
+					<h2>Video Production</h2>
 					<p class="slideInUp">
 						Prior to Exploration Link, I worked for <a class="underline" target="_blank" href="https://imageslifemedia.com/">Images Life Media</a>, an event management video production company with a
 						successful niche market in wedding biographies, corporate events, and commercial video services.
@@ -116,12 +114,12 @@ import harp from '../img/sites/harp.webp';
 
 	<section id="slideshow-container">
 		<div class="container images">
-			<div class="flex padding-x align-middle borders">
+			<div class="flex padding-x align-middle borders grey-bg">
 				<div class="cell small-18">
-					<h3>Side Projects</h3>
+					<h2>Side Projects</h2>
 					<p>
 						The following traditional media selections are examples from a number of ongoing side projects, including documenting my son and daughter as they have grown up, local urban and Google Maps
-						"found" landscapes, and illustrations inspired by drawing lessons at our kitchen table.
+						"found" landscapes, and illustrations inspired by drawing lessons at our kitchen table, beginning with their washed plush rabbit drying on the clothesline.
 					</p>
 					<div class="flex">
 						<div class="cell small-18" id="swiper-vertical-nav">
@@ -176,16 +174,14 @@ import harp from '../img/sites/harp.webp';
 										<div class="swiper-container swiper-container-h">
 											<div class="swiper-wrapper">
 												<div class="swiper-slide"><Picture src={bunny} formats={['avif', 'webp']} alt="Bunny" /><p>Bunny</p></div>
-												<!-- <div class="swiper-slide"><Picture src={cheezWhiz} formats={['avif', 'webp']} alt="Cheese Whiz" /><p>Cheese Whiz</p></div> -->
+												<div class="swiper-slide"><Picture src={cheezWhiz} formats={['avif', 'webp']} alt="Cheese Whiz" /><p>Cheese Whiz</p></div>
 												<div class="swiper-slide"><Picture src={triad} formats={['avif', 'webp']} alt="Triad" /><p>Triad</p></div>
-												<div class="swiper-slide"><Picture src={butterfly} formats={['avif', 'webp']} alt="Butterfly Elder" /><p>Butterfly Elder</p></div>
-												<div class="swiper-slide"><Picture src={involuntary} formats={['avif', 'webp']} alt="Involuntary Melancholia" /><p>Involuntary Melancholia</p></div>
+												<div class="swiper-slide"><Picture src={elder} formats={['avif', 'webp']} alt="Butterfly Elder" /><p>Butterfly Elder</p></div>
+												<div class="swiper-slide"><Picture src={melancholia} formats={['avif', 'webp']} alt="Involuntary Melancholia" /><p>Involuntary Melancholia</p></div>
 												<div class="swiper-slide"><Picture src={dreaming} formats={['avif', 'webp']} alt="Dreaming of Mount Vesuvius" /><p>Dreaming of Mount Vesuvius</p></div>
-												<div class="swiper-slide"><Picture src={birdman} formats={['avif', 'webp']} alt="Quiet Birdman Assocation" /><p>Quiet Birdman Assocation</p></div>
+												<div class="swiper-slide"><Picture src={birdmen} formats={['avif', 'webp']} alt="Quiet Birdman Assocation" /><p>Quiet Birdman Assocation</p></div>
 												<div class="swiper-slide"><Picture src={spring} formats={['avif', 'webp']} alt="spring" /><p>Spring</p></div>
 												<div class="swiper-slide"><Picture src={dad} formats={['avif', 'webp']} alt="Dad, carry me" /><p>Dad, carry me</p></div>
-												<div class="swiper-slide"><Picture src={ok} formats={['avif', 'webp']} alt="Everything is going to be ok" /><p>Everything is going to be ok</p></div>
-												<div class="swiper-slide"><Picture src={alright} formats={['avif', 'webp']} alt="Alright, I won't leave you" /><p>Alright, I won't leave you</p></div>
 											</div>
 											<div class="swiper-pagination swiper-pagination-h"></div>
 										</div>
@@ -213,76 +209,86 @@ import harp from '../img/sites/harp.webp';
 		</div>
 	</section>
 
+	<style>
+		#mining .swiper-slide {
+			background: #f2f2f2;
+		}
+	</style>
+
 	<!-- Swiper JS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-	<script is:inline src="../src/scripts/swiper.js"></script>
-
 	<script>
-		var swiper = new Swiper('.elink', {
-			mousewheel: true,
-			keyboard: true,
-			autoplay: true,
-			speed: 1000,
-			delay: 5000,
-			effect: 'fade',
-			pagination: {
-				pagination: '.swiper-pagination-h',
-				el: '.swiper-pagination-h',
-				clickable: true,
-				renderBullet: function (index: number, className: string) {
-					return '<span class="' + className + '">' + direction[index] + '</span>';
-				},
-			},
-		});
+		import Swiper from 'swiper';
+		import { Pagination, Autoplay } from 'swiper/modules';
+		Swiper.use([Autoplay]);
+		import 'swiper/scss';
+		import 'swiper/scss/effect-fade';
+		import 'swiper/scss/pagination';
 
-		var swiper = new Swiper('.examples', {
-			mousewheel: true,
-			keyboard: true,
-			autoplay: true,
-			speed: 1000,
-			delay: 50000,
-			effect: 'fade',
-			autoHeight: true,
-		});
+		document.addEventListener('astro:page-load', () => {
+			function initializeSwipers() {
+				var swiper = new Swiper('.elink', {
+					modules: [Pagination],
+					mousewheel: true,
+					keyboard: true,
+					autoplay: true,
+					speed: 1000,
+					direction: 'horizontal',
+					effect: 'fade',
+					pagination: {
+						el: '.swiper-pagination',
+						renderBullet: function (index, className) {
+							return '<span class="' + className + '"></span>';
+						},
+						clickable: true,
+					},
+				});
 
-		// IMAGES
-		var floor = ['Portraits', 'Landscape', 'Drawings'];
-		var direction = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
+				var swiper = new Swiper('.examples', {
+					mousewheel: true,
+					keyboard: true,
+					autoplay: true,
+					speed: 1000,
+					effect: 'fade',
+					autoHeight: true,
+				});
 
-		var swiperV = new Swiper('.swiper-container-v', {
-			pagination: {
-				el: '.swiper-pagination-v',
-				clickable: true,
-				autoHeight: true,
-				renderBullet: function (index: number, className: string) {
-					return '<span class="' + className + '">' + floor[index] + '</span>';
-				},
-			},
-			speed: 1000,
-			direction: 'vertical',
-			autoHeight: true,
-			spaceBetween: 0,
-		});
+				// IMAGES
+				var floor = ['Portraits', 'Landscape', 'Drawings'];
+				var direction = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
 
-		var swiperH = new Swiper('.swiper-container-h', {
-			lazy: true,
-			pagination: {
-				pagination: '.swiper-pagination-h',
-				el: '.swiper-pagination-h',
-				clickable: true,
-				autoHeight: true,
-				renderBullet: function (index: number, className: string) {
-					return '<span class="' + className + '">' + direction[index] + '</span>';
-				},
-			},
-			speed: 1000,
-			//autoplay: true,
+				var swiperV = new Swiper('.swiper-container-v', {
+					pagination: {
+						el: '.swiper-pagination-v',
+						clickable: true,
+						renderBullet: function (index: number, className: string) {
+							return '<span class="' + className + '">' + floor[index] + '</span>';
+						},
+					},
+					speed: 1000,
+					direction: 'vertical',
+					autoHeight: true,
+					spaceBetween: 0,
+				});
 
-			direction: 'horizontal',
-			effect: 'fade',
-			spaceBetween: 0,
-			autoHeight: true,
-			nested: true,
+				var swiperH = new Swiper('.swiper-container-h', {
+					pagination: {
+						el: '.swiper-pagination',
+						renderBullet: function (index, className) {
+							return '<span class="' + className + '"></span>';
+						},
+						clickable: true,
+					},
+					speed: 1000,
+					//autoplay: true,
+
+					direction: 'horizontal',
+					effect: 'fade',
+					spaceBetween: 0,
+					autoHeight: true,
+					nested: true,
+				});
+			}
+			initializeSwipers();
 		});
 	</script>
 </Layout>

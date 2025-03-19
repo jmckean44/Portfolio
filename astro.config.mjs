@@ -1,4 +1,4 @@
-import { defineConfig, envField } from 'astro/config';
+import { defineConfig } from 'astro/config';
 import node from '@astrojs/node';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
@@ -11,9 +11,9 @@ export default defineConfig({
 	output: 'static',
 	integrations: [sitemap(), icon(), react()],
 	prefetch: true,
-	adapter: node({
-		mode: 'standalone',
-	}),
+	// adapter: node({
+	// 	mode: 'standalone',
+	// }),
 	// adapter: netlify({
 	// 	edgeMiddleware: true,
 	// }),

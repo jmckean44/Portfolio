@@ -13,7 +13,7 @@ $input-button-border: 2px #fff solid;
 $input-border-radius: 2px !important;
 $input-border: 1px var.$dark solid;
 $input-span-bg: #fff;
-$input-padding: 0.7rem 1rem 0.6rem !important;
+$input-padding: 0.7rem 0.75rem 0.6rem !important;
 
 $input-line-height: 1;
 
@@ -28,6 +28,11 @@ $input-transition: all ease 0.5s;
 	//position: absolute;
 	margin-top: -0.8rem;
 	margin-bottom: 1rem;
+}
+
+#form-container {
+	margin: 0 auto;
+	max-width: 400px;
 }
 
 form {
@@ -76,18 +81,25 @@ form p {
 
 form span.helperText {
 	position: absolute;
-	top: 2px;
-	right: 4px;
+	top: 5px;
+	right: 5px;
 	font-size: 10px;
 	/* padding: 3px 5px; */
 	line-height: $input-line-height;
 	font-weight: bold;
-	color: var.$theme-clr;
+	color: var.$dark;
 	text-transform: uppercase;
-	border-radius: 3px;
 	opacity: 0;
 	/* background: #fff; */
 	transition: $input-transition;
+}
+
+form #result {
+	text-transform: none;
+	font-family: 'CalibriBold', sans-serif;
+	line-height: 1.2;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 
 form h3 {

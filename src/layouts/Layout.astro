@@ -13,6 +13,7 @@ const path = Astro.url.pathname;
 const pageSiteTitle = path === '/' ? `${TITLE}` : `${pageTitle} | ${TITLE}`;
 
 import { ClientRouter } from 'astro:transitions';
+import { Image } from 'astro:assets';
 ---
 
 <html lang="en" class="lenis">
@@ -78,18 +79,9 @@ import { ClientRouter } from 'astro:transitions';
 	</head>
 
 	<body>
-		<!-- <script is:inline>
-			const curve = document.querySelector('.curve');
-
-			document.addEventListener('DOMContentLoaded', () => {
-				curve.setTimeout(() => {
-					curve.style.display = 'block';
-				}, 3000);
-			});
-		</script> -->
 		<div class="curve">
-			<svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"
-				><style>
+			<svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+				<style>
 					.path-0 {
 						animation: pathAnim-0 120s;
 						animation-timing-function: linear;

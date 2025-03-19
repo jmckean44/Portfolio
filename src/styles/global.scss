@@ -543,6 +543,10 @@ $container-padding-mobile: 1.25rem;
 	gap: 1rem;
 }
 
+#current-sites .flex .filter p {
+	margin-bottom: 0;
+}
+
 .slide-show {
 	margin: 0 auto;
 	border: 1px red dashed;
@@ -728,11 +732,18 @@ dialog:popover-open:not([open]) {
 }
 
 #resume {
-	text-align: left !important;
-	background: #f2f2f2;
-	padding: 0.5rem 1rem;
-	border-radius: 3px;
+	text-align: center;
+	color: #fff;
+	background: var.$theme-clr;
+	padding: 0.2rem 1rem;
+	border-radius: 2px;
 	display: inline-block;
+	margin-left: 0.25rem;
+}
+
+#resume:hover {
+	background: var.$dark;
+	color: #fff;
 }
 
 @keyframes fadeInOut {
@@ -816,10 +827,6 @@ dialog:popover-open:not([open]) {
 	margin-bottom: 1rem;
 	border: 1px #ccc solid;
 	border-radius: 3px;
-}
-
-#resume {
-	text-align: center;
 }
 
 /* =============================================

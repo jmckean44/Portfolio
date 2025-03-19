@@ -18,16 +18,25 @@ header {
 	//backdrop-filter: blur(10px);
 }
 
+#home .curve {
+	display: none;
+}
+
 .curve {
 	position: absolute;
-	margin-top: -20%;
+	margin-top: -15%;
 	left: 0;
 	right: 0;
 	width: 100%;
 	overflow: hidden;
 	line-height: 0;
-	//opacity: 0;
 	transition: 0.5s all ease;
+}
+
+@media (max-width: 1400px) {
+	.curve {
+		margin-top: -10%;
+	}
 }
 
 .curve svg {
@@ -36,10 +45,16 @@ header {
 	width: 100%;
 }
 
-#home .curve,
-#about .curve,
-#contact .curve {
-	display: none;
+#home .curve path {
+	fill: rgba(0, 0, 0, 0.1);
+}
+
+#about .curve path {
+	fill: rgb(244, 229, 242);
+}
+
+#contact .curve path {
+	fill: rgb(230, 235, 247);
 }
 
 @media (max-width: 600px) {

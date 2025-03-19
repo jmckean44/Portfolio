@@ -17,7 +17,7 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	transition: all ease-out 0.5s;
+	transition: all ease 0.3s;
 }
 
 .nav-links li {
@@ -26,7 +26,7 @@ nav {
 
 .nav-links li a {
 	font-family: 'SteelfishRegular';
-	font-size: min(max(1.5rem, 6vw), 100px);
+	font-size: min(max(1.5rem, 5vw), 90px);
 	color: var.$font-clr;
 	display: inline-block;
 	text-align: center;
@@ -39,7 +39,7 @@ nav {
 	letter-spacing: 2px;
 	mix-blend-mode: difference !important;
 	background-position: top -50% center;
-	transition: all ease-out 0.5s;
+	transition: all ease 0.3s;
 }
 
 .nav-links li a span {
@@ -47,14 +47,14 @@ nav {
 	display: block;
 	letter-spacing: 1px;
 	margin-bottom: 3px;
-	color: #98999e;
+	color: rgba(0, 0, 0, 0.5);
 }
 
 .nav-links li a.active,
 .nav-links li a:hover {
 	color: var.$theme-clr;
 	font-weight: bold;
-	transition: all ease-out 0.5s;
+	transition: all ease 0.3s;
 	background: url('../fonts/underline-theme-clr.svg') no-repeat center bottom;
 	background-size: auto 3%;
 }

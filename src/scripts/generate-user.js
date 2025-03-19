@@ -14,9 +14,9 @@ function displayUser(user) {
 	const themeBg = document.querySelector('html');
 
 	if (user.gender === 'female') {
-		placeholderBG.style.backgroundColor = '#e3ddcf';
+		placeholderBG.style.backgroundColor = '#eff3eb ';
 	} else {
-		placeholderBG.style.backgroundColor = '#eff3eb';
+		placeholderBG.style.backgroundColor = '#f9f9f9';
 	}
 
 	userDisplay.innerHTML = ` 
