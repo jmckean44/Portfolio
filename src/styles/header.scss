@@ -118,13 +118,13 @@ html.light #header.header.headroom.headroom--not-bottom.headroom--pinned.headroo
 	margin-top: -25px;
 }
 
-@media (max-width: 700px) {
-	#header.headroom--not-bottom.headroom--not-top .nav-links,
-	#header.headroom--not-bottom.headroom--not-top.headroom--pinned .nav-links,
-	#header.headroom--not-top.headroom--bottom .nav-links {
-		margin-top: 0;
-	}
-}
+// @media (max-width: 700px) {
+// 	#header.headroom--not-bottom.headroom--not-top .nav-links,
+// 	#header.headroom--not-bottom.headroom--not-top.headroom--pinned .nav-links,
+// 	#header.headroom--not-top.headroom--bottom .nav-links {
+// 		margin-top: 0;
+// 	}
+// }
 
 #header.headroom--not-bottom.headroom--not-top .nav-links li a,
 #header.headroom--not-bottom.headroom--not-top.headroom--pinned .nav-links li a,

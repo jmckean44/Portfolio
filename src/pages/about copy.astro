@@ -234,8 +234,7 @@ import harp from '../img/sites/harp.webp';
 					modules: [Pagination],
 					autoplay: true,
 					speed: 1000,
-					direction: 'horizontal',
-					effect: 'fade',
+					//effect: 'fade',
 					pagination: {
 						el: '.swiper-pagination',
 						renderBullet: function (index, className) {
@@ -256,7 +255,7 @@ import harp from '../img/sites/harp.webp';
 
 				// IMAGES
 				var floor = ['Portraits', 'Landscape', 'Drawings'];
-				var direction = ['S', 'W', 'N', 'E'];
+				var direction = ['', '', ''];
 
 				var swiperV = new Swiper('.swiper-container-v', {
 					pagination: {
@@ -273,37 +272,23 @@ import harp from '../img/sites/harp.webp';
 				});
 
 				var swiperH = new Swiper('.swiper-container-h', {
-					//pagination: '.swiper-pagination-h',
-
 					pagination: {
-						el: '.swiper-pagination-h',
-						clickable: true,
+						el: '.swiper-pagination',
 						renderBullet: function (index, className) {
-							return '<span class="' + className + '">' + direction[index] + '</span>';
+							return '<span class="' + className + '"></span>';
 						},
+						clickable: true,
 					},
-					paginationClickable: true,
-					speed: 1500,
+					speed: 1000,
+					autoplay: true,
 					direction: 'horizontal',
+					effect: 'fade',
 					spaceBetween: 0,
+					autoHeight: true,
 					nested: true,
 				});
 			}
 			initializeSwipers();
 		});
 	</script>
-
-	<!-- <script>
-		var swiperVertBullet = document.querySelector('.swiper-pagination-v .swiper-pagination-bullet');
-		var swiperPageHor = document.querySelector('.swiper-pagination-h');
-		var swiperHorMenu = document.querySelector('.swiper-pagination-h.swiper-pagination-bullets');
-
-		if (swiperVertBullet) {
-			swiperVertBullet.addEventListener('click', function () {
-				if (swiperHorMenu) {
-					(swiperHorMenu as HTMLElement).style.display = 'block';
-				}
-			});
-		}
-	</script> -->
 </Layout>
