@@ -71,13 +71,14 @@ if (!item) {
 	</script>
 	<style>
 		.container-items {
-			padding: 0 1.25rem;
-			max-width: 1390px;
+			padding: 0 0.5rem;
+			max-width: 1400px;
 			margin: 0 auto;
 		}
-		.flex {
+
+		/* .flex {
 			gap: 1rem;
-		}
+		} */
 		.grid.work {
 			--grid-layout-gap: 1rem;
 			--grid-column-count: 3;
@@ -93,7 +94,7 @@ if (!item) {
 
 			/* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
 			align-items: center;
-			background: #f5f5f5;
+			background: #f9f9f9;
 			border-radius: 5px;
 			padding: 1.25rem;
 			gap: 2rem;
@@ -169,14 +170,27 @@ if (!item) {
 			right: 1.5rem;
 		}
 		.close:hover {
-			background-image: url('../../img/close-wh.svg') no-repeat;
+			background-image: url('../../img/close-wh.svg') no-repeat !important;
 			background-color: #ff9000;
 			background-size: 15px;
 			background-position: center;
 			border: 1px #ff9000 solid;
 		}
+
 		p {
 			font-size: min(max(0.9rem, 1.25vw), 22px);
+		}
+
+		@media (max-width: 350px) {
+			.grid.work {
+				background: none;
+				border-radius: 3px;
+				padding: 0 0 1.3rem;
+				gap: 2rem;
+				position: relative;
+				margin-top: 200px;
+				margin-bottom: 3rem;
+			}
 		}
 
 		@keyframes animate-in {

@@ -78,7 +78,7 @@ import thomas from '../img/sites/7stthomas.webp';
 	</section>
 
 	<section id="current-sites">
-		<div class="container top btm">
+		<div class="container">
 			<div class="flex padding-x">
 				<div class="cell small-18 medium-9">
 					<h1>Active Sites</h1>
@@ -101,23 +101,22 @@ import thomas from '../img/sites/7stthomas.webp';
 						</ul>
 					</div>
 
-					<div class="flex" id="sites">
+					<!-- <div class="flex" id="sites">
 						{items.map((item) => <ItemCard {item} />)}
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
+		<div class="flex" id="sites">
+			{items.map((item) => <ItemCard {item} />)}
+		</div>
 	</section>
-
-	<div class="line-btm">
-		<div></div>
-	</div>
 
 	<section id="htmls">
 		<div class="container top">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h2 class="staggerText">HTML Email Campaigns</h2>
+					<h2>HTML Email Campaigns</h2>
 				</div>
 				<div class="cell small-18">
 					<p class="width">
@@ -131,10 +130,11 @@ import thomas from '../img/sites/7stthomas.webp';
 			<div id="campaigns">
 				<div>
 					<Picture src={html7Dale} formats={['avif', 'webp']} quality="" alt="7 Dale" />
-					<form action="/dale.php" method="POST" id="dale">
-						<input type="email" name="email" placeholder="Email" />
+					<form action="/htmls/dale.php" method="POST" id="dale">
+						<input type="email" name="email" placeholder="Email" required />
 						<input class="btn" name="submit" type="submit" value="SEND" />
 					</form>
+					<div id="response"></div>
 				</div>
 				<div>
 					<Picture src={htmlMRC} formats={['avif', 'webp']} quality="" alt="Marina Resort Cavtat" />
@@ -178,7 +178,7 @@ import thomas from '../img/sites/7stthomas.webp';
 	<section>
 		<div class="container top btm" id="featured">
 			<div class="flex">
-				<h2 class="staggerText">Featured Site</h2>
+				<h2>Featured Site</h2>
 			</div>
 
 			<p class="featured-details">
@@ -208,60 +208,66 @@ import thomas from '../img/sites/7stthomas.webp';
 		</div>
 	</section>
 
-	<section id="features-container">
+	<section id="featured-videos">
 		<div class="container top">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h2 class="staggerText">Video & Animation Ads</h2>
-					<p>The following animations are selections from a series of Facebook and Google Ad campaigns.</p>
+					<h2>Video & Animation Ads</h2>
+					<p class="width">
+						The following examples are selections from a number of Facebook and Google Ad campaigns (the 1080p 1:1 aspect ratio version). They contain a mixture of composited still image with video,
+						and vector graphic animations using Adobe Animate.
+					</p>
 					<br />
 				</div>
 			</div>
 		</div>
 
-		<div class="features">
-			<div>
-				<svg class="play-button" viewBox="0 0 200 200">
-					<circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="#fff"></circle>
-					<polygon points="70, 55 70, 145 145, 100" fill="#fff"></polygon>
-				</svg>
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/diamond-mobile.mp4" type="video/mp4" />
+					</video>
+					<h3>Residential Highrise Rentals</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/Fortune-District-Ad-1.mp4" type="video/mp4" />
+					</video>
+					<h3>Commercial Space</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/Greehaus-1080.mp4" type="video/mp4" />
+					</video>
+					<h3>Condominiums</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/MRC-Facebook.mp4" type="video/mp4" />
+					</video>
+					<h3>Resort</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/Greenhaus-sky.mp4" type="video/mp4" />
+					</video>
+					<h3>Condominiums</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/MRC-Ad-1.mp4" type="video/mp4" />
+					</video>
+					<h3>Resort</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/BlueVista-Summer.mp4" type="video/mp4" />
+					</video>
+					<h3>Residential Community</h3>
+				</div>
 			</div>
-			<div>
-				<video playsinline muted controls poster="">
-					<source src="/Fortune-District-Ad-1.mp4" type="video/mp4" />
-				</video>
-				<h4>Commercial Space</h4>
-			</div>
-			<div>
-				<video playsinline muted controls poster="">
-					<source src="/Greehaus-1080.mp4" type="video/mp4" />
-				</video>
-				<h4>Condos</h4>
-			</div>
-			<div>
-				<video playsinline muted controls poster="">
-					<source src="/MRC-Facebook.mp4" type="video/mp4" />
-				</video>
-				<h4>Croatian Resort</h4>
-			</div>
-			<div>
-				<video playsinline muted controls poster="">
-					<source src="/Greenhaus-sky.mp4" type="video/mp4" />
-				</video>
-				<h4>Condominiums</h4>
-			</div>
-			<div>
-				<video playsinline muted controls poster="">
-					<source src="/MRC-Ad-1.mp4" type="video/mp4" />
-				</video>
-				<h4>Croatian Resort</h4>
-			</div>
-			<div>
-				<video playsinline muted controls poster="">
-					<source src="/BlueVista-Summer.mp4" type="video/mp4" />
-				</video>
-				<h4>Blue Vista / Residential Community</h4>
-			</div>
+			<div class="swiper-pagination"></div>
 		</div>
 	</section>
 
@@ -269,7 +275,7 @@ import thomas from '../img/sites/7stthomas.webp';
 		<div class="container top btm">
 			<div class="flex padding-x">
 				<div class="cell">
-					<h2 class="staggerText">Web Limbo</h2>
+					<h2>Web Limbo</h2>
 					<p class="width">A number of P&B Real Estate developer projects below have been retired, although some are still active and or have samples of marketing materials if you click on them.</p>
 					<p class="width">
 						On top of the list below, other web projects that I have developed can be seen <a
@@ -282,110 +288,110 @@ import thomas from '../img/sites/7stthomas.webp';
 					<br />
 				</div>
 			</div>
-			<div class="flex padding-x small-up-2 medium-up-3 large-up-4 graveyard">
+			<div class="grid graveyard">
 				<div class="cell">
 					<a href="https://theravine.ca/" target="_blank" aria-label="offsite link to theravine.ca">
 						<Image src={ravine} class="" alt="The Ravine" />
-						<p>The Ravine</p>
+						<h3>The Ravine</h3>
 					</a>
 				</div>
 				<div class="cell">
 					<a href="https://pbmarketing.ca/work-arthaus.php" target="_blank" aria-label="offsite link to work-arthaus.php">
 						<Image src={arthaus} class="" alt="Arthaus" />
-						<p>Arthaus</p>
+						<h3>Arthaus</h3>
 					</a>
 				</div>
 				<div class="cell">
 					<a href="https://pbmarketing.ca/work-shiplake.php" target="_blank" aria-label="offsite link to work-shiplake.php">
 						<Image src={shiplake} class="" alt="Shiplake Rental Management" />
-						<p>Shiplake Rental Mgmt.</p>
+						<h3>Shiplake Rentals</h3>
 					</a>
 				</div>
 				<div class="cell">
 					<a href="https://pbmarketing.ca/work-7stThomas.php" target="_blank" aria-label="offsite link to work-7stThomas.php">
 						<Image src={thomas} class="" alt="7 St. Thomas" />
-						<p>7 St. Thomas</p>
+						<h3>7 St. Thomas</h3>
 					</a>
 				</div>
 				<div class="cell">
 					<Image src={peterSt} class="" alt="117 Peter Street" />
-					<p>117 Peter Street</p>
+					<h3>117 Peter Street</h3>
 				</div>
 				<div class="cell">
 					<Image src={barrington} class="" alt="The Barrington" />
-					<p>The Barrington</p>
+					<h3>The Barrington</h3>
 				</div>
 				<div class="cell">
 					<a href="https://pbmarketing.ca/work-boathaus.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-boathaus.php">
 						<Image src={boathaus} class="" alt="Boathaus" />
-						<p>Boathaus</p>
+						<h3>Boathaus</h3>
 					</a>
 				</div>
 				<div class="cell">
 					<Image src={brownstones} class="" alt="Brownstones" />
-					<p>Brownstones</p>
+					<h3>Brownstones</h3>
 				</div>
 				<div class="cell">
 					<a href="https://pbmarketing.ca/work-delisle.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-delisle.php">
 						<Image src={delisle} class="" alt="Delisle Dentistry" />
-						<p>Delisle Dentistry</p>
+						<h3>Delisle Dentistry</h3>
 					</a>
 				</div>
 				<div class="cell">
 					<Image src={designhaus} class="" alt="Designhaus" />
-					<p>Designhaus</p>
+					<h3>Designhaus</h3>
 				</div>
 				<div class="cell">
 					<Image src={fuse} class="" alt="Fuse Consos" />
-					<p>Fuse Consos</p>
+					<h3>Fuse Consos</h3>
 				</div>
 				<div class="cell">
 					<Image src={genesis} class="" alt="Genesis Condos" />
-					<p>Genesis Condos</p>
+					<h3>Genesis Condos</h3>
 				</div>
 				<div class="cell">
 					<Image src={guildwood} class="" alt="Guildwood Condos" />
-					<p>Guildwood Condos</p>
+					<h3>Guildwood Condos</h3>
 				</div>
 				<div class="cell">
 					<a href="http://jacjacobson.com" target="_blank" aria-label="offsite link to jacjacobson.com">
 						<Image src={jac} class="" alt="Jack Jacobson Photography" />
-						<p>Jack Jacobson Photography</p>
+						<h3>Jack Jacobson Photography</h3>
 					</a>
 				</div>
 				<div class="cell">
 					<Image src={aquavil} class="" alt="Aquavil" />
-					<p>Aquavil</p>
+					<h3>Aquavil</h3>
 				</div>
 				<div class="cell">
 					<a href="https://kingswaybytheriver.ca/" target="_blank" aria-label="offsite link to kingswaybytheriver.ca">
 						<Image src={kingsway} class="" alt="Kingsway By The River" />
-						<p>Kingsway By The River</p>
+						<h3>Kingsway By The River</h3>
 					</a>
 				</div>
 				<div class="cell">
 					<Image src={northeast} class="" alt="Northeast Midstream Energ" />
-					<p>Northeast Midstream Energy</p>
+					<h3>Northeast Midstream Energy</h3>
 				</div>
 				<div class="cell">
 					<Image src={sunrise} class="" alt="Sunrise Condos" />
-					<p>Sunrise Condos</p>
+					<h3>Sunrise Condos</h3>
 				</div>
 				<div class="cell">
 					<Image src={todm} class="" alt="Towns of Don Mills" />
-					<p>Towns of Don Mills</p>
+					<h3>Towns of Don Mills</h3>
 				</div>
 				<div class="cell">
 					<Image src={union} class="" alt="Union Villas" />
-					<p>Union Villas</p>
+					<h3>Union Villas</h3>
 				</div>
 				<div class="cell">
 					<Image src={url} class="" alt="URL Condos" />
-					<p>URL Condos</p>
+					<h3>URL Condos</h3>
 				</div>
 				<div class="cell">
 					<Image src={mcmurray} class="" alt="McMurray Residences" />
-					<p>McMurray Residences</p>
+					<h3>McMurray Residences</h3>
 				</div>
 			</div>
 		</div>
@@ -403,11 +409,6 @@ import thomas from '../img/sites/7stthomas.webp';
 </Layout>
 
 <video class="fireworks" src="/fireworks-wh.mp4" autoplay playsinline muted loop poster=""></video>
-
-<script is:inline src="/gsap.min.js"></script>
-<script is:inline src="/ScrollTrigger.min.js"></script>
-<script is:inline src="/ScrollSmoother.min.js"></script>
-<script is:inline src="/SplitText.min.js"></script>
 
 <script>
 	document.addEventListener('astro:page-load', () => {
@@ -431,59 +432,28 @@ import thomas from '../img/sites/7stthomas.webp';
 </script>
 
 <script is:inline>
-	document.addEventListener('astro:page-load', () => {
-		const fact = document.querySelector('.fact');
-		const factDetails = document.querySelector('.fact-details');
+	document.getElementById('dale').addEventListener('submit', async function (e) {
+		e.preventDefault();
 
-		fact.addEventListener('click', () => {
-			factDetails.classList.toggle('show');
-		});
-	});
-</script>
+		const form = e.target;
+		const formData = new FormData(form);
+		const responseDiv = document.getElementById('response');
 
-<script is:inline>
-	// FEATURES PINNED
-	document.addEventListener('astro:page-load', () => {
-		const features = document.querySelector('.features');
-
-		function getScrollAmount() {
-			let featuresWidth = features.scrollWidth;
-			return -(featuresWidth - window.innerWidth / 1.05);
-		}
-
-		const tween = gsap.fromTo(
-			features,
-			{
-				//x: () => window.innerWidth
-			},
-			{
-				x: getScrollAmount,
-			}
-		);
-
-		ScrollTrigger.create({
-			trigger: '#features-container',
-			start: 'top 0%',
-			end: () => `+=${getScrollAmount() * -1}`,
-			pin: true,
-			paused: true,
-			ease: 'power3',
-			animation: tween,
-			scrub: 2,
-			invalidateOnRefresh: true,
-			//markers: true
-		});
-
-		const sections = gsap.utils.toArray('.features div');
-
-		sections.forEach((section) => {
-			ScrollTrigger.create({
-				trigger: section,
-				containerAnimation: tween,
-				scrub: true,
-				start: 'left 0%',
+		try {
+			const response = await fetch(form.action, {
+				method: 'POST',
+				body: formData,
 			});
-		});
+			const result = await response.json();
+
+			if (result.status === 'success') {
+				responseDiv.innerHTML = `<p style="color: green;">${result.message}</p>`;
+			} else {
+				responseDiv.innerHTML = `<p style="color: red;">${result.message}</p>`;
+			}
+		} catch (error) {
+			responseDiv.innerHTML = `<p style="color: red;">An error occurred. Please try again later.</p>`;
+		}
 	});
 </script>
 
@@ -492,6 +462,15 @@ import thomas from '../img/sites/7stthomas.webp';
 		const filterButtons = document.querySelectorAll('.filter-btn');
 		const sites = document.querySelectorAll('#sites .site');
 		const filterSites = document.querySelector('#filter-sites ul');
+
+		// function removeAllButton() {
+		// 	const allButton = document.querySelector('.filter-btn-all');
+		// 	if (allButton.classList.contains('active')) {
+		// 		allButton.setTimeout(() => {
+		// 			allButton.style.display = 'none';
+		// 		}, 2000);
+		// 	}
+		// }
 
 		function addAllButton() {
 			// Check if the "All" button already exists
@@ -509,12 +488,15 @@ import thomas from '../img/sites/7stthomas.webp';
 					createFilterBtn.classList.add('active');
 					sites.forEach((site) => (site.style.display = 'block'));
 				});
+
+				// if (createFilterBtn.classList.contains('active')) {
+				// 	removeAllButton();
+				// }
 			}
 		}
 
 		filterButtons.forEach((button) => {
 			button.addEventListener('click', () => {
-				// Remove active class from all buttons and add to the clicked button
 				filterButtons.forEach((btn) => btn.classList.remove('active'));
 				button.classList.add('active');
 
@@ -525,7 +507,6 @@ import thomas from '../img/sites/7stthomas.webp';
 
 				const filterType = button.textContent.trim();
 
-				// Filter sites based on the data-type attribute
 				sites.forEach((site) => {
 					const dataCategory = site.getAttribute('data-category');
 					if (dataCategory === filterType || filterType === 'All') {
@@ -535,7 +516,6 @@ import thomas from '../img/sites/7stthomas.webp';
 					}
 				});
 
-				// Add the "All" button
 				addAllButton();
 			});
 		});
@@ -588,37 +568,104 @@ import thomas from '../img/sites/7stthomas.webp';
 	});
 </script>
 
-<script is:inline>
-	// STAGGER TEXT
-	function setupSplits() {
-		gsap.utils.toArray('.staggerText').forEach((el) => {
-			gsap.from(
-				SplitText.create(el, {
-					type: 'words, chars',
-				}).chars,
-				{
-					duration: 1,
-					opacity: 0,
-					id: 'chars',
-					y: -20,
-					ease: 'circ:out',
-					stagger: 0.5,
-					scrollTrigger: {
-						trigger: el,
-						start: 'top 100%',
-						end: 'top 80%',
-						scrub: 1,
-					},
-				}
-			);
-		});
+<style>
+	:root {
+		.swiper {
+			padding-bottom: 3rem;
+		}
+		.swiper-pagination {
+			bottom: 10px !important;
+		}
+		.swiper-pagination-bullet-active {
+			background: #021e42;
+		}
+		.swiper-slide {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background: none;
+		}
 	}
+</style>
 
-	setupSplits();
-	window.addEventListener('resize', setupSplits);
+<script>
+	import Swiper from 'swiper';
+	import { Pagination, Autoplay } from 'swiper/modules';
+	Swiper.use([Autoplay]);
+	import 'swiper/scss';
+	import 'swiper/scss/effect-fade';
+	import 'swiper/scss/pagination';
+
+	document.addEventListener('astro:page-load', () => {
+		function initializeSwipers() {
+			new Swiper('.swiper', {
+				modules: [Pagination],
+				freeMode: true,
+				speed: 1000,
+				loop: true,
+				autoplay: {
+					delay: 4000,
+					disableOnInteraction: true,
+					pauseOnMouseEnter: true,
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					renderBullet: function (index, className) {
+						return '<span class="' + className + '"></span>';
+					},
+					clickable: true,
+				},
+				breakpoints: {
+					2000: {
+						slidesPerView: 6,
+						spaceBetween: 40,
+					},
+					1600: {
+						slidesPerView: 5,
+						spaceBetween: 30,
+					},
+					1200: {
+						slidesPerView: 4,
+						spaceBetween: 20,
+					},
+					900: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					500: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					400: {
+						slidesPerView: 1,
+						spaceBetween: 20,
+					},
+				},
+			});
+		}
+
+		initializeSwipers();
+	});
 </script>
 
 <style>
+	/* -------------------
+	 VIDEOS
+	 ------------------- */
+	#featured-videos video {
+		margin-bottom: 1rem;
+	}
+	#featured-videos h3 {
+		font-size: 1.25rem;
+	}
+	#featured-videos video::-webkit-media-controls-volume-slider {
+		display: none;
+	}
+	#featured-videos video::-webkit-media-controls-mute-button {
+		display: none;
+	}
+
 	/* -------------------
 	 LAPTOP & MOBILE 
 	 ------------------- */
@@ -683,5 +730,50 @@ import thomas from '../img/sites/7stthomas.webp';
 			left: 0;
 			right: 0;
 		}
+	}
+</style>
+
+<style>
+	.wrapper {
+		list-style: none;
+		margin: 0 auto 0 auto;
+		padding: 0;
+		display: grid;
+		max-width: 1400px;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-auto-flow: dense;
+	}
+
+	@media (min-width: 460px) {
+		.wrapper {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.text {
+			grid-column: 1 / 3;
+		}
+	}
+
+	@media (min-width: 660px) {
+		.wrapper {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+
+		.text {
+			grid-column: 2 / 4;
+			grid-row: 1 / 3;
+		}
+
+		.wide {
+			grid-column: auto / span 2;
+		}
+	}
+
+	.wrapper li {
+		margin: 10px;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		padding: 1.25rem;
 	}
 </style>

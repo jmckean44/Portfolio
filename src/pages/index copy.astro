@@ -1,0 +1,770 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Picture } from 'astro:assets';
+import { Image } from 'astro:assets';
+import { items } from '../data/index.ts';
+import '../styles/form.scss';
+import ItemCard from '../components/ItemCard.astro';
+import html7Dale from '../img/htmls/7dale.jpg';
+import htmlMRC from '../img/htmls/mrc.jpg';
+import htmlDiamond from '../img/htmls/diamond.jpg';
+import htmlWinslow from '../img/htmls/winslow.jpg';
+import htmlVanguard from '../img/htmls/vanguard.jpg';
+import CheckboxGroup from '../components/Checkbox.jsx';
+import laptop from '../img/laptop.png';
+import mobile from '../img/mobile.png';
+import fact from '../img/fact.webp';
+import aquavil from '../img/sites/aquavil.jpg';
+import barrington from '../img/sites/barrington.jpg';
+import boathaus from '../img/sites/boathaus.jpg';
+import brownstones from '../img/sites/brownstones.jpg';
+import delisle from '../img/sites/delisle.jpg';
+import designhaus from '../img/sites/designhaus.jpg';
+import fuse from '../img/sites/fuse.jpg';
+import genesis from '../img/sites/genesis.jpg';
+import guildwood from '../img/sites/guildwood.jpg';
+import jac from '../img/sites/jac.jpg';
+import kingsway from '../img/sites/kingsway.jpg';
+import mcmurray from '../img/sites/mcmurray.jpg';
+import northeast from '../img/sites/northeast.jpg';
+import peterSt from '../img/sites/peterSt.jpg';
+import ravine from '../img/sites/ravine.jpg';
+import shiplake from '../img/sites/shiplake.jpg';
+import sunrise from '../img/sites/sunrise.jpg';
+import todm from '../img/sites/todm.jpg';
+import union from '../img/sites/union.jpg';
+import url from '../img/sites/url.jpg';
+import arthaus from '../img/sites/arthaus.webp';
+import thomas from '../img/sites/7stthomas.webp';
+---
+
+<Layout pageTitle="Past & Current Work" pageSiteTitles="">
+	<section>
+		<div class="container top-of-page btm" id="intro">
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h1 id="greeting" class="slideInUp"></h1>
+				</div>
+			</div>
+			<div class="flex padding-x">
+				<div class="cell small-18 medium-9">
+					<p class="justify">
+						My name is Jeff and I am a <strong class="bold">Frontend Web Developer</strong> with a background in the <strong class="bold">Visual Arts</strong>. I have a comprehensive understanding of
+						the fundamentals of <strong class="bold">composition</strong> and <strong class="bold">design</strong> and apply principles from these disciplines towards digital content creation.
+					</p>
+					<p>For more detailed information, please see my <a class="underline" href="/Jeff-McKean-Resume.pdf" target="_blank">resume</a>.</p>
+				</div>
+				<div class="cell small-18 medium-9">
+					<p class="justify paragraph-bg">
+						My experience working with smaller marketing agencies as the principal frontend web developer and multimedia specialist, has given me the opportunity to work on a diverse range of
+						responsibilities related to digital marketing communications.
+					</p>
+
+					<!-- <button popovertarget="modal" class="fact-img"><Image src={fact} alt="Fact" /></button>
+					<dialog id="modal" popover="auto">
+						<button popovertarget="modal" popovertargetaction="hide" class="fact-close"></button>
+						<p>
+							This site was built using the <strong><a target="_blank" href="https://astro.build/" class="underline" aria-label="offsite link to Astro.build">Astro JS</a></strong> framework, <a
+								class="underline"
+								aria-label="offsite link to lenis.darkroom.engineering/"
+								target="_blank"
+								href="https://lenis.darkroom.engineering/">Lenis</a
+							> native-browser smooth scrolling, and some parallaxing using the <a class="underline" target="_blank" href="https://gsap.com/" aria-label="offsite link to gsap.com">GSAP</a> animation library.
+						</p>
+					</dialog> -->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="current-sites">
+		<div class="container">
+			<div class="flex padding-x">
+				<div class="cell small-18 medium-9">
+					<h1>Active Sites</h1>
+					<p class="justify">
+						The following custom designed site examples were created for <a target=" _blank" href="https://pbmarketing.ca/" class="underline" aria-label="offsite link to
+						pbmarketing.ca"
+							>P&B Marketing</a
+						>, a full-service marketing agency that offers a comprehensive suite of marketing services, encompassing everything from strategy and planning to execution and analytics, covering both
+						digital and traditional channels to developers in the real estate industry.
+					</p>
+					<br />
+				</div>
+				<div class="cell small-18 filter">
+					<p class="bold">Filter sites by build type:</p>
+					<div id="filter-sites">
+						<ul>
+							<li><button class="filter-btn">PHP</button></li>
+							<li><button class="filter-btn">Astro</button></li>
+							<li><button class="filter-btn">CMS</button></li>
+						</ul>
+					</div>
+
+					<!-- <div class="flex" id="sites">
+						{items.map((item) => <ItemCard {item} />)}
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<div class="flex" id="sites">
+			{items.map((item) => <ItemCard {item} />)}
+		</div>
+	</section>
+
+	<section id="htmls">
+		<div class="container top">
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h2>HTML Email Campaigns</h2>
+				</div>
+				<div class="cell small-18">
+					<p class="width">
+						The following selection of <strong>HTML Email campaigns</strong> were hand-coded in Visusal Studio Code, tested in Litmus, and deployed through Mailchimp.
+					</p>
+					<div class="cell small-18">
+						<p class="width">To receive a test in your inbox, please enter your email address, and click send.</p>
+					</div>
+				</div>
+			</div>
+			<div id="campaigns">
+				<div>
+					<Picture src={html7Dale} formats={['avif', 'webp']} quality="" alt="7 Dale" />
+					<form action="/dale.php" method="POST" id="dale">
+						<input type="email" name="email" placeholder="Email" />
+						<input class="btn" name="submit" type="submit" value="SEND" />
+					</form>
+				</div>
+				<div>
+					<Picture src={htmlMRC} formats={['avif', 'webp']} quality="" alt="Marina Resort Cavtat" />
+					<form action="" method="POST" class="">
+						<input type="email" placeholder="Email" />
+						<input class="btn" name="submit" type="submit" value="SEND" />
+					</form>
+				</div>
+				<div>
+					<Picture src={htmlWinslow} formats={['avif', 'webp']} quality="" alt="The Winslow" />
+					<form action="" method="POST" class="">
+						<input type="email" placeholder="Email" />
+						<input class="btn" name="submit" type="submit" value="SEND" />
+					</form>
+				</div>
+				<div>
+					<Picture src={htmlVanguard} formats={['avif', 'webp']} quality="" alt="The Vanguard" />
+					<form action="" method="POST" class="">
+						<input type="email" placeholder="Email" />
+						<input class="btn" name="submit" type="submit" value="SEND" />
+					</form>
+				</div>
+				<div>
+					<Picture src={htmlDiamond} formats={['avif', 'webp']} quality="" alt="The Diamond Rentals" />
+					<form action="" method="POST" class="">
+						<input type="email" placeholder="Email" />
+						<input class="btn" name="submit" type="submit" value="SEND" />
+					</form>
+				</div>
+				<div>
+					<Picture src={htmlDiamond} formats={['avif', 'webp']} quality="" alt="The Diamond Rentals" />
+					<form action="" method="POST" class="">
+						<input type="email" placeholder="Email" />
+						<input class="btn" name="submit" type="submit" value="SEND" />
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container top btm" id="featured">
+			<div class="flex">
+				<h2>Featured Site</h2>
+			</div>
+
+			<p class="featured-details">
+				The <strong class="bold">Marina Resort Cavtat</strong> site is currently a multilingual registration website for an up and coming resort in Croatia. At the clients request, The full site will be
+				available shortly.
+			</p>
+
+			<div class="flex display-formats">
+				<div class="laptop-container">
+					<Image src={laptop} class="device-mask" alt="Laptop" />
+					<video class="site-video" autoplay playsinline muted loop poster="">
+						<source src="/mrc-laptop.mp4" type="video/mp4" />
+					</video>
+				</div>
+				<div class="mobile-container">
+					<Image src={mobile} class="device-mask" alt="Mobile Mask" />
+					<video class="mobile-video" autoplay playsinline muted loop poster="">
+						<source src="/mrc-mobile.mp4" type="video/mp4" />
+					</video>
+				</div>
+			</div>
+			<div id="timeline">
+				<video class="timeline" autoplay playsinline muted loop poster="/timeline-poster.webp">
+					<source src="/timeline.mp4" type="video/mp4" />
+				</video>
+			</div>
+		</div>
+	</section>
+
+	<section id="featured-videos">
+		<div class="container top">
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h2>Video & Animation Ads</h2>
+					<p class="width">
+						The following examples are selections from a number of Facebook and Google Ad campaigns (the 1080p 1:1 aspect ratio version). They contain a mixture of composited still image with video,
+						and vector graphic animations using Adobe Animate.
+					</p>
+					<br />
+				</div>
+			</div>
+		</div>
+
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/diamond-mobile.mp4" type="video/mp4" />
+					</video>
+					<h3>Residential Highrise Rentals</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/Fortune-District-Ad-1.mp4" type="video/mp4" />
+					</video>
+					<h3>Commercial Space</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/Greehaus-1080.mp4" type="video/mp4" />
+					</video>
+					<h3>Condominiums</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/MRC-Facebook.mp4" type="video/mp4" />
+					</video>
+					<h3>Resort</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/Greenhaus-sky.mp4" type="video/mp4" />
+					</video>
+					<h3>Condominiums</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/MRC-Ad-1.mp4" type="video/mp4" />
+					</video>
+					<h3>Resort</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/BlueVista-Summer.mp4" type="video/mp4" />
+					</video>
+					<h3>Residential Community</h3>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</section>
+
+	<section id="graveyard">
+		<div class="container top btm">
+			<div class="flex padding-x">
+				<div class="cell">
+					<h2>Web Limbo</h2>
+					<p class="width">A number of P&B Real Estate developer projects below have been retired, although some are still active and or have samples of marketing materials if you click on them.</p>
+					<p class="width">
+						On top of the list below, other web projects that I have developed can be seen <a
+							target="_blank"
+							class="underline"
+							href="https://pbmarketing.ca/work.php"
+							aria-label="offsite link to pbmarketing.ca">here</a
+						>.
+					</p>
+					<br />
+				</div>
+			</div>
+			<div class="flex padding-x small-up-2 medium-up-3 large-up-4 graveyard">
+				<div class="cell">
+					<a href="https://theravine.ca/" target="_blank" aria-label="offsite link to theravine.ca">
+						<Image src={ravine} class="" alt="The Ravine" />
+						<h3>The Ravine</h3>
+					</a>
+				</div>
+				<div class="cell">
+					<a href="https://pbmarketing.ca/work-arthaus.php" target="_blank" aria-label="offsite link to work-arthaus.php">
+						<Image src={arthaus} class="" alt="Arthaus" />
+						<h3>Arthaus</h3>
+					</a>
+				</div>
+				<div class="cell">
+					<a href="https://pbmarketing.ca/work-shiplake.php" target="_blank" aria-label="offsite link to work-shiplake.php">
+						<Image src={shiplake} class="" alt="Shiplake Rental Management" />
+						<h3>Shiplake Rentals</h3>
+					</a>
+				</div>
+				<div class="cell">
+					<a href="https://pbmarketing.ca/work-7stThomas.php" target="_blank" aria-label="offsite link to work-7stThomas.php">
+						<Image src={thomas} class="" alt="7 St. Thomas" />
+						<h3>7 St. Thomas</h3>
+					</a>
+				</div>
+				<div class="cell">
+					<Image src={peterSt} class="" alt="117 Peter Street" />
+					<h3>117 Peter Street</h3>
+				</div>
+				<div class="cell">
+					<Image src={barrington} class="" alt="The Barrington" />
+					<h3>The Barrington</h3>
+				</div>
+				<div class="cell">
+					<a href="https://pbmarketing.ca/work-boathaus.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-boathaus.php">
+						<Image src={boathaus} class="" alt="Boathaus" />
+						<h3>Boathaus</h3>
+					</a>
+				</div>
+				<div class="cell">
+					<Image src={brownstones} class="" alt="Brownstones" />
+					<h3>Brownstones</h3>
+				</div>
+				<div class="cell">
+					<a href="https://pbmarketing.ca/work-delisle.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-delisle.php">
+						<Image src={delisle} class="" alt="Delisle Dentistry" />
+						<h3>Delisle Dentistry</h3>
+					</a>
+				</div>
+				<div class="cell">
+					<Image src={designhaus} class="" alt="Designhaus" />
+					<h3>Designhaus</h3>
+				</div>
+				<div class="cell">
+					<Image src={fuse} class="" alt="Fuse Consos" />
+					<h3>Fuse Consos</h3>
+				</div>
+				<div class="cell">
+					<Image src={genesis} class="" alt="Genesis Condos" />
+					<h3>Genesis Condos</h3>
+				</div>
+				<div class="cell">
+					<Image src={guildwood} class="" alt="Guildwood Condos" />
+					<h3>Guildwood Condos</h3>
+				</div>
+				<div class="cell">
+					<a href="http://jacjacobson.com" target="_blank" aria-label="offsite link to jacjacobson.com">
+						<Image src={jac} class="" alt="Jack Jacobson Photography" />
+						<h3>Jack Jacobson Photography</h3>
+					</a>
+				</div>
+				<div class="cell">
+					<Image src={aquavil} class="" alt="Aquavil" />
+					<h3>Aquavil</h3>
+				</div>
+				<div class="cell">
+					<a href="https://kingswaybytheriver.ca/" target="_blank" aria-label="offsite link to kingswaybytheriver.ca">
+						<Image src={kingsway} class="" alt="Kingsway By The River" />
+						<h3>Kingsway By The River</h3>
+					</a>
+				</div>
+				<div class="cell">
+					<Image src={northeast} class="" alt="Northeast Midstream Energ" />
+					<h3>Northeast Midstream Energy</h3>
+				</div>
+				<div class="cell">
+					<Image src={sunrise} class="" alt="Sunrise Condos" />
+					<h3>Sunrise Condos</h3>
+				</div>
+				<div class="cell">
+					<Image src={todm} class="" alt="Towns of Don Mills" />
+					<h3>Towns of Don Mills</h3>
+				</div>
+				<div class="cell">
+					<Image src={union} class="" alt="Union Villas" />
+					<h3>Union Villas</h3>
+				</div>
+				<div class="cell">
+					<Image src={url} class="" alt="URL Condos" />
+					<h3>URL Condos</h3>
+				</div>
+				<div class="cell">
+					<Image src={mcmurray} class="" alt="McMurray Residences" />
+					<h3>McMurray Residences</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="next-page">
+		<div class="container btm">
+			<div class="flex padding-x">
+				<div class="cell">
+					<p>Go to <strong class="bold"><a href="/new" class="underline">Learning Curve</a></strong> or <strong class="bold"><a href="/about" class="underline">About</a></strong>.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<video class="fireworks" src="/fireworks-wh.mp4" autoplay playsinline muted loop poster=""></video>
+
+<script>
+	document.addEventListener('astro:page-load', () => {
+		const date = new Date();
+		const timeOfDay = date.getHours();
+		let greeting;
+
+		if (timeOfDay < 12) {
+			greeting = 'Good morning.';
+		} else if (timeOfDay < 17) {
+			greeting = 'Good afternoon.';
+		} else {
+			greeting = 'Good evening.';
+		}
+
+		const greetingElement = document.getElementById('greeting');
+		if (greetingElement) {
+			greetingElement.innerHTML = '<h1>' + greeting + '</h1>';
+		}
+	});
+</script>
+
+<script is:inline>
+	document.addEventListener('astro:page-load', () => {
+		const fact = document.querySelector('.fact');
+		const factDetails = document.querySelector('.fact-details');
+
+		fact.addEventListener('click', () => {
+			factDetails.classList.toggle('show');
+		});
+	});
+</script>
+
+<script is:inline>
+	document.addEventListener('astro:page-load', () => {
+		const filterButtons = document.querySelectorAll('.filter-btn');
+		const sites = document.querySelectorAll('#sites .site');
+		const filterSites = document.querySelector('#filter-sites ul');
+
+		// function removeAllButton() {
+		// 	const allButton = document.querySelector('.filter-btn-all');
+		// 	if (allButton.classList.contains('active')) {
+		// 		allButton.setTimeout(() => {
+		// 			allButton.style.display = 'none';
+		// 		}, 2000);
+		// 	}
+		// }
+
+		function addAllButton() {
+			// Check if the "All" button already exists
+			if (!document.querySelector('.filter-btn-all')) {
+				const createLi = document.createElement('li');
+				const createFilterBtn = document.createElement('button');
+				createFilterBtn.classList.add('filter-btn', 'filter-btn-all');
+				createFilterBtn.textContent = 'All';
+				createLi.appendChild(createFilterBtn);
+				filterSites.insertBefore(createLi, filterSites.firstChild);
+
+				// Add event listener to the "All" button
+				createFilterBtn.addEventListener('click', () => {
+					filterButtons.forEach((btn) => btn.classList.remove('active'));
+					createFilterBtn.classList.add('active');
+					sites.forEach((site) => (site.style.display = 'block'));
+				});
+
+				// if (createFilterBtn.classList.contains('active')) {
+				// 	removeAllButton();
+				// }
+			}
+		}
+
+		filterButtons.forEach((button) => {
+			button.addEventListener('click', () => {
+				filterButtons.forEach((btn) => btn.classList.remove('active'));
+				button.classList.add('active');
+
+				const allButton = document.querySelector('.filter-btn-all');
+				if (allButton) {
+					allButton.classList.remove('active');
+				}
+
+				const filterType = button.textContent.trim();
+
+				sites.forEach((site) => {
+					const dataCategory = site.getAttribute('data-category');
+					if (dataCategory === filterType || filterType === 'All') {
+						site.style.display = 'block';
+					} else {
+						site.style.display = 'none';
+					}
+				});
+
+				addAllButton();
+			});
+		});
+	});
+</script>
+
+<script is:inline>
+	async function sendData(data, url) {
+		try {
+			const request = await fetch(url, {
+				method: 'POST',
+				body: data,
+			});
+
+			const result = await request.json();
+			console.log(result);
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
+	const form = document.getElementById('dale');
+
+	form.addEventListener('submit', function (e) {
+		e.preventDefault();
+		var data = new FormData(document.forms.form);
+		sendData(data, '/htmls/dale.php');
+	});
+</script>
+
+<script is:inline>
+	document.addEventListener('astro:page-load', () => {
+		const video = document.querySelector('.fireworks');
+
+		document.getElementById('themeToggle').addEventListener('click', () => {
+			if (localStorage.getItem('theme') && localStorage.getItem('theme').includes('dark')) {
+				video.setAttribute('src', '/fireworks-drk.mp4');
+			} else {
+				video.setAttribute('src', '/fireworks-wh.mp4');
+			}
+		});
+
+		document.addEventListener('astro:page-load', () => {
+			if (localStorage.getItem('theme').includes('dark')) {
+				video.setAttribute('src', '/fireworks-drk.mp4');
+			} else {
+				video.setAttribute('src', '/fireworks-wh.mp4');
+			}
+		});
+	});
+</script>
+
+<style>
+	:root {
+		.swiper {
+			padding-bottom: 3rem;
+		}
+		.swiper-pagination {
+			bottom: 10px !important;
+		}
+		.swiper-pagination-bullet-active {
+			background: #021e42;
+		}
+		.swiper-slide {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background: none;
+		}
+	}
+</style>
+
+<script>
+	import Swiper from 'swiper';
+	import { Pagination, Autoplay } from 'swiper/modules';
+	Swiper.use([Autoplay]);
+	import 'swiper/scss';
+	import 'swiper/scss/effect-fade';
+	import 'swiper/scss/pagination';
+
+	document.addEventListener('astro:page-load', () => {
+		function initializeSwipers() {
+			new Swiper('.swiper', {
+				modules: [Pagination],
+				freeMode: true,
+				speed: 1000,
+				loop: true,
+				autoplay: {
+					delay: 4000,
+					disableOnInteraction: true,
+					pauseOnMouseEnter: true,
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					renderBullet: function (index, className) {
+						return '<span class="' + className + '"></span>';
+					},
+					clickable: true,
+				},
+				breakpoints: {
+					2000: {
+						slidesPerView: 6,
+						spaceBetween: 40,
+					},
+					1600: {
+						slidesPerView: 5,
+						spaceBetween: 30,
+					},
+					1200: {
+						slidesPerView: 4,
+						spaceBetween: 20,
+					},
+					900: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					500: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					400: {
+						slidesPerView: 1,
+						spaceBetween: 20,
+					},
+				},
+			});
+		}
+
+		initializeSwipers();
+	});
+</script>
+
+<style>
+	/* -------------------
+	 VIDEOS
+	 ------------------- */
+	#featured-videos video {
+		margin-bottom: 1rem;
+	}
+	#featured-videos h3 {
+		font-size: 1.25rem;
+	}
+	#featured-videos video::-webkit-media-controls-volume-slider {
+		display: none;
+	}
+	#featured-videos video::-webkit-media-controls-mute-button {
+		display: none;
+	}
+
+	/* -------------------
+	 LAPTOP & MOBILE 
+	 ------------------- */
+	.display-formats {
+		align-items: center;
+		gap: 3rem;
+	}
+
+	.display-formats .laptop-container {
+		flex: 1 1 0;
+		position: relative;
+		padding: 10% 0;
+	}
+
+	.display-formats .mobile-container {
+		flex: 0 1 auto;
+		position: relative;
+		max-width: 250px;
+		padding: 50px 0;
+	}
+
+	.device-mask {
+		position: absolute;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.site-video {
+		width: 79%;
+		margin: 4% auto 0;
+		border-radius: 10px;
+	}
+
+	.mobile-video {
+		width: 95%;
+		margin: 4% auto 0;
+		border-radius: 20px;
+	}
+
+	@media (max-width: 1000px) {
+		.display-formats {
+			flex-direction: column;
+			gap: 3rem;
+		}
+	}
+
+	@media (max-width: 500px) {
+		.display-formats .mobile-container {
+			max-width: 100%;
+			width: 65%;
+			padding: 0 0 5rem;
+		}
+		.mobile-video {
+			width: 60%;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+		}
+		.display-formats .mobile-container img {
+			width: 65%;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+		}
+	}
+	/* -------------------
+	 GRAVEYARD
+	 ------------------- */
+	#graveyard h3 {
+		text-align: center;
+		font-size: 1.25rem;
+	}
+</style>
+
+<style>
+	.wrapper {
+		list-style: none;
+		margin: 0 auto 0 auto;
+		padding: 0;
+		display: grid;
+		max-width: 1400px;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-auto-flow: dense;
+	}
+
+	@media (min-width: 460px) {
+		.wrapper {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.text {
+			grid-column: 1 / 3;
+		}
+	}
+
+	@media (min-width: 660px) {
+		.wrapper {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+
+		.text {
+			grid-column: 2 / 4;
+			grid-row: 1 / 3;
+		}
+
+		.wide {
+			grid-column: auto / span 2;
+		}
+	}
+
+	.wrapper li {
+		margin: 10px;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		padding: 1.25rem;
+	}
+</style>

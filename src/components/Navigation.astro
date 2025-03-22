@@ -8,16 +8,16 @@ import ThemeIcon from '../components/ThemeIcon.astro';
 <div class="container">
 	<nav>
 		<ul class="nav-links">
-			<li class="wow slideInDown" data-wow-duration="3s" data-wow-delay=".5s">
-				<a class={currentPath === '' ? 'active' : ''} href="/"><span>Live & Previous</span>Work</a>
+			<li class="wow slideInDown" data-wow-duration="3s" data-wow-delay="0s">
+				<a class={currentPath === '' || currentPath !== 'new' ? 'active' : ''} href="/"><span>Live & Previous</span>Work</a>
 			</li>
-			<li class="wow slideInDown" data-wow-duration="3s" data-wow-delay="1s">
+			<li class="wow slideInDown" data-wow-duration="3s" data-wow-delay=".5s">
 				<a class={currentPath === 'new' ? 'active' : ''} href="/new"><span>Learning</span>Curve</a>
 			</li>
-			<li class="wow slideInDown" data-wow-duration="3s" data-wow-delay="1.5s">
+			<li class="wow slideInDown" data-wow-duration="3s" data-wow-delay="1s">
 				<a class={currentPath === 'about' ? 'active' : ''} href="/about"><span>A Brief</span>Story</a>
 			</li>
-			<li class="wow slideInDown" data-wow-duration="3s" data-wow-delay="2s">
+			<li class="wow slideInDown" data-wow-duration="3s" data-wow-delay="1.5s">
 				<a class={currentPath === 'contact' ? 'active' : ''} href="/contact"><span>Send a</span>MSG</a>
 			</li>
 		</ul>

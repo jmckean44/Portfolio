@@ -463,15 +463,15 @@ $container-padding-mobile: 1.25rem;
 }
 
 .container.top {
-	padding: 100px $container-padding 0;
+	padding: 150px $container-padding 0;
 }
 
 .container.btm {
-	padding: 0 $container-padding 125px;
+	padding: 0 $container-padding 150px;
 }
 
 .container.top.btm-sm {
-	padding: 100px $container-padding 50px;
+	padding: 150px $container-padding 50px;
 }
 
 .container.btm-sm {
@@ -479,7 +479,7 @@ $container-padding-mobile: 1.25rem;
 }
 
 .container.top.btm {
-	padding: 100px $container-padding;
+	padding: 150px $container-padding;
 }
 
 .container.top-of-page {
@@ -523,15 +523,50 @@ $container-padding-mobile: 1.25rem;
 }
 
 /* =================================
+	 CURRENT SITES
+==================================== */
+#current-sites {
+	padding: 120px 0 0;
+}
+
+#current-sites .container {
+	padding: 0 $container-padding;
+}
+
+#current-sites .intro {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+#current-sites #sites {
+	max-width: 1400px;
+	padding: 0 0.3rem;
+	margin: 0 auto;
+}
+
+#current-sites .flex .filter p {
+	margin-bottom: 0;
+}
+
+@media (max-width: 750px) {
+	#current-sites #sites {
+		max-width: 1400px;
+		padding: 0 0.5rem;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 350px) {
+	#current-sites #sites {
+		padding: 0 1.25rem;
+	}
+}
+
+/* =================================
 	 COLOURS
 ==================================== */
 #greeting {
 	color: var.$theme-clr;
-}
-
-#current-sites .container.top.btm {
-	padding: 100px $container-padding 100px;
-	//border: 1px red solid;
 }
 
 .paragraph-bg {
@@ -544,19 +579,6 @@ $container-padding-mobile: 1.25rem;
 	.paragraph-bg {
 		margin-top: 0.5rem;
 	}
-}
-
-#current-sites .intro {
-	max-width: 1400px;
-	margin: 0 auto;
-}
-
-#current-sites .flex {
-	gap: 1rem;
-}
-
-#current-sites .flex .filter p {
-	margin-bottom: 0;
 }
 
 .slide-show {
@@ -667,7 +689,6 @@ p a {
 
 #home #filter-sites ul button {
 	background: var.$theme-clr;
-	padding-inline: 0.7rem;
 	margin-inline: auto;
 	height: auto;
 	line-height: 1;
@@ -687,62 +708,17 @@ p a {
 	background: var.$dark;
 }
 
-#modal::backdrop {
-	background: rgba(0, 0, 0, 0.5);
-	backdrop-filter: blur(5px);
+@media (max-width: 400px) {
+	#home #filter-sites ul button {
+		margin-right: 0.5rem;
+		padding: 0.6rem 0.5rem 0.5rem;
+		font-size: 0.8rem;
+	}
 }
 
-.fact-img {
-	width: 50px;
-	background: rgba(255, 255, 255, 0);
-}
-
-#modal .fact-close {
-	background: #fff url('../img/icon-close.svg') no-repeat top right !important;
-	background-size: 20px;
-	float: right;
-	width: 26px;
-	height: 26px;
-	padding: 1rem;
-	margin-top: 0;
-	margin-left: 1rem;
-	border: 1px red solid;
-}
-
-dialog:popover-open:not([open]) {
-	overlay: auto !important;
-	margin: 0 auto;
-	padding: 1.5rem;
-	max-width: 500px;
-	left: 0;
-	right: 0;
-	top: 40%;
-	border: 0;
-	border-radius: 5px;
-}
-
-#home .fact-details {
-	display: none;
-	position: absolute;
-	width: auto;
-	margin: 0 auto;
-	max-width: 400px;
-	background: #f2f2f2;
-	border-radius: 3px;
-	border: 1px #e0e0e0 solid;
-	padding: 1rem;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	font-size: 1.1rem;
-	z-index: 9999999999;
-}
-
-#home .fact-details.show {
-	display: block;
-	animation: fadeInOut ease 0.5s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-}
-
+/* =================================
+	 RESUME
+==================================== */
 #resume {
 	text-align: center;
 	color: #fff;
@@ -897,7 +873,7 @@ dialog:popover-open:not([open]) {
 	padding: 100px 1.25rem 1.25rem;
 	border-radius: 5px;
 	background: rgba(255, 255, 255, 0.8);
-	border: 1px #f2f2f2 solid;
+	border: 1px #ccc solid;
 }
 
 #featured .flex {
@@ -959,19 +935,34 @@ dialog:popover-open:not([open]) {
 	margin-bottom: 2rem;
 }
 
-#graveyard .graveyard .cell img {
+#graveyard .grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	align-content: center;
+	gap: 1.5rem;
+}
+
+// #graveyard .grid .cell:nth-child(5n) {
+// 	grid-column: span 2;
+// }
+
+#graveyard .graveyard .cell {
 	border: 1px #ccc solid;
+	background: #fff;
 	border-radius: 3px;
 	padding: 5px;
 	margin-bottom: 0.5rem;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-#graveyard .graveyard .cell p {
-	//font-family: 'Courier New', Courier, monospace;
+#graveyard .graveyard .cell img {
+	margin-bottom: 0.75rem;
+}
+
+#graveyard h3 {
 	text-align: center;
-	font-size: 1rem;
-	line-height: 1.2;
-	margin-bottom: 1.5rem;
+	font-size: 1.25rem;
+	margin-bottom: 0.75rem;
 }
 
 @media (max-width: 400px) {
