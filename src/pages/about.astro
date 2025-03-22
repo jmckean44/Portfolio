@@ -219,6 +219,27 @@ import harp from '../img/sites/harp.webp';
 		}
 	</style>
 
+	<style>
+		:root {
+			.swiper {
+				padding-bottom: 3rem;
+			}
+			.swiper-pagination {
+				bottom: 10px !important;
+			}
+			.swiper-pagination-bullet-active {
+				background: #021e42;
+			}
+			.swiper-slide {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				background: none;
+			}
+		}
+	</style>
+
 	<!-- Swiper JS -->
 	<script>
 		import Swiper from 'swiper';
@@ -230,8 +251,7 @@ import harp from '../img/sites/harp.webp';
 
 		document.addEventListener('astro:page-load', () => {
 			function initializeSwipers() {
-				var swiper = new Swiper('.elink', {
-					modules: [Pagination],
+				new Swiper('.elink', {
 					autoplay: true,
 					speed: 1000,
 					direction: 'horizontal',
@@ -245,20 +265,11 @@ import harp from '../img/sites/harp.webp';
 					},
 				});
 
-				var swiper = new Swiper('.examples', {
-					mousewheel: true,
-					keyboard: true,
-					autoplay: true,
-					speed: 1000,
-					effect: 'fade',
-					autoHeight: true,
-				});
-
-				// IMAGES
+				// TRADITIONAL MEDIA
 				var floor = ['Portraits', 'Landscape', 'Drawings'];
 				var direction = ['S', 'W', 'N', 'E'];
 
-				var swiperV = new Swiper('.swiper-container-v', {
+				new Swiper('.swiper-container-v', {
 					pagination: {
 						el: '.swiper-pagination-v',
 						clickable: true,
@@ -272,9 +283,7 @@ import harp from '../img/sites/harp.webp';
 					spaceBetween: 0,
 				});
 
-				var swiperH = new Swiper('.swiper-container-h', {
-					//pagination: '.swiper-pagination-h',
-
+				new Swiper('.swiper-container-h', {
 					pagination: {
 						el: '.swiper-pagination-h',
 						clickable: true,
@@ -282,7 +291,7 @@ import harp from '../img/sites/harp.webp';
 							return '<span class="' + className + '">' + direction[index] + '</span>';
 						},
 					},
-					paginationClickable: true,
+					//paginationClickable: true,
 					speed: 1500,
 					direction: 'horizontal',
 					spaceBetween: 0,
