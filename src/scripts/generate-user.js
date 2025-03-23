@@ -1,25 +1,26 @@
-function fetchUser() {
-	showSpinner();
-	fetch('https://randomuser.me/api')
-		.then((res) => res.json())
-		.then((data) => {
-			hideSpinner();
-			displayUser(data.results[0]);
-		});
-}
-
-function displayUser(user) {
-	const userDisplay = document.querySelector('#user');
-	const placeholderBG = document.querySelector('#generate-user');
-	const themeBg = document.querySelector('html');
-
-	if (user.gender === 'female') {
-		placeholderBG.style.backgroundColor = '#eff3eb ';
-	} else {
-		placeholderBG.style.backgroundColor = '#f9f9f9';
+document.addEventListener('astro:page-load', () => {
+	function fetchUser() {
+		showSpinner();
+		fetch('https://randomuser.me/api')
+			.then((res) => res.json())
+			.then((data) => {
+				hideSpinner();
+				displayUser(data.results[0]);
+			});
 	}
 
-	userDisplay.innerHTML = ` 
+	function displayUser(user) {
+		const userDisplay = document.querySelector('#user');
+		const placeholderBG = document.querySelector('#generate-user');
+		const themeBg = document.querySelector('html');
+
+		if (user.gender === 'female') {
+			placeholderBG.style.backgroundColor = '#eff3eb ';
+		} else {
+			placeholderBG.style.backgroundColor = '#f9f9f9';
+		}
+
+		userDisplay.innerHTML = ` 
     <img src="${user.picture.large}" width="150" height="150" alt="${user.name.first} ${user.name.last}" />   
       <p>
         <strong class="bold">Name: </strong>${user.name.first} ${user.name.last}
@@ -33,16 +34,17 @@ function displayUser(user) {
 				<strong class="bold">Age: </strong> ${user.dob.age}</p>
 
   `;
-}
+	}
 
-function showSpinner() {
-	document.querySelector('.spinner').style.display = 'block';
-}
+	function showSpinner() {
+		document.querySelector('.spinner').style.display = 'block';
+	}
 
-function hideSpinner() {
-	document.querySelector('.spinner').style.display = 'none';
-}
+	function hideSpinner() {
+		document.querySelector('.spinner').style.display = 'none';
+	}
 
-document.querySelector('#generate').addEventListener('click', fetchUser);
+	document.querySelector('#generate').addEventListener('click', fetchUser);
 
-fetchUser();
+	fetchUser();
+});

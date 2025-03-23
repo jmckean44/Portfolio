@@ -123,7 +123,7 @@ import thomas from '../img/sites/7stthomas.webp';
 						The following selection of <strong>HTML Email campaigns</strong> were hand-coded in Visusal Studio Code, tested in Litmus, and deployed through Mailchimp.
 					</p>
 					<div class="cell small-18">
-						<p class="width">To receive a test in your inbox, please enter your email address, and click send.</p>
+						<p class="width">To receive a test in your inbox, please enter your email address and click send.</p>
 					</div>
 				</div>
 			</div>
@@ -134,7 +134,7 @@ import thomas from '../img/sites/7stthomas.webp';
 						<input type="email" name="email" placeholder="Email" required />
 						<input class="btn" name="submit" type="submit" value="SEND" />
 					</form>
-					<div id="response"></div>
+					<div class="response"></div>
 				</div>
 				<div>
 					<Picture src={htmlMRC} formats={['avif', 'webp']} quality="" alt="Marina Resort Cavtat" />
@@ -175,8 +175,8 @@ import thomas from '../img/sites/7stthomas.webp';
 		</div>
 	</section>
 
-	<section>
-		<div class="container top btm" id="featured">
+	<section id="featured-site">
+		<div class="container top btm">
 			<div class="flex">
 				<h2>Featured Site</h2>
 			</div>
@@ -437,7 +437,7 @@ import thomas from '../img/sites/7stthomas.webp';
 
 		const form = e.target;
 		const formData = new FormData(form);
-		const responseDiv = document.getElementById('response');
+		const responseDiv = document.querySelector('.response');
 
 		try {
 			const response = await fetch(form.action, {

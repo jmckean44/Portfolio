@@ -2,6 +2,7 @@
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove first "/"
 import ThemeIcon from '../components/ThemeIcon.astro';
+const { bodyId } = Astro.props;
 ---
 
 <ThemeIcon />
@@ -9,7 +10,7 @@ import ThemeIcon from '../components/ThemeIcon.astro';
 	<nav>
 		<ul class="nav-links">
 			<li class="wow slideInDown" data-wow-duration="3s" data-wow-delay="0s">
-				<a class={currentPath === '' || currentPath !== 'new' ? 'active' : ''} href="/"><span>Live & Previous</span>Work</a>
+				<a class={['/', 'new', 'about', 'contact'].includes(currentPath) ? '' : 'active'} href="/"><span>Live & Previous</span>Work</a>
 			</li>
 			<li class="wow slideInDown" data-wow-duration="3s" data-wow-delay=".5s">
 				<a class={currentPath === 'new' ? 'active' : ''} href="/new"><span>Learning</span>Curve</a>

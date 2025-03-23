@@ -47,7 +47,11 @@ import harp from '../img/sites/harp.webp';
 					print and web services to companies in the Mining and Exploration Industry.
 				</p>
 			</div>
+		</div>
+	</section>
 
+	<section>
+		<div class="container border-container">
 			<div class="flex padding-x align-middle borders grey-bg">
 				<div class="cell small-18 medium-10 small-order-2 medium-order-1">
 					<div class="swiper elink">
@@ -88,7 +92,7 @@ import harp from '../img/sites/harp.webp';
 	<div class="line-vert right"></div>
 
 	<section>
-		<div class="container">
+		<div class="container border-container">
 			<div class="flex padding-x align-middle borders">
 				<div class="cell small-18 medium-9 intro">
 					<h2>Video Production</h2>
@@ -113,14 +117,13 @@ import harp from '../img/sites/harp.webp';
 	<div class="line-vert left"></div>
 
 	<section id="slideshow-container">
-		<div class="container images">
+		<div class="container border-container images" id="traditional">
 			<div class="flex padding-x align-middle borders grey-bg">
 				<div class="cell small-18">
 					<h2>Side Projects</h2>
 					<p>
-						The following traditional media selections are examples from a number of personal ongoing side projects that includes: documenting my son and daughter as they have grown up, local urban
-						and Google Maps "found" landscapes, and illustrations inspired by drawing lessons at our kitchen table - that began with drawing their toy figurines and a washed plush rabbit drying on the
-						clothesline.
+						The following traditional media selections are examples from a number of personal side projects, including documenting my son and daughter in portraits as they have grown up, local urban
+						and Google Maps "found" landscapes, and illustrations inspired by drawing lessons at our kitchen table - that began with a plush rabbit drying on the clothesline.
 					</p>
 					<div class="flex">
 						<div class="cell small-18" id="swiper-vertical-nav">
@@ -132,15 +135,38 @@ import harp from '../img/sites/harp.webp';
 									<div class="swiper-slide">
 										<div class="swiper-container swiper-container-h">
 											<div class="swiper-wrapper">
-												<div class="swiper-slide"><Picture src={bunny} formats={['avif', 'webp']} alt="Bunny" /><p>Bunny</p></div>
-												<div class="swiper-slide"><Picture src={cheezWhiz} formats={['avif', 'webp']} alt="Cheese Whiz" /><p>Cheese Whiz</p></div>
-												<div class="swiper-slide"><Picture src={triad} formats={['avif', 'webp']} alt="Triad" /><p>Triad</p></div>
-												<div class="swiper-slide"><Picture src={elder} formats={['avif', 'webp']} alt="Butterfly Elder" /><p>Butterfly Elder</p></div>
-												<div class="swiper-slide"><Picture src={melancholia} formats={['avif', 'webp']} alt="Involuntary Melancholia" /><p>Involuntary Melancholia</p></div>
-												<div class="swiper-slide"><Picture src={dreaming} formats={['avif', 'webp']} alt="Dreaming of Mount Vesuvius" /><p>Dreaming of Mount Vesuvius</p></div>
-												<div class="swiper-slide"><Picture src={birdmen} formats={['avif', 'webp']} alt="Quiet Birdman Assocation" /><p>Quiet Birdman Assocation</p></div>
-												<div class="swiper-slide"><Picture src={spring} formats={['avif', 'webp']} alt="spring" /><p>Spring</p></div>
-												<div class="swiper-slide"><Picture src={dad} formats={['avif', 'webp']} alt="Dad, carry me" /><p>Dad, carry me</p></div>
+												<div class="swiper-slide">
+													<Picture src={bunny} formats={['avif', 'webp']} alt="Bunny" />
+													<p>Bunny</p>
+												</div>
+												<div class="swiper-slide">
+													<Picture src={cheezWhiz} formats={['avif', 'webp']} alt="Cheese Whiz" />
+													<p>Cheese Whiz</p>
+												</div>
+												<div class="swiper-slide">
+													<Picture src={triad} formats={['avif', 'webp']} alt="Triad" />
+													<p>Triad</p>
+												</div>
+												<div class="swiper-slide">
+													<Picture src={elder} formats={['avif', 'webp']} alt="Butterfly Elder" />
+													<p>Butterfly Elder</p>
+												</div>
+												<div class="swiper-slide">
+													<Picture src={melancholia} formats={['avif', 'webp']} alt="Involuntary Melancholia" />
+													<p>Involuntary Melancholia</p>
+												</div>
+												<div class="swiper-slide">
+													<Picture src={dreaming} formats={['avif', 'webp']} alt="Dreaming of Mount Vesuvius" />
+													<p>Dreaming of Mount Vesuvius</p>
+												</div>
+												<div class="swiper-slide">
+													<Picture src={spring} formats={['avif', 'webp']} alt="spring" />
+													<p>Spring</p>
+												</div>
+												<div class="swiper-slide">
+													<Picture src={dad} formats={['avif', 'webp']} alt="Dad, carry me" />
+													<p>Dad, carry me</p>
+												</div>
 											</div>
 											<div class="swiper-pagination swiper-pagination-h"></div>
 										</div>
@@ -161,10 +187,14 @@ import harp from '../img/sites/harp.webp';
 													<Picture src={mrferron} formats={['avif', 'webp']} alt="Liam" />
 													<p>Liam</p>
 												</div>
-												<div class="swiper-slide"><Picture src={mrferron} formats={['avif', 'webp']} alt="Gerard" /><p>Gerard</p></div>
-												<div class="swiper-slide"><Picture src={misa2} formats={['avif', 'webp']} alt="Misa" /><p>Misa</p></div>
-												<div class="swiper-slide"><Picture src={mrferron} formats={['avif', 'webp']} alt="Misa" /><p>Misa</p></div>
-												<div class="swiper-slide"><Picture src={mrferron} formats={['avif', 'webp']} alt="Misa" /><p>Misa</p></div>
+												<div class="swiper-slide">
+													<Picture src={mrferron} formats={['avif', 'webp']} alt="Gerard" />
+													<p>Gerard</p>
+												</div>
+												<div class="swiper-slide">
+													<Picture src={misa2} formats={['avif', 'webp']} alt="Misa" />
+													<p>Misa</p>
+												</div>
 											</div>
 											<div class="swiper-pagination swiper-pagination-h"></div>
 										</div>
@@ -199,7 +229,7 @@ import harp from '../img/sites/harp.webp';
 	<div class="line-vert right"></div>
 
 	<section>
-		<div class="container btm">
+		<div class="container border-container films">
 			<div class="flex padding-x align-middle borders">
 				<div class="cell small-18 medium-9">
 					<h1>Favourite Films</h1>
@@ -210,109 +240,104 @@ import harp from '../img/sites/harp.webp';
 		</div>
 	</section>
 
-	<style>
-		#mining .swiper-slide {
-			background: #f9f9f9;
-		}
-		.swiper-slide img {
-			mix-blend-mode: multiply;
-		}
-	</style>
+	<div class="line-vert left"></div>
+
+	<section>
+		<div class="container border-container books">
+			<div class="flex padding-x align-middle borders">
+				<div class="cell small-18 medium-9">
+					<h1>Favourite Books</h1>
+					<p>Coming soon.</p>
+				</div>
+				<div class="cell small-18 medium-9"></div>
+			</div>
+		</div>
+	</section>
 
 	<style>
 		:root {
-			.swiper {
-				padding-bottom: 3rem;
-			}
 			.swiper-pagination {
-				bottom: 10px !important;
+				bottom: -25px !important;
 			}
 			.swiper-pagination-bullet-active {
-				background: #021e42;
+				background: #ff9000;
 			}
-			.swiper-slide {
+			#traditional .swiper {
 				display: flex;
 				flex-direction: column;
-				justify-content: center;
 				align-items: center;
-				background: none;
+				background: #f9f9f9;
+			}
+			#mining .swiper-slide {
+				background: #f9f9f9 !important;
+			}
+			#mining .swiper-slide p {
+				padding: 1.5rem 0 0;
+			}
+			.books {
+				max-width: 1200px;
 			}
 		}
 	</style>
 
 	<!-- Swiper JS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script is:inline src="../src/scripts/swiper.js"></script>
+
 	<script>
-		import Swiper from 'swiper';
-		import { Pagination, Autoplay } from 'swiper/modules';
-		Swiper.use([Autoplay]);
-		import 'swiper/scss';
-		import 'swiper/scss/effect-fade';
-		import 'swiper/scss/pagination';
+		new Swiper('.elink', {
+			mousewheel: true,
+			keyboard: true,
+			autoplay: true,
+			speed: 1000,
+			delay: 5000,
+			effect: 'fade',
+			pagination: {
+				pagination: '.swiper-pagination-h',
+				el: '.swiper-pagination-h',
+				clickable: true,
+				renderBullet: function (index: number, className: string) {
+					return '<span class="' + className + '">' + direction[index] + '</span>';
+				},
+			},
+		});
 
-		document.addEventListener('astro:page-load', () => {
-			function initializeSwipers() {
-				new Swiper('.elink', {
-					autoplay: true,
-					speed: 1000,
-					direction: 'horizontal',
-					effect: 'fade',
-					pagination: {
-						el: '.swiper-pagination',
-						renderBullet: function (index, className) {
-							return '<span class="' + className + '"></span>';
-						},
-						clickable: true,
-					},
-				});
+		// IMAGES
+		var floor = ['Drawings', 'Portraits', 'Landscape'];
+		var direction = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
 
-				// TRADITIONAL MEDIA
-				var floor = ['Portraits', 'Landscape', 'Drawings'];
-				var direction = ['S', 'W', 'N', 'E'];
+		new Swiper('.swiper-container-v', {
+			pagination: {
+				el: '.swiper-pagination-v',
+				clickable: true,
+				autoHeight: true,
+				renderBullet: function (index: number, className: string) {
+					return '<span class="' + className + '">' + floor[index] + '</span>';
+				},
+			},
+			speed: 1000,
+			direction: 'vertical',
+			//autoHeight: true,
+			spaceBetween: 30,
+		});
 
-				new Swiper('.swiper-container-v', {
-					pagination: {
-						el: '.swiper-pagination-v',
-						clickable: true,
-						renderBullet: function (index: number, className: string) {
-							return '<span class="' + className + '">' + floor[index] + '</span>';
-						},
-					},
-					speed: 1000,
-					direction: 'vertical',
-					autoHeight: true,
-					spaceBetween: 0,
-				});
-
-				new Swiper('.swiper-container-h', {
-					pagination: {
-						el: '.swiper-pagination-h',
-						clickable: true,
-						renderBullet: function (index, className) {
-							return '<span class="' + className + '">' + direction[index] + '</span>';
-						},
-					},
-					//paginationClickable: true,
-					speed: 1500,
-					direction: 'horizontal',
-					spaceBetween: 0,
-					nested: true,
-				});
-			}
-			initializeSwipers();
+		new Swiper('.swiper-container-h', {
+			lazy: true,
+			pagination: {
+				pagination: '.swiper-pagination-h',
+				el: '.swiper-pagination-h',
+				clickable: true,
+				autoHeight: true,
+				renderBullet: function (index: number, className: string) {
+					return '<span class="' + className + '">' + direction[index] + '</span>';
+				},
+			},
+			speed: 1000,
+			direction: 'horizontal',
+			effect: 'fade',
+			spaceBetween: 30,
+			//autoHeight: true,
+			nested: true,
 		});
 	</script>
-
-	<!-- <script>
-		var swiperVertBullet = document.querySelector('.swiper-pagination-v .swiper-pagination-bullet');
-		var swiperPageHor = document.querySelector('.swiper-pagination-h');
-		var swiperHorMenu = document.querySelector('.swiper-pagination-h.swiper-pagination-bullets');
-
-		if (swiperVertBullet) {
-			swiperVertBullet.addEventListener('click', function () {
-				if (swiperHorMenu) {
-					(swiperHorMenu as HTMLElement).style.display = 'block';
-				}
-			});
-		}
-	</script> -->
 </Layout>
