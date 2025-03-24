@@ -5,11 +5,23 @@ import '../styles/swiper.scss';
 
 import { Image } from 'astro:assets';
 import { getImage } from 'astro:assets';
+
+import anv from '../img/sites/anv.webp';
+import loki from '../img/sites/loki.webp';
+import riva from '../img/sites/riva.webp';
+import pdac from '../img/sites/pdac.webp';
+import ific from '../img/sites/ific.webp';
+import tkk from '../img/sites/tkk.webp';
+import rockcliff from '../img/sites/rockcliff.webp';
+import queenston from '../img/sites/qmi.webp';
+import harp from '../img/sites/harp.webp';
+import logos from '../img/sites/logos.webp';
+import pollock from '../img/pollock.webp';
+
 import bunny from '../img/drawings/bunny.webp';
 import triad from '../img/drawings/triad.webp';
 import dad from '../img/drawings/carry-me.webp';
 import spring from '../img/drawings/spring.webp';
-import birdmen from '../img/drawings/birdmen.webp';
 import elder from '../img/drawings/elder.webp';
 import melancholia from '../img/drawings/melancholia.webp';
 import dreaming from '../img/drawings/dreaming.webp';
@@ -18,19 +30,13 @@ import cheezWhiz from '../img/drawings/cheez-whiz.webp';
 import lebanonRoad from '../img/landscapes/lebanon-road.webp';
 import flynns from '../img/landscapes/flynns.webp';
 
-import misa2 from '../img/portraits/misa-02.webp';
-import mrferron from '../img/portraits/mr-ferron.webp';
+import misa2007 from '../img/portraits/misa-2007.webp';
+import misa2009 from '../img/portraits/misa-2009.webp';
+import misa2020 from '../img/portraits/misa-2020.webp';
+import misa2021 from '../img/portraits/misa-2021.webp';
 import liam2011 from '../img/portraits/liam-2011.webp';
-
-import anv from '../img/sites/anv.webp';
-import loki from '../img/sites/loki.webp';
-import terraplus from '../img/sites/terraplus.webp';
-import thundermin from '../img/sites/thr.webp';
-import rockcliff from '../img/sites/rockcliff.webp';
-import queenston from '../img/sites/qmi.webp';
-import riva from '../img/sites/riva.webp';
-import pdac from '../img/sites/pdac.webp';
-import harp from '../img/sites/harp.webp';
+import liam2013 from '../img/portraits/liam-2013.webp';
+import liam2014 from '../img/portraits/liam-2014.webp';
 ---
 
 <Layout pageTitle="About" pageSiteTitles="">
@@ -38,7 +44,7 @@ import harp from '../img/sites/harp.webp';
 		<div class="container top-of-page">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h1>Investor Relations: Marketing</h1>
+					<h1>Marketing and Earlier</h1>
 				</div>
 			</div>
 			<div id="intro" class="spacing-btm">
@@ -58,32 +64,34 @@ import harp from '../img/sites/harp.webp';
 						<div class="swiper-wrapper" id="mining">
 							<div class="swiper-slide"><Picture src={anv} formats={['avif', 'webp']} alt="Allied Nevada" /></div>
 							<div class="swiper-slide"><Picture src={loki} formats={['avif', 'webp']} alt="Loki Innovations" /></div>
-							<div class="swiper-slide"><Picture src={terraplus} formats={['avif', 'webp']} alt="Terraplus" /></div>
-							<div class="swiper-slide"><Picture src={thundermin} formats={['avif', 'webp']} alt="Thundermin" /></div>
+							<div class="swiper-slide"><Picture src={ific} formats={['avif', 'webp']} alt="IFIC" /></div>
+							<div class="swiper-slide"><Picture src={tkk} formats={['avif', 'webp']} alt="TKK" /></div>
+							<div class="swiper-slide"><Picture src={riva} formats={['avif', 'webp']} alt="Riva Modeling" /></div>
+							<div class="swiper-slide"><Picture src={tkk} formats={['avif', 'webp']} alt="Thundermin" /></div>
+							<div class="swiper-slide"><Picture src={logos} formats={['avif', 'webp']} alt="Logos" /></div>
 							<div class="swiper-slide"><Picture src={rockcliff} formats={['avif', 'webp']} alt="Rockcliff" /></div>
 							<div class="swiper-slide"><Picture src={queenston} formats={['avif', 'webp']} alt="Queenston Engineering" /></div>
-							<div class="swiper-slide"><Picture src={riva} formats={['avif', 'webp']} alt="Riva Modeling" /></div>
 							<div class="swiper-slide"><Picture src={pdac} formats={['avif', 'webp']} alt="PDAC" /></div>
 							<div class="swiper-slide"><Picture src={harp} formats={['avif', 'webp']} alt="Harp Capital" /></div>
 						</div>
 					</div>
 				</div>
 				<div class="cell small-18 medium-8 small-order-1 medium-order-2">
-					<h2>Tabled Days</h2>
+					<h2>Investor Relations</h2>
 					<p>
-						The following carousel of brochure sites are examples from my initial introduction to HTML, CSS, jQuery, web-design, and content management for companies in the investor relations and
-						software development industries and were built with Microsoft FrontPage.
+						The following brochure sites, although dated, are examples from my initial introduction to HTML, CSS, jQuery, web-design, and content management, for companies in the investor relations
+						and software development industries.
 					</p>
 					<p>
 						I was asked to create and unify branding between print, web, and tradeshow booths, as well as build HTML tabled websites, post news releases, edit video, modify and optimize images, and
 						create Adobe Flash animations for web and banner Ads.
 					</p>
-					<!-- <p>
-						<a target="_blank" class="underline" href="https://www.linkedin.com/in/doug-webster-7a82a12/">Doug Webster</a>, a Geogologist and musician, started the company in the mid 90's to meet the
-						growing demand for an online presence for companies in the Mining and Exploration industry, including <a target="_blank" class="underline" href="https://pdac.ca/"
+					<p>
+						<a target="_blank" class="underline" href="https://www.linkedin.com/in/doug-webster-7a82a12/">Doug Webster</a>, a Geogologist, started the company to meet the growing demand for an online
+						presence for companies in the Mining and Exploration industry, including <a target="_blank" class="underline" href="https://pdac.ca/"
 							>The Prospectors & Developers Association of Canada (PDAC)</a
 						> and <a target="_blank" class="underline" href="https://www.kinross.com/">Kinross Gold</a>, to name a few.
-					</p> -->
+					</p>
 				</div>
 			</div>
 		</div>
@@ -122,8 +130,8 @@ import harp from '../img/sites/harp.webp';
 				<div class="cell small-18">
 					<h2>Side Projects</h2>
 					<p>
-						The following traditional media selections are examples from a number of personal side projects, including documenting my son and daughter in portraits as they have grown up, local urban
-						and Google Maps "found" landscapes, and illustrations inspired by drawing lessons at our kitchen table - that began with a plush rabbit drying on the clothesline.
+						The following traditional media selections are examples from a number of side projects, including documenting my son and daughter in portraits as they have grown up, local urban and Google
+						Maps "found" landscapes, and illustrations inspired by drawing lessons at our kitchen table that began with a plush rabbit drying on the clothesline.
 					</p>
 					<div class="flex">
 						<div class="cell small-18" id="swiper-vertical-nav">
@@ -176,42 +184,56 @@ import harp from '../img/sites/harp.webp';
 										<div class="swiper-container swiper-container-h">
 											<div class="swiper-wrapper" id="portraits">
 												<div class="swiper-slide">
-													<Picture src={mrferron} formats={['avif', 'webp']} alt="Wife" />
-													<p>Prague Selfie</p>
+													<Picture src={liam2011} formats={['avif', 'webp']} alt="Liam" />
+													<p>Liam 2010</p>
 												</div>
 												<div class="swiper-slide">
-													<Picture src={mrferron} formats={['avif', 'webp']} alt="Mish Collage" />
-													<p>Misa Collage</p>
+													<Picture src={liam2013} formats={['avif', 'webp']} alt="Liam" />
+													<p>Liam 2012</p>
 												</div>
 												<div class="swiper-slide">
-													<Picture src={mrferron} formats={['avif', 'webp']} alt="Liam" />
-													<p>Liam</p>
+													<Picture src={liam2014} formats={['avif', 'webp']} alt="Liam" />
+													<p>Liam 2014</p>
 												</div>
 												<div class="swiper-slide">
-													<Picture src={mrferron} formats={['avif', 'webp']} alt="Gerard" />
-													<p>Gerard</p>
+													<Picture src={misa2007} formats={['avif', 'webp']} alt="Misa" />
+													<p>Misa 2007</p>
 												</div>
 												<div class="swiper-slide">
-													<Picture src={misa2} formats={['avif', 'webp']} alt="Misa" />
-													<p>Misa</p>
+													<Picture src={misa2009} formats={['avif', 'webp']} alt="Misa" />
+													<p>Misa 2009</p>
+												</div>
+												<div class="swiper-slide">
+													<Picture src={misa2020} formats={['avif', 'webp']} alt="Misa" />
+													<p>Misa 2019</p>
+												</div>
+												<div class="swiper-slide">
+													<Picture src={misa2021} formats={['avif', 'webp']} alt="Misa" />
+													<p>Misa 2021</p>
 												</div>
 											</div>
 											<div class="swiper-pagination swiper-pagination-h"></div>
 										</div>
 									</div>
 
-									<div class="swiper-slide">
+									<div class="swiper-slide" id="landscapes">
 										<div class="swiper-container swiper-container-h">
 											<div class="swiper-wrapper">
 												<div class="swiper-slide">
 													<Picture src={lebanonRoad} formats={['avif', 'webp']} alt="" />
 													<p>
 														<strong>GOOGLE MAPS</strong><br />God's House, Lebanon Rd, Pembroke, Giles, Virginia<br />
-														<a target="_blank" href="https://maps.app.goo.gl/shfugEJfF2Eb86dX6">Coordinates</a>
+														<a target="_blank" class="underline" href="https://maps.app.goo.gl/shfugEJfF2Eb86dX6">Coordinates</a>
 													</p>
 												</div>
 												<div class="swiper-slide">
-													<Picture src={flynns} formats={['avif', 'webp']} alt="" /><p><strong>GOOGLE MAPS</strong><br />Flynns General Store & Gas<br />29 County Rd 507, Buckhorn, ON K0L 1J0</p>
+													<Picture src={flynns} formats={['avif', 'webp']} alt="" /><p>
+														<strong>GOOGLE MAPS</strong><br />Flynns General Store & Gas<br />29 County Rd 507, Buckhorn, Ontario<br /><a
+															target="_blank"
+															class="underline"
+															href="https://maps.app.goo.gl/2PA1kCvhNLF5f8K58">Coordinates</a
+														>
+													</p>
 												</div>
 											</div>
 											<div class="swiper-pagination swiper-pagination-h"></div>
@@ -229,6 +251,34 @@ import harp from '../img/sites/harp.webp';
 	<div class="line-vert right"></div>
 
 	<section>
+		<div class="container border-container books">
+			<div class="flex padding-x align-middle borders">
+				<div class="cell small-18 medium-12">
+					<h1>Colour Theory</h1>
+					<p>
+						Understanding the underlying principles of how colours interact when mixed together or in context to each other, and the visual and psychological effects that can be created has always
+						been interesting to me.
+					</p>
+					<p>
+						A friend introduced me to Scientific American magazine, thinking that <a target="_blank" class="underline" href="/Scientific-American-Pollock.pdf">an article</a> about a study that was done
+						on Jackson Pollock drip paintings would interest me. At first glance, it seems obvious that there would be nothing systematic about the random and almost chaotic nature of the physical process
+						of flinging paint off a brush onto the canvas he was working on while he stood on it. But the study showed that there was a pattern to the way the paint was applied. They found fractals* in
+						his work, and that the means he took to arrive at that particular effect were deliberate.
+					</p>
+					<p class="text-sm">
+						<em>* Fractals are infinitely complex patterns that are self-similar across different scales. They are created by repeating a simple process over and over in an ongoing feedback loop.</em>
+					</p>
+				</div>
+				<div class="cell small-18 medium-6" id="pollock">
+					<a target="_blank" href="/Scientific-American-Pollock.pdf"><Image src={pollock} alt="Jackson Pollock article in Scientific American" /></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="line-vert left"></div>
+
+	<section>
 		<div class="container border-container films">
 			<div class="flex padding-x align-middle borders">
 				<div class="cell small-18 medium-9">
@@ -240,7 +290,7 @@ import harp from '../img/sites/harp.webp';
 		</div>
 	</section>
 
-	<div class="line-vert left"></div>
+	<div class="line-vert right"></div>
 
 	<section>
 		<div class="container border-container books">
@@ -256,32 +306,51 @@ import harp from '../img/sites/harp.webp';
 
 	<style>
 		:root {
-			.swiper-pagination {
-				bottom: -25px !important;
-			}
-			.swiper-pagination-bullet-active {
-				background: #ff9000;
-			}
-			#traditional .swiper {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				background: #f9f9f9;
-			}
 			#mining .swiper-slide {
 				background: #f9f9f9 !important;
 			}
 			#mining .swiper-slide p {
 				padding: 1.5rem 0 0;
 			}
+			.swiper-pagination {
+				bottom: -25px !important;
+			}
+			.swiper-pagination-bullet-active {
+				background: #ff9000;
+			}
+			#slideshow-container .swiper {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				background: #f9f9f9;
+			}
+			#slideshow-container .swiper-slide {
+				margin-bottom: 50px !important; /* For vertical Swiper */
+				margin-right: 50px !important; /* For horizontal Swiper */
+			}
+			#slideshow-container .swiper-slide p {
+				padding-right: 10px;
+				margin-top: -25px;
+				text-align: right;
+			}
+			#slideshow-container #landscapes .swiper-slide p {
+				padding-right: 10px;
+				margin-top: 25px;
+			}
 			.books {
 				max-width: 1200px;
+			}
+			#pollock {
+				text-align: center;
+			}
+			#pollock img {
+				max-width: 300px;
 			}
 		}
 	</style>
 
 	<!-- Swiper JS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="../src/styles/swiper-bundle.min.css" />
 	<script is:inline src="../src/scripts/swiper.js"></script>
 
 	<script>
@@ -315,10 +384,11 @@ import harp from '../img/sites/harp.webp';
 					return '<span class="' + className + '">' + floor[index] + '</span>';
 				},
 			},
+			lazy: true,
 			speed: 1000,
 			direction: 'vertical',
-			//autoHeight: true,
-			spaceBetween: 30,
+			autoHeight: false,
+			spaceBetween: 50,
 		});
 
 		new Swiper('.swiper-container-h', {
@@ -335,8 +405,8 @@ import harp from '../img/sites/harp.webp';
 			speed: 1000,
 			direction: 'horizontal',
 			effect: 'fade',
-			spaceBetween: 30,
-			//autoHeight: true,
+			spaceBetween: 50,
+			autoHeight: false,
 			nested: true,
 		});
 	</script>

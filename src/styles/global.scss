@@ -128,7 +128,8 @@ svg,
 canvas,
 video {
 	display: block;
-	max-inline-size: 100%;
+	// max-inline-size: 100%;
+	width: 100%;
 	block-size: auto;
 }
 
@@ -244,6 +245,10 @@ p {
 	text-wrap: pretty;
 	color: var.$dark;
 	text-align: left;
+}
+
+.text-sm {
+	font-size: 80%;
 }
 
 a,
@@ -1018,7 +1023,7 @@ p a {
 // }
 
 #new .project {
-	padding: 3rem 1.75rem 2rem;
+	padding: 2rem 1.25rem 2rem;
 	background: #f9f9f9;
 	border-radius: 3px;
 	border: 1rem #fff solid;
@@ -1034,6 +1039,10 @@ p a {
 #new .project#generate-user img {
 	max-width: 150px;
 	margin-bottom: 1rem;
+}
+
+#new #generate-user .btn:hover {
+	background: var.$theme-clr !important;
 }
 
 /* =============================================

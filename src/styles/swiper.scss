@@ -17,9 +17,7 @@
 
 #slideshow-container h3,
 #slideshow-container p {
-	text-align: right;
-	padding-top: 5px;
-	padding-right: 5px;
+	text-align: center;
 }
 
 #slideshow-container #slideshow {
@@ -64,12 +62,11 @@
 }
 
 .swiper-slide p {
-	margin: 0 auto;
 	text-align: center;
 	width: 100%;
 	color: #999999;
 	font-family: 'Courier New', Courier, monospace, sans-serif;
-	font-size: 0.7rem;
+	font-size: 0.75rem;
 }
 
 .swiper-pagination-v .swiper-pagination-bullet {
@@ -94,7 +91,6 @@
 .swiper-pagination-v .swiper-pagination-bullet-active {
 	background: var.$theme-clr;
 	color: #fff;
-	//transform: scale(1);
 	transition: all 0.3s ease;
 }
 
@@ -112,14 +108,12 @@
 .swiper-pagination-h {
 	top: auto;
 	bottom: 0;
-	//height: 100px;
 	width: 100%;
 	z-index: 9999999999999999;
 }
 
 .swiper-pagination-h .swiper-pagination-bullet {
 	background: rgba(38, 38, 45, 0.1);
-	// border: 1px rgba(255, 255, 255, 1) solid;
 	opacity: 1;
 	transition: all 0.3s ease;
 	height: 12px;

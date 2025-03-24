@@ -12,12 +12,12 @@ document.addEventListener('astro:page-load', () => {
 	function displayUser(user) {
 		const userDisplay = document.querySelector('#user');
 		const placeholderBG = document.querySelector('#generate-user');
-		const themeBg = document.querySelector('html');
+		const btn = document.querySelector('#generate-user .btn');
 
 		if (user.gender === 'female') {
-			placeholderBG.style.backgroundColor = '#eff3eb ';
+			placeholderBG.style.backgroundColor = '#f4e5f2';
 		} else {
-			placeholderBG.style.backgroundColor = '#f9f9f9';
+			placeholderBG.style.backgroundColor = '#e6ebf7';
 		}
 
 		userDisplay.innerHTML = ` 
