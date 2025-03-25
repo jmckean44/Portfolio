@@ -563,11 +563,12 @@ import thomas from '../img/sites/7stthomas.webp';
 			padding-bottom: 3rem;
 		}
 		.swiper-pagination {
-			z-index: 99999999;
-			cursor: pointer;
+			width: 100%;
+			bottom: 0;
 		}
 		.swiper-pagination-bullet {
 			background: #ccc;
+			cursor: pointer;
 		}
 		.swiper-pagination-bullet-active {
 			background: #021e42;
@@ -582,40 +583,50 @@ import thomas from '../img/sites/7stthomas.webp';
 	}
 </style>
 
-<!-- Swiper JS -->
-<link rel="stylesheet" href="../src/styles/swiper-bundle.min.css" />
-<script is:inline src="../src/scripts/swiper.js"></script>
-
 <script>
+	import Swiper from 'swiper';
+	import { Pagination, Autoplay } from 'swiper/modules';
+	Swiper.use([Autoplay]);
+	import 'swiper/scss';
+	import 'swiper/scss/effect-fade';
+	import 'swiper/scss/pagination';
+
 	document.addEventListener('astro:page-load', () => {
-		new Swiper('.swiper', {
-			speed: 1000,
-			loop: true,
-			spaceBetween: 50,
-			//autoplay: false,
-			clickable: true,
-			pagination: {
-				el: '.swiper-pagination',
-			},
-			breakpoints: {
-				2000: {
-					slidesPerView: 5,
-					spaceBetween: 40,
+		function initializeSwipers() {
+			new Swiper('.swiper', {
+				modules: [Pagination],
+				freeMode: true,
+				speed: 1000,
+				loop: true,
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: true,
 				},
-				1700: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
 				},
-				1200: {
-					slidesPerView: 3,
-					spaceBetween: 25,
+				breakpoints: {
+					2200: {
+						slidesPerView: 5,
+					},
+					1700: {
+						slidesPerView: 4,
+					},
+					1200: {
+						slidesPerView: 3,
+					},
+					650: {
+						slidesPerView: 2,
+					},
+					400: {
+						slidesPerView: 1,
+					},
 				},
-				700: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-			},
-		});
+			});
+		}
+
+		initializeSwipers();
 	});
 </script>
 
@@ -711,7 +722,15 @@ import thomas from '../img/sites/7stthomas.webp';
 	 ------------------- */
 	#graveyard .graveyard .cell.materials {
 		background: #3a3a42;
-		border: 0;
+		overflow: hidden;
+		border: 1px #3a3a42 solid;
+	}
+	#graveyard .graveyard .cell.materials img {
+		transition: all ease 0.5s;
+	}
+	#graveyard .graveyard .cell.materials img:hover {
+		transform: scale(1.2) translate(0, -12px);
+		transition: all ease 0.5s;
 	}
 	#graveyard .graveyard .cell.materials h3 {
 		color: #fff;
