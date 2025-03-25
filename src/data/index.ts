@@ -27,7 +27,7 @@ export const items: Item[] = [
 		link: 'marinaresortcavtat.com',
 		website: 'https://marinaresortcavtat.com/',
 		type: 'Astro',
-		image: '../img/sites/mrc.webp',
+		image: '/mrc.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -39,7 +39,7 @@ export const items: Item[] = [
 		link: '7dale.com',
 		website: 'https://7dale.com',
 		type: 'PHP',
-		image: '../img/sites/no7dale.webp',
+		image: '/no7dale.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -51,7 +51,7 @@ export const items: Item[] = [
 		link: 'platinumvista.ca',
 		website: 'https://platinumvista.ca',
 		type: 'PHP',
-		image: '../img/sites/platinumVista.webp',
+		image: '/platinumVista.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -64,7 +64,7 @@ export const items: Item[] = [
 		link: 'loretabeachresort.com',
 		website: 'https://loretabeachresort.com',
 		type: 'PHP',
-		image: '../img/sites/loreto.webp',
+		image: '/loreto.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -77,7 +77,7 @@ export const items: Item[] = [
 			'The Diamond is an up and coming modern open-concept rental building and future community in the Junction area of Toronto. The registration site was created to generate leads for the sales team. Client ownership changed and the site is now managed by their team using a different domain (diamondrentals.ca). A local copy of the landing page is available using the button below.',
 		details: 'jQuery, PHP, HTML, CSS, Adobe Suite, MailChimp',
 		link: 'junctionrentals.ca',
-		image: '../img/sites/diamond.webp',
+		image: '/diamond.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -89,7 +89,7 @@ export const items: Item[] = [
 		link: 'fortuneccp.com',
 		website: 'https://fortuneccp.com/',
 		type: 'CMS',
-		image: '../img/sites/fortune.webp',
+		image: '/fortune.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -101,7 +101,7 @@ export const items: Item[] = [
 		link: 'giapm.ca',
 		website: 'https://giapm.ca',
 		type: 'CMS',
-		image: '../img/sites/gia.webp',
+		image: '/gia.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -113,7 +113,7 @@ export const items: Item[] = [
 		link: 'riverscape.ca',
 		website: 'https://riverscape.ca/',
 		type: 'Astro',
-		image: '../img/sites/riverscape.webp',
+		image: '/riverscape.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -126,7 +126,7 @@ export const items: Item[] = [
 		link: 'shiupong.com',
 		website: 'https://shiupong.com',
 		type: 'Astro',
-		image: '../img/sites/shiupong.webp',
+		image: '/shiupong.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -138,7 +138,7 @@ export const items: Item[] = [
 		link: 'vanguardto.com',
 		website: 'https://vanguardto.com/',
 		type: 'CMS',
-		image: '../img/sites/vanguard.webp',
+		image: '/vanguard.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -150,7 +150,7 @@ export const items: Item[] = [
 		link: 'thewinslow.ca',
 		website: 'https://thewinslow.ca/',
 		type: 'CMS',
-		image: '../img/sites/winslow.webp',
+		image: '/winslow.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -162,7 +162,7 @@ export const items: Item[] = [
 		link: '260highpark.com',
 		website: 'https://260highpark.com/',
 		type: 'PHP',
-		image: '../img/sites/260HP.webp',
+		image: '/260HP.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -174,7 +174,7 @@ export const items: Item[] = [
 		link: 'fieldgateconstruction.com',
 		website: 'https://fieldgateconstruction.com/',
 		type: 'PHP',
-		image: '../img/sites/fieldgate.webp',
+		image: '/fieldgate.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -186,7 +186,7 @@ export const items: Item[] = [
 		link: 'mellema.ca',
 		website: 'https://mellema.ca',
 		type: 'PHP',
-		image: '../img/sites/mellema.webp',
+		image: '/mellema.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -198,7 +198,7 @@ export const items: Item[] = [
 		link: 'cleanroomsplus.ca',
 		website: 'https://www.cleanroomsplus.ca/',
 		type: 'PHP',
-		image: '../img/sites/cleanrooms.webp',
+		image: '/cleanrooms.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -210,7 +210,7 @@ export const items: Item[] = [
 		link: 'wilkinsonconstruction.ca',
 		website: 'https://www.wilkinsonconstruction.ca',
 		type: 'PHP',
-		image: '../img/sites/wilkinson.webp',
+		image: '/wilkinson.webp',
 		category: ItemCategory.Projects,
 	},
 	{
@@ -223,7 +223,7 @@ export const items: Item[] = [
 		link: 'kingswaybytheriver.ca',
 		website: 'https://kingswaybytheriver.ca/',
 		type: 'PHP',
-		image: '../img/sites/kingsway.webp',
+		image: '/kingsway.webp',
 		category: ItemCategory.Projects,
 	},
 ];
