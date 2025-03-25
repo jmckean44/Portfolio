@@ -29,13 +29,24 @@ html.dark body {
 	background: var.$dark !important;
 }
 
-html.dark #nav-desktop .nav-links > li a {
-	color: var.$theme-clr;
-	background: #fff;
+html.dark #about .curve path {
+	fill: rgb(24, 22, 22);
 }
 
-html.dark .nav-links > li > a.active span,
-html.dark .nav-links > li > a:hover span {
+#contact .curve path {
+	fill: rgb(230, 235, 247);
+}
+
+html.dark .nav-links li a {
+	color: #fff;
+}
+
+html.dark .nav-links li a span {
+	color: #999 !important;
+}
+
+html.dark .nav-links li a.active,
+html.dark .nav-links li a:hover {
 	color: var.$theme-clr;
 }
 
@@ -75,7 +86,7 @@ html.dark h3,
 html.dark h4,
 html.dark h5,
 html.dark h6 {
-	color: var.$theme-clr;
+	color: #fff;
 }
 
 html.dark #home .work-thumbs,
@@ -88,19 +99,23 @@ html.dark .line-btm {
 }
 
 html.dark .borders {
-	border: 1px #555 solid;
+	border: none;
 }
 
 html.dark .line-vert {
 	background: repeating-linear-gradient(90deg, var.$dark, var.$dark 1.5px, var.$dark 0, var.$dark);
 }
 
-html.dark .swiper-slide {
-	background: var.$dark;
+html.dark .flex .flex .swiper-pagination-bullet {
+	background: #ababab;
 }
 
-html .swiper-slide {
-	background: #f8f8f8;
+html.dark .flex .flex .swiper-pagination-bullet-active {
+	background: #ff9000;
+}
+
+html.dark .container.images img {
+	border: none;
 }
 
 html.dark #about p,
@@ -115,11 +130,20 @@ html.dark #new .project {
 }
 
 html.dark .site {
-	background: rgba(000, 000, 000, 0.3);
+	background: rgba(000, 000, 000, 0.5);
 }
 
+html.dark #about #mining .swiper-slide,
+html.dark #new #floorplans,
+html.dark #home #featured-site .container,
+html.dark #about .flex:not(.not-dark),
 html.dark .grey-bg {
-	background: rgba(000, 000, 000, 0.4) !important;
+	background: rgba(000, 000, 000, 0.5);
+}
+
+html.dark #home #featured-site .container,
+html.dark #about #slideshow-container .swiper-slide {
+	border: none;
 }
 
 html.dark #new .project .btm {
@@ -144,10 +168,6 @@ html.dark #new .residence-plans img {
 html.dark ul,
 html.dark #new #floorplans h3 {
 	color: #fff;
-}
-
-html.dark #new #floorplans {
-	background: #33333d;
 }
 
 html.dark #graveyard .graveyard .cell img {

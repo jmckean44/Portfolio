@@ -45,8 +45,8 @@ header {
 	width: 100%;
 }
 
-#home .curve path {
-	fill: rgba(0, 0, 0, 0.1);
+#home .curve {
+	display: none;
 }
 
 #about .curve path {

@@ -539,20 +539,27 @@ import thomas from '../img/sites/7stthomas.webp';
 	document.addEventListener('astro:page-load', () => {
 		const video = document.querySelector('.fireworks');
 
-		document.getElementById('themeToggle').addEventListener('click', () => {
-			if (localStorage.getItem('theme') && localStorage.getItem('theme').includes('dark')) {
+		// Function to update the video source based on the theme
+		function updateVideoSource() {
+			if (localStorage.getItem('theme') === 'dark') {
 				video.setAttribute('src', '/fireworks-drk.mp4');
 			} else {
 				video.setAttribute('src', '/fireworks-wh.mp4');
 			}
-		});
+		}
 
-		document.addEventListener('astro:page-load', () => {
-			if (localStorage.getItem('theme').includes('dark')) {
-				video.setAttribute('src', '/fireworks-drk.mp4');
-			} else {
-				video.setAttribute('src', '/fireworks-wh.mp4');
-			}
+		// Update the video source on page load
+		updateVideoSource();
+
+		// Listen for theme toggle and update the video source
+		document.getElementById('themeToggle').addEventListener('click', () => {
+			// Toggle theme in localStorage
+			const currentTheme = localStorage.getItem('theme');
+			const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+			localStorage.setItem('theme', newTheme);
+
+			// Update the video source
+			updateVideoSource();
 		});
 	});
 </script>
