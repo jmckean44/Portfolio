@@ -3,20 +3,20 @@ import node from '@astrojs/node';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 import icon from 'astro-icon';
-//import netlify from '@astrojs/netlify';
+import netlify from '@astrojs/netlify';
 
 export default defineConfig({
 	//server: { port: parseInt(import.meta.env.PORT) || 4321, host: true },
-	site: 'https://jmckean44.netlify.com',
+	site: 'https://jmckean44.netlify.app',
 	output: 'static',
 	integrations: [sitemap(), icon(), react()],
 	prefetch: true,
 	adapter: node({
 		mode: 'standalone',
 	}),
-	// adapter: netlify({
-	// 	edgeMiddleware: true,
-	// }),
+	adapter: netlify({
+		edgeMiddleware: true,
+	}),
 	vite: {
 		css: {
 			preprocessorOptions: {
