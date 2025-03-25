@@ -11,9 +11,9 @@ export default defineConfig({
 	output: 'static',
 	integrations: [sitemap(), icon(), react()],
 	prefetch: true,
-	// adapter: node({
-	// 	mode: 'standalone',
-	// }),
+	adapter: node({
+		mode: 'standalone',
+	}),
 	// adapter: netlify({
 	// 	edgeMiddleware: true,
 	// }),
