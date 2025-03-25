@@ -92,7 +92,7 @@ html.dark .borders {
 }
 
 html.dark .line-vert {
-	background: repeating-linear-gradient(90deg, #26262d, #555 1.5px, #26262d 0, #26262d);
+	background: repeating-linear-gradient(90deg, var.$dark, var.$dark 1.5px, var.$dark 0, var.$dark);
 }
 
 html.dark .swiper-slide {

@@ -3,9 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/residences.scss';
 import PictureComponent from '../components/PictureComponent.astro';
 
-import { Image } from 'astro:assets';
-import { getImage } from 'astro:assets';
-import { Picture } from 'astro:assets';
+//import { Image } from 'astro:assets';
+//import { getImage } from 'astro:assets';
+//import { Picture } from 'astro:assets';
 
 import placeholder from '../img/residences-placeholder.webp';
 import placeholderMobile from '../img/residences-placeholder-mobile.webp';
@@ -142,7 +142,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 					The Site Plan UI, below, is a customized version of a real estate site plan <a href="https://mapplic.com/case-study/real-estate" target="_blank" class="underline">plugin</a> that offers potential
 					buyers a visual representation of the resort property, hotels, and amenities.
 				</p>
-				<p>The default plugin site plan image is a transparent svg, which works well (being that its a vector image) for zooming in close and to reduce the image file size.</p>
+				<p>The default plugin site plan image is a transparent SVG, which works well for zooming in close and to reduce the image file size.</p>
 				<p>
 					In this case, the original site map was a bitmap image, which was converted to a webp format with lazy loading enabled to help compensate for the client request to zoom in closely and avoid
 					pixelation, which required the image to be over 4000 pixels in height and width.
@@ -217,7 +217,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 	}
 
 	.btn {
-		background: #26262d;
+		background: #3a3a42;
 		display: inline-block;
 		color: #fff;
 		border: none;
@@ -245,7 +245,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 	.btn-clear {
 		margin-top: 3rem;
 		font-size: 1.2rem;
-		background: #26262d;
+		background: #3a3a42;
 		color: #fff;
 		border: none;
 		border-radius: 3px;

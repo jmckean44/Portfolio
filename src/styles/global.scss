@@ -147,11 +147,10 @@ html {
 body {
 	overflow-x: hidden !important;
 	line-height: 1.6;
-	//padding: 0 2%;
 	margin: 0;
 	font-family: var.$font-sans-serif;
 	font-weight: normal;
-	font-size: var.$font-size;
+	font-size: min(max(1.2rem, 2vw), 19px);
 	height: 100%;
 	background: var.$bg-clr;
 	position: relative;
@@ -443,6 +442,11 @@ button a:hover {
 	background: var.$dark;
 	display: block;
 	padding: 0.5rem;
+}
+
+.filter-btn,
+.btn {
+	color: #fff !important;
 }
 
 /* =================================
@@ -1066,6 +1070,10 @@ p a {
 	border: 1px #ccc solid;
 	border-radius: 5px;
 	padding: 2rem 1%;
+}
+
+.borders.light {
+	border: 1px #f9f9f9 solid;
 }
 
 .line-vert {

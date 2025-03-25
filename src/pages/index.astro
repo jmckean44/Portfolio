@@ -4,16 +4,15 @@ import { Picture } from 'astro:assets';
 import { Image } from 'astro:assets';
 import { items } from '../data/index.ts';
 import '../styles/form.scss';
+import '../styles/swiper.scss';
 import ItemCard from '../components/ItemCard.astro';
 import html7Dale from '../img/htmls/7dale.jpg';
 import htmlMRC from '../img/htmls/mrc.jpg';
 import htmlDiamond from '../img/htmls/diamond.jpg';
 import htmlWinslow from '../img/htmls/winslow.jpg';
 import htmlVanguard from '../img/htmls/vanguard.jpg';
-import CheckboxGroup from '../components/Checkbox.jsx';
 import laptop from '../img/laptop.png';
 import mobile from '../img/mobile.png';
-import fact from '../img/fact.webp';
 import aquavil from '../img/sites/aquavil.jpg';
 import barrington from '../img/sites/barrington.jpg';
 import boathaus from '../img/sites/boathaus.jpg';
@@ -49,16 +48,18 @@ import thomas from '../img/sites/7stthomas.webp';
 			<div class="flex padding-x">
 				<div class="cell small-18 medium-9">
 					<p class="justify">
-						My name is Jeff and I am a <strong class="bold">Frontend Web Developer</strong> with a background in the <strong class="bold">Visual Arts</strong>. I have a comprehensive understanding of
-						the fundamentals of <strong class="bold">composition</strong> and <strong class="bold">design</strong> and apply principles from these disciplines towards digital content creation.
+						I am a <strong class="bold">Frontend Web Developer</strong> with a background in <strong class="bold">Visual Arts</strong>. I have a comprehensive understanding of the fundamentals of <strong
+							class="bold">composition</strong
+						> and <strong class="bold">design</strong> and apply principles from these disciplines towards digital content creation and the processes of converting web designs into accessible, performant,
+						device-tested, responsive websites.
 					</p>
 					<p>For more detailed information, please see my <a class="underline" href="/Jeff-McKean-Resume.pdf" target="_blank">resume</a>.</p>
 				</div>
 				<div class="cell small-18 medium-9">
-					<p class="justify paragraph-bg">
-						My experience working with smaller marketing agencies as the principal frontend web developer and multimedia specialist, has given me the opportunity to work on a diverse range of
-						responsibilities related to digital marketing communications.
-					</p>
+					<!-- <p class="justify paragraph-bg">
+						My experience working with smaller marketing agencies as the principal frontend web developer and multimedia specialist has given me the opportunity to work on a diverse range of projects
+						related to web-related digital marketing communications.
+					</p> -->
 
 					<!-- <button popovertarget="modal" class="fact-img"><Image src={fact} alt="Fact" /></button>
 					<dialog id="modal" popover="auto">
@@ -86,8 +87,8 @@ import thomas from '../img/sites/7stthomas.webp';
 						The following custom designed site examples were created for <a target=" _blank" href="https://pbmarketing.ca/" class="underline" aria-label="offsite link to
 						pbmarketing.ca"
 							>P&B Marketing</a
-						>, a full-service marketing agency that offers a comprehensive suite of marketing services, encompassing everything from strategy and planning to execution and analytics, covering both
-						digital and traditional channels to developers in the real estate industry.
+						>, a full-service marketing and communications agency that offers a comprehensive suite of marketing services, encompassing everything from strategy and planning to execution and
+						analytics, covering both digital and traditional channels to developers in the real estate industry.
 					</p>
 					<br />
 				</div>
@@ -276,7 +277,9 @@ import thomas from '../img/sites/7stthomas.webp';
 			<div class="flex padding-x">
 				<div class="cell">
 					<h2>Web Limbo</h2>
-					<p class="width">A number of P&B Real Estate developer projects below have been retired, although some are still active and or have samples of marketing materials if you click on them.</p>
+					<p class="width">
+						The following real estate developer projects have been retired, although some of them are still active (dark background) and or have samples of marketing materials if you click on them.
+					</p>
 					<p class="width">
 						On top of the list below, other web projects that I have developed can be seen <a
 							target="_blank"
@@ -289,28 +292,51 @@ import thomas from '../img/sites/7stthomas.webp';
 				</div>
 			</div>
 			<div class="grid graveyard">
-				<div class="cell">
+				<div class="cell materials">
 					<a href="https://theravine.ca/" target="_blank" aria-label="offsite link to theravine.ca">
 						<Image src={ravine} class="" alt="The Ravine" />
 						<h3>The Ravine</h3>
 					</a>
 				</div>
-				<div class="cell">
-					<a href="https://pbmarketing.ca/work-arthaus.php" target="_blank" aria-label="offsite link to work-arthaus.php">
-						<Image src={arthaus} class="" alt="Arthaus" />
-						<h3>Arthaus</h3>
+				<div class="cell materials">
+					<a href="https://kingswaybytheriver.ca/" target="_blank" aria-label="offsite link to kingswaybytheriver.ca">
+						<Image src={kingsway} class="" alt="Kingsway By The River" />
+						<h3>Kingsway By The River</h3>
 					</a>
 				</div>
-				<div class="cell">
+				<div class="cell materials">
 					<a href="https://pbmarketing.ca/work-shiplake.php" target="_blank" aria-label="offsite link to work-shiplake.php">
 						<Image src={shiplake} class="" alt="Shiplake Rental Management" />
 						<h3>Shiplake Rentals</h3>
 					</a>
 				</div>
-				<div class="cell">
+				<div class="cell materials">
 					<a href="https://pbmarketing.ca/work-7stThomas.php" target="_blank" aria-label="offsite link to work-7stThomas.php">
 						<Image src={thomas} class="" alt="7 St. Thomas" />
 						<h3>7 St. Thomas</h3>
+					</a>
+				</div><div class="cell materials">
+					<a href="https://pbmarketing.ca/work-arthaus.php" target="_blank" aria-label="offsite link to work-arthaus.php">
+						<Image src={arthaus} class="" alt="Arthaus" />
+						<h3>Arthaus</h3>
+					</a>
+				</div>
+				<div class="cell materials">
+					<a href="https://pbmarketing.ca/work-delisle.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-delisle.php">
+						<Image src={delisle} class="" alt="Delisle Dentistry" />
+						<h3>Delisle Dentistry</h3>
+					</a>
+				</div>
+				<div class="cell materials">
+					<a href="http://jacjacobson.com" target="_blank" aria-label="offsite link to jacjacobson.com">
+						<Image src={jac} class="" alt="Jack Jacobson Photography" />
+						<h3>Jack Jacobson Photography</h3>
+					</a>
+				</div>
+				<div class="cell materials">
+					<a href="https://pbmarketing.ca/work-boathaus.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-boathaus.php">
+						<Image src={boathaus} class="" alt="Boathaus" />
+						<h3>Boathaus</h3>
 					</a>
 				</div>
 				<div class="cell">
@@ -322,20 +348,8 @@ import thomas from '../img/sites/7stthomas.webp';
 					<h3>The Barrington</h3>
 				</div>
 				<div class="cell">
-					<a href="https://pbmarketing.ca/work-boathaus.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-boathaus.php">
-						<Image src={boathaus} class="" alt="Boathaus" />
-						<h3>Boathaus</h3>
-					</a>
-				</div>
-				<div class="cell">
 					<Image src={brownstones} class="" alt="Brownstones" />
 					<h3>Brownstones</h3>
-				</div>
-				<div class="cell">
-					<a href="https://pbmarketing.ca/work-delisle.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-delisle.php">
-						<Image src={delisle} class="" alt="Delisle Dentistry" />
-						<h3>Delisle Dentistry</h3>
-					</a>
 				</div>
 				<div class="cell">
 					<Image src={designhaus} class="" alt="Designhaus" />
@@ -354,20 +368,8 @@ import thomas from '../img/sites/7stthomas.webp';
 					<h3>Guildwood Condos</h3>
 				</div>
 				<div class="cell">
-					<a href="http://jacjacobson.com" target="_blank" aria-label="offsite link to jacjacobson.com">
-						<Image src={jac} class="" alt="Jack Jacobson Photography" />
-						<h3>Jack Jacobson Photography</h3>
-					</a>
-				</div>
-				<div class="cell">
 					<Image src={aquavil} class="" alt="Aquavil" />
 					<h3>Aquavil</h3>
-				</div>
-				<div class="cell">
-					<a href="https://kingswaybytheriver.ca/" target="_blank" aria-label="offsite link to kingswaybytheriver.ca">
-						<Image src={kingsway} class="" alt="Kingsway By The River" />
-						<h3>Kingsway By The River</h3>
-					</a>
 				</div>
 				<div class="cell">
 					<Image src={northeast} class="" alt="Northeast Midstream Energ" />
@@ -463,15 +465,6 @@ import thomas from '../img/sites/7stthomas.webp';
 		const sites = document.querySelectorAll('#sites .site');
 		const filterSites = document.querySelector('#filter-sites ul');
 
-		// function removeAllButton() {
-		// 	const allButton = document.querySelector('.filter-btn-all');
-		// 	if (allButton.classList.contains('active')) {
-		// 		allButton.setTimeout(() => {
-		// 			allButton.style.display = 'none';
-		// 		}, 2000);
-		// 	}
-		// }
-
 		function addAllButton() {
 			// Check if the "All" button already exists
 			if (!document.querySelector('.filter-btn-all')) {
@@ -488,10 +481,6 @@ import thomas from '../img/sites/7stthomas.webp';
 					createFilterBtn.classList.add('active');
 					sites.forEach((site) => (site.style.display = 'block'));
 				});
-
-				// if (createFilterBtn.classList.contains('active')) {
-				// 	removeAllButton();
-				// }
 			}
 		}
 
@@ -574,7 +563,10 @@ import thomas from '../img/sites/7stthomas.webp';
 			padding-bottom: 3rem;
 		}
 		.swiper-pagination {
-			bottom: 10px !important;
+			bottom: 0px !important;
+		}
+		.swiper-pagination-bullet {
+			background: #ccc;
 		}
 		.swiper-pagination-bullet-active {
 			background: #021e42;
@@ -582,63 +574,46 @@ import thomas from '../img/sites/7stthomas.webp';
 		.swiper-slide {
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: space-evenly;
 			align-items: center;
 			background: none;
 		}
 	}
 </style>
 
-<script>
-	import Swiper from 'swiper';
-	import { Pagination, Autoplay } from 'swiper/modules';
-	Swiper.use([Autoplay]);
-	import 'swiper/scss';
-	import 'swiper/scss/effect-fade';
-	import 'swiper/scss/pagination';
+<!-- Swiper JS -->
+<link rel="stylesheet" href="../src/styles/swiper-bundle.min.css" />
+<script is:inline src="../src/scripts/swiper.js"></script>
 
+<script>
 	document.addEventListener('astro:page-load', () => {
 		function initializeSwipers() {
 			new Swiper('.swiper', {
-				modules: [Pagination],
 				freeMode: true,
 				speed: 1000,
 				loop: true,
-				autoplay: {
-					delay: 4000,
-					disableOnInteraction: true,
-					pauseOnMouseEnter: true,
-				},
 				pagination: {
 					el: '.swiper-pagination',
-					renderBullet: function (index, className) {
+					renderBullet: function (className: string) {
 						return '<span class="' + className + '"></span>';
 					},
 					clickable: true,
 				},
 				breakpoints: {
 					2000: {
-						slidesPerView: 6,
+						slidesPerView: 5,
 						spaceBetween: 40,
 					},
-					1600: {
-						slidesPerView: 5,
+					1700: {
+						slidesPerView: 4,
 						spaceBetween: 30,
 					},
 					1200: {
-						slidesPerView: 4,
-						spaceBetween: 20,
-					},
-					900: {
 						slidesPerView: 3,
 						spaceBetween: 20,
 					},
-					500: {
+					700: {
 						slidesPerView: 2,
-						spaceBetween: 20,
-					},
-					400: {
-						slidesPerView: 1,
 						spaceBetween: 20,
 					},
 				},
@@ -657,7 +632,7 @@ import thomas from '../img/sites/7stthomas.webp';
 		margin-bottom: 1rem;
 	}
 	#featured-videos h3 {
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 	}
 	#featured-videos video::-webkit-media-controls-volume-slider {
 		display: none;
@@ -665,9 +640,14 @@ import thomas from '../img/sites/7stthomas.webp';
 	#featured-videos video::-webkit-media-controls-mute-button {
 		display: none;
 	}
-	#featured-videos .swiper-slide {
-		flex-shrink: 1;
+
+	#featured-videos video {
+		padding: 0 1.25rem;
 	}
+
+	/* #featured-videos .swiper-slide {
+		flex-shrink: 1;
+	} */
 
 	/* -------------------
 	 LAPTOP & MOBILE 
@@ -733,5 +713,16 @@ import thomas from '../img/sites/7stthomas.webp';
 			left: 0;
 			right: 0;
 		}
+	}
+
+	/* -------------------
+	 GRAVEYARD
+	 ------------------- */
+	#graveyard .graveyard .cell.materials {
+		background: #3a3a42;
+		border: 0;
+	}
+	#graveyard .graveyard .cell.materials h3 {
+		color: #fff;
 	}
 </style>

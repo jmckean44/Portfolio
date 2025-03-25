@@ -256,21 +256,21 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				<div class="cell small-18 medium-12">
 					<h1>Colour Theory</h1>
 					<p>
-						Understanding the underlying principles of how colours interact when mixed together or in context to each other, and the visual and psychological effects that can be created has always
-						been interesting to me.
+						The ongoing process of learning the effects of colour in context to each other, when mixing together to achieve a particluar hue or tone, and the visual and psychological implications of
+						colour and form by great artists has always interested to me.
 					</p>
 					<p>
 						A friend introduced me to Scientific American magazine, thinking that <a target="_blank" class="underline" href="/Scientific-American-Pollock.pdf">an article</a> about a study that was done
-						on Jackson Pollock drip paintings would interest me. At first glance, it seems obvious that there would be nothing systematic about the random and almost chaotic nature of the physical process
-						of flinging paint off a brush onto the canvas he was working on while he stood on it. But the study showed that there was a pattern to the way the paint was applied. They found fractals* in
-						his work, and that the means he took to arrive at that particular effect were deliberate.
+						on Jackson Pollock drip paintings would interest me. At first glance, it appears to be unlikely that something systematic could come from the physical act of randomly flinging paint off of
+						a brush onto a canvas that he stood on. However, the computer analyzed study found that there was in fact repeating fractal patterning in his work, and that the means he took to arrive at that
+						particular effect were deliberate.
 					</p>
 					<p class="text-sm">
 						<em>* Fractals are infinitely complex patterns that are self-similar across different scales. They are created by repeating a simple process over and over in an ongoing feedback loop.</em>
 					</p>
 				</div>
 				<div class="cell small-18 medium-6" id="pollock">
-					<a target="_blank" href="/Scientific-American-Pollock.pdf"><Image src={pollock} alt="Jackson Pollock article in Scientific American" /></a>
+					<a target="_blank" href="/Scientific-American-Pollock.pdf"><Image src={pollock} class="borders light" alt="Jackson Pollock article in Scientific American" /></a>
 				</div>
 			</div>
 		</div>
@@ -354,60 +354,62 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 	<script is:inline src="../src/scripts/swiper.js"></script>
 
 	<script>
-		new Swiper('.elink', {
-			mousewheel: true,
-			keyboard: true,
-			autoplay: true,
-			speed: 1000,
-			delay: 5000,
-			effect: 'fade',
-			pagination: {
-				pagination: '.swiper-pagination-h',
-				el: '.swiper-pagination-h',
-				clickable: true,
-				renderBullet: function (index: number, className: string) {
-					return '<span class="' + className + '">' + direction[index] + '</span>';
+		document.addEventListener('astro:page-load', () => {
+			new Swiper('.elink', {
+				mousewheel: true,
+				keyboard: true,
+				autoplay: true,
+				speed: 1000,
+				delay: 5000,
+				effect: 'fade',
+				pagination: {
+					el: '.swiper-pagination',
+					renderBullet: function (className: string) {
+						return '<span class="' + className + '"></span>';
+					},
+					clickable: true,
 				},
-			},
-		});
+			});
 
-		// IMAGES
-		var floor = ['Drawings', 'Portraits', 'Landscape'];
-		var direction = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
+			// IMAGES
+			var floor = ['Drawings', 'Portraits', 'Landscape'];
+			var direction = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
 
-		new Swiper('.swiper-container-v', {
-			pagination: {
-				el: '.swiper-pagination-v',
-				clickable: true,
-				autoHeight: true,
-				renderBullet: function (index: number, className: string) {
-					return '<span class="' + className + '">' + floor[index] + '</span>';
+			new Swiper('.swiper-container-v', {
+				pagination: {
+					el: '.swiper-pagination-v',
+					clickable: true,
+					autoHeight: true,
+					renderBullet: function (index: number, className: string) {
+						return '<span class="' + className + '">' + floor[index] + '</span>';
+					},
 				},
-			},
-			lazy: true,
-			speed: 1000,
-			direction: 'vertical',
-			autoHeight: false,
-			spaceBetween: 50,
-		});
+				lazy: true,
+				speed: 1000,
+				direction: 'vertical',
+				autoHeight: false,
+				spaceBetween: 50,
+			});
 
-		new Swiper('.swiper-container-h', {
-			lazy: true,
-			pagination: {
-				pagination: '.swiper-pagination-h',
-				el: '.swiper-pagination-h',
-				clickable: true,
-				autoHeight: true,
-				renderBullet: function (index: number, className: string) {
-					return '<span class="' + className + '">' + direction[index] + '</span>';
+			new Swiper('.swiper-container-h', {
+				lazy: true,
+				pagination: {
+					pagination: '.swiper-pagination-h',
+					el: '.swiper-pagination-h',
+					clickable: true,
+					autoHeight: true,
+					renderBullet: function (index: number, className: string) {
+						return '<span class="' + className + '">' + direction[index] + '</span>';
+					},
 				},
-			},
-			speed: 1000,
-			direction: 'horizontal',
-			effect: 'fade',
-			spaceBetween: 50,
-			autoHeight: false,
-			nested: true,
+				speed: 1000,
+				direction: 'horizontal',
+				effect: 'fade',
+				spaceBetween: 50,
+				autoplay: true,
+				autoHeight: false,
+				nested: true,
+			});
 		});
 	</script>
 </Layout>
