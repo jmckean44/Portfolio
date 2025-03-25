@@ -29,7 +29,7 @@ html.dark body {
 	background: var.$dark !important;
 }
 
-html.dark #about .curve path {
+html.dark .curve path {
 	fill: rgb(24, 22, 22);
 }
 
@@ -42,7 +42,7 @@ html.dark .nav-links li a {
 }
 
 html.dark .nav-links li a span {
-	color: #999 !important;
+	color: #b6b6b6 !important;
 }
 
 html.dark .nav-links li a.active,
@@ -114,7 +114,12 @@ html.dark .flex .flex .swiper-pagination-bullet-active {
 	background: #ff9000;
 }
 
-html.dark .container.images img {
+html.dark #grid-work-container {
+	max-width: 1424px;
+}
+
+html.dark .container.images img,
+html.dark #home .image {
 	border: none;
 }
 
@@ -124,7 +129,7 @@ html.dark .site h2 {
 }
 
 html.dark #new .project {
-	background: #33333d;
+	background: rgba(000, 000, 000, 0.5);
 	border: none;
 	padding: 2rem 1.75rem;
 }
