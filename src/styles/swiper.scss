@@ -50,7 +50,7 @@
 .swiper-slide {
 	position: relative;
 	text-align: center;
-	background: #fff;
+	//background: #fff;
 	height: auto;
 	margin-bottom: 1rem !important;
 }
@@ -95,21 +95,22 @@
 }
 
 #swiper-vertical-nav .swiper-pagination {
-	margin-left: 0.5rem;
+	font-family: var.$font-sans-serif-bold;
 }
+
 .swiper-pagination {
-	text-align: center !important;
+	text-align: center;
 	bottom: 0;
 }
+
 #swiper-vertical-nav .swiper-pagination {
-	justify-content: center !important;
+	justify-content: center;
 }
 
 .swiper-pagination-h {
 	top: auto;
 	bottom: 0;
 	width: 100%;
-	z-index: 9999999999999999;
 }
 
 .swiper-pagination-h .swiper-pagination-bullet {

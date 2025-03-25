@@ -1,19 +1,19 @@
 @use 'variables' as var;
 
 $input-font: var.$font-sans-serif;
-$input-font-size: 0.85rem !important;
+$input-font-size: 0.85rem;
 $input-font-size-button: 14px;
-$input-font-clr: var.$dark !important;
+$input-font-clr: var.$dark;
 $input-font-spacing: 0.5px;
 $input-background-clr: transparent;
 $input-background-focus: transparent;
 $input-boxshadow: 0 #ccc 5px;
 $input-button-clr: #fff;
 $input-button-border: 2px #fff solid;
-$input-border-radius: 2px !important;
+$input-border-radius: 2px;
 $input-border: 1px var.$dark solid;
 $input-span-bg: #fff;
-$input-padding: 0.7rem 0.75rem 0.6rem !important;
+$input-padding: 0.7rem 0.75rem 0.6rem;
 
 $input-line-height: 1;
 
@@ -39,7 +39,7 @@ form {
 	width: 100%;
 	max-width: 400px;
 	text-transform: uppercase;
-	margin: 0 auto !important;
+	margin: 0 auto;
 }
 
 form > div {
@@ -56,26 +56,26 @@ form p {
 }
 
 .form div.error {
-	margin: 0rem 0 0.5rem !important;
-	padding: 0 !important;
-	background-color: transparent !important;
-	font-size: 0.7rem !important;
+	margin: 0rem 0 0.5rem;
+	padding: 0;
+	background-color: transparent;
+	font-size: 0.7rem;
 	font-style: italic;
 	text-transform: none;
-	font-weight: 600 !important;
+	font-weight: 600;
 	z-index: 1;
-	color: var.$theme-clr !important;
+	color: var.$theme-clr;
 }
 
 .form div.response {
-	font-family: var.$theme-font !important;
-	margin: 0 !important;
-	padding: 0 !important;
-	top: 0 !important;
-	width: 100% !important;
-	line-height: 1.4 !important;
-	color: var.$dark !important;
-	font-weight: 600 !important;
+	font-family: var.$theme-font;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	width: 100%;
+	line-height: 1.4;
+	color: var.$dark;
+	font-weight: 600;
 	text-transform: none;
 }
 
@@ -124,18 +124,18 @@ form .message {
 	color: var.$theme-clr;
 	text-transform: uppercase;
 	font-family: var.$theme-font;
-	padding: 0 3px !important;
+	padding: 0 3px;
 	opacity: 0;
 }
 
 .form input:focus + span,
 .form textarea:focus + span,
 .form input:focus ~ label + span {
-	opacity: 1 !important;
+	opacity: 1;
 }
 
 .form input ~ label + span {
-	opacity: 0 !important;
+	opacity: 0;
 }
 
 #contact .g-recaptcha {
@@ -180,11 +180,11 @@ label {
 }
 
 .form .mc-field-group.input-group label {
-	display: flex !important;
+	display: flex;
 }
 
 .form .mc-field-group label {
-	margin-bottom: 0 !important;
+	margin-bottom: 0;
 }
 
 form input:focus + span,
@@ -195,14 +195,14 @@ form input:focus ~ label + span {
 }
 
 .form label.error {
-	margin: -10px 0 1rem 0 !important;
-	padding: 0 !important;
-	background-color: transparent !important;
-	font-weight: bold !important;
+	margin: -10px 0 1rem 0;
+	padding: 0;
+	background-color: transparent;
+	font-weight: bold;
 	text-transform: uppercase;
 	font-size: 9px;
 	z-index: 1;
-	color: #fff !important;
+	color: #fff;
 	letter-spacing: 1px;
 }
 
@@ -210,11 +210,11 @@ form input:focus ~ label + span {
    PLACEHOLDERS
 ======================================= */
 input::placeholder {
-	color: var.$dark !important;
+	color: var.$dark;
 }
 
 textarea::placeholder {
-	color: var.$dark !important;
+	color: var.$dark;
 }
 
 [placeholder]:focus::-webkit-input-placeholder {
@@ -280,12 +280,12 @@ textarea {
 	margin: $input-margin;
 	font-family: 'Calibribold', sans-serif;
 	font-size: $input-font-size;
-	color: var.$dark !important;
-	-webkit-text-fill-color: var.$dark !important;
+	color: var.$dark;
+	-webkit-text-fill-color: var.$dark;
 	text-transform: uppercase;
 	background-color: $input-background-clr;
 	border-radius: $input-border-radius;
-	border: $input-border !important;
+	border: $input-border;
 	letter-spacing: $input-font-spacing;
 	line-height: $input-line-height;
 	transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
@@ -305,7 +305,7 @@ textarea:focus {
 	background: $input-background-focus;
 	outline: none;
 	color: var.$theme-clr;
-	-webkit-text-fill-color: var.$theme-clr;
+	-webkit-text-fill-color: var.$dark;
 	box-shadow: $input-focus-boxshadow;
 	transition: box-shadow 0.2s, border-color 0.2s ease-in-out;
 }
@@ -330,16 +330,16 @@ textarea {
    SELECT
 ================================================ */
 select {
-	width: 100% !important;
+	width: 100%;
 	min-height: $input-min-height;
-	padding: 0.4rem 1rem !important;
+	padding: 0.4rem 1rem;
 	margin-bottom: 0.5rem;
 	font-size: $input-font-size;
-	text-transform: uppercase !important;
+	text-transform: uppercase;
 	font-family: 'Calibribold', sans-serif;
-	font-family: $input-font !important;
+	font-family: $input-font;
 	letter-spacing: $input-font-spacing;
-	color: var.$dark !important;
+	color: var.$dark;
 	background-color: $input-background-clr;
 	border: $input-border;
 	border-radius: $input-border-radius;
@@ -385,7 +385,7 @@ input[type='checkbox']:focus {
 }
 
 .margin-left {
-	margin-left: 1rem !important;
+	margin-left: 1rem;
 	border: 1px red solid;
 }
 
@@ -438,9 +438,9 @@ input[type='checkbox']:focus {
 
 #register .radio-inputs p {
 	color: var.$dark;
-	font-family: var.$theme-font !important;
+	font-family: var.$theme-font;
 	text-transform: uppercase;
-	font-weight: bold !important;
+	font-weight: bold;
 	font-size: 0.9rem;
 	padding: 0.5rem 1.5rem 0.5rem 0;
 	letter-spacing: 1px;

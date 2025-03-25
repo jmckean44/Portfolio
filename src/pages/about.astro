@@ -4,7 +4,6 @@ import { Picture } from 'astro:assets';
 import '../styles/swiper.scss';
 
 import { Image } from 'astro:assets';
-import { getImage } from 'astro:assets';
 
 import anv from '../img/sites/anv.webp';
 import loki from '../img/sites/loki.webp';
@@ -130,8 +129,8 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				<div class="cell small-18">
 					<h2>Side Projects</h2>
 					<p>
-						The following traditional media selections are examples from a number of side projects, including documenting my son and daughter in portraits as they have grown up, local urban and Google
-						Maps "found" landscapes, and illustrations inspired by drawing lessons at our kitchen table - that began with a plush rabbit drying on the clothesline.
+						The following examples are selections from a number of side projects, including documenting my son and daughter in portraits as they have grown up, local urban and Google Maps "found"
+						landscapes, and illustrations inspired by drawing lessons at our kitchen table - that began with a plush rabbit drying on the clothesline.
 					</p>
 					<div class="flex not-dark">
 						<div class="cell small-18" id="swiper-vertical-nav">
@@ -256,7 +255,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				<div class="cell small-18 medium-12">
 					<h1>Colour Theory</h1>
 					<p>
-						The ongoing process of learning the effects of colour in context to each other, when mixing together to achieve a particluar hue or tone, and the visual and psychological implications of
+						The ongoing process of learning the effects of colour in context to each other, when mixing together to achieve a particluar hue or tone, the visual and psychological implications of
 						colour and form by great artists has always interested to me, including the example below.
 					</p>
 					<p>
@@ -322,7 +321,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				background: #f9f9f9;
+				background: none;
 			}
 			#slideshow-container .swiper-slide {
 				margin-bottom: 50px !important; /* For vertical Swiper */
@@ -350,15 +349,15 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 	</style>
 
 	<!-- Swiper JS -->
-	<link rel="stylesheet" href="../src/styles/swiper-bundle.min.css" />
-	<script is:inline src="../src/scripts/swiper.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 	<script>
 		document.addEventListener('astro:page-load', () => {
 			new Swiper('.elink', {
 				mousewheel: true,
 				keyboard: true,
-				autoplay: true,
+				autoplay: false,
 				speed: 1000,
 				delay: 5000,
 				effect: 'fade',
@@ -406,8 +405,8 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				direction: 'horizontal',
 				effect: 'fade',
 				spaceBetween: 50,
-				autoplay: true,
-				autoHeight: false,
+				autoplay: false,
+				autoHeight: true,
 				nested: true,
 			});
 		});

@@ -29,12 +29,43 @@ html.dark body {
 	background: var.$dark !important;
 }
 
-html.dark .curve path {
+html.dark .curve path,
+html.dark #about .curve path,
+html.dark #contact .curve path {
 	fill: rgb(24, 22, 22);
 }
 
-#contact .curve path {
-	fill: rgb(230, 235, 247);
+html.dark #contact #form input,
+html.dark #contact #form textarea {
+	border: 1px solid #999;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+html.dark #home #campaigns form input::placeholder,
+html.dark #home #campaigns form input:focus,
+html.dark #form input:focus,
+html.dark #form input[type='text'],
+html.dark #form input::placeholder,
+html.dark #contact #form textarea::placeholder {
+	color: #fff !important;
+	-webkit-text-fill-color: #fff !important;
+}
+
+html.dark #contact #form .btn {
+	background: var.$theme-clr;
+}
+
+html.dark #home #campaigns form input {
+	border: 1px #999 solid;
+}
+
+html.dark #htmls #campaigns img {
+	border: none;
+}
+
+html.dark #home #campaigns form .btn {
+	background: var.$theme-clr;
+	border: none;
 }
 
 html.dark .nav-links li a {
@@ -132,6 +163,28 @@ html.dark #new .project {
 	background: rgba(000, 000, 000, 0.5);
 	border: none;
 	padding: 2rem 1.75rem;
+}
+
+html.dark #new .project:first-child {
+	border-left: #3a3a42 solid 1rem;
+	border-right: #3a3a42 solid 0.5rem;
+}
+
+html.dark #new .project:last-child {
+	border-left: #3a3a42 solid 0.5rem;
+	border-left: #3a3a42 solid 1rem;
+}
+
+@media (max-width: 750px) {
+	html.dark #new .project:first-child {
+		border-right: #3a3a42 solid 1rem;
+		border-bottom: #3a3a42 solid 1.5rem;
+	}
+
+	html.dark #new .project:last-child {
+		border-left: #3a3a42 solid 1rem;
+		border-right: #3a3a42 solid 1rem;
+	}
 }
 
 html.dark .site {

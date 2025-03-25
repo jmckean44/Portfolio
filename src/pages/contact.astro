@@ -10,6 +10,10 @@ import '../styles/form.scss';
 				<div class="cell">
 					<h1>Contact</h1>
 
+					<p>To send a message, please fill out and submit the form below.</p>
+
+					<br />
+
 					<form method="POST" id="form">
 						<input type="hidden" name="access_key" value="3d4e1ccc-77f5-4fa8-860c-81854fd38d03" />
 						<input type="hidden" name="subject" value="Submission from jmckean44.netlify.com" />
@@ -32,7 +36,7 @@ import '../styles/form.scss';
 							<span class="helperText">Comments</span>
 						</div>
 
-						<div class="h-captcha" data-captcha="true"></div>
+						<div class="h-captcha" data-theme="dark" data-captcha="true"></div>
 						<div>
 							<div>
 								<div id="result"></div>
@@ -95,7 +99,7 @@ import '../styles/form.scss';
 								});
 						});
 					</script> -->
-					<script src="https://web3forms.com/client/script.js" async defer></script>
+					<script is:inline src="https://web3forms.com/client/script.js" async defer></script>
 				</div>
 			</div>
 		</div>
