@@ -86,7 +86,7 @@ header {
 
 #header.headroom.headroom--not-top.headroom--not-bottom .nav-links li a,
 #header.headroom.headroom--not-bottom.headroom--not-top.headroom--pinned .nav-links li a {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 	transition: all ease-in-out 0.5s;
 }
 
@@ -97,7 +97,7 @@ header {
 
 #header.headroom.headroom--not-bottom.headroom--not-top .nav-links li a {
 	backdrop-filter: blur(15px);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 	transition: all ease-in-out 0.5s;
 }
 
@@ -113,7 +113,7 @@ html.light #header.header.headroom.headroom--not-bottom.headroom--pinned.headroo
 #header.headroom--not-top.headroom--bottom .nav-links {
 	justify-content: center;
 	transition: 0.5s ease all;
-	gap: 2rem;
+	gap: 1rem;
 	margin-top: -25px;
 }
 
@@ -129,7 +129,7 @@ html.light #header.header.headroom.headroom--not-bottom.headroom--pinned.headroo
 #header.headroom--not-bottom.headroom--not-top.headroom--pinned .nav-links li a,
 #header.headroom--not-top.headroom--bottom .nav-links li a {
 	font-size: 1.5rem;
-	padding: 2rem 1rem 0.85rem;
+	padding: 2rem 1rem 0.6rem;
 	background: #fff;
 	background-size: auto 3%;
 	color: var.$dark;
@@ -138,7 +138,7 @@ html.light #header.header.headroom.headroom--not-bottom.headroom--pinned.headroo
 	border-bottom-left-radius: 3px;
 	border: 1px #ccc solid;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-	transition: all ease-out 0.5s;
+	transition: all ease-out 0.3s;
 }
 
 @media (max-width: 600px) {
@@ -154,8 +154,8 @@ html.light #header.header.headroom.headroom--not-bottom.headroom--pinned.headroo
 		border-bottom-right-radius: 3px;
 		border-bottom-left-radius: 3px;
 		border: 1px #ccc solid;
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-		transition: all ease-out 0.5s;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		transition: all ease-out 0.3s;
 	}
 	.nav-links li a span {
 		display: none;
@@ -173,7 +173,7 @@ html.light #header.header.headroom.headroom--not-bottom.headroom--pinned.headroo
 	color: #fff;
 	font-weight: 700;
 	border: 1px var.$theme-clr solid;
-	transition: all ease-out 0.5s;
+	transition: all ease-out 0.3s;
 }
 
 #header.headroom--not-bottom.headroom--not-top .nav-links li a.active span,

@@ -7,7 +7,6 @@
 nav {
 	max-width: 1400px;
 	margin: 0 auto;
-	//padding: 0 3%;
 	text-align: center;
 	position: relative;
 	z-index: 99999999;
@@ -37,7 +36,6 @@ nav {
 	text-transform: uppercase;
 	line-height: 1;
 	letter-spacing: 2px;
-	mix-blend-mode: difference !important;
 	background-position: top -50% center;
 	transition: all ease 0.3s;
 }
@@ -79,9 +77,4 @@ nav {
 		opacity: 1;
 		filter: blur(0px);
 	}
-}
-
-.fadeInBlur {
-	animation-name: fadeInBlur;
-	transition: 5s ease-out all;
 }
