@@ -43,7 +43,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 		<div class="container top-of-page">
 			<div class="flex padding-x not-dark">
 				<div class="cell small-18">
-					<h1>Marketing and Earlier</h1>
+					<h1>Opportunities</h1>
 				</div>
 			</div>
 			<div id="intro" class="spacing-btm">
@@ -383,7 +383,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 						return '<span class="' + className + '">' + floor[index] + '</span>';
 					},
 				},
-				lazy: true,
+				//lazy: true,
 				speed: 1000,
 				direction: 'vertical',
 				autoHeight: false,
@@ -401,11 +401,14 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 						return '<span class="' + className + '">' + direction[index] + '</span>';
 					},
 				},
-				speed: 1000,
-				direction: 'horizontal',
-				effect: 'fade',
-				spaceBetween: 50,
+				mousewheel: true,
+				keyboard: true,
 				autoplay: false,
+				speed: 1000,
+				delay: 5000,
+				effect: 'fade',
+				direction: 'horizontal',
+				spaceBetween: 50,
 				autoHeight: true,
 				nested: true,
 			});
