@@ -150,7 +150,7 @@ body {
 	margin: 0;
 	font-family: var.$font-sans-serif;
 	font-weight: normal;
-	font-size: min(max(1.2rem, 2vw), 19px);
+	font-size: min(max(1.6rem, 2.5vw), 20px);
 	height: 100%;
 	background: var.$bg-clr;
 	position: relative;
@@ -278,6 +278,11 @@ p {
 }
 
 .bold {
+	font-family: 'CalibriBold', sans-serif;
+	font-weight: bold;
+}
+
+strong {
 	font-family: 'CalibriBold', sans-serif;
 	font-weight: bold;
 }
@@ -460,7 +465,7 @@ $container-padding: 1.25rem;
 $container-padding-mobile: 1.25rem;
 
 .container.images {
-	max-width: 600px !important;
+	max-width: 650px !important;
 }
 
 .container.images img {
@@ -641,11 +646,11 @@ $container-padding-mobile: 1.25rem;
 }
 
 #intro p {
-	font-size: min(max(1.2rem, 2vw), 22px);
+	font-size: min(max(1.5rem, 2.5vw), 24px);
 }
 
 .width {
-	max-width: 700px;
+	max-width: 800px;
 }
 
 .centred {
@@ -1047,6 +1052,10 @@ p a {
 
 #new #generate-user .btn:hover {
 	background: var.$theme-clr !important;
+}
+
+#new #sitemap {
+	overflow: hidden;
 }
 
 /* =============================================

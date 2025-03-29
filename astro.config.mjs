@@ -10,13 +10,10 @@ export default defineConfig({
 	site: 'https://jmckean44.netlify.app',
 	output: 'static',
 	integrations: [sitemap(), icon(), react()],
-	prefetch: true,
 	adapter: node({
 		mode: 'standalone',
 	}),
-	// adapter: netlify({
-	// 	edgeMiddleware: true,
-	// }),
+	prefetch: true,
 	vite: {
 		css: {
 			preprocessorOptions: {
@@ -26,20 +23,4 @@ export default defineConfig({
 			},
 		},
 	},
-	// env: {
-	// 	schema: {
-	// 		API_KEY: envField.string({
-	// 			context: 'server',
-	// 			access: 'secret',
-	// 		}),
-	// 		LIST_ID: envField.string({
-	// 			context: 'server',
-	// 			access: 'secret',
-	// 		}),
-	// 		DATA_CENTER: envField.string({
-	// 			context: 'server',
-	// 			access: 'secret',
-	// 		}),
-	// 	},
-	// },
 });

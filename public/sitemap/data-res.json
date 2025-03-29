@@ -3,13 +3,13 @@
 		"title": "Residential lots",
 		"mapWidth": 4114,
 		"mapHeight": 3679,
-		"maxZoom": "1.5",
+		"maxZoom": "1.4",
 		"hoverTooltip": true,
 		"sidebar": true,
 		"layerSwitcher": "bottom-left",
-		"resetButton": "bottom-right",
-		"zoomButtons": "bottom-right",
-		"height": "800px",
+		"resetButton": "top-right",
+		"zoomButtons": "top-right",
+		"height": "",
 		"filters": false,
 		"thumbnails": false,
 		"ordered": false,
@@ -32,13 +32,13 @@
 	"layers": [
 		{
 			"id": "lot-map",
-			"name": "Marina Resort Cavtat Location Map",
+			"name": "Marina Resort Cavtat Site Map",
 			"file": "/sitemap/sitemap-res.webp"
 		}
 	],
 	"groups": [
 		{
-			"name": ""
+			"name": "Site Plan"
 		}
 	],
 	"locations": [
@@ -46,12 +46,8 @@
 			"id": "",
 			"title": "",
 			"group": [],
-			"sample": "",
-			"style": "",
-			"action": "",
-			"image": "assets/suites.webp",
-			"link": "https://marinaresortcavtat.com/",
-			"phone": ""
+			"image": "/sitemap/sitemap-res.webp",
+			"link": "https://marinaresortcavtat.com/"
 		},
 		{
 			"group": "",
@@ -72,7 +68,7 @@
 			"layer": "lot-map",
 			"group": "residences",
 			"coord": [0.2, 0.4],
-			"zoom": "2",
+			"zoom": "1",
 			"label": "A1",
 			"desc": ""
 		},
@@ -82,7 +78,7 @@
 			"layer": "lot-map",
 			"group": "residences",
 			"coord": [0.205, 0.32],
-			"zoom": "",
+			"zoom": "1",
 			"label": "A2"
 		},
 		{
@@ -91,7 +87,7 @@
 			"layer": "lot-map",
 			"group": "residences",
 			"coord": [0.23, 0.26],
-			"zoom": "",
+			"zoom": "1",
 			"label": "A3"
 		},
 		{
@@ -100,7 +96,7 @@
 			"layer": "lot-map",
 			"group": "residences",
 			"coord": [0.25, 0.19],
-			"zoom": "",
+			"zoom": "1",
 			"label": "A4"
 		},
 		{
@@ -109,7 +105,7 @@
 			"layer": "lot-map",
 			"group": "residences",
 			"coord": [0.25, 0.14],
-			"zoom": "",
+			"zoom": "1",
 			"label": "A5"
 		},
 		{
@@ -118,7 +114,7 @@
 			"layer": "lot-map",
 			"group": "residences",
 			"coord": [0.35, 0.13],
-			"zoom": "3",
+			"zoom": "1",
 			"label": "A6"
 		},
 		{
@@ -127,7 +123,7 @@
 			"layer": "lot-map",
 			"group": "residences",
 			"coord": [0.4, 0.12],
-			"zoom": "",
+			"zoom": "1",
 			"label": "A7"
 		},
 		{
@@ -136,7 +132,7 @@
 			"layer": "lot-map",
 			"group": "residences",
 			"coord": [0.45, 0.14],
-			"zoom": "",
+			"zoom": "1",
 			"label": "A8"
 		},
 		{
@@ -145,7 +141,7 @@
 			"layer": "lot-map",
 			"group": "residences",
 			"coord": [0.5, 0.14],
-			"zoom": "",
+			"zoom": "1",
 			"label": "A9"
 		},
 		{
@@ -154,7 +150,7 @@
 			"layer": "lot-map",
 			"group": "residences",
 			"coord": [0.558, 0.16],
-			"zoom": "",
+			"zoom": "1",
 			"label": "A10"
 		},
 		{
@@ -211,7 +207,7 @@
 			"layer": "lot-map",
 			"group": "residences",
 			"coord": [0.54, 0.3],
-			"zoom": "",
+			"zoom": "1",
 			"label": "D1"
 		}
 	],

@@ -263,18 +263,18 @@ html html.dark #header.headroom--not-bottom.headroom--not-top .nav-links li a {
 }
 
 .github {
-	width: 20px;
+	width: 15px;
 }
 
 .linkedin {
-	width: 20px;
+	width: 15px;
 	margin-left: 1rem;
 	margin-right: 0.75rem;
 }
 
 .sun {
 	fill: var.$theme-clr;
-	width: 20px;
+	width: 15px;
 }
 .moon {
 	fill: transparent;
@@ -294,6 +294,12 @@ html html.dark #header.headroom--not-bottom.headroom--not-top .nav-links li a {
 	.controls {
 		position: absolute;
 		left: auto;
-		top: 85px;
+		margin-top: 15%;
+	}
+}
+
+@media (max-width: 500px) {
+	.controls {
+		margin-top: 65px;
 	}
 }

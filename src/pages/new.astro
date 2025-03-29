@@ -16,7 +16,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 		<div class="container top-of-page">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h1>Like Drake says... it's non-stop.</h1>
+					<h1>Recently Learned</h1>
 				</div>
 			</div>
 
@@ -24,16 +24,20 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 				<div class="flex padding-x" id="intro">
 					<div class="cell small-18 medium-9">
 						<p class="slideInUp">
-							This page showcases components built with javascript that are either in prodcution or were created as part of a 37 hour <a
+							This page showcases components built with vanilla javascript that are either in prodcution or were created as part of a 37 hour <a
 								target="_blank"
 								class="underline"
 								href="https://www.traversymedia.com/modern-javascript-2-0">Modern JavaScript From The Beginning</a
 							> course to strengthen my Javascript skills.
 						</p>
 						<p>
-							The components include a shopping list, a random user generator, and a floor plan UI for a <a class="underline" target="_blank" href="https://marinaresortcavtat.com/">resort website</a>.
-							The floor plan UI was designed by our Art Director and the site plan UI was a customized version of a real estate site plan plugin.
+							The components include a <strong>shopping list</strong>, a <strong>random user generator</strong>, and a <strong>floor plan UI</strong> for a <a
+								class="underline"
+								target="_blank"
+								href="https://marinaresortcavtat.com/">resort website</a
+							>.
 						</p>
+						<p><em>More to come...</em></p>
 					</div>
 					<div class="cell small-18 medium-9">
 						<p></p>
@@ -95,194 +99,195 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 				<div class="cell small-18 medium-9">
 					<p class="width">
 						I was asked to create a User Interface for the floor plans page of a <a href="https://marinaresortcavtat.com/" class="underline" target="_blank">Croatian resort website</a> that would intuitively
-						guide users through the floor plan selection process. The functionality was designed by our Art Director.
+						guide users through the floor plan selection process. The functionality was designed by our Art Director and the site plan UI is a customized version of a real estate site plan Javascript plugin.
 					</p>
 				</div>
 				<div class="cell small-18 medium-9">
 					<p>
-						The idea was to start with disabled select menus until a <strong class="bold">NUMBER OF BEDROOMS</strong> was chosen, followed by a <strong class="bold">RESIDENCE TYPE</strong> and then a
-						<strong class="bold">SUITE NUMBER</strong>, which would load the chosen floor plan and site plan location marker, as well as the Key Features for that suite, where applicable.
+						The idea was to start with disabled select menus until a <strong>NUMBER OF BEDROOMS</strong> was chosen, followed by a <strong>RESIDENCE TYPE</strong> and then a
+						<strong>SUITE NUMBER</strong>, which would load the chosen floor plan and site plan location marker, as well as the <strong>Key Features</strong> for that suite, where applicable.
 					</p>
 				</div>
 			</div>
 		</div>
-	</section>
 
-	<section id="floorplans">
-		<div class="select-below">
-			<h3>Select A Bedroom Number</h3>
-		</div>
-		<div class="residence-choice">
-			<select name="bedroomNumber" id="bedroomNumber">
-				<option value="disabled">NUMBER OF BEDROOMS</option>
-				<option value="1 Bedroom">1 Bedroom</option>
-				<option value="2 Bedrooms">2 Bedrooms</option>
-				<option value="3 Bedrooms">3 Bedrooms</option>
-				<option value="4 Bedrooms">4 Bedrooms</option>
-			</select>
-			<select name="residenceType" id="residenceType" disabled>
-				<option value="disabled">RESIDENCE TYPE</option>
-			</select>
-			<select name="suites" id="suites" disabled>
-				<option value="disabled">SELECT SUITE</option>
-			</select>
-		</div>
+		<section id="floorplans">
+			<div class="select-below">
+				<h3>Select A Bedroom Number</h3>
+			</div>
+			<div class="residence-choice">
+				<select name="bedroomNumber" id="bedroomNumber">
+					<option value="disabled">NUMBER OF BEDROOMS</option>
+					<option value="1 Bedroom">1 Bedroom</option>
+					<option value="2 Bedrooms">2 Bedrooms</option>
+					<option value="3 Bedrooms">3 Bedrooms</option>
+					<option value="4 Bedrooms">4 Bedrooms</option>
+				</select>
+				<select name="residenceType" id="residenceType" disabled>
+					<option value="disabled">RESIDENCE TYPE</option>
+				</select>
+				<select name="suites" id="suites" disabled>
+					<option value="disabled">SELECT SUITE</option>
+				</select>
+			</div>
 
-		<div class="residence-plans">
-			<PictureComponent mobileImgUrl={placeholderMobile} desktopImgUrl={placeholder} loading="lazy" className="clip-image" alt="Marina Resort Cavtat" />
-		</div>
-	</section>
+			<div class="residence-plans">
+				<PictureComponent mobileImgUrl={placeholderMobile} desktopImgUrl={placeholder} loading="lazy" className="clip-image" alt="Marina Resort Cavtat" />
+			</div>
+		</section>
 
-	<div class="container top">
-		<div class="flex padding-x">
-			<div class="cell small-18">
-				<h2>Resort Site Plan UI</h2>
+		<div class="container top">
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h2>Resort Site Plan UI</h2>
+				</div>
+			</div>
+
+			<div class="flex padding-x">
+				<div class="cell small-18 medium-9">
+					<p>
+						The Site Plan UI below is a customized version of a real estate site plan <a href="https://mapplic.com/case-study/real-estate" target="_blank" class="underline">plugin</a> that offers a visual
+						representation of the property, hotels, and amenities.
+					</p>
+					<p>The default plugin site plan image is a transparent SVG, which works well for zooming in close and to reduce the image file size.</p>
+					<p>
+						In this case, the site map image was in a bitmap format, which was converted to a webp format with lazy loading enabled to help compensate for the client request to zoom in closely and
+						avoid pixelation, which required the image to be over 4000 pixels in height and width.
+					</p>
+				</div>
+				<div class="cell small-18 medium-9">
+					<p>The choice to use the dark theme coloured background in the site plan container was meant to frame the image when zoomed in.</p>
+					<p>
+						Each marker has its own zoom level option. The client chose to use that feature to avoid instances where markers that are closer to the perimeter of the image would shift image beyond the
+						edge of the container when zoomed in. slides beyond the .
+					</p>
+				</div>
 			</div>
 		</div>
 
-		<div class="flex padding-x">
-			<div class="cell small-18 medium-9">
-				<p>
-					The Site Plan UI, below, is a customized version of a real estate site plan <a href="https://mapplic.com/case-study/real-estate" target="_blank" class="underline">plugin</a> that offers potential
-					buyers a visual representation of the resort property, hotels, and amenities.
-				</p>
-				<p>The default plugin site plan image is a transparent SVG, which works well for zooming in close and to reduce the image file size.</p>
-				<p>
-					In this case, the original site map was a bitmap image, which was converted to a webp format with lazy loading enabled to help compensate for the client request to zoom in closely and avoid
-					pixelation, which required the image to be over 4000 pixels in height and width.
-				</p>
-			</div>
-			<div class="cell small-18 medium-9">
-				<p>The choice to use the dark coloured theme background in the site plan container was meant to frame the image when zoomed in.</p><p>
-					An alternative option was presented to the client: to manually define a zoom level for each site marker to avoid the zoomed-in image from passing the outer container border for markers that
-					were close to the top of the image. The client preferred the first option.
-				</p>
-			</div>
-		</div>
-	</div>
-
-	<section id="sitemap">
-		<div><mapplic-map data-json="/sitemap/data-res.json"></mapplic-map></div>
+		<section id="sitemap">
+			<div><mapplic-map data-json="/sitemap/data-res.json"></mapplic-map></div>
+		</section>
+		<script is:inline src="/sitemap/mapplic-res.js"></script>
 	</section>
-	<script is:inline src="/sitemap/mapplic-res.js"></script>
-</Layout>
 
-<script is:inline src="/residences.js"></script>
+	<script is:inline src="/residences.js"></script>
 
-<style>
-	#sitemap {
-		background: rgb(2, 30, 66);
-		max-width: 100%;
-		padding-bottom: 0;
-		margin-top: 50px;
-	}
-
-	#sitemap > div {
-		max-width: 1500px;
-		margin: 0 auto;
-	}
-	.edit-mode {
-		color: #ccc;
-	}
-
-	/* Form & Input */
-	.form-input {
-		width: 100%;
-		font-size: 18px;
-		margin-bottom: 0.5rem;
-		padding: 0.75rem 0.75rem 0.65rem;
-		border: 1px solid #ccc;
-		border-radius: 3px;
-		line-height: 1;
-		outline: none;
-		max-width: 300px;
-	}
-
-	.form-input-filter {
-		margin-top: 20px;
-		width: 100%;
-		font-size: 18px;
-		margin-bottom: 20px;
-		padding: 10px 0 5px;
-		border: none;
-		border-bottom: 1px solid #ccc;
-		background: transparent;
-		outline: none;
-	}
-
-	.item-list {
-		margin: 0 !important;
-	}
-
-	/* Buttons */
-	button {
-		text-transform: uppercase;
-		letter-spacing: 2px;
-	}
-
-	.btn {
-		background: #3a3a42;
-		display: inline-block;
-		color: #fff;
-		border: none;
-		border-radius: 3px;
-		padding: 0.5rem 0.75rem;
-		cursor: pointer;
-	}
-
-	.btn:hover {
-		background: #ff9000;
-		color: #fff;
-	}
-
-	button.remove-item {
-		background: url('../img/icon-close.svg') no-repeat right center;
-		background-size: 15px;
-		width: 100px !important;
-		height: 30px !important;
-		border: 1px red solid !important;
-		display: block !important;
-		padding: 10px !important;
-		cursor: pointer;
-	}
-
-	.btn-clear {
-		margin-top: 3rem;
-		font-size: 1.2rem;
-		background: #3a3a42;
-		color: #fff;
-		border: none;
-		border-radius: 3px;
-		padding: 0.5rem 0.75rem;
-		display: inline-block;
-		cursor: pointer;
-	}
-
-	.btn-clear:hover {
-		background: #ff9000;
-		color: #fff;
-	}
-
-	/* Items */
-	.items {
-		margin: 2rem 0 0 0;
-	}
-
-	.items li {
-		display: flex;
-		justify-content: space-between;
-		width: 45%;
-		border: 1px solid #ccc;
-		border-radius: 5px;
-		padding: 10px 15px;
-		margin: 0 5px 20px;
-		font-weight: 700;
-		cursor: pointer;
-	}
-
-	@media (max-width: 500px) {
-		.items li {
-			width: 100%;
+	<style>
+		#sitemap {
+			background: rgb(2, 30, 66);
+			max-width: 100%;
+			padding-bottom: 0;
+			margin-top: 50px;
 		}
-	}
-</style>
+
+		#sitemap > div {
+			max-width: 1500px;
+			margin: 0 auto;
+		}
+		.edit-mode {
+			color: #ccc;
+		}
+
+		/* Form & Input */
+		.form-input {
+			width: 100%;
+			font-size: 18px;
+			margin-bottom: 0.5rem;
+			padding: 0.75rem 0.75rem 0.65rem;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			line-height: 1;
+			outline: none;
+			max-width: 300px;
+		}
+
+		.form-input-filter {
+			margin-top: 20px;
+			width: 100%;
+			font-size: 18px;
+			margin-bottom: 20px;
+			padding: 10px 0 5px;
+			border: none;
+			border-bottom: 1px solid #ccc;
+			background: transparent;
+			outline: none;
+		}
+
+		.item-list {
+			margin: 0 !important;
+		}
+
+		/* Buttons */
+		button {
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		.btn {
+			background: #3a3a42;
+			display: inline-block;
+			color: #fff;
+			border: none;
+			border-radius: 3px;
+			padding: 0.5rem 0.75rem;
+			cursor: pointer;
+		}
+
+		.btn:hover {
+			background: #ff9000;
+			color: #fff;
+		}
+
+		button.remove-item {
+			background: url('../img/icon-close.svg') no-repeat right center;
+			background-size: 15px;
+			width: 100px !important;
+			height: 30px !important;
+			border: 1px red solid !important;
+			display: block !important;
+			padding: 10px !important;
+			cursor: pointer;
+		}
+
+		.btn-clear {
+			margin-top: 3rem;
+			font-size: 1.2rem;
+			background: #3a3a42;
+			color: #fff;
+			border: none;
+			border-radius: 3px;
+			padding: 0.5rem 0.75rem;
+			display: inline-block;
+			cursor: pointer;
+		}
+
+		.btn-clear:hover {
+			background: #ff9000;
+			color: #fff;
+		}
+
+		/* Items */
+		.items {
+			margin: 2rem 0 0 0;
+		}
+
+		.items li {
+			display: flex;
+			justify-content: space-between;
+			width: 45%;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			padding: 10px 15px;
+			margin: 0 5px 20px;
+			font-weight: 700;
+			cursor: pointer;
+		}
+
+		@media (max-width: 500px) {
+			.items li {
+				width: 100%;
+			}
+		}
+	</style>
+</Layout>

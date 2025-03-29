@@ -30,7 +30,7 @@ nav {
 	display: inline-block;
 	text-align: center;
 	border: 1px solid transparent;
-	padding: 2.5rem 0 0.75rem;
+	padding: 3rem 0 0.75rem;
 	text-decoration: none;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -57,10 +57,15 @@ nav {
 	background-size: auto 3%;
 }
 
+@media (max-width: 800px) {
+	.nav-links li a {
+		padding: 2rem 0 0.75rem;
+	}
+}
+
 @media (max-width: 700px) {
 	.nav-links li a {
-		padding: 1rem 0 0.75rem;
-		//border: 1px red solid;
+		padding: 1rem 0 0.5rem;
 	}
 }
 

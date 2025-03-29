@@ -88,7 +88,8 @@
 	left: 0 !important;
 	width: 100%;
 	max-width: 100%;
-	/* padding: 8px 0 0 !important; */
+	height: 100%;
+	padding: 3rem 1.5rem 4rem 1.5rem !important;
 	transition: margin-top 0.2s, max-width 0.2s;
 }
 .mapplic-portrait .mapplic-container {
@@ -123,10 +124,11 @@ li[data-location='headingSitePlan'] .mapplic-grid-item h3,
 li[data-location='headingSitePlan'] .mapplic-dir-item h4 {
 	font-size: 2rem !important;
 	font-style: italic;
-	font-family: 'abril-display', serif;
+	font-family: 'Georgia', serif;
 	font-weight: 600;
 	line-height: 1;
 	cursor: default;
+	margin-bottom: 1rem !important;
 }
 
 .mapplic-dir-items li:first-child h4 {
@@ -155,7 +157,7 @@ li[data-group='residences'] {
 	box-sizing: border-box;
 	border-radius: 0;
 	position: relative;
-	overflow: hidden;
+	overflow: visible;
 }
 .mapplic-container > img {
 	display: block;
@@ -212,8 +214,8 @@ li[data-group='residences'] {
 	-webkit-user-select: none;
 	user-select: none;
 	position: absolute;
-	line-height: 1.75;
-	font-size: 12px;
+	line-height: 1.5;
+	font-size: 13px;
 	font-weight: 500;
 	text-align: center;
 	width: 26px;
@@ -226,7 +228,6 @@ li[data-group='residences'] {
 
 @media (max-width: 850px) {
 	.mapplic-marker {
-		line-height: 1.55 !important ;
 		font-size: 10px;
 		width: 20px;
 		height: 20px;
@@ -237,7 +238,7 @@ li[data-group='residences'] {
 
 .mapplic-marker.mapplic-active,
 .mapplic-marker:hover {
-	transform: scale(1.3) !important;
+	transform: scale(1.1) !important;
 	background: #d8a460;
 	transition: all ease 0.3s;
 	z-index: 101 !important;
@@ -881,7 +882,7 @@ li[data-group='residences'] {
 	flex-direction: column;
 	align-items: center;
 	width: var(--sidebar);
-	padding: 3rem 1rem 3rem 1.5rem;
+	padding: 4rem 1.5rem 4rem 1.5rem;
 	background: #021e42;
 	overflow: hidden;
 	z-index: 110;
@@ -904,7 +905,7 @@ li[data-group='residences'] {
 	padding: 0;
 	margin: 0;
 	width: auto;
-	overflow-y: auto;
+	overflow-y: visible;
 }
 .mapplic-dir-items {
 	display: grid;
@@ -1012,9 +1013,9 @@ li[data-location='heading'] h3 {
 	margin-bottom: 0 !important;
 	cursor: default !important;
 	color: #fff !important;
-	font-size: 0.8rem !important;
+	font-size: 1rem !important;
 	display: block !important;
-	font-weight: 500;
+	font-weight: bold;
 }
 
 li[data-location='A10'],
