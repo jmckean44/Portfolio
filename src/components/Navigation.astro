@@ -10,7 +10,7 @@ const { bodyId } = Astro.props;
 	<nav>
 		<ul class="nav-links">
 			<li>
-				<a class={['/', 'new', 'about', 'contact'].includes(currentPath) ? '' : 'active'} href="/"><span>Live & Previous</span>Work</a>
+				<a class={['./', 'new', 'about', 'contact'].includes(currentPath) ? '' : 'active'} href="./"><span>Live & Previous</span>Work</a>
 			</li>
 			<li>
 				<a class={currentPath === 'new' ? 'active' : ''} href="/new"><span>Learning</span>Curve</a>
