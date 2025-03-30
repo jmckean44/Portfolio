@@ -9,7 +9,7 @@ const { item } = Astro.props;
 const transitionName = item.slug;
 ---
 
-<a href={`./${item.slug}`} data-category={item.type} class="site">
+<a href={`/${item.slug}`} data-category={item.type} class="site">
 	<div>
 		<img src={item.image} alt={item.name} transition:name={`${transitionName} image`} class="image" />
 	</div>
