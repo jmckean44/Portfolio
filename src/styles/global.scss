@@ -291,6 +291,12 @@ strong {
 	text-align: justify;
 }
 
+@media (max-width: 640px) {
+	.justify {
+		text-align: left;
+	}
+}
+
 /* =============================================
 	 IMAGES
 ================================================ */

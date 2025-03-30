@@ -77,11 +77,11 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				</div>
 				<div class="cell small-18 medium-8 small-order-1 medium-order-2">
 					<h2>Investor Relations</h2>
-					<p>
+					<p class="justify">
 						The following brochure sites, although dated, are examples from my initial introduction to HTML, CSS, jQuery, web-design, and content management for companies in the investor relations and
 						software development industries.
 					</p>
-					<p>
+					<p class="justify">
 						I was asked to create and unify branding between print, web, and tradeshow booths, as well as build HTML tabled websites, post news releases, edit video, modify and optimize images, and
 						create Adobe Flash animations for web and banner Ads.
 					</p>
@@ -103,11 +103,11 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 			<div class="flex padding-x align-middle borders">
 				<div class="cell small-18 medium-9 intro">
 					<h2>Video Production</h2>
-					<p class="slideInUp">
+					<p class="justify">
 						Prior to Exploration Link, I worked for <a class="underline" target="_blank" href="https://imageslifemedia.com/">Images Life Media</a>, an event management video production company with a
 						successful niche market in wedding biographies, corporate events, and commercial video services.
 					</p>
-					<p>
+					<p class="justify">
 						I was responsible for recording corporate and wedding videos, filming b+w 8mm & 16mm film, film to video transfers, video editing and effects, and incorporating mixed-media and photography
 						for client projects in the Greater Toronto Area.
 					</p>
@@ -328,6 +328,12 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				margin-bottom: 50px !important; /* For vertical Swiper */
 				margin-right: 50px !important; /* For horizontal Swiper */
 			}
+			.swiper-slide img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 			#slideshow-container .swiper-slide p {
 				padding-right: 10px;
 				margin-top: -25px;
@@ -376,7 +382,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 
 			// IMAGES
 			var floor = ['Drawings', 'Portraits', 'Landscape'];
-			var direction = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
+			var direction = ['', '', '', ''];
 
 			new Swiper('.swiper-container-v', {
 				pagination: {
@@ -387,10 +393,8 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 						return '<span class="' + className + '">' + floor[index] + '</span>';
 					},
 				},
-				//lazy: true,
 				speed: 1000,
 				direction: 'vertical',
-				autoHeight: false,
 				spaceBetween: 50,
 			});
 
@@ -416,6 +420,17 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				autoHeight: true,
 				nested: true,
 			});
+		});
+	</script>
+
+	<script>
+		var swiperVertBullet = document.querySelector('.swiper-pagination-v .swiper-pagination-bullet');
+		var swiperHorMenu = document.querySelector('.swiper-pagination-h.swiper-pagination-bullets') as HTMLElement;
+
+		swiperVertBullet?.addEventListener('click', function () {
+			if (swiperHorMenu) {
+				(swiperHorMenu as HTMLElement).style.border = '1px red solid';
+			}
 		});
 	</script>
 </Layout>
