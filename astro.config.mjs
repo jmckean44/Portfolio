@@ -9,6 +9,7 @@ export default defineConfig({
 	//server: { port: parseInt(import.meta.env.PORT) || 4321, host: true },
 	site: 'https://jmckean44.netlify.app',
 	output: 'static',
+	trailingSlash: 'never',
 	integrations: [sitemap(), icon(), react()],
 	adapter: node({
 		mode: 'standalone',
