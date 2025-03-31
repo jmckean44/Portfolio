@@ -57,6 +57,12 @@ nav {
 	background-size: auto 3%;
 }
 
+@media (max-width: 1100px) {
+	.nav-links li a span {
+		font-size: 40%;
+	}
+}
+
 @media (max-width: 800px) {
 	.nav-links li a {
 		padding: 2rem 0 0.75rem;
@@ -66,6 +72,15 @@ nav {
 @media (max-width: 700px) {
 	.nav-links li a {
 		padding: 1rem 0 0.5rem;
+	}
+	.nav-links li a span {
+		font-size: 45%;
+	}
+}
+
+@media (max-width: 500px) {
+	.nav-links li a span {
+		font-size: 50%;
 	}
 }
 

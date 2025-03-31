@@ -5,44 +5,43 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-	<div class="container">
+	<div class="">
 		<nav>
 			<ul class="nav-links">
 				<li>
-					<a class={['/', 'new', 'about', 'contact'].includes(currentPath) ? '' : 'active'} href="/"><span>Live & Previous</span>Work</a>
+					<a class={['/', 'new', 'about', 'contact'].includes(currentPath) ? '/' : 'active'} href="/"><span>Current</span>Work</a>
 				</li>
 				<li>
-					<a class={currentPath === '/new' ? 'active' : ''} href="/new"><span>Learning</span>Curve</a>
+					<a class={currentPath === 'new' ? 'active' : ''} href="/new"><span>Learning</span>Curve</a>
 				</li>
 				<li>
-					<a class={currentPath === '/about' ? 'active' : ''} href="/about"><span>A Brief</span>Story</a>
+					<a class={currentPath === 'about' ? 'active' : ''} href="/about"><span>A Brief</span>Story</a>
 				</li>
 				<li>
-					<a class={currentPath === '/contact' ? 'active' : ''} href="/contact"><span>Send a</span>MSG</a>
+					<a class={currentPath === 'contact' ? 'active' : ''} href="/contact"><span>Send a</span>MSG</a>
 				</li>
 			</ul>
+			<div id="copyright">
+				<p>© {currentYear}</p>
+			</div>
 		</nav>
 	</div>
 
-	<div id="copyright">
-		<p>Copyright {currentYear}</p>
-	</div>
-</footer>
+	<script src="../scripts/scripts.js"></script>
+	<script src="../scripts/headroom.js"></script>
+	<script src="../scripts/lenis.js"></script>
 
-<script src="../scripts/scripts.js"></script>
-<script src="../scripts/headroom.js"></script>
-<script src="../scripts/lenis.js"></script>
-
-<script is:inline src="/wow.js"></script>
-<script is:inline>
-	document.addEventListener('DOMContentLoaded', function () {
-		var wow = new WOW({
-			boxClass: 'wow',
-			animateClass: 'animated',
-			offset: 100,
-			mobile: true,
-			live: true,
+	<script is:inline src="/wow.js"></script>
+	<script is:inline>
+		document.addEventListener('DOMContentLoaded', function () {
+			var wow = new WOW({
+				boxClass: 'wow',
+				animateClass: 'animated',
+				offset: 100,
+				mobile: true,
+				live: true,
+			});
+			wow.init();
 		});
-		wow.init();
-	});
-</script>
+	</script>
+</footer>

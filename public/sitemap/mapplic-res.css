@@ -123,9 +123,7 @@
 li[data-location='headingSitePlan'] .mapplic-grid-item h3,
 li[data-location='headingSitePlan'] .mapplic-dir-item h4 {
 	font-size: 2rem !important;
-	font-style: italic;
-	font-family: 'abril-display', serif;
-	font-weight: 600;
+	font-family: 'CalibriBold', sans-serif;
 	line-height: 1;
 	cursor: default;
 }
@@ -213,9 +211,8 @@ li[data-group='residences'] {
 	-webkit-user-select: none;
 	user-select: none;
 	position: absolute;
-	line-height: 1.5;
 	font-size: 13px;
-	font-weight: 500;
+	font-family: 'CalibriBold', sans-serif;
 	text-align: center;
 	width: 26px;
 	height: 26px;
@@ -327,11 +324,14 @@ li[data-group='residences'] {
 	display: flex;
 	flex-direction: column;
 	gap: 4px;
+	font-family: 'CalibriBold', sans-serif ';
+	line-height: 1;
 }
 .mapplic-popup-title h4 {
 	font-weight: 500;
 	font-size: 12px;
 	line-height: 1;
+	font-family: ' CalibriBold ', sans-serif';
 }
 
 .mapplic-popup-title h5 {
@@ -1014,7 +1014,7 @@ li[data-location='heading'] h3 {
 	color: #fff !important;
 	font-size: 0.8rem !important;
 	display: block !important;
-	font-weight: 500;
+	font-family: 'CalibriBold', sans-serif;
 }
 
 li[data-location='A10'],

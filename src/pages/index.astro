@@ -5,6 +5,7 @@ import { Image } from 'astro:assets';
 import { items } from '../data/index.ts';
 import '../styles/form.scss';
 import '../styles/swiper.scss';
+import Checkbox from '../components/Checkbox';
 import ItemCard from '../components/ItemCard.astro';
 import html7Dale from '../img/htmls/7dale.jpg';
 import htmlMRC from '../img/htmls/mrc.jpg';
@@ -124,290 +125,267 @@ import thomas from '../img/sites/7stthomas.webp';
 					</p>
 					<div class="cell small-18">
 						<p class="width">To receive a test in your inbox, please enter your email address and click send.</p>
+
+						<form action="/htmls/dale.php" method="POST">
+							<input type="email" name="email" placeholder="Email" required />
+							<input class="btn" name="submit" type="submit" value="SEND" />
+						</form>
+						<div class="response"></div>
 					</div>
 				</div>
 			</div>
-			<div id="campaigns">
-				<div>
-					<Picture src={html7Dale} formats={['avif', 'webp']} quality="" alt="7 Dale" />
-					<form action="/htmls/dale.php" method="POST" id="dale">
-						<input type="email" name="email" placeholder="Email" required />
-						<input class="btn" name="submit" type="submit" value="SEND" />
-					</form>
-					<div class="response"></div>
-				</div>
-				<div>
-					<Picture src={htmlMRC} formats={['avif', 'webp']} quality="" alt="Marina Resort Cavtat" />
-					<form action="" method="POST" class="">
-						<input type="email" placeholder="Email" />
-						<input class="btn" name="submit" type="submit" value="SEND" />
-					</form>
-				</div>
-				<div>
-					<Picture src={htmlWinslow} formats={['avif', 'webp']} quality="" alt="The Winslow" />
-					<form action="" method="POST" class="">
-						<input type="email" placeholder="Email" />
-						<input class="btn" name="submit" type="submit" value="SEND" />
-					</form>
-				</div>
-				<div>
-					<Picture src={htmlVanguard} formats={['avif', 'webp']} quality="" alt="The Vanguard" />
-					<form action="" method="POST" class="">
-						<input type="email" placeholder="Email" />
-						<input class="btn" name="submit" type="submit" value="SEND" />
-					</form>
-				</div>
-				<div>
-					<Picture src={htmlDiamond} formats={['avif', 'webp']} quality="" alt="The Diamond Rentals" />
-					<form action="" method="POST" class="">
-						<input type="email" placeholder="Email" />
-						<input class="btn" name="submit" type="submit" value="SEND" />
-					</form>
-				</div>
-				<div>
-					<Picture src={htmlDiamond} formats={['avif', 'webp']} quality="" alt="The Diamond Rentals" />
-					<form action="" method="POST" class="">
-						<input type="email" placeholder="Email" />
-						<input class="btn" name="submit" type="submit" value="SEND" />
-					</form>
-				</div>
-			</div>
 		</div>
-	</section>
-
-	<section id="featured-site">
-		<div class="container top btm">
-			<div class="flex">
-				<h2>Featured Site</h2>
+		<div id="campaigns">
+			<div>
+				<Checkbox />
+				<Picture src={html7Dale} formats={['avif', 'webp']} quality="" alt="7 Dale" />
 			</div>
-
-			<p class="featured-details">
-				The <strong><a class="underline" target="_blank" href="https://marinaresortcavtat.com/">Marina Resort Cavtat</a></strong> site is currently a multilingual registration website for an up and coming
-				resort in Croatia. At the clients request, The full site will be available shortly.
-			</p>
-
-			<div class="flex display-formats">
-				<div class="laptop-container">
-					<Image src={laptop} class="device-mask" alt="Laptop" />
-					<video class="site-video" autoplay playsinline muted loop poster="">
-						<source src="/mrc-laptop.mp4" type="video/mp4" />
-					</video>
-				</div>
-				<div class="mobile-container">
-					<Image src={mobile} class="device-mask" alt="Mobile Mask" />
-					<video class="mobile-video" autoplay playsinline muted loop poster="">
-						<source src="/mrc-mobile.mp4" type="video/mp4" />
-					</video>
-				</div>
+			<div>
+				<Checkbox />
+				<Picture src={htmlMRC} formats={['avif', 'webp']} quality="" alt="Marina Resort Cavtat" />
 			</div>
-			<div id="timeline">
-				<video class="timeline" autoplay playsinline muted loop poster="/timeline-poster.webp">
-					<source src="/timeline.mp4" type="video/mp4" />
-				</video>
+			<div>
+				<Checkbox />
+				<Picture src={htmlWinslow} formats={['avif', 'webp']} quality="" alt="The Winslow" />
 			</div>
-		</div>
-	</section>
-
-	<section id="featured-videos">
-		<div class="container top">
-			<div class="flex padding-x">
-				<div class="cell small-18">
-					<h2>Social Media Ads</h2>
-					<p class="width">
-						These animated ads are the 1080p (1:1 aspect ratio) selections from a number of Facebook and Google Ad campaigns. The design and and provided with . They contain a mixture of composited
-						still image with video, and vector graphic animations using Adobe Animate.
-					</p>
-					<br />
-				</div>
+			<div>
+				<Checkbox />
+				<Picture src={htmlVanguard} formats={['avif', 'webp']} quality="" alt="The Vanguard" />
 			</div>
-		</div>
-
-		<div class="swiper">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<video playsinline muted controls poster="">
-						<source src="/diamond-mobile.mp4" type="video/mp4" />
-					</video>
-					<h3>Residential Highrise Rentals</h3>
-				</div>
-				<div class="swiper-slide">
-					<video playsinline muted controls poster="">
-						<source src="/Fortune-District-Ad-1.mp4" type="video/mp4" />
-					</video>
-					<h3>Commercial Space</h3>
-				</div>
-				<div class="swiper-slide">
-					<video playsinline muted controls poster="">
-						<source src="/Greehaus-1080.mp4" type="video/mp4" />
-					</video>
-					<h3>Condominiums</h3>
-				</div>
-				<div class="swiper-slide">
-					<video playsinline muted controls poster="">
-						<source src="/MRC-Facebook.mp4" type="video/mp4" />
-					</video>
-					<h3>Resort</h3>
-				</div>
-				<div class="swiper-slide">
-					<video playsinline muted controls poster="">
-						<source src="/Greenhaus-sky.mp4" type="video/mp4" />
-					</video>
-					<h3>Condominiums</h3>
-				</div>
-				<div class="swiper-slide">
-					<video playsinline muted controls poster="">
-						<source src="/MRC-Ad-1.mp4" type="video/mp4" />
-					</video>
-					<h3>Resort</h3>
-				</div>
-				<div class="swiper-slide">
-					<video playsinline muted controls poster="">
-						<source src="/BlueVista-Summer.mp4" type="video/mp4" />
-					</video>
-					<h3>Residential Community</h3>
-				</div>
+			<div>
+				<Checkbox />
+				<Picture src={htmlDiamond} formats={['avif', 'webp']} quality="" alt="The Diamond Rentals" />
 			</div>
-			<div class="swiper-pagination"></div>
-		</div>
-	</section>
-
-	<section id="graveyard">
-		<div class="container top btm">
-			<div class="flex padding-x">
-				<div class="cell">
-					<h2>Web Limbo</h2>
-					<p class="width">
-						The following real estate developer projects have been retired, although some of them are still active (dark background) and or have samples of marketing materials if you click on them.
-					</p>
-					<p class="width">
-						On top of the list below, other web projects that I have developed can be seen <a
-							target="_blank"
-							class="underline"
-							href="https://pbmarketing.ca/work.php"
-							aria-label="offsite link to pbmarketing.ca">here</a
-						>.
-					</p>
-					<br />
-				</div>
-			</div>
-			<div class="grid graveyard">
-				<div class="cell materials">
-					<a href="https://theravine.ca/" target="_blank" aria-label="offsite link to theravine.ca">
-						<Image src={ravine} class="" alt="The Ravine" />
-						<h3>The Ravine</h3>
-					</a>
-				</div>
-				<div class="cell materials">
-					<a href="https://kingswaybytheriver.ca/" target="_blank" aria-label="offsite link to kingswaybytheriver.ca">
-						<Image src={kingsway} class="" alt="Kingsway By The River" />
-						<h3>Kingsway By The River</h3>
-					</a>
-				</div>
-				<div class="cell materials">
-					<a href="https://pbmarketing.ca/work-shiplake.php" target="_blank" aria-label="offsite link to work-shiplake.php">
-						<Image src={shiplake} class="" alt="Shiplake Rental Management" />
-						<h3>Shiplake Rentals</h3>
-					</a>
-				</div>
-				<div class="cell materials">
-					<a href="https://pbmarketing.ca/work-7stThomas.php" target="_blank" aria-label="offsite link to work-7stThomas.php">
-						<Image src={thomas} class="" alt="7 St. Thomas" />
-						<h3>7 St. Thomas</h3>
-					</a>
-				</div><div class="cell materials">
-					<a href="https://pbmarketing.ca/work-arthaus.php" target="_blank" aria-label="offsite link to work-arthaus.php">
-						<Image src={arthaus} class="" alt="Arthaus" />
-						<h3>Arthaus</h3>
-					</a>
-				</div>
-				<div class="cell materials">
-					<a href="https://pbmarketing.ca/work-delisle.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-delisle.php">
-						<Image src={delisle} class="" alt="Delisle Dentistry" />
-						<h3>Delisle Dentistry</h3>
-					</a>
-				</div>
-				<div class="cell materials">
-					<a href="http://jacjacobson.com" target="_blank" aria-label="offsite link to jacjacobson.com">
-						<Image src={jac} class="" alt="Jack Jacobson Photography" />
-						<h3>Jack Jacobson Photography</h3>
-					</a>
-				</div>
-				<div class="cell materials">
-					<a href="https://pbmarketing.ca/work-boathaus.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-boathaus.php">
-						<Image src={boathaus} class="" alt="Boathaus" />
-						<h3>Boathaus</h3>
-					</a>
-				</div>
-				<div class="cell">
-					<Image src={peterSt} class="" alt="117 Peter Street" />
-					<h3>117 Peter Street</h3>
-				</div>
-				<div class="cell">
-					<Image src={barrington} class="" alt="The Barrington" />
-					<h3>The Barrington</h3>
-				</div>
-				<div class="cell">
-					<Image src={brownstones} class="" alt="Brownstones" />
-					<h3>Brownstones</h3>
-				</div>
-				<div class="cell">
-					<Image src={designhaus} class="" alt="Designhaus" />
-					<h3>Designhaus</h3>
-				</div>
-				<div class="cell">
-					<Image src={fuse} class="" alt="Fuse Consos" />
-					<h3>Fuse Consos</h3>
-				</div>
-				<div class="cell">
-					<Image src={genesis} class="" alt="Genesis Condos" />
-					<h3>Genesis Condos</h3>
-				</div>
-				<div class="cell">
-					<Image src={guildwood} class="" alt="Guildwood Condos" />
-					<h3>Guildwood Condos</h3>
-				</div>
-				<div class="cell">
-					<Image src={aquavil} class="" alt="Aquavil" />
-					<h3>Aquavil</h3>
-				</div>
-				<div class="cell">
-					<Image src={northeast} class="" alt="Northeast Midstream Energ" />
-					<h3>Northeast Midstream Energy</h3>
-				</div>
-				<div class="cell">
-					<Image src={sunrise} class="" alt="Sunrise Condos" />
-					<h3>Sunrise Condos</h3>
-				</div>
-				<div class="cell">
-					<Image src={todm} class="" alt="Towns of Don Mills" />
-					<h3>Towns of Don Mills</h3>
-				</div>
-				<div class="cell">
-					<Image src={union} class="" alt="Union Villas" />
-					<h3>Union Villas</h3>
-				</div>
-				<div class="cell">
-					<Image src={url} class="" alt="URL Condos" />
-					<h3>URL Condos</h3>
-				</div>
-				<div class="cell">
-					<Image src={mcmurray} class="" alt="McMurray Residences" />
-					<h3>McMurray Residences</h3>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="next-page">
-		<div class="container btm">
-			<div class="flex padding-x">
-				<div class="cell">
-					<p>Go to <strong><a href="./new" class="underline">Learning Curve</a></strong> or <strong><a href="./about" class="underline">About</a></strong>.</p>
-				</div>
+			<div>
+				<Checkbox />
+				<Picture src={htmlDiamond} formats={['avif', 'webp']} quality="" alt="The Diamond Rentals" />
 			</div>
 		</div>
 	</section>
 </Layout>
+
+<section id="featured-site">
+	<div class="container top btm">
+		<div class="flex">
+			<h2>Featured Site</h2>
+		</div>
+
+		<p class="featured-details">
+			The <strong><a class="underline" target="_blank" href="https://marinaresortcavtat.com/">Marina Resort Cavtat</a></strong> site is currently a multilingual registration website for an up and coming
+			resort in Croatia. At the clients request, The full site will be available shortly.
+		</p>
+
+		<div class="flex display-formats">
+			<div class="laptop-container">
+				<Image src={laptop} class="device-mask" alt="Laptop" />
+				<video class="site-video" autoplay playsinline muted loop poster="">
+					<source src="/mrc-laptop.mp4" type="video/mp4" />
+				</video>
+			</div>
+			<div class="mobile-container">
+				<Image src={mobile} class="device-mask" alt="Mobile Mask" />
+				<video class="mobile-video" autoplay playsinline muted loop poster="">
+					<source src="/mrc-mobile.mp4" type="video/mp4" />
+				</video>
+			</div>
+		</div>
+		<div id="timeline">
+			<video class="timeline" autoplay playsinline muted loop poster="/timeline-poster.webp">
+				<source src="/timeline.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</div>
+</section>
+
+<section id="featured-videos">
+	<div class="container top">
+		<div class="flex padding-x">
+			<div class="cell small-18">
+				<h2>Social Media Ads</h2>
+				<p class="width">
+					These animated ads are the 1080p (1:1 aspect ratio) selections from a number of Facebook and Google Ad campaigns. The design and and provided with . They contain a mixture of composited
+					still image with video, and vector graphic animations using Adobe Animate.
+				</p>
+				<br />
+			</div>
+		</div>
+	</div>
+
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<video playsinline muted controls poster="">
+					<source src="/diamond-mobile.mp4" type="video/mp4" />
+				</video>
+				<h3>Residential Highrise Rentals</h3>
+			</div>
+			<div class="swiper-slide">
+				<video playsinline muted controls poster="">
+					<source src="/Fortune-District-Ad-1.mp4" type="video/mp4" />
+				</video>
+				<h3>Commercial Space</h3>
+			</div>
+			<div class="swiper-slide">
+				<video playsinline muted controls poster="">
+					<source src="/Greehaus-1080.mp4" type="video/mp4" />
+				</video>
+				<h3>Condominiums</h3>
+			</div>
+			<div class="swiper-slide">
+				<video playsinline muted controls poster="">
+					<source src="/MRC-Facebook.mp4" type="video/mp4" />
+				</video>
+				<h3>Resort</h3>
+			</div>
+			<div class="swiper-slide">
+				<video playsinline muted controls poster="">
+					<source src="/Greenhaus-sky.mp4" type="video/mp4" />
+				</video>
+				<h3>Condominiums</h3>
+			</div>
+			<div class="swiper-slide">
+				<video playsinline muted controls poster="">
+					<source src="/MRC-Ad-1.mp4" type="video/mp4" />
+				</video>
+				<h3>Resort</h3>
+			</div>
+			<div class="swiper-slide">
+				<video playsinline muted controls poster="">
+					<source src="/BlueVista-Summer.mp4" type="video/mp4" />
+				</video>
+				<h3>Residential Community</h3>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+</section>
+
+<section id="graveyard">
+	<div class="container top btm">
+		<div class="flex padding-x">
+			<div class="cell">
+				<h2>Web Limbo</h2>
+				<p class="width">
+					The following real estate developer projects have been retired, although some of them are still active (dark background) and or have samples of marketing materials if you click on them.
+				</p>
+				<p class="width">
+					On top of the list below, other web projects that I have developed can be seen <a
+						target="_blank"
+						class="underline"
+						href="https://pbmarketing.ca/work.php"
+						aria-label="offsite link to pbmarketing.ca">here</a
+					>.
+				</p>
+				<br />
+			</div>
+		</div>
+		<div class="grid graveyard">
+			<div class="cell materials">
+				<a href="https://theravine.ca/" target="_blank" aria-label="offsite link to theravine.ca">
+					<Image src={ravine} class="" alt="The Ravine" />
+					<h3>The Ravine</h3>
+				</a>
+			</div>
+			<div class="cell materials">
+				<a href="https://kingswaybytheriver.ca/" target="_blank" aria-label="offsite link to kingswaybytheriver.ca">
+					<Image src={kingsway} class="" alt="Kingsway By The River" />
+					<h3>Kingsway By The River</h3>
+				</a>
+			</div>
+			<div class="cell materials">
+				<a href="https://pbmarketing.ca/work-shiplake.php" target="_blank" aria-label="offsite link to work-shiplake.php">
+					<Image src={shiplake} class="" alt="Shiplake Rental Management" />
+					<h3>Shiplake Rentals</h3>
+				</a>
+			</div>
+			<div class="cell materials">
+				<a href="https://pbmarketing.ca/work-7stThomas.php" target="_blank" aria-label="offsite link to work-7stThomas.php">
+					<Image src={thomas} class="" alt="7 St. Thomas" />
+					<h3>7 St. Thomas</h3>
+				</a>
+			</div><div class="cell materials">
+				<a href="https://pbmarketing.ca/work-arthaus.php" target="_blank" aria-label="offsite link to work-arthaus.php">
+					<Image src={arthaus} class="" alt="Arthaus" />
+					<h3>Arthaus</h3>
+				</a>
+			</div>
+			<div class="cell materials">
+				<a href="https://pbmarketing.ca/work-delisle.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-delisle.php">
+					<Image src={delisle} class="" alt="Delisle Dentistry" />
+					<h3>Delisle Dentistry</h3>
+				</a>
+			</div>
+			<div class="cell materials">
+				<a href="http://jacjacobson.com" target="_blank" aria-label="offsite link to jacjacobson.com">
+					<Image src={jac} class="" alt="Jack Jacobson Photography" />
+					<h3>Jack Jacobson Photography</h3>
+				</a>
+			</div>
+			<div class="cell materials">
+				<a href="https://pbmarketing.ca/work-boathaus.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-boathaus.php">
+					<Image src={boathaus} class="" alt="Boathaus" />
+					<h3>Boathaus</h3>
+				</a>
+			</div>
+			<div class="cell">
+				<Image src={peterSt} class="" alt="117 Peter Street" />
+				<h3>117 Peter Street</h3>
+			</div>
+			<div class="cell">
+				<Image src={barrington} class="" alt="The Barrington" />
+				<h3>The Barrington</h3>
+			</div>
+			<div class="cell">
+				<Image src={brownstones} class="" alt="Brownstones" />
+				<h3>Brownstones</h3>
+			</div>
+			<div class="cell">
+				<Image src={designhaus} class="" alt="Designhaus" />
+				<h3>Designhaus</h3>
+			</div>
+			<div class="cell">
+				<Image src={fuse} class="" alt="Fuse Consos" />
+				<h3>Fuse Consos</h3>
+			</div>
+			<div class="cell">
+				<Image src={genesis} class="" alt="Genesis Condos" />
+				<h3>Genesis Condos</h3>
+			</div>
+			<div class="cell">
+				<Image src={guildwood} class="" alt="Guildwood Condos" />
+				<h3>Guildwood Condos</h3>
+			</div>
+			<div class="cell">
+				<Image src={aquavil} class="" alt="Aquavil" />
+				<h3>Aquavil</h3>
+			</div>
+			<div class="cell">
+				<Image src={northeast} class="" alt="Northeast Midstream Energ" />
+				<h3>Northeast Midstream Energy</h3>
+			</div>
+			<div class="cell">
+				<Image src={sunrise} class="" alt="Sunrise Condos" />
+				<h3>Sunrise Condos</h3>
+			</div>
+			<div class="cell">
+				<Image src={todm} class="" alt="Towns of Don Mills" />
+				<h3>Towns of Don Mills</h3>
+			</div>
+			<div class="cell">
+				<Image src={union} class="" alt="Union Villas" />
+				<h3>Union Villas</h3>
+			</div>
+			<div class="cell">
+				<Image src={url} class="" alt="URL Condos" />
+				<h3>URL Condos</h3>
+			</div>
+			<div class="cell">
+				<Image src={mcmurray} class="" alt="McMurray Residences" />
+				<h3>McMurray Residences</h3>
+			</div>
+		</div>
+	</div>
+</section>
 
 <video class="fireworks" src="./fireworks-wh.mp4" autoplay playsinline muted loop poster=""></video>
 
@@ -433,7 +411,7 @@ import thomas from '../img/sites/7stthomas.webp';
 </script>
 
 <script is:inline>
-	document.getElementById('dale').addEventListener('submit', async function (e) {
+	document.querySelector('form').addEventListener('submit', async function (e) {
 		e.preventDefault();
 
 		const form = e.target;
@@ -511,30 +489,6 @@ import thomas from '../img/sites/7stthomas.webp';
 </script>
 
 <script is:inline>
-	async function sendData(data, url) {
-		try {
-			const request = await fetch(url, {
-				method: 'POST',
-				body: data,
-			});
-
-			const result = await request.json();
-			console.log(result);
-		} catch (error) {
-			console.error(error);
-		}
-	}
-
-	const form = document.getElementById('dale');
-
-	form.addEventListener('submit', function (e) {
-		e.preventDefault();
-		var data = new FormData(document.forms.form);
-		sendData(data, '/htmls/dale.php');
-	});
-</script>
-
-<script is:inline>
 	document.addEventListener('astro:page-load', () => {
 		const video = document.querySelector('.fireworks');
 
@@ -603,11 +557,11 @@ import thomas from '../img/sites/7stthomas.webp';
 				modules: [Pagination],
 				freeMode: true,
 				speed: 1000,
-				loop: true,
-				autoplay: {
-					delay: 5000,
-					disableOnInteraction: true,
-				},
+				// loop: true,
+				// autoplay: {
+				// 	delay: 5000,
+				// 	disableOnInteraction: true,
+				// },
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true,
@@ -657,12 +611,62 @@ import thomas from '../img/sites/7stthomas.webp';
 		padding: 0 1.25rem;
 	}
 
+	/* =============================================
+			FEATURED SITE
+	================================================ */
+	#featured-site {
+		padding: 0 1.25rem;
+	}
+
+	#featured-site .container {
+		padding: 100px 0 1.25rem;
+		border-radius: 5px;
+		background: rgba(255, 255, 255, 0.8);
+		border: 1px #ccc solid;
+		max-width: 1360px;
+	}
+
+	#featured-site .flex {
+		justify-content: center;
+	}
+
+	#featured-site .featured-details {
+		text-align: center;
+		margin: 0 auto;
+		max-width: 600px;
+		padding: 0 1.25rem;
+	}
+
+	#timeline {
+		margin: 0 auto;
+		background: #fff;
+		max-width: 1400px;
+		width: 100%;
+		border: 0px #f2f2f2 solid;
+		border-radius: 3px;
+	}
+
+	#timeline .timeline {
+		width: 100%;
+	}
+
+	@media (max-width: 700px) {
+		#featured-site {
+			padding: 0;
+		}
+		#featured-site .container {
+			border: 0;
+			background: none;
+		}
+	}
+
 	/* -------------------
 	 LAPTOP & MOBILE 
 	 ------------------- */
 	.display-formats {
 		align-items: center;
 		gap: 3rem;
+		padding: 0 1.25rem;
 	}
 
 	.display-formats .laptop-container {
