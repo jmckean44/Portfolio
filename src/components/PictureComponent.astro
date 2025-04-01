@@ -34,9 +34,9 @@ const desktopImgAvif = await getImage({
 ---
 
 <picture>
-	<source type="image/avif" media="(max-width: 800px)" srcset={mobileImgAvif.src} />
+	<!-- <source type="image/avif" media="(max-width: 800px)" srcset={mobileImgAvif.src} /> -->
 	<source type="image/webp" media="(max-width: 800px)" srcset={mobileImgWebp.src} />
-	<source type="image/avif" media="(min-width: 801px)" srcset={desktopImgAvif.src} />
+	<!-- <source type="image/avif" media="(min-width: 801px)" srcset={desktopImgAvif.src} /> -->
 	<source type="image/webp" media="(min-width: 801px)" srcset={desktopImgWebp.src} />
 	<img src={desktopImgWebp.src} class={className} loading={loading as 'eager' | 'lazy'} alt={alt} width={desktopImgWebp.attributes.width} height={desktopImgWebp.attributes.height} />
 </picture>

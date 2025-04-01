@@ -329,17 +329,18 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				overflow: hidden;
 			}
 			#slideshow-container .borders {
-				padding: 2.5rem 1% 3rem;
+				padding: 2.5rem 1% 6rem;
 			}
 			#slideshow-container .swiper-container-v {
-				overflow: hidden;
+				overflow: visible;
 			}
 			#slideshow-container .swiper-slide {
+				pointer-events: none;
 				background: #f9f9f9;
 			}
 			#slideshow-container .swiper-slide p {
-				padding-right: 15px;
-				margin-top: -30px;
+				padding-right: 10px;
+				margin-top: 10px;
 				text-align: right;
 			}
 			#slideshow-container #landscapes .swiper-slide p {
@@ -353,7 +354,9 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				border: 0;
 			}
 			#slideshow-container .swiper-pagination {
-				bottom: -25px !important;
+				bottom: 80px !important;
+				background: #f9f9f9;
+				z-index: 99999999999;
 			}
 			#slideshow-container .swiper-pagination-bullet-active {
 				background: #ff9000;
@@ -413,23 +416,26 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				pagination: {
 					el: '.swiper-pagination-v',
 					clickable: true,
+					autoHeight: true,
 					renderBullet: function (index: number, className: string) {
 						return '<span class="' + className + '">' + floor[index] + '</span>';
 					},
 				},
 				direction: 'vertical',
-				autoplay: false,
-				autoHeight: true,
+				autoplay: true,
 				speed: 1000,
 				delay: 5000,
-				spaceBetween: 50,
+				//effect: 'fade',
+				spaceBetween: 100,
 			});
 
 			new Swiper('.swiper-container-h', {
+				lazy: true,
 				pagination: {
 					pagination: '.swiper-pagination-h',
 					el: '.swiper-pagination-h',
 					clickable: true,
+					autoHeight: true,
 					renderBullet: function (index: number, className: string) {
 						return '<span class="' + className + '">' + direction[index] + '</span>';
 					},
@@ -438,7 +444,9 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				autoplay: false,
 				speed: 1000,
 				delay: 5000,
-				spaceBetween: 30,
+				effect: 'fade',
+				spaceBetween: 100,
+				autoHeight: true,
 				nested: true,
 			});
 		});

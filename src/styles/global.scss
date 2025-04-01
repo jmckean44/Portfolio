@@ -154,9 +154,9 @@ body {
 	height: 100%;
 	background: var.$bg-clr;
 	position: relative;
-	animation: fadeInAnimation ease 1s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
+	// animation: fadeInAnimation ease 1s;
+	// animation-iteration-count: 1;
+	// animation-fill-mode: forwards;
 }
 
 @keyframes fadeInAnimation {
