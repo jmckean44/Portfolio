@@ -897,43 +897,32 @@ p a {
 /* =============================================
 		VIDEOS
 ================================================ */
+.responsive-iframe {
+	max-width: 100%;
+	padding-top: 56.25%;
+	position: relative;
+	width: 100%;
+}
 
-// .video-container {
-// 	position: relative;
-// 	transition: transform 0.3s ease;
-// }
-// .video-container:hover {
-// 	transform: scale(1.02);
-// }
-// video {
-// 	width: 100%;
-// 	display: block;
-// }
-// .overlay {
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// 	height: 100%;
-// 	background-color: rgba(0, 0, 0, 0.5);
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	opacity: 1;
-// 	transition: opacity 0.3s ease;
-// }
-// .overlay-text {
-// 	color: white;
-// 	font-size: 24px;
-// 	text-align: center;
-// }
-// .video-container:hover .overlay {
-// 	opacity: 0;
-// }
+.responsive-iframe iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
 
 .video-container > div {
 	border: 1px #ccc;
 	border-radius: 5px;
+}
+
+@media (max-width: var.$tablet) {
+	.responsive-iframe,
+	.swiper.elink {
+		margin-top: 1rem;
+	}
 }
 
 /* =============================================
@@ -1065,7 +1054,7 @@ p a {
 .borders {
 	border: 1px #ccc solid;
 	border-radius: 5px;
-	padding: 2.5rem 1% 1.25rem;
+	padding: 2.5rem 1%;
 }
 
 .borders.light {
