@@ -251,7 +251,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 	<div class="line-vert right"></div>
 
 	<section>
-		<div class="container border-container books">
+		<div class="container border-container article">
 			<div class="flex padding-x align-middle borders">
 				<div class="cell small-18 medium-12">
 					<h1>Colour Theory</h1>
@@ -308,25 +308,15 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 		:root {
 			#mining .swiper-slide {
 				background: #f9f9f9 !important;
+				margin-bottom: 0 !important;
+				border: 0 !important;
+			}
+			#mining .swiper-slide img {
+				margin: 0;
+				border: 0 !important;
 			}
 			#mining .swiper-slide p {
 				padding: 1.5rem 0 0;
-			}
-			.swiper-pagination {
-				bottom: -25px !important;
-			}
-			.swiper-pagination-bullet-active {
-				background: #ff9000;
-			}
-			#slideshow-container .swiper {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				background: none;
-			}
-			#slideshow-container .swiper-slide {
-				margin-bottom: 50px !important; /* For vertical Swiper */
-				margin-right: 50px !important; /* For horizontal Swiper */
 			}
 			.swiper-slide img {
 				display: block;
@@ -334,9 +324,16 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				height: 100%;
 				object-fit: cover;
 			}
+			#slideshow-container .borders {
+				padding: 2.5rem 1% 6rem;
+			}
+
+			#slideshow-container .swiper-container-v {
+				overflow: visible;
+			}
 			#slideshow-container .swiper-slide p {
 				padding-right: 10px;
-				margin-top: -25px;
+				margin-top: 10px;
 				text-align: right;
 			}
 			#slideshow-container #landscapes .swiper-slide p {
@@ -345,6 +342,15 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 			}
 			#slideshow-container h2 {
 				margin-bottom: 1.5rem;
+			}
+			#slideshow-container .container.images img {
+				border: 0;
+			}
+			#slideshow-container .swiper-pagination {
+				bottom: -80px !important;
+			}
+			#slideshow-container .swiper-pagination-bullet-active {
+				background: #ff9000;
 			}
 			.books {
 				max-width: 1200px;
@@ -355,14 +361,20 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 			#pollock img {
 				max-width: 300px;
 			}
-		}
-		@media (max-width: 450px) {
-			#swiper-vertical-nav .swiper-pagination {
-				justify-content: center;
-				gap: 0;
-				align-items: center;
-				flex-direction: column;
-				margin-bottom: 3rem;
+			.text-sm {
+				margin-bottom: 0;
+			}
+
+			@media (max-width: 450px) {
+				.swiper-pagination-h .swiper-pagination-bullet {
+					height: 9px !important;
+					width: 9px !important;
+				}
+			}
+			@media (max-width: 750px) {
+				.article img {
+					margin-top: 2rem;
+				}
 			}
 		}
 	</style>
@@ -402,9 +414,12 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 						return '<span class="' + className + '">' + floor[index] + '</span>';
 					},
 				},
-				speed: 1000,
 				direction: 'vertical',
-				spaceBetween: 50,
+				autoplay: false,
+				speed: 1000,
+				delay: 5000,
+				effect: 'fade',
+				spaceBetween: 100,
 			});
 
 			new Swiper('.swiper-container-h', {
@@ -420,12 +435,12 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				},
 				mousewheel: true,
 				keyboard: true,
+				direction: 'horizontal',
 				autoplay: false,
 				speed: 1000,
 				delay: 5000,
 				effect: 'fade',
-				direction: 'horizontal',
-				spaceBetween: 50,
+				spaceBetween: 100,
 				autoHeight: true,
 				nested: true,
 			});

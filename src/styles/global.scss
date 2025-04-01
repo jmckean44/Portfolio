@@ -150,7 +150,7 @@ body {
 	margin: 0;
 	font-family: var.$font-sans-serif;
 	font-weight: normal;
-	font-size: min(max(1.6rem, 2.5vw), 20px);
+	font-size: min(max(1.8rem, 2.5vw), 21px);
 	height: 100%;
 	background: var.$bg-clr;
 	position: relative;
@@ -498,6 +498,14 @@ $container-padding-mobile: 1.25rem;
 	padding: 125px $container-padding 50px;
 }
 
+.container.top-med.btm-med {
+	padding: 60px $container-padding 80px;
+}
+
+.container.top.btm-sm {
+	padding: 125px $container-padding 50px;
+}
+
 .container.btm-sm {
 	padding: 0 $container-padding 50px;
 }
@@ -534,7 +542,7 @@ $container-padding-mobile: 1.25rem;
 		padding: 150px $container-padding 0;
 	}
 	.container.top {
-		padding: 125px $container-padding 0;
+		padding: 100px $container-padding 0;
 	}
 
 	.container.btm {
@@ -542,7 +550,7 @@ $container-padding-mobile: 1.25rem;
 	}
 
 	.container.top.btm {
-		padding: 125px $container-padding;
+		padding: 100px $container-padding;
 	}
 }
 
@@ -569,7 +577,7 @@ $container-padding-mobile: 1.25rem;
 }
 
 #current-sites .flex .filter p {
-	margin-bottom: 0;
+	margin-bottom: 1rem;
 }
 
 @media (max-width: 750px) {
@@ -652,7 +660,7 @@ $container-padding-mobile: 1.25rem;
 }
 
 #intro p {
-	font-size: min(max(1.5rem, 2.5vw), 24px);
+	font-size: min(max(1.8rem, 2.75vw), 24px);
 }
 
 .width {
@@ -939,21 +947,16 @@ p a {
 
 #graveyard .grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
 	align-content: center;
 	gap: 1.5rem;
 }
-
-// #graveyard .grid .cell:nth-child(5n) {
-// 	grid-column: span 2;
-// }
 
 #graveyard .graveyard .cell {
 	border: 1px #ccc solid;
 	background: #fff;
 	border-radius: 3px;
 	padding: 5px;
-	margin-bottom: 0.5rem;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -967,9 +970,28 @@ p a {
 	margin-bottom: 0.75rem;
 }
 
-@media (max-width: 400px) {
-	.graveyard.small-up-2 > .cell {
-		width: 100%;
+#graveyard .graveyard .cell.materials {
+	background: #3a3a42;
+	overflow: hidden;
+	border: 1px #3a3a42 solid;
+}
+#graveyard .graveyard .cell.materials img {
+	transition: all ease 0.5s;
+}
+#graveyard .graveyard .cell.materials img:hover {
+	transform: scale(1.2) translate(0, -12px);
+	transition: all ease 0.5s;
+}
+#graveyard .graveyard .cell.materials h3 {
+	color: #fff;
+}
+
+@media (max-width: 550px) {
+	#graveyard .grid {
+		grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	}
+	#graveyard h3 {
+		font-size: 1rem;
 	}
 }
 
@@ -1031,15 +1053,10 @@ p a {
 }
 
 /* =============================================
-	LINES & BORDERS
+	BORDERS
 ================================================ */
 .marker {
 	width: 20px;
-}
-
-#about #about-intro {
-	text-align: center;
-	padding-bottom: 100px;
 }
 
 .border-container {
@@ -1050,12 +1067,30 @@ p a {
 .borders {
 	border: 1px #ccc solid;
 	border-radius: 5px;
-	padding: 2rem 1%;
+	padding: 2.5rem 1%;
 }
 
 .borders.light {
-	border: 1px #f9f9f9 solid;
+	border: 1px #f2f2f2 solid;
 }
+
+@media (max-width: 450px) {
+	.border-container {
+		padding: 0;
+	}
+	.borders {
+		border-top: 1px #ccc solid;
+		border-left: 0;
+		border-right: 0;
+		border-bottom: 1px #ccc solid;
+		border-radius: 0;
+		padding: 2.5rem 1.25rem;
+	}
+}
+
+/* =============================================
+	LINES
+================================================ */
 
 .line-vert {
 	height: 100px;
@@ -1087,6 +1122,13 @@ p a {
 /* =============================================
 		ABOUT
 ================================================ */
-// #about .swiper img {
-// 	border: 1px #ccc solid;
-// }
+#about #about-intro {
+	text-align: center;
+	padding-bottom: 100px;
+}
+
+@media (max-width: 750px) {
+	#about .swiper.elink {
+		margin-top: 1rem;
+	}
+}
