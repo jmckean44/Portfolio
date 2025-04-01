@@ -100,7 +100,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 
 	<section>
 		<div class="container border-container">
-			<div class="flex padding-x align-middle borders">
+			<div class="flex padding-x align-middle borders grey-bg">
 				<div class="cell small-18 medium-9 intro">
 					<h2>Video Production</h2>
 					<p class="justify">
@@ -252,7 +252,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 
 	<section>
 		<div class="container border-container article">
-			<div class="flex padding-x align-middle borders">
+			<div class="flex padding-x align-middle borders grey-bg">
 				<div class="cell small-18 medium-12">
 					<h1>Colour Theory</h1>
 					<p>
@@ -280,7 +280,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 
 	<section>
 		<div class="container border-container films">
-			<div class="flex padding-x align-middle borders">
+			<div class="flex padding-x align-middle borders grey-bg">
 				<div class="cell small-18 medium-9">
 					<h1>Something else?</h1>
 					<p>Coming soon.</p>
@@ -331,6 +331,10 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 			#slideshow-container .swiper-container-v {
 				overflow: visible;
 			}
+			#slideshow-container .swiper-slide {
+				pointer-events: none;
+				background: #f9f9f9;
+			}
 			#slideshow-container .swiper-slide p {
 				padding-right: 10px;
 				margin-top: 10px;
@@ -348,6 +352,8 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 			}
 			#slideshow-container .swiper-pagination {
 				bottom: -80px !important;
+				background: #f9f9f9;
+				z-index: 99999999999;
 			}
 			#slideshow-container .swiper-pagination-bullet-active {
 				background: #ff9000;
