@@ -173,10 +173,9 @@ import thomas from '../img/sites/7stthomas.webp';
 			</div>
 
 			<p class="featured-details">
-				The <strong><a class="underline" target="_blank" href="https://marinaresortcavtat.com/">Marina Resort Cavtat</a></strong> site is currently a multilingual registration landing page for an up and
-				coming resort in Croatia (see the Marina Resort Cavtat site above for more details).
+				The <strong><a class="underline" href="/mrc">Marina Resort Cavtat</a></strong> site is currently a multilingual registration landing page for an up and coming resort in Croatia.
 			</p>
-			<p>The full site will be available soon.</p>
+			<p>The full site, which is build using <a class="underline" href="https://astro.build/">Astro JS</a> and includes GSAP & Scrolltrigger parallaxing, will be available soon.</p>
 
 			<div class="flex display-formats">
 				<div class="laptop-container">
@@ -398,7 +397,46 @@ import thomas from '../img/sites/7stthomas.webp';
 		</div>
 	</section>
 
-	<video class="fireworks" src="./fireworks-wh.mp4" autoplay playsinline muted loop poster=""></video>
+	<style>
+		.video {
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			object-fit: cover;
+		}
+	</style>
+
+	<script is:inline>
+		gsap.registerPlugin(ScrollTrigger);
+
+		const coolVideo = document.querySelector('video');
+
+		let tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: 'video',
+				start: 'top top',
+				end: 'bottom+=200% bottom',
+				scrub: 2,
+				markers: true,
+			},
+		});
+
+		// wait until video metadata is loaded, so we can grab the proper duration before adding the onscroll animation. Might need to add a loader for loonng videos
+		coolVideo.onloadedmetadata = function () {
+			tl.to(coolVideo, { currentTime: coolVideo.duration });
+		};
+
+		// Dealing with devices
+		function isTouchDevice() {
+			return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+		}
+		if (isTouchDevice()) {
+			coolVideo.play();
+			coolVideo.pause();
+		}
+	</script>
+
+	<!-- <video class="fireworks" src="./fireworks-wh.mp4" autoplay playsinline muted loop poster=""></video> -->
 </Layout>
 
 <script>
@@ -645,7 +683,7 @@ import thomas from '../img/sites/7stthomas.webp';
 	#featured-site p {
 		text-align: center;
 		margin: 0 auto 1rem;
-		max-width: 600px;
+		max-width: 700px;
 		padding: 0 1.25rem;
 	}
 

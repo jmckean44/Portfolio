@@ -921,7 +921,7 @@ p a {
 @media (max-width: var.$tablet) {
 	.responsive-iframe,
 	.swiper.elink {
-		margin-top: 1rem;
+		margin-top: 2rem;
 	}
 }
 
@@ -1072,6 +1072,9 @@ p a {
 		border-bottom: 1px #ccc solid;
 		border-radius: 0;
 		padding: 2.5rem 1.25rem 1.25rem;
+	}
+	#about .borders p {
+		//padding: 0 1.25rem;
 	}
 }
 
