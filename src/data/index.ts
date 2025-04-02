@@ -71,7 +71,7 @@ export const items: Item[] = [
 		id: 2,
 		name: 'The Diamond Rentals',
 		slug: 'diamond',
-		website: '/diamond/',
+		website: '/diamond-site/index.html',
 		type: 'PHP',
 		description:
 			'The Diamond is an up and coming modern open-concept rental building and future community in the Junction area of Toronto. The registration site was created to generate leads for the sales team. Client ownership changed and the site is now managed by their team using a different domain (diamondrentals.ca). A local copy of the landing page is available using the button below.',
