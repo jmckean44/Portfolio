@@ -21,6 +21,7 @@ import bunny from '../img/drawings/bunny.webp';
 import triad from '../img/drawings/triad.webp';
 import dad from '../img/drawings/carry-me.webp';
 import spring from '../img/drawings/spring.webp';
+import birdmen from '../img/drawings/birdmen.webp';
 import elder from '../img/drawings/elder.webp';
 import melancholia from '../img/drawings/melancholia.webp';
 import dreaming from '../img/drawings/dreaming.webp';
@@ -43,7 +44,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 		<div class="container top-of-page">
 			<div class="flex padding-x not-dark">
 				<div class="cell small-18">
-					<h1>Video to Web Design</h1>
+					<h1>A Transition...</h1>
 				</div>
 			</div>
 			<div id="intro" class="spacing-btm">
@@ -76,7 +77,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 					</div>
 				</div>
 				<div class="cell small-18 medium-9 large-9 small-order-1 medium-order-2">
-					<h2>Investor Relations</h2>
+					<h2>Investor Relations Marketing</h2>
 					<p class="justify">
 						The following brochure sites, although dated, are a few examples from my initial introduction to <strong>HTML, CSS, jQuery, web-design</strong>, and <strong>content management</strong> for
 						companies in the investor relations and software development industries.
@@ -128,10 +129,10 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 			<div class="flex padding-x align-middle borders grey-bg">
 				<div class="cell small-18">
 					<h2>Side Projects</h2>
-					<p>Outside of work, I have always enjoyed the visual arts....... discovering new and past works........</p>
+					<p>Outside of work, I have always enjoyed discovering new and past works of art, particluarly painting and film.</p>
 					<p>
-						The following examples are selections from a number of side projects, including documenting my son and daughter in portraits as they have grown up, local urban and Google Maps "found"
-						landscapes, and illustrations inspired by drawing lessons at our kitchen table - that began with a plush rabbit drying on the clothesline.
+						The following examples are selections from a few side projects, including documenting my son and daughter in portraits as they have grown up, local Urban and Google Maps "found"
+						landscapes, and illustrations inspired by drawing lessons at our kitchen table - that began with a plush rabbit drying on our clothesline and grew into a series of fifty illustrations.
 					</p>
 					<div class="flex not-dark">
 						<div class="cell small-18" id="swiper-vertical-nav">
@@ -144,8 +145,8 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 										<div class="swiper-container swiper-container-h">
 											<div class="swiper-wrapper">
 												<div class="swiper-slide">
-													<Picture src={bunny} formats={['avif', 'webp']} alt="Bunny" />
-													<p>Bunny</p>
+													<Picture src={bunny} formats={['avif', 'webp']} alt="Rosie" />
+													<p>Rosie</p>
 												</div>
 												<div class="swiper-slide">
 													<Picture src={cheezWhiz} formats={['avif', 'webp']} alt="Cheese Whiz" />
@@ -174,6 +175,14 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 												<div class="swiper-slide">
 													<Picture src={dad} formats={['avif', 'webp']} alt="Dad, carry me" />
 													<p>Dad, carry me</p>
+												</div>
+												<div class="swiper-slide">
+													<Picture src={birdmen} formats={['avif', 'webp']} alt="Quiet Birdmen Association" />
+													<p><a target="_blank" class="underline" href="https://en.wikipedia.org/wiki/Quiet_Birdmen">Quiet Birdmen Association</a></p>
+												</div>
+												<div class="swiper-slide">
+													<Picture src={birdmen} formats={['avif', 'webp']} alt="Alright, I won't leave you" />
+													<p>Alright, I won't leave you</p>
 												</div>
 											</div>
 											<div class="swiper-pagination swiper-pagination-h"></div>
@@ -253,8 +262,8 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 	<section>
 		<div class="container border-container article">
 			<div class="flex padding-x align-middle borders grey-bg">
-				<div class="cell small-18 medium-10">
-					<h1>Colour Theory</h1>
+				<div class="cell small-18 medium-10 large-10">
+					<h1>An Interest in Colour</h1>
 					<p>
 						The ongoing process of learning the effects of colour in context to each other, when mixing together to achieve a particluar hue or tone, and the visual and psychological implications of
 						colour and form by great artists has always interested to me, including the example below.
@@ -270,8 +279,8 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 						<em>* Fractals are infinitely complex patterns that are self-similar across different scales. They are created by repeating a simple process over and over in an ongoing feedback loop.</em>
 					</p>
 				</div>
-				<div class="cell small-18 medium-8" id="pollock">
-					<a target="_blank" href="./Scientific-American-Pollock.pdf"><Image src={pollock} class="borders light" alt="Jackson Pollock article in Scientific American" /></a>
+				<div class="cell small-18 medium-8 large-8" id="pollock">
+					<a target="_blank" href="./Scientific-American-Pollock.pdf"><Image src={pollock} alt="Jackson Pollock article in Scientific American" /></a>
 				</div>
 			</div>
 		</div>
@@ -316,9 +325,6 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				margin: 0;
 				border: 0 !important;
 			}
-			#mining .swiper-slide p {
-				padding: 1.5rem 0 0;
-			}
 			.swiper-slide img {
 				display: block;
 				width: 100%;
@@ -337,17 +343,15 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 			#slideshow-container .swiper-slide {
 				background: #f9f9f9;
 			}
-			#slideshow-container .swiper-slide p {
+			#slideshow-container h2 {
+				margin-bottom: 1.5rem;
+			}
+			#slideshow-container .swiper-slide p,
+			#slideshow-container .swiper-slide p a {
 				padding-right: 15px;
 				margin-top: -30px;
 				text-align: right;
-			}
-			#slideshow-container #landscapes .swiper-slide p {
-				padding-right: 10px;
-				margin-top: 25px;
-			}
-			#slideshow-container h2 {
-				margin-bottom: 1.5rem;
+				color: #333;
 			}
 			#slideshow-container .container.images img {
 				border: 0;
@@ -366,11 +370,20 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 			}
 			#pollock img {
 				max-width: 300px;
+				border: 1px #f2f2f2 solid;
+				padding: 5px;
+				border-radius: 5px;
+				background: #fff;
 			}
 			.text-sm {
 				margin-bottom: 0;
 			}
 
+			@media (max-width: 1024px) {
+				#pollock img {
+					margin-top: 2rem;
+				}
+			}
 			@media (max-width: 450px) {
 				.swiper-pagination-h .swiper-pagination-bullet {
 					height: 9px !important;
@@ -407,7 +420,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 
 			// IMAGES
 			var floor = ['Drawings', 'Portraits', 'Landscape'];
-			var direction = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
+			var direction = ['', '', '', '', '', '', '', '', '', '', ''];
 
 			new Swiper('.swiper-container-v', {
 				pagination: {
@@ -419,10 +432,10 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				},
 				direction: 'vertical',
 				autoplay: false,
-				autoHeight: true,
+				autoHeight: false,
 				speed: 1000,
 				delay: 5000,
-				spaceBetween: 50,
+				spaceBetween: 80,
 			});
 
 			new Swiper('.swiper-container-h', {
@@ -434,10 +447,12 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 						return '<span class="' + className + '">' + direction[index] + '</span>';
 					},
 				},
-				direction: 'horizontal',
-				autoplay: false,
+				//direction: 'horizontal',
+				effect: 'fade',
+				autoplay: true,
 				speed: 1000,
-				delay: 5000,
+				delay: 10000,
+				autoHeight: true,
 				spaceBetween: 30,
 				nested: true,
 			});
