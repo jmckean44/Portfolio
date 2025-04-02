@@ -175,7 +175,10 @@ import thomas from '../img/sites/7stthomas.webp';
 			<p class="featured-details">
 				The <strong><a class="underline" href="/mrc">Marina Resort Cavtat</a></strong> site is currently a multilingual registration landing page for an up and coming resort in Croatia.
 			</p>
-			<p>The full site, which is build using <a class="underline" href="https://astro.build/">Astro JS</a> and includes GSAP & Scrolltrigger parallaxing, will be available soon.</p>
+			<p>
+				The full site, which is build using <a class="underline" target="_blank" href="https://astro.build/">Astro JS</a> and includes GSAP, Scrolltrigger, and SplitText parallaxing, will be available
+				soon.
+			</p>
 
 			<div class="flex display-formats">
 				<div class="laptop-container">
@@ -261,8 +264,8 @@ import thomas from '../img/sites/7stthomas.webp';
 			<div class="swiper-pagination"></div>
 		</div>
 
-		<div style="margin: 4rem auto 1rem; max-width:1200px;text-align:center">
-			<video playsinline muted controls poster="" style="width: 100%;">
+		<div style="margin: 4rem auto 1rem; max-width:1200px;text-align:center;padding: 0 1.25rem;">
+			<video playsinline muted controls poster="" style="width: 100%; border: 1px #ccc solid;">
 				<source src="/S2-Video-Wall.mp4" type="video/mp4" />
 			</video>
 			<h3>Condo Sales Centre Video Wall</h3>
@@ -657,7 +660,7 @@ import thomas from '../img/sites/7stthomas.webp';
 		display: none;
 	}
 
-	#featured-videos video {
+	#featured-videos .swiper video {
 		padding: 0 1.25rem;
 	}
 
