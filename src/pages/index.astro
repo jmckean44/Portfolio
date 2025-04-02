@@ -49,7 +49,7 @@ import thomas from '../img/sites/7stthomas.webp';
 			<div class="flex padding-x">
 				<div class="cell small-18">
 					<p class="justify width">
-						I am a <strong>Frontend Web Developer</strong> with a background in <strong>web design</strong> and the <strong>Visual Arts</strong>.
+						I am a <strong>Frontend Web Developer</strong> with a background in <strong>web design</strong> and <strong>visual arts</strong>.
 					</p>
 					<p class="justify width">
 						I have a comprehensive understanding of the fundamentals of <strong class="bold">composition</strong> and <strong>design</strong> and apply principles from these disciplines towards <strong
@@ -127,7 +127,7 @@ import thomas from '../img/sites/7stthomas.webp';
 						The following selection of <strong>HTML Email campaigns</strong> were hand-coded in Visusal Studio Code, tested in Litmus, and deployed through Mailchimp.
 					</p>
 					<div class="cell small-18">
-						<p class="width">To receive a test in your inbox, please enter your email address and click send.</p>
+						<p class="width">To receive a test in your inbox, please enter your email address, select one of the examples and click send.</p>
 
 						<form action="/htmls/dale.php" method="POST">
 							<input type="email" name="email" placeholder="Email" required />
@@ -214,10 +214,6 @@ import thomas from '../img/sites/7stthomas.webp';
 			</div>
 		</div>
 
-		<video playsinline muted controls autoplay poster="" style="width: 100%;">
-			<source src="/S2-Video-Wall.mp4" type="video/mp4" />
-		</video>
-
 		<div class="swiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
@@ -264,6 +260,13 @@ import thomas from '../img/sites/7stthomas.webp';
 				</div>
 			</div>
 			<div class="swiper-pagination"></div>
+		</div>
+
+		<div style="margin: 4rem auto 1rem; max-width:1200px;text-align:center">
+			<video playsinline muted controls poster="" style="width: 100%;">
+				<source src="/S2-Video-Wall.mp4" type="video/mp4" />
+			</video>
+			<h3>Condo Sales Centre Video Wall</h3>
 		</div>
 	</section>
 
@@ -607,7 +610,7 @@ import thomas from '../img/sites/7stthomas.webp';
 		margin-bottom: 1rem;
 	}
 	#featured-videos h3 {
-		font-size: 1.5rem;
+		font-size: min(max(1.5rem, 2.5vw), 28px);
 	}
 	#featured-videos video::-webkit-media-controls-volume-slider {
 		display: none;
