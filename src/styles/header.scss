@@ -176,7 +176,13 @@ html.light #header.header.headroom.headroom--not-bottom.headroom--pinned.headroo
 	color: #fff;
 }
 
-#header.headroom--not-bottom.headroom--not-top .nav-links li a span,
+#header.headroom--not-bottom.headroom--not-top .nav-links li a span {
+	letter-spacing: 1px;
+	margin-bottom: 3px;
+	display: block;
+	font-size: 30%;
+}
+
 #header.headroom--not-bottom.headroom--not-top.headroom--pinned .nav-links li a span,
 #header.headroom--not-top.headroom--bottom .nav-links li a span {
 	letter-spacing: 1px;

@@ -5,13 +5,13 @@ import { Image } from 'astro:assets';
 import { items } from '../data/index.ts';
 import '../styles/form.scss';
 import '../styles/swiper.scss';
-import Checkbox from '../components/Checkbox';
 import ItemCard from '../components/ItemCard.astro';
 import html7Dale from '../img/htmls/7dale.jpg';
 import htmlMRC from '../img/htmls/mrc.jpg';
 import htmlDiamond from '../img/htmls/diamond.jpg';
 import htmlWinslow from '../img/htmls/winslow.jpg';
 import htmlVanguard from '../img/htmls/vanguard.jpg';
+import kingsway2 from '../img/htmls/kingsway.webp';
 import laptop from '../img/laptop.png';
 import mobile from '../img/mobile.png';
 import aquavil from '../img/sites/aquavil.jpg';
@@ -128,40 +128,60 @@ import thomas from '../img/sites/7stthomas.webp';
 					</p>
 					<div class="cell small-18">
 						<p class="width">To receive a test in your inbox, please enter your email address, select one of the examples and click send.</p>
-
-						<form action="/htmls/dale.php" method="POST">
-							<input type="email" name="email" placeholder="Email" required />
-							<input class="btn" name="submit" type="submit" value="SEND" />
-						</form>
-						<div class="response"></div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div id="campaigns">
 			<div>
-				<Checkbox />
-				<Picture src={html7Dale} formats={['avif', 'webp']} quality="" alt="7 Dale" />
-			</div>
-			<div>
-				<Checkbox />
-				<Picture src={htmlMRC} formats={['avif', 'webp']} quality="" alt="Marina Resort Cavtat" />
-			</div>
-			<div>
-				<Checkbox />
-				<Picture src={htmlWinslow} formats={['avif', 'webp']} quality="" alt="The Winslow" />
-			</div>
-			<div>
-				<Checkbox />
-				<Picture src={htmlVanguard} formats={['avif', 'webp']} quality="" alt="The Vanguard" />
-			</div>
-			<div>
-				<Checkbox />
-				<Picture src={htmlDiamond} formats={['avif', 'webp']} quality="" alt="The Diamond Rentals" />
-			</div>
-			<div>
-				<Checkbox />
-				<Picture src={htmlDiamond} formats={['avif', 'webp']} quality="" alt="The Diamond Rentals" />
+				<form id="htmls" action="/htmls/dale.php" method="POST">
+					<input type="email" name="email" class="email" placeholder="Email" required />
+					<input class="btn" name="submit" type="submit" value="SEND" />
+					<div class="response"></div>
+
+					<div id="campaigns">
+						<div>
+							<label class="label" for="dale">
+								<input type="radio" name="campaigns[]" value="dale" class="radio-input" />
+								<div class="radio-design"></div>
+							</label>
+							<Picture src={html7Dale} formats={['avif', 'webp']} alt="7 Dale" />
+						</div>
+						<div>
+							<label class="label" for="mrc">
+								<input type="radio" name="campaigns[]" value="mrc" class="radio-input" />
+								<div class="radio-design"></div>
+							</label>
+							<Picture src={htmlMRC} formats={['avif', 'webp']} alt="Marina Resort Cavtat" />
+						</div>
+						<div>
+							<label class="label" for="winslow">
+								<input type="radio" name="campaigns[]" value="winslow" class="radio-input" />
+								<div class="radio-design"></div>
+							</label>
+							<Picture src={htmlWinslow} formats={['avif', 'webp']} alt="The Winslow" />
+						</div>
+						<div>
+							<label class="label" for="vanguard">
+								<input type="radio" name="campaigns[]" value="vanguard" class="radio-input" />
+								<div class="radio-design"></div>
+							</label>
+							<Picture src={htmlVanguard} formats={['avif', 'webp']} alt="The Vanguard" />
+						</div>
+						<div>
+							<label class="label" for="diamond">
+								<input type="radio" name="campaigns[]" value="diamond" class="radio-input" />
+								<div class="radio-design"></div>
+							</label>
+							<Picture src={htmlDiamond} formats={['avif', 'webp']} alt="The Diamond Rentals" />
+						</div>
+						<div>
+							<label class="label" for="kingsway">
+								<input type="radio" name="campaigns[]" value="kingsway" class="radio-input" />
+								<div class="radio-design"></div>
+							</label>
+							<Picture src={kingsway2} formats={['avif', 'webp']} alt="Kingsway By The River" />
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</section>
@@ -176,8 +196,8 @@ import thomas from '../img/sites/7stthomas.webp';
 				The <strong><a class="underline" href="/mrc">Marina Resort Cavtat</a></strong> site is currently a multilingual registration landing page for an up and coming resort in Croatia.
 			</p>
 			<p>
-				The full site, which is build using <a class="underline" target="_blank" href="https://astro.build/">Astro JS</a> and includes GSAP, Scrolltrigger, and SplitText parallaxing, will be available
-				soon.
+				The full site (available soon) is built using <a class="underline" target="_blank" href="https://astro.build/">Astro JS</a> and includes GSAP, Scrolltrigger, and SplitText parallaxing. The form
+				is integrated with Salesforce Marketing Cloud through <a class="underline" target="_blank" href="https://onyx-technologies.com/">Onyx Technologies</a>.
 			</p>
 
 			<div class="flex display-formats">
@@ -208,8 +228,8 @@ import thomas from '../img/sites/7stthomas.webp';
 				<div class="cell small-18">
 					<h2>Social Media Ads</h2>
 					<p class="width">
-						These animated ads are the 1080p (1:1 aspect ratio) selections from a number of Facebook and Google Ad campaigns. The design and and provided with . They contain a mixture of composited
-						still image with video, and vector graphic animations using Adobe Animate.
+						These animated ads are the 1080p (1:1 aspect ratio) selections from a number of Facebook and Google Ad campaigns. They contain a mixture of composited still image with video and vector
+						graphic animations using Adobe Animate.
 					</p>
 					<br />
 				</div>
@@ -464,7 +484,7 @@ import thomas from '../img/sites/7stthomas.webp';
 </script>
 
 <script is:inline>
-	document.querySelector('form').addEventListener('submit', async function (e) {
+	document.getElementById('htmls').addEventListener('submit', async function (e) {
 		e.preventDefault();
 
 		const form = e.target;

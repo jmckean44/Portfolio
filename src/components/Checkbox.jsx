@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+//import React, { useState } from "react";
 import * as Checkbox from "@radix-ui/react-checkbox";
 import { CheckIcon } from "@radix-ui/react-icons";
-import { Controller } from "react-hook-form";
 import "../styles/checkboxes.scss";
+
 
 const CheckboxGroup = () => (
 	<div className="checkboxesContainer">
 		<Checkbox.Root className="CheckboxRoot" id="c1">
-			<Checkbox.Indicator className="CheckboxIndicator">
+			<Checkbox.Indicator className="CheckboxIndicator" checked={false}>
 				<CheckIcon />
 			</Checkbox.Indicator>
 		</Checkbox.Root>

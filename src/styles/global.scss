@@ -724,6 +724,7 @@ p a {
 #home #filter-sites ul {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: nowrap;
 	margin: 0 0 2rem 0;
 }
 
@@ -837,13 +838,12 @@ p a {
 	margin-bottom: 50px;
 }
 
-#htmls #campaigns {
+#htmls #campaigns:not(form) {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, 14%);
 	justify-content: space-between;
 	grid-column-gap: 1.5rem;
 	margin: 2rem auto 0;
-	padding: 0 1.25rem;
 	max-width: 1400px;
 }
 

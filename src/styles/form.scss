@@ -42,6 +42,14 @@ form {
 	margin: 0 auto;
 }
 
+form#htmls {
+	max-width: 100%;
+}
+
+form#htmls .email {
+	max-width: 300px;
+}
+
 form > div {
 	position: relative;
 }
@@ -175,6 +183,7 @@ label {
 label {
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
 	gap: 5px;
 	cursor: pointer;
 }
@@ -359,7 +368,7 @@ select:focus {
 /* =============================
    CHECKBOXES
 ================================ */
-/* input[type='checkbox'] {
+input[type='checkbox'] {
 	margin: 0;
 	width: 1rem;
 	height: 1rem;
@@ -384,11 +393,6 @@ input[type='checkbox']:focus {
 	margin-bottom: 0;
 }
 
-.margin-left {
-	margin-left: 1rem;
-	border: 1px red solid;
-}
-
 .checkbox-input {
 	position: absolute;
 	left: 0;
@@ -397,13 +401,12 @@ input[type='checkbox']:focus {
 	height: 1px;
 	opacity: 0;
 	z-index: -1;
-} 
+}
 
 .checkbox-design {
 	width: 16px;
 	height: 16px;
 	background: var.$theme-clr;
-	background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%)); 
 	position: relative;
 }
 
@@ -420,41 +423,57 @@ input[type='checkbox']:focus {
 
 .checkbox-input:checked + .checkbox-design::before {
 	transform: scale(0);
+	background: var.$theme-clr;
 }
 
 /* =============================
-   RADIO BUTTONS
+	 INPUT RADIO
 ================================ */
-.radio-inputs {
+.label {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
 	align-items: center;
-	padding-left: 1rem;
-}
-
-.radio-inputs > * {
-	padding-right: 0.5rem;
-}
-
-#register .radio-inputs p {
-	color: var.$dark;
-	font-family: var.$theme-font;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 0.9rem;
-	padding: 0.5rem 1.5rem 0.5rem 0;
-	letter-spacing: 1px;
-}
-
-label {
-	display: flex;
-	align-items: center;
-	gap: 5px;
-	margin: 10px 0;
+	align-content: stretch;
+	margin-right: 15px;
 	cursor: pointer;
-	font-size: 1rem;
-	font-weight: 600;
-	color: var.$dark;
+	transition: all ease 0.3s;
+}
+
+.radio-input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+	z-index: -1;
+}
+
+.radio-design {
+	width: 16px;
+	height: 16px;
+	border-radius: 100%;
+	background: var.$theme-clr;
+	position: relative;
+	margin-bottom: 1rem;
+}
+
+.radio-design::before {
+	content: '';
+	display: block;
+	width: inherit;
+	height: inherit;
+	border-radius: inherit;
+	background: #fff;
+	transform: scale(0.8);
+	transition: 0.3s;
+}
+
+.radio-input:checked + .radio-design::before {
+	transform: scale(0);
+	background: var.$theme-clr;
 }
 
 .submit-button {
