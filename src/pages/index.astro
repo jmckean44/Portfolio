@@ -117,50 +117,50 @@ import thomas from '../img/sites/7stthomas.webp';
 				</div>
 			</div>
 			<div>
-				<form id="htmls" action="/htmls/dale.php" method="POST">
-					<input type="email" name="email" class="email" placeholder="Email" required />
+				<form id="htmls" action="" method="POST">
+					<input type="email" name="email" class="email" placeholder="Email" />
 					<input class="btn" name="submit" type="submit" value="SEND" />
 					<div class="response"></div>
 
 					<div id="campaigns">
 						<div>
 							<label class="label" for="dale">
-								<input type="radio" name="campaign" value="dale" class="radio-input" />
+								<input type="radio" name="campaign[]" value="dale" id="dale" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={html7Dale} formats={['avif', 'webp']} alt="7 Dale" />
 						</div>
 						<div>
 							<label class="label" for="mrc">
-								<input type="radio" name="campaign" value="mrc" class="radio-input" />
+								<input type="radio" name="campaign[]" value="mrc" id="mrc" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={htmlMRC} formats={['avif', 'webp']} alt="Marina Resort Cavtat" />
 						</div>
 						<div>
 							<label class="label" for="winslow">
-								<input type="radio" name="campaign" value="winslow" class="radio-input" />
+								<input type="radio" name="campaign[]" value="winslow" id="winslow" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={htmlWinslow} formats={['avif', 'webp']} alt="The Winslow" />
 						</div>
 						<div>
 							<label class="label" for="vanguard">
-								<input type="radio" name="campaign" value="vanguard" class="radio-input" />
+								<input type="radio" name="campaign[]" value="vanguard" id="vanguard" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={htmlVanguard} formats={['avif', 'webp']} alt="The Vanguard" />
 						</div>
 						<div>
 							<label class="label" for="diamond">
-								<input type="radio" name="campaign" value="diamond" class="radio-input" />
+								<input type="radio" name="campaign[]" value="diamond" id="diamond" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={htmlDiamond} formats={['avif', 'webp']} alt="The Diamond Rentals" />
 						</div>
 						<div>
 							<label class="label" for="kingsway">
-								<input type="radio" name="campaign" value="kingsway" class="radio-input" />
+								<input type="radio" name="campaign[]" value="kingsway" id="kingsway" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={kingsway2} formats={['avif', 'webp']} alt="Kingsway By The River" />
@@ -418,36 +418,6 @@ import thomas from '../img/sites/7stthomas.webp';
 	}
 </style>
 
-<script is:inline>
-	gsap.registerPlugin(ScrollTrigger);
-
-	const coolVideo = document.querySelector('video');
-
-	let tl = gsap.timeline({
-		scrollTrigger: {
-			trigger: 'video',
-			start: 'top top',
-			end: 'bottom+=200% bottom',
-			scrub: 2,
-			markers: true,
-		},
-	});
-
-	// wait until video metadata is loaded, so we can grab the proper duration before adding the onscroll animation. Might need to add a loader for loonng videos
-	coolVideo.onloadedmetadata = function () {
-		tl.to(coolVideo, { currentTime: coolVideo.duration });
-	};
-
-	// Dealing with devices
-	function isTouchDevice() {
-		return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
-	}
-	if (isTouchDevice()) {
-		coolVideo.play();
-		coolVideo.pause();
-	}
-</script>
-
 <script>
 	document.addEventListener('astro:page-load', () => {
 		const date = new Date();
@@ -470,28 +440,61 @@ import thomas from '../img/sites/7stthomas.webp';
 </script>
 
 <script is:inline>
-	document.getElementById('htmls').addEventListener('submit', async function (e) {
-		e.preventDefault();
-
-		const form = e.target;
-		const formData = new FormData(form);
-		const responseDiv = document.querySelector('.response');
-
-		try {
-			const response = await fetch(form.action, {
-				method: 'POST',
-				body: formData,
-			});
-			const result = await response.json();
-
-			if (result.status === 'success') {
-				responseDiv.innerHTML = `<p style="color: green;">${result.message}</p>`;
-			} else {
-				responseDiv.innerHTML = `<p style="color: red;">${result.message}</p>`;
-			}
-		} catch (error) {
-			responseDiv.innerHTML = `<p style="color: red;">An error occurred. Please try again later.</p>`;
+	document.addEventListener('astro:page-load', () => {
+		if (!form) {
+			console.error('Form element not found');
+			return;
 		}
+
+		const form = document.getElementById('htmls');
+
+		form.addEventListener('submit', async function () {
+			const formData = new FormData(form);
+			const radioButtons = document.querySelectorAll('.radio-input');
+			e.preventDefault();
+
+			radioButtons.forEach((radio) => {
+				radio.addEventListener('change', function () {
+					console.log(`${radio.value}`);
+					if (radio.checked) {
+						if (radio.value === 'dale') {
+							form.action = '/htmls/dale.php';
+							console.log(`${form.action}`);
+						} else if (radio.value === 'mrc') {
+							form.action = '/htmls/mrc.php';
+						} else if (radio.value === 'winslow') {
+							form.action = '/htmls/winslow.php';
+						} else if (radio.value === 'vanguard') {
+							form.action = '/htmls/vanguard.php';
+						} else if (radio.value === 'diamond') {
+							form.action = '/htmls/diamond.php';
+						} else if (radio.value === 'kingsway') {
+							form.action = '/htmls/kingsway.php';
+						} else {
+							form.action = '';
+						}
+					}
+				});
+			});
+
+			const responseDiv = document.querySelector('.response');
+
+			try {
+				const response = await fetch(form.action, {
+					method: 'POST',
+					body: formData,
+				});
+				const result = await response.json();
+
+				if (result.status === 'success') {
+					responseDiv.innerHTML = `<p style="color: green;">${result.message}</p>`;
+				} else {
+					responseDiv.innerHTML = `<p style="color: red;">${result.message}</p>`;
+				}
+			} catch (error) {
+				responseDiv.innerHTML = `<p style="color: red;">An error occurred. Please try again later.</p>`;
+			}
+		});
 	});
 </script>
 
@@ -547,11 +550,10 @@ import thomas from '../img/sites/7stthomas.webp';
 	});
 </script>
 
-<script is:inline>
+<!-- <script is:inline>
 	document.addEventListener('astro:page-load', () => {
 		const video = document.querySelector('.fireworks');
 
-		// Function to update the video source based on the theme
 		function updateVideoSource() {
 			if (localStorage.getItem('theme') === 'dark') {
 				video.setAttribute('src', './fireworks-drk.mp4');
@@ -559,22 +561,18 @@ import thomas from '../img/sites/7stthomas.webp';
 				video.setAttribute('src', './fireworks-wh.mp4');
 			}
 		}
-
-		// Update the video source on page load
+		
 		updateVideoSource();
-
-		// Listen for theme toggle and update the video source
-		document.getElementById('themeToggle').addEventListener('click', () => {
-			// Toggle theme in localStorage
+	
+		document.getElementById('themeToggle').addEventListener('click', () => {	
 			const currentTheme = localStorage.getItem('theme');
 			const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 			localStorage.setItem('theme', newTheme);
 
-			// Update the video source
 			updateVideoSource();
 		});
 	});
-</script>
+</script> -->
 
 <style>
 	:root {
