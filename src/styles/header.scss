@@ -31,12 +31,6 @@ header {
 	transition: 0.5s all ease;
 }
 
-// @media (max-width: 1400px) {
-// 	.curve {
-// 		margin-top: -5%;
-// 	}
-// }
-
 .curve svg {
 	position: relative;
 	display: block;
@@ -55,9 +49,9 @@ header {
 	fill: rgb(230, 235, 247);
 }
 
-@media (max-width: 600px) {
-	header {
-		padding: 0;
+@media (max-width: 800px) {
+	.curve {
+		margin-top: 0%;
 	}
 }
 
