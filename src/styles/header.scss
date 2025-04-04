@@ -91,10 +91,10 @@ html.light #header.header.headroom.headroom--not-bottom.headroom--pinned.headroo
 #header.headroom--not-bottom.headroom--not-top.headroom--pinned,
 #header.headroom--not-top.headroom--bottom {
 	//border-bottom: 1px #ccc solid;
-	background: rgba(255, 255, 255, 0.5);
-	backdrop-filter: blur(1px);
+	background: rgba(255, 255, 255, 0.75);
+	backdrop-filter: blur(2px);
 	//box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	padding-bottom: 1rem;
+	padding-bottom: 0.75rem;
 }
 
 #header.headroom.headroom--not-top.headroom--not-bottom .nav-links li a,
