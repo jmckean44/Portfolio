@@ -6,100 +6,60 @@ import '../styles/form.scss';
 <Layout pageTitle="Contact" pageSiteTitles="">
 	<section>
 		<div class="container top-of-page">
-			<div class="flex" id="form-container">
-				<div class="cell">
-					<h1>Contact</h1>
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h1>Contact Me</h1>
+					<div id="intro">
+						<p class="justify width">To send a message, please fill out and submit the form below.</p>
 
-					<p>To send a message, please fill out and submit the form below.</p>
+						<br />
 
-					<br />
+						<form method="POST" id="form">
+							<input type="hidden" name="access_key" value="3d4e1ccc-77f5-4fa8-860c-81854fd38d03" />
+							<input type="hidden" name="subject" value="Submission from jmckean44.netlify.com" />
+							<input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
 
-					<form method="POST" id="form">
-						<input type="hidden" name="access_key" value="3d4e1ccc-77f5-4fa8-860c-81854fd38d03" />
-						<input type="hidden" name="subject" value="Submission from jmckean44.netlify.com" />
-						<input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
-
-						<div>
-							<label for="fname" class="visuallyHidden">First Name</label>
-							<input type="text" name="name" id="first_name" placeholder="Name" required="" />
-							<span class="helperText">Name</span>
-						</div>
-
-						<div>
-							<label for="email" class="visuallyHidden">Email</label>
-							<input type="email" name="email" id="email" placeholder="Email *" required />
-							<span class="helperText">Email</span>
-						</div>
-						<div>
-							<label for="message" class="visuallyHidden">Comments</label>
-							<textarea rows="5" name="message" id="message" placeholder="Comments"></textarea>
-							<span class="helperText">Comments</span>
-						</div>
-
-						<div class="h-captcha" data-theme="dark" data-captcha="true"></div>
-						<div>
 							<div>
-								<div id="result"></div>
-								<button type="submit" class="button btn"> SUBMIT </button>
+								<label for="fname" class="visuallyHidden">First Name</label>
+								<input type="text" name="name" id="first_name" placeholder="Name" required="" />
+								<span class="helperText">Name</span>
 							</div>
-						</div>
-					</form>
 
-					<script is:inline>
-						const formCaptcha = document.getElementById('form');
+							<div>
+								<label for="email" class="visuallyHidden">Email</label>
+								<input type="email" name="email" id="email" placeholder="Email *" required />
+								<span class="helperText">Email</span>
+							</div>
+							<div>
+								<label for="message" class="visuallyHidden">Comments</label>
+								<textarea rows="10" name="message" id="message" placeholder="Comments"></textarea>
+								<span class="helperText">Comments</span>
+							</div>
 
-						formCaptcha.addEventListener('submit', function (e) {
-							const hCaptcha = formCaptcha.querySelector('textarea[name=h-captcha-response]').value;
+							<div class="h-captcha" data-theme="dark" data-captcha="true"></div>
+							<div>
+								<div>
+									<div id="result"></div>
+									<button type="submit" class="button btn"> SUBMIT </button>
+								</div>
+							</div>
+						</form>
 
-							if (!hCaptcha) {
-								e.preventDefault();
-								alert('Please fill out captcha field');
-								return;
-							}
-						});
-					</script>
+						<script is:inline>
+							const formCaptcha = document.getElementById('form');
 
-					<!-- <script is:inline>
-						const form = document.getElementById('form');
-						const result = document.getElementById('result');
+							formCaptcha.addEventListener('submit', function (e) {
+								const hCaptcha = formCaptcha.querySelector('textarea[name=h-captcha-response]').value;
 
-						form.addEventListener('submit', function (e) {
-							e.preventDefault();
-							const formData = new FormData(form);
-							const object = Object.fromEntries(formData);
-							const json = JSON.stringify(object);
-							result.innerHTML = 'Please wait...';
-
-							fetch('https://api.web3forms.com/submit', {
-								method: 'POST',
-								headers: {
-									'Content-Type': 'application/json',
-									Accept: 'application/json',
-								},
-								body: json,
-							})
-								.then(async (response) => {
-									let json = await response.json();
-									if (response.status == 200) {
-										result.innerHTML = 'Form submitted successfully';
-									} else {
-										console.log(response);
-										result.innerHTML = json.message;
-									}
-								})
-								.catch((error) => {
-									console.log(error);
-									result.innerHTML = 'Something went wrong!';
-								})
-								.then(function () {
-									form.reset();
-									setTimeout(() => {
-										result.style.display = 'none';
-									}, 5000);
-								});
-						});
-					</script> -->
-					<script is:inline src="https://web3forms.com/client/script.js" async defer></script>
+								if (!hCaptcha) {
+									e.preventDefault();
+									alert('Please fill out captcha field');
+									return;
+								}
+							});
+						</script>
+						<script is:inline src="https://web3forms.com/client/script.js" async defer></script>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -25,13 +25,11 @@ $input-error-clr: var.$theme-clr;
 $input-transition: all ease 0.5s;
 
 .errorMsg {
-	//position: absolute;
 	margin-top: -0.8rem;
 	margin-bottom: 1rem;
 }
 
 #form-container {
-	margin: 0 auto;
 	max-width: 400px;
 }
 
@@ -39,7 +37,6 @@ form {
 	width: 100%;
 	max-width: 400px;
 	text-transform: uppercase;
-	margin: 0 auto;
 }
 
 form#htmls {
