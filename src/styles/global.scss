@@ -209,15 +209,15 @@ h1 {
 }
 
 h2 {
-	font-size: min(max(2.2rem, 3vw), 50px);
+	font-size: min(max(2.25rem, 3vw), 50px);
 }
 
 h3 {
-	font-size: min(max(1.9rem, 2.5vw), 40px);
+	font-size: min(max(2rem, 2.5vw), 40px);
 }
 
 h4 {
-	font-size: min(max(1.6rem, 2.25vw), 30px);
+	font-size: min(max(1.7rem, 2.25vw), 30px);
 }
 
 h5 {
@@ -523,24 +523,24 @@ $container-padding-mobile: 1.25rem;
 	padding: 300px $container-padding 100px;
 }
 
-@media (min-width: 1401px) {
+@media (min-width: 1301px) {
 	.container.top-of-page,
 	.container.top-of-page.btm {
 		padding: 300px $container-padding 0;
 	}
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1300px) {
 	.container.top-of-page,
 	.container.top-of-page.btm {
-		padding: 20% $container-padding 0;
+		padding: 22.5% $container-padding 0;
 	}
 }
 
 @media (max-width: 800px) {
 	.container.top-of-page,
 	.container.top-of-page.btm {
-		padding: 150px $container-padding 0;
+		padding: 200px $container-padding 0;
 	}
 	.container.top {
 		padding: 100px $container-padding 0;
@@ -552,6 +552,13 @@ $container-padding-mobile: 1.25rem;
 
 	.container.top.btm {
 		padding: 100px $container-padding;
+	}
+}
+
+@media (max-width: 500px) {
+	.container.top-of-page,
+	.container.top-of-page.btm {
+		padding: 150px $container-padding 0;
 	}
 }
 
@@ -660,6 +667,10 @@ $container-padding-mobile: 1.25rem;
 	font-size: 180%;
 }
 
+#home #intro h1 {
+	margin-bottom: 2rem;
+}
+
 #intro p {
 	font-size: min(max(1.8rem, 2.75vw), 24px);
 }
@@ -681,17 +692,9 @@ $container-padding-mobile: 1.25rem;
 /* =====================
 	 MISC
 ======================== */
-.stagger-img {
-	padding: 100px 0;
-}
-
-.clipInLeft {
-	position: relative;
-}
-
-.stagger-img > div {
-	position: relative;
-	//border: 1px red solid;
+.border-top {
+	border-top: var.$dark 1px solid;
+	padding-top: 2rem;
 }
 
 .absolute {
@@ -838,7 +841,7 @@ p a {
 	margin-bottom: 50px;
 }
 
-#htmls #campaigns:not(form) {
+#htmls #campaigns {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, 14%);
 	justify-content: space-between;
@@ -853,8 +856,12 @@ p a {
 }
 
 #htmls #campaigns > div input {
-	margin-top: 0.75rem;
-	margin-bottom: 0rem;
+	cursor: pointer;
+	height: 16px;
+	width: 16px;
+	top: 0;
+	opacity: 0;
+	z-index: 999999;
 }
 
 #htmls #campaigns img {
@@ -865,7 +872,7 @@ p a {
 }
 
 #htmls form {
-	margin: 2rem 0 0 !important;
+	margin: 2rem 0 0;
 	padding: 0 0 2rem;
 	max-width: 300px;
 }
@@ -1008,10 +1015,6 @@ p a {
 /* =============================================
 	NEW PAGE
 ================================================ */
-// #new .curve {
-// 	display: none;
-// }
-
 #new .project {
 	padding: 2rem 1.25rem 2rem;
 	background: #f9f9f9;
@@ -1061,7 +1064,7 @@ p a {
 	border: 1px #f2f2f2 solid;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
 	.border-container {
 		padding: 0;
 	}
@@ -1072,9 +1075,6 @@ p a {
 		border-bottom: 1px #ccc solid;
 		border-radius: 0;
 		padding: 2.5rem 1.25rem 1.25rem;
-	}
-	#about .borders p {
-		//padding: 0 1.25rem;
 	}
 }
 

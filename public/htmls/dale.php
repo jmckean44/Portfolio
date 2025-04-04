@@ -7,29 +7,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
   }
 
-  // Get the selected campaigns
-  $campaigns = isset($_POST['campaigns']) ? $_POST['campaigns'] : [];
-  if (empty($campaigns)) {
-    echo json_encode(["status" => "error", "message" => "No campaigns selected."]);
+  // Get the selected campaign
+  $campaign = isset($_POST['campaign']) ? htmlspecialchars($_POST['campaign']) : null;
+  if (!$campaign) {
+    echo json_encode(["status" => "error", "message" => "No campaign selected."]);
     exit;
   }
 
   // Email details
-  $to = $email;
-  $subject = "HTML Email Campaigns";
+  $to = $email; // Send the email to the user who submitted the form
+  $subject = "HTML Email Campaign - $campaign";
   $headers = "From: no-reply@yourdomain.com\r\n";
   $headers .= "Reply-To: no-reply@yourdomain.com\r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
   // Build the email content
   $message = "<html><body>";
-  $message .= "<h1>Selected Campaigns</h1>";
-  $message .= "<ul>";
-  foreach ($campaigns as $campaign) {
-    $message .= "<li>" . htmlspecialchars($campaign) . "</li>";
-  }
-  $message .= "</ul>";
-  $message .= "<p>Thank you for your interest in our campaigns!</p>";
+  $message .= "<h1>Selected Campaign: $campaign</h1>";
+  $message .= "<p>Thank you for your interest in the $campaign campaign!</p>";
   $message .= "</body></html>";
 
   // Send the email

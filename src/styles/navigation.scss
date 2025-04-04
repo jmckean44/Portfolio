@@ -23,11 +23,9 @@ nav {
 	text-align: center;
 }
 
-.nav-links li a,
-.nav-links li a:focus,
-.nav-links li a:visited {
+.nav-links li a {
 	font-family: 'SteelfishRegular';
-	font-size: min(max(2rem, 5vw), 90px);
+	font-size: min(max(2rem, 6vw), 90px);
 	color: var.$font-clr;
 	display: inline-block;
 	text-align: center;
@@ -43,11 +41,12 @@ nav {
 }
 
 .nav-links li a span {
-	font-size: 30%;
+	font-size: 35%;
 	display: block;
 	letter-spacing: 1px;
 	margin-bottom: 3px;
 	color: rgba(0, 0, 0, 0.5);
+	transition: all ease 0.3s;
 }
 
 .nav-links li a.active,
@@ -59,30 +58,21 @@ nav {
 	background-size: auto 3%;
 }
 
-@media (max-width: 1100px) {
-	.nav-links li a span {
-		font-size: 40%;
-	}
-}
+// @media (max-width: 1100px) {
+// 	.nav-links li a span {
+// 		font-size: 40%;
+// 	}
+// }
 
-@media (max-width: 800px) {
-	.nav-links li a {
-		padding: 2rem 0 0.75rem;
-	}
-}
-
-@media (max-width: 700px) {
-	.nav-links li a {
-		padding: 1rem 0 0.5rem;
-	}
-	.nav-links li a span {
-		font-size: 45%;
-	}
-}
+// @media (max-width: 700px) {
+// 	.nav-links li a span {
+// 		font-size: 50%;
+// 	}
+// }
 
 @media (max-width: 500px) {
-	.nav-links li a span {
-		font-size: 50%;
+	.nav-links li a {
+		padding: 1rem 0 0.75rem;
 	}
 }
 

@@ -12,19 +12,17 @@ header {
 	padding: 0;
 	text-align: center;
 	width: 100%;
-	z-index: 999999999;
 	opacity: 1;
-	//box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-	//backdrop-filter: blur(10px);
-}
-
-#home .curve {
-	display: none;
+	// height: 200px;
+	// display: flex;
+	// align-content: end;
+	// border-bottom: 1px red solid;
+	z-index: 999999999;
 }
 
 .curve {
 	position: absolute;
-	margin-top: -15%;
+	margin-top: -10%;
 	left: 0;
 	right: 0;
 	width: 100%;
@@ -33,11 +31,11 @@ header {
 	transition: 0.5s all ease;
 }
 
-@media (max-width: 1400px) {
-	.curve {
-		margin-top: -10%;
-	}
-}
+// @media (max-width: 1400px) {
+// 	.curve {
+// 		margin-top: -5%;
+// 	}
+// }
 
 .curve svg {
 	position: relative;
@@ -45,8 +43,8 @@ header {
 	width: 100%;
 }
 
-#home .curve {
-	display: none;
+#home .curve path {
+	fill: rgba(0, 0, 0, 0.03);
 }
 
 #about .curve path {
@@ -119,8 +117,9 @@ html.light #header.header.headroom.headroom--not-bottom.headroom--pinned.headroo
 #header.headroom--not-bottom.headroom--not-top .nav-links li a,
 #header.headroom--not-bottom.headroom--not-top.headroom--pinned .nav-links li a,
 #header.headroom--not-top.headroom--bottom .nav-links li a {
-	font-size: 2rem;
-	padding: 2rem 1rem 0.6rem;
+	//font-size: 2rem;
+	font-size: min(max(1.5rem, 2.5vw), 36px);
+	padding: 2.25rem 1rem 0.8rem;
 	background: #fff;
 	background-size: auto 3%;
 	color: var.$dark;
@@ -132,24 +131,12 @@ html.light #header.header.headroom.headroom--not-bottom.headroom--pinned.headroo
 	transition: all ease-out 0.3s;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
 	#header.headroom--not-bottom.headroom--not-top .nav-links li a,
 	#header.headroom--not-bottom.headroom--not-top.headroom--pinned .nav-links li a,
 	#header.headroom--not-top.headroom--bottom .nav-links li a {
-		font-size: 1.75rem;
-		padding: 2rem 0.5rem 0.85rem;
+		padding: 2.25rem 0.5rem 0.8rem;
 		background: #fff;
-		background-size: auto 3%;
-		color: var.$dark;
-		font-weight: 700;
-		border-bottom-right-radius: 3px;
-		border-bottom-left-radius: 3px;
-		border: 1px #ccc solid;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-		transition: all ease-out 0.3s;
-	}
-	.nav-links li a span {
-		display: none;
 	}
 }
 
@@ -180,7 +167,7 @@ html.light #header.header.headroom.headroom--not-bottom.headroom--pinned.headroo
 	letter-spacing: 1px;
 	margin-bottom: 3px;
 	display: block;
-	font-size: 30%;
+	font-size: 50%;
 }
 
 #header.headroom--not-bottom.headroom--not-top.headroom--pinned .nav-links li a span,

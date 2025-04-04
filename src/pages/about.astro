@@ -45,7 +45,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 		<div class="container top-of-page">
 			<div class="flex padding-x not-dark">
 				<div class="cell small-18">
-					<h1>A Transition...</h1>
+					<h1>One Thing Leads to Another</h1>
 				</div>
 			</div>
 			<div id="intro" class="spacing-btm">
@@ -136,11 +136,10 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 			<div class="flex padding-x align-middle borders grey-bg">
 				<div class="cell small-18">
 					<h2>Side Projects</h2>
-					<p>Outside of work, I have always enjoyed discovering new and past works of art, particluarly regarding painting and film.</p>
+					<p>Discovering new and past works of art, particluarly regarding painting and film, has always been an interest.</p>
 					<p>
-						The following examples are selections from a few side projects, including documenting my son and daughter in portraits as they have grown up, local Urban and Google Maps "found"
-						landscapes, and illustrations inspired by drawing lessons at our kitchen table - that began with a plush rabbit drying on our clothesline and grew into a series of about fifty
-						illustrations.
+						The following examples are selections from a few side projects, including documenting my son and daughter in portraits as they have grown up, local urban and Google Maps "found"
+						landscapes, and illustrations inspired by a few drawing lessons at our kitchen table that began a plush rabbit drying on our clothesline.
 					</p>
 					<div class="flex not-dark">
 						<div class="cell small-18" id="swiper-vertical-nav">
@@ -372,6 +371,18 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 					margin-top: 2rem;
 				}
 			}
+
+			@media (max-width: 500px) {
+				#slideshow-container .borders,
+				.borders {
+					padding: 2.5rem 1.25rem 3rem;
+				}
+				.swiper-pagination-v .swiper-pagination-bullet {
+					font-size: 0.75rem;
+					padding: 0.6rem 0.5rem 0.5rem;
+				}
+			}
+
 			@media (max-width: 450px) {
 				.swiper-pagination-h .swiper-pagination-bullet {
 					height: 9px !important;
@@ -407,7 +418,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 			});
 
 			// IMAGES
-			var floor = ['Portraits', 'Landscape', 'Drawings'];
+			var floor = ['Portraits', 'Landscapes', 'Drawings'];
 			var direction = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
 
 			new Swiper('.swiper-container-v', {
@@ -441,7 +452,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				speed: 1000,
 				delay: 10000,
 				autoHeight: true,
-				spaceBetween: 30,
+				spaceBetween: 50,
 				nested: true,
 			});
 		});

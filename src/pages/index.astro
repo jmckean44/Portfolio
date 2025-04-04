@@ -49,13 +49,15 @@ import thomas from '../img/sites/7stthomas.webp';
 			<div class="flex padding-x">
 				<div class="cell small-18">
 					<p class="justify width">
-						I am a <strong>Frontend Web Developer</strong> with a background in <strong>web design</strong> and <strong>visual arts</strong>.
+						Coming from a background in <strong>Visual Arts</strong> and <strong>Web Design</strong>, I would likely sit somewhere in the middle of the <strong>Frontend Web Developer</strong> spectrum.
+						Working for smaller marketing agencies has given me the opportunity to manage a wide range of projects and responsibilities.
 					</p>
 					<p class="justify width">
 						I have a comprehensive understanding of the fundamentals of <strong class="bold">composition</strong> and <strong>design</strong> and apply principles from these disciplines towards <strong
 							>digital content creation</strong
 						> and the processes of converting designs into accessible, performant, device-tested, responsive websites.
 					</p>
+					<p class="justify width"></p>
 					<p>For more detailed information, please see my <a class="underline" href="./Jeff-McKean-Resume.pdf" target="_blank">resume</a>.</p>
 				</div>
 				<!-- <div class="cell small-18 medium-8">
@@ -85,7 +87,7 @@ import thomas from '../img/sites/7stthomas.webp';
 		<div class="container">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h1>Active Sites</h1>
+					<h1 class="border-top">Active Sites</h1>
 					<p class="justify width">
 						The following custom designed active site examples were created for <a target=" _blank" href="https://pbmarketing.ca/" class="underline" aria-label="offsite link to
 						pbmarketing.ca"
@@ -120,7 +122,7 @@ import thomas from '../img/sites/7stthomas.webp';
 		<div class="container top">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h2>HTML Email Campaigns</h2>
+					<h2 class="border-top">HTML Email Campaigns</h2>
 				</div>
 				<div class="cell small-18">
 					<p class="width">
@@ -140,42 +142,42 @@ import thomas from '../img/sites/7stthomas.webp';
 					<div id="campaigns">
 						<div>
 							<label class="label" for="dale">
-								<input type="radio" name="campaigns[]" value="dale" class="radio-input" />
+								<input type="radio" name="campaign" value="dale" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={html7Dale} formats={['avif', 'webp']} alt="7 Dale" />
 						</div>
 						<div>
 							<label class="label" for="mrc">
-								<input type="radio" name="campaigns[]" value="mrc" class="radio-input" />
+								<input type="radio" name="campaign" value="mrc" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={htmlMRC} formats={['avif', 'webp']} alt="Marina Resort Cavtat" />
 						</div>
 						<div>
 							<label class="label" for="winslow">
-								<input type="radio" name="campaigns[]" value="winslow" class="radio-input" />
+								<input type="radio" name="campaign" value="winslow" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={htmlWinslow} formats={['avif', 'webp']} alt="The Winslow" />
 						</div>
 						<div>
 							<label class="label" for="vanguard">
-								<input type="radio" name="campaigns[]" value="vanguard" class="radio-input" />
+								<input type="radio" name="campaign" value="vanguard" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={htmlVanguard} formats={['avif', 'webp']} alt="The Vanguard" />
 						</div>
 						<div>
 							<label class="label" for="diamond">
-								<input type="radio" name="campaigns[]" value="diamond" class="radio-input" />
+								<input type="radio" name="campaign" value="diamond" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={htmlDiamond} formats={['avif', 'webp']} alt="The Diamond Rentals" />
 						</div>
 						<div>
 							<label class="label" for="kingsway">
-								<input type="radio" name="campaigns[]" value="kingsway" class="radio-input" />
+								<input type="radio" name="campaign" value="kingsway" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={kingsway2} formats={['avif', 'webp']} alt="Kingsway By The River" />
@@ -187,7 +189,7 @@ import thomas from '../img/sites/7stthomas.webp';
 	</section>
 
 	<section id="featured-site">
-		<div class="container top btm">
+		<div class="container btm">
 			<div class="flex">
 				<h2>Featured Site</h2>
 			</div>
@@ -296,7 +298,7 @@ import thomas from '../img/sites/7stthomas.webp';
 		<div class="container top">
 			<div class="flex padding-x">
 				<div class="cell">
-					<h2>Web Limbo</h2>
+					<h2 class="border-top">Web Limbo</h2>
 					<p class="width">
 						The following real estate developer projects have mostly been retired, although the first two are still active. The other projects with a dark background have marketing materials examples
 						that can be seen if you click on them.
@@ -459,7 +461,7 @@ import thomas from '../img/sites/7stthomas.webp';
 		}
 	</script>
 
-	<!-- <video class="fireworks" src="./fireworks-wh.mp4" autoplay playsinline muted loop poster=""></video> -->
+	<video class="fireworks" src="./fireworks-wh.mp4" autoplay playsinline muted loop poster=""></video>
 </Layout>
 
 <script>
@@ -730,6 +732,7 @@ import thomas from '../img/sites/7stthomas.webp';
 		#featured-site .container {
 			border: 0;
 			background: none;
+			padding: 0 0 1.25rem;
 		}
 	}
 

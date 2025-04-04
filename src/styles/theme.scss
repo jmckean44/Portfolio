@@ -290,16 +290,16 @@ html html.dark #header.headroom--not-bottom.headroom--not-top .nav-links li a {
 	color-scheme: dark;
 }
 
-@media (max-width: 800px) {
-	.controls {
-		position: absolute;
-		left: auto;
-		margin-top: 15%;
-	}
-}
+// @media (max-width: 800px) {
+// 	.controls {
+// 		position: absolute;
+// 		left: auto;
+// 		margin-top: 15%;
+// 	}
+// }
 
 @media (max-width: 500px) {
 	.controls {
-		margin-top: 65px;
+		margin-top: 85px;
 	}
 }
