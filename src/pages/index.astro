@@ -48,9 +48,6 @@ import thomas from '../img/sites/7stthomas.webp';
 			</div>
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<!-- <p class="justify width">
-						My name is <a target="_blank" class="underline" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPxS8HdRDiiUpnFn1Pf1jgSmM32VSgarREdGFqMK9zmvgM5p_M">...</a>
-					</p> -->
 					<p class="justify width">
 						With a background in <strong>Visual Arts</strong> and <strong>Web Design</strong>, I have a comprehensive understanding of the fundamentals of <strong class="bold">composition</strong> and
 						<strong>design</strong> and apply principles from these disciplines towards <strong>digital content creation</strong> and the process of converting designs into accessible, performant, device-tested,
@@ -64,14 +61,6 @@ import thomas from '../img/sites/7stthomas.webp';
 						>.
 					</p>
 				</div>
-
-				<!-- <div class="cell small-18 medium-7 large-7">
-					<p class="justify">
-						I have a comprehensive understanding of the fundamentals of <strong class="bold">composition</strong> and <strong>design</strong> and apply principles from these disciplines towards <strong
-							>digital content creation</strong
-						> and the processes of converting designs into accessible, performant, device-tested, responsive websites.
-					</p>
-				</div> -->
 			</div>
 		</div>
 	</section>
@@ -182,21 +171,21 @@ import thomas from '../img/sites/7stthomas.webp';
 		</div>
 	</section>
 
-	<section id="featured-site">
-		<div class="container">
-			<div class="flex padding-x">
-				<div class="cell small-18">
-					<h2 class="border-top">Featured Site</h2>
-				</div>
+	<div class="container" id="featured-site-heading">
+		<div class="flex padding-x">
+			<div class="cell small-18">
+				<h2 class="border-top">Featured Site</h2>
 			</div>
 		</div>
+	</div>
 
+	<section id="featured-site">
 		<div class="container btm featured-site-bg">
 			<p class="featured-details">
 				The <strong><a class="underline" href="/mrc">Marina Resort Cavtat</a></strong> site is a multilingual registration landing page for an up and coming resort in Croatia. The full site (available
 				soon) is built using <a class="underline" target="_blank" href="https://astro.build/">Astro JS</a> and includes GSAP, Scrolltrigger, and SplitText parallaxing.
 			</p>
-			<p>The form is integrated with Salesforce Marketing Cloud through <a class="underline" target="_blank" href="https://onyx-technologies.com/">Onyx Technologies</a>.</p>
+			<p>The form is integrated with Salesforce Marketing Cloud through <a class="underline" target="_blank" href="https://onyx-technologies.com/">Onyx Technologies</a></p>
 
 			<div class="flex display-formats">
 				<div class="laptop-container">
@@ -296,7 +285,7 @@ import thomas from '../img/sites/7stthomas.webp';
 				<div class="cell">
 					<h2 class="border-top">Web Limbo</h2>
 					<p class="width">
-						The following real estate developer projects have mostly been retired, although the first two are still active. The other projects with a dark background have marketing materials examples
+						The following real estate developer projects have mostly been retired, although the first two are still active. The other projects with a dark background have marketing material examples
 						that can be seen if you click on them.
 					</p>
 					<p class="width">
@@ -597,11 +586,14 @@ import thomas from '../img/sites/7stthomas.webp';
 			bottom: 0;
 		}
 		.swiper-pagination-bullet {
-			background: #ccc;
+			background: #021e42;
 			cursor: pointer;
+			width: 12px;
+			height: 12px;
+			opacity: 1 !important;
 		}
 		.swiper-pagination-bullet-active {
-			background: #021e42;
+			background: #ff9000;
 		}
 		.swiper-slide {
 			display: flex;
@@ -684,6 +676,9 @@ import thomas from '../img/sites/7stthomas.webp';
 	/* =============================================
 			FEATURED SITE
 	================================================ */
+	#featured-site-heading {
+		margin: 50px auto 1rem;
+	}
 	#featured-site {
 		padding: 0 1.25rem;
 	}

@@ -273,11 +273,11 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				<div class="cell small-18 medium-10 large-10">
 					<h1>An Interest in Colour</h1>
 					<p class="width justify">
-						Learning about the effects of colour - in context to each other, when mixed together to achieve a particluar hue or tone, and discovering the "<a
+						Learning about the effects of colour - in context to each other, when mixed together to achieve a particluar hue or tone, along with discovering the "<a
 							target="_blank"
 							class="underline"
 							href="https://www.ways-of-seeing.com/">Ways of Seeing</a
-						>" the visual and psychological implications of colour and form by great artists has been an ongoing interest, including the example below.
+						>" the visual and psychological implications of colour and form by great artists has been a persistant interest, including the example below.
 					</p>
 					<p class="width justify">
 						A friend introduced me to Scientific American magazine that had an <a target="_blank" class="underline" href="./Scientific-American-Pollock.pdf">article</a> about a scientific study looking
@@ -314,6 +314,10 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				height: 100%;
 				object-fit: cover;
 			}
+			#slideshow-container .swiper-wrapper {
+				padding-bottom: 30px;
+				border-bottom: 1px red solid;
+			}
 
 			#slideshow-container .swiper {
 				overflow: hidden;
@@ -321,6 +325,14 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 			#slideshow-container .borders {
 				padding: 2.5rem 1% 3rem;
 			}
+			/* #slideshow-container .swiper-container-v {
+				overflow: hidden;
+				aspect-ratio: 1 / 1.25;
+			} */
+			/* #slideshow-container .swiper-container-h {
+				overflow: hidden;
+				aspect-ratio: 1 / 1.25;
+			} */
 			#slideshow-container .swiper-slide {
 				background: #f9f9f9;
 			}
@@ -332,22 +344,14 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				padding-right: 15px;
 				margin-top: -30px;
 				text-align: right;
-				color: #3a3a42;
-			}
-			#slideshow-container #portraits .swiper-slide p {
-				color: #fff;
-			}
-			#slideshow-container #landscapes .swiper-slide p,
-			#slideshow-container #landscapes .swiper-slide p a {
-				margin-top: 30px;
-				padding-right: 0;
-				text-align: left;
+				color: #333;
 			}
 			#slideshow-container .container.images img {
 				border: 0;
 			}
 			#slideshow-container .swiper-pagination {
-				position: relative !important;
+				bottom: -25px !important;
+				margin-bottom: 30px;
 			}
 			#slideshow-container .swiper-pagination-bullet-active {
 				background: #ff9000;
@@ -437,7 +441,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				autoHeight: false,
 				speed: 1000,
 				delay: 5000,
-				spaceBetween: 10,
+				spaceBetween: 25,
 			});
 
 			new Swiper('.swiper-container-h', {
