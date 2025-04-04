@@ -15,9 +15,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Mailchimp API credentials
-    $apiKey = '9ae3a523bae7f03d82d138a966f0a93a-us9'; // Replace with your Mailchimp API key
-    $serverPrefix = 'us9'; // Replace with your Mailchimp server prefix (e.g., 'us1', 'us2')
-    $listId = 'f92b8abf94'; // Replace with your Mailchimp Audience ID
+    $apiKey = ''; // Replace with your Mailchimp API key
+    $serverPrefix = ''; // Replace with your Mailchimp server prefix (e.g., 'us1', 'us2')
+    $listId = ''; // Replace with your Mailchimp Audience ID
 
     // Mailchimp API endpoint
     $url = "https://$serverPrefix.api.mailchimp.com/3.0/campaigns";
