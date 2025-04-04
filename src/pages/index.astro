@@ -88,6 +88,7 @@ import thomas from '../img/sites/7stthomas.webp';
 						>, a full-service marketing and communications agency that provides a suite of marketing services, encompassing everything from strategy and planning to execution and analytics, covering
 						both digital and traditional channels, to developers in the real estate industry.
 					</p>
+					<p class="justify width">Click on a site for details and a link to the live site.</p>
 					<br />
 				</div>
 				<div class="cell small-18 filter">
@@ -182,18 +183,20 @@ import thomas from '../img/sites/7stthomas.webp';
 	</section>
 
 	<section id="featured-site">
-		<div class="container btm">
-			<div class="flex">
-				<h2>Featured Site</h2>
+		<div class="container">
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h2 class="border-top">Featured Site</h2>
+				</div>
 			</div>
+		</div>
 
+		<div class="container btm featured-site-bg">
 			<p class="featured-details">
-				The <strong><a class="underline" href="/mrc">Marina Resort Cavtat</a></strong> site is currently a multilingual registration landing page for an up and coming resort in Croatia.
+				The <strong><a class="underline" href="/mrc">Marina Resort Cavtat</a></strong> site is a multilingual registration landing page for an up and coming resort in Croatia. The full site (available
+				soon) is built using <a class="underline" target="_blank" href="https://astro.build/">Astro JS</a> and includes GSAP, Scrolltrigger, and SplitText parallaxing.
 			</p>
-			<p>
-				The full site (available soon) is built using <a class="underline" target="_blank" href="https://astro.build/">Astro JS</a> and includes GSAP, Scrolltrigger, and SplitText parallaxing.
-			</p>
-			<p>The form is integrated with Salesforce Marketing Cloud through <a class="underline" target="_blank" href="https://onyx-technologies.com/">Onyx Technologies</a></p>
+			<p>The form is integrated with Salesforce Marketing Cloud through <a class="underline" target="_blank" href="https://onyx-technologies.com/">Onyx Technologies</a>.</p>
 
 			<div class="flex display-formats">
 				<div class="laptop-container">
@@ -686,12 +689,14 @@ import thomas from '../img/sites/7stthomas.webp';
 	}
 
 	#featured-site .container {
-		padding: 100px 0 1.25rem;
+		padding: 50px 0 50px;
+		max-width: 1360px;
+	}
+
+	#featured-site .container.featured-site-bg {
 		padding: 100px 0 0;
 		border-radius: 5px;
 		background: rgba(0, 0, 0, 0.05);
-		/* border: 1px #ccc solid; */
-		max-width: 1360px;
 	}
 
 	#featured-site .flex {
@@ -701,7 +706,7 @@ import thomas from '../img/sites/7stthomas.webp';
 	#featured-site p {
 		text-align: center;
 		margin: 0 auto 1rem;
-		max-width: 700px;
+		max-width: 750px;
 		padding: 0 1.25rem;
 	}
 
