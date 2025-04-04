@@ -101,7 +101,7 @@ import thomas from '../img/sites/7stthomas.webp';
 		</div>
 	</section>
 
-	<section id="htmls">
+	<section id="htmls-container">
 		<div class="container top">
 			<div class="flex padding-x">
 				<div class="cell small-18">
@@ -111,14 +111,14 @@ import thomas from '../img/sites/7stthomas.webp';
 					<p class="width">
 						The following selection of <strong>HTML Email campaigns</strong> were hand-coded in Visusal Studio Code, tested in Litmus, and deployed through Mailchimp.
 					</p>
-					<div class="cell small-18">
+					<div class="cell small-18 p-before-form">
 						<p class="width">To receive a test in your inbox (not set up yet), please enter your email address, select one of the examples and click send.</p>
 					</div>
 				</div>
 			</div>
 			<div>
 				<form id="htmls" action="" method="POST">
-					<input type="email" name="email" class="email" placeholder="Email" />
+					<input type="email" name="email" class="email" placeholder="Email" required />
 					<input class="btn" name="submit" type="submit" value="SEND" />
 					<div class="response"></div>
 
@@ -441,43 +441,51 @@ import thomas from '../img/sites/7stthomas.webp';
 
 <script is:inline>
 	document.addEventListener('astro:page-load', () => {
+		const form = document.getElementById('htmls');
+		const radioButtons = document.querySelectorAll('.radio-input');
+
 		if (!form) {
 			console.error('Form element not found');
 			return;
 		}
 
-		const form = document.getElementById('htmls');
+		radioButtons.forEach((radio) => {
+			radio.addEventListener('change', function () {
+				console.log(`${radio.value}`);
+				if (radio.checked) {
+					if (radio.value === 'dale') {
+						form.action = '/htmls/dale.php';
+						console.log(`${form.action}`);
+					} else if (radio.value === 'mrc') {
+						form.action = '/htmls/mrc.php';
+					} else if (radio.value === 'winslow') {
+						form.action = '/htmls/winslow.php';
+					} else if (radio.value === 'vanguard') {
+						form.action = '/htmls/vanguard.php';
+					} else if (radio.value === 'diamond') {
+						form.action = '/htmls/diamond.php';
+					} else if (radio.value === 'kingsway') {
+						form.action = '/htmls/kingsway.php';
+					} else {
+						form.action = '';
+					}
+				}
+			});
+		});
 
-		form.addEventListener('submit', async function () {
+		//console.log(form);
+
+		form.addEventListener('submit', async function (e) {
 			const formData = new FormData(form);
-			const radioButtons = document.querySelectorAll('.radio-input');
+			const isRadioChecked = Array.from(radioButtons).some((radio) => radio.checked);
 			e.preventDefault();
 
-			radioButtons.forEach((radio) => {
-				radio.addEventListener('change', function () {
-					console.log(`${radio.value}`);
-					if (radio.checked) {
-						if (radio.value === 'dale') {
-							form.action = '/htmls/dale.php';
-							console.log(`${form.action}`);
-						} else if (radio.value === 'mrc') {
-							form.action = '/htmls/mrc.php';
-						} else if (radio.value === 'winslow') {
-							form.action = '/htmls/winslow.php';
-						} else if (radio.value === 'vanguard') {
-							form.action = '/htmls/vanguard.php';
-						} else if (radio.value === 'diamond') {
-							form.action = '/htmls/diamond.php';
-						} else if (radio.value === 'kingsway') {
-							form.action = '/htmls/kingsway.php';
-						} else {
-							form.action = '';
-						}
-					}
-				});
-			});
-
 			const responseDiv = document.querySelector('.response');
+
+			if (!isRadioChecked) {
+				responseDiv.innerHTML = `<p style="color: red;">Please select one of the HTMLs below and try again.</p>`;
+				return;
+			}
 
 			try {
 				const response = await fetch(form.action, {

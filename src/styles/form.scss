@@ -35,15 +35,15 @@ $input-transition: all ease 0.5s;
 
 form {
 	width: 100%;
-	max-width: 400px;
+	//max-width: 400px;
 	text-transform: uppercase;
 }
 
-form#htmls {
+form#send-html {
 	max-width: 100%;
 }
 
-form#htmls .email {
+form#send-html .email {
 	max-width: 300px;
 }
 
