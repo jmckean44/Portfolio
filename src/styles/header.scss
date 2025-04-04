@@ -92,7 +92,7 @@ html.light #header.header.headroom.headroom--not-bottom.headroom--pinned.headroo
 #header.headroom--not-top.headroom--bottom {
 	//border-bottom: 1px #ccc solid;
 	background: rgba(255, 255, 255, 0.5);
-	//backdrop-filter: blur(5px);
+	backdrop-filter: blur(1px);
 	//box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	padding-bottom: 1rem;
 }

@@ -37,7 +37,7 @@
 .swiper-container-v {
 	height: auto !important;
 	overflow: hidden;
-	aspect-ratio: 1 / 1.2;
+	aspect-ratio: 1 / 1.275;
 	border-radius: 3px;
 }
 
@@ -80,7 +80,7 @@
 	color: #fff;
 	background: var.$dark;
 	opacity: 1;
-	border-radius: 3px;
+	border-radius: 2px;
 	text-transform: uppercase;
 	letter-spacing: 0;
 	transition: all 0.3s ease;
@@ -162,5 +162,4 @@
 	width: 100% !important;
 	left: 0;
 	right: 0;
-	background-color: pink;
 }

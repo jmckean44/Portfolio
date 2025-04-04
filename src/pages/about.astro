@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import { Picture } from 'astro:assets';
 import '../styles/swiper.scss';
-
 import { Image } from 'astro:assets';
 
 import anv from '../img/sites/anv.webp';
@@ -87,12 +86,12 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 						I was asked to create and unify branding between print, web, and tradeshow booths, as well as build HTML tabled websites, post news releases, edit, modify and optimize video and images,
 						and create Adobe Flash animations for web and banner Ads.
 					</p>
-					<p class="text-sm">
+					<!-- <p class="text-sm">
 						<em>
-							See my 15 minutes of fame in this PDAC newsletter <a target="_blank" class="underline" href="/PDAC-Newsletter.pdf">photo credit</a> of the back of someones head (taken at the annual PDAC
-							Convention held at the Metro Toronto Convention Centre).</em
+							PDAC newsletter <a target="_blank" class="underline" href="/PDAC-Newsletter.pdf">photo credit</a> of the back of someones head (taken at the annual PDAC Convention held at the Metro Toronto
+							Convention Centre).</em
 						>
-					</p>
+					</p> -->
 					<!-- <p>
 						<a target="_blank" class="underline" href="https://www.linkedin.com/in/doug-webster-7a82a12/">Doug Webster</a>, a Geogologist, started the company to meet the growing demand for an online
 						presence for companies in the Mining and Exploration industry, including <a target="_blank" class="underline" href="https://pdac.ca/"
@@ -315,8 +314,8 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				object-fit: cover;
 			}
 
-			#slideshow-container .swiper {
-				overflow: hidden;
+			#slideshow-container .swiper-container {
+				padding-bottom: 0;
 			}
 			#slideshow-container .borders {
 				padding: 2.5rem 1% 3rem;
@@ -346,9 +345,10 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 			#slideshow-container .container.images img {
 				border: 0;
 			}
-			#slideshow-container .swiper-pagination {
+			/* #slideshow-container .swiper-pagination-h {
 				position: relative !important;
-			}
+				background: red;
+			} */
 			#slideshow-container .swiper-pagination-bullet-active {
 				background: #ff9000;
 			}
@@ -362,7 +362,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				max-width: 300px;
 				border: 1px #f2f2f2 solid;
 				padding: 5px;
-				border-radius: 5px;
+				border-radius: 3px;
 				background: #fff;
 			}
 			.text-sm {
@@ -437,7 +437,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				autoHeight: false,
 				speed: 1000,
 				delay: 5000,
-				spaceBetween: 10,
+				spaceBetween: 25,
 			});
 
 			new Swiper('.swiper-container-h', {
@@ -449,11 +449,12 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 						return '<span class="' + className + '">' + direction[index] + '</span>';
 					},
 				},
-				direction: 'horizontal',
+				//direction: 'horizontal',
+				effect: 'fade',
 				autoplay: false,
 				speed: 1000,
 				delay: 5000,
-				autoHeight: true,
+				autoHeight: false,
 				spaceBetween: 25,
 				nested: true,
 			});
