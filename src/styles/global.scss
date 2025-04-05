@@ -292,6 +292,10 @@ strong {
 	text-align: justify;
 }
 
+.left {
+	text-align: left !important;
+}
+
 @media (max-width: 640px) {
 	.justify {
 		text-align: left;
@@ -1022,7 +1026,7 @@ p a {
 	NEW PAGE
 ================================================ */
 #new .project {
-	padding: 2rem 1.25rem 2rem;
+	padding: 2rem 1.5rem 2rem;
 	background: #f9f9f9;
 	border-radius: 3px;
 	border: 1rem #fff solid;
@@ -1044,8 +1048,25 @@ p a {
 	background: var.$theme-clr !important;
 }
 
+#new #generate-user p {
+	font-size: 1rem;
+}
+
 #new #sitemap {
 	overflow: hidden;
+}
+
+@media (max-width: 500px) {
+	#new .project-container {
+		padding: 60px 0 80px;
+	}
+	#new .project-container .project {
+		border: 0;
+		padding: 2rem 2.5rem 2rem;
+	}
+	#new .project#generate-user {
+		margin-top: 1.5rem;
+	}
 }
 
 /* =============================================

@@ -29,27 +29,16 @@ $input-transition: all ease 0.5s;
 	margin-bottom: 1rem;
 }
 
-#form-container {
+#contact #form-container {
 	max-width: 400px;
+	margin: 0 auto;
 }
 
 #contact form {
 	width: 100%;
-	//max-width: 400px;
+	max-width: 400px;
 	margin: 0 auto;
 	text-transform: uppercase;
-}
-
-#contact form .cell {
-	border: 1px red solid;
-}
-
-form#send-html {
-	max-width: 100%;
-}
-
-form#send-html .email {
-	max-width: 300px;
 }
 
 form > div {
