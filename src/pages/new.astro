@@ -16,20 +16,17 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 		<div class="container top-of-page">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h1>Recent Projects</h1>
-				</div>
-			</div>
-
-			<div class="cell small-18">
-				<div class="flex padding-x" id="intro">
-					<div class="cell small-18">
-						<p class="width">
-							The components below were built with vanilla Javascript and are either in prodcution or were created as part of a 37 hour <a
-								target="_blank"
-								class="underline"
-								href="https://www.traversymedia.com/modern-javascript-2-0">Modern JavaScript From The Beginning</a
-							> course to strengthen my Javascript skills.
-						</p>
+					<div class="flex padding-x" id="intro">
+						<div class="cell small-18">
+							<h1>Projects</h1>
+							<p class="width justify">
+								The components below were built with vanilla Javascript and are either in production or were created as part of a 37 hour <a
+									target="_blank"
+									class="underline"
+									href="https://www.traversymedia.com/modern-javascript-2-0">JavaScript</a
+								> course to strengthen my Javascript skills.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -37,10 +34,31 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 	</section>
 
 	<section>
-		<div class="container top-med btm-med project-container">
+		<div class="container top med films">
+			<div class="flex padding-x align-middle">
+				<div class="cell small-18">
+					<h2 class="border-top">Flixx Movie Search</h2>
+					<p class="width justify">
+						This Flixx style movie component was built using The Movie Database API, which uses the open source mobile touch slider <a target="_blank" href="https://swiperjs.com/" class="underline"
+							>Swiper</a
+						>, pagination, .......
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container top btm project-container">
+			<div class="flex padding-x align-middle">
+				<div class="cell small-18">
+					<h2 class="border-top sm"></h2>
+				</div>
+			</div>
+
 			<div class="flex padding-x">
 				<div class="cell small-18 medium-9 large-9 project">
-					<h2>Shopping List</h2>
+					<h3>Shopping List</h3>
 					<p>Add, delete, and filter through your list of shopping to-do's.</p>
 					<form id="item-form">
 						<div class="form-control">
@@ -63,7 +81,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 					<button id="clear" class="btn-clear">CLEAR ALL</button>
 				</div>
 				<div class="cell small-18 medium-9 large-9 project" id="generate-user">
-					<h2>Random User Generator</h2>
+					<h3>Random User Generator</h3>
 					<div id="user"></div>
 					<button id="generate" class="btn">
 						<div class="spinner" style="display: none;"></div>
@@ -80,7 +98,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 		<div class="container btm-sm">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h2>Resort Floor Plan UI</h2>
+					<h2 class="border-top">Resort Floor Plan UI</h2>
 				</div>
 			</div>
 
@@ -100,7 +118,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 			</div>
 		</div>
 
-		<section id="floorplans">
+		<div id="floorplans">
 			<div class="select-below">
 				<h3>Select A Bedroom Number</h3>
 			</div>
@@ -123,12 +141,14 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 			<div class="residence-plans">
 				<PictureComponent mobileImgUrl={placeholderMobile} desktopImgUrl={placeholder} loading="lazy" className="clip-image" alt="Marina Resort Cavtat" />
 			</div>
-		</section>
+		</div>
+	</section>
 
+	<section>
 		<div class="container top">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h2>Resort Site Plan UI</h2>
+					<h2 class="border-top">Resort Site Plan UI</h2>
 				</div>
 			</div>
 
@@ -154,25 +174,13 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 			</div>
 		</div>
 
-		<section id="sitemap">
+		<div id="sitemap">
 			<div><mapplic-map data-json="/sitemap/data-res.json"></mapplic-map></div>
-		</section>
-		<script is:inline src="/sitemap/mapplic-res.js"></script>
-	</section>
-	<script is:inline src="/residences.js"></script>
-
-	<br /><br /><br />
-	<section>
-		<div class="container border-container films">
-			<div class="flex padding-x align-middle borders grey-bg">
-				<div class="cell small-18 medium-9">
-					<h1>Flixx Fetch API Movie Search</h1>
-					<p>Coming soon.</p>
-				</div>
-				<div class="cell small-18 medium-9"></div>
-			</div>
 		</div>
 	</section>
+
+	<script is:inline src="/sitemap/mapplic-res.js"></script>
+	<script is:inline src="/residences.js"></script>
 
 	<style>
 		#sitemap {

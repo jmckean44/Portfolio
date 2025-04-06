@@ -30,13 +30,13 @@ $input-transition: all ease 0.5s;
 }
 
 #contact #form-container {
-	max-width: 400px;
+	max-width: 400px !important;
 	margin: 0 auto;
 }
 
 #contact form {
 	width: 100%;
-	max-width: 400px;
+	max-width: 400px !important;
 	margin: 0 auto;
 	text-transform: uppercase;
 }

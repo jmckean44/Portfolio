@@ -9,15 +9,6 @@
 	padding-bottom: 125px;
 }
 
-// #sitemap .gradient {
-// 	position: absolute;
-// 	width: 100%;
-// 	height: 100vh;
-// 	background: rgb(255, 0, 0);
-// 	background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 0, 0) 48%, rgba(255, 0, 0, 1) 100%);
-// 	z-index: 99999999999;
-// }
-
 /* ===========================
 	 SELECT PLANS
 =============================== */
@@ -64,14 +55,13 @@
 
 #floorplans .residence-choice select {
 	color: #fff;
-	font-size: 0.8rem;
-	font-weight: 600;
+	font-size: 0.9rem;
+	font-family: 'CalibriBold', ans-serif;
 	padding: 0.4rem 0.75rem 0.3rem;
 	background: #bc955b url('../img/arrow-down-select-wh.svg') no-repeat right 10px center;
 	background-size: 17px;
 	margin: 0 0 0.45rem;
 	width: 100%;
-	font-family: var.$font-sans-serif;
 	text-transform: uppercase;
 	border: 0;
 	appearance: none;
@@ -182,7 +172,7 @@
 }
 
 #floorplans .residence-plans .details h5 span {
-	font-weight: 400;
+	font-family: 'CalibriBold', ans-serif;
 	margin-left: 1rem;
 	margin-right: 1rem;
 }
@@ -195,12 +185,11 @@
 	color: #fff;
 	font-size: 0.9rem;
 	padding: 0.6rem 1rem;
-	background: var.$dark url('./img/arrow-down-select-wh.svg') no-repeat right 10px center;
+	background: var.$dark url('../img/arrow-down-select-wh.svg') no-repeat right 10px center;
 	background-size: 17px;
 	margin: 0 0 1rem;
 	border: 0;
-	font-family: var.$font-sans-serif;
-	font-weight: 500;
+	font-family: 'CalibriBold', ans-serif;
 	line-height: 1.2;
 	border: 0;
 	appearance: none;
@@ -219,7 +208,7 @@
 #floorplans .residence-plans .details .floorplan,
 #floorplans .residence-plans .details .download,
 #floorplans .residence-plans .details .siteplan {
-	font-weight: 600;
+	font-family: 'CalibriBold', ans-serif;
 	max-width: 150px;
 	font-size: 1.1rem;
 	width: 100%;
@@ -241,7 +230,7 @@
 }
 
 #floorplans .residence-plans .details .viewbook {
-	background: url('./img/icon-external-link.svg') no-repeat right 4px center;
+	background: url('../img/icon-external-link.svg') no-repeat right 4px center;
 	background-size: 14px;
 	font-weight: 500;
 	margin-bottom: 1.5rem;
@@ -250,13 +239,13 @@
 }
 
 #floorplans .residence-plans .details .viewbook:hover {
-	background: url('./img/icon-external-link.svg') no-repeat right 1px center;
+	background: url('../img/icon-external-link.svg') no-repeat right 1px center;
 	background-size: 14px;
 }
 
 #floorplans .residence-plans .details .download {
 	display: inline-block;
-	background: url('./img/residence-arrow-download.svg') no-repeat right center;
+	background: url('../img/residence-arrow-download.svg') no-repeat right center;
 	background-size: 25px;
 	font-weight: 500;
 	padding: 0.2rem 0.5rem 0.2rem 0;

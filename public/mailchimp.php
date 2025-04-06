@@ -16,8 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Mailchimp API credentials
     $apiKey = ''; // Replace with your Mailchimp API key
-    $serverPrefix = ''; // Replace with your Mailchimp server prefix (e.g., 'us1', 'us2')
-    $listId = ''; // Replace with your Mailchimp Audience ID
+    $serverPrefix = 'us9'; // Replace with your Mailchimp server prefix (e.g., 'us1', 'us2')
+    $listId = 'f92b8abf94'; // Replace with your Mailchimp Audience ID
 
     // Mailchimp API endpoint
     $url = "https://$serverPrefix.api.mailchimp.com/3.0/campaigns";

@@ -205,11 +205,11 @@ h6 {
 }
 
 h1 {
-	font-size: min(max(2.5rem, 3.5vw), 60px);
+	font-size: min(max(3.5rem, 5vw), 80px);
 }
 
 h2 {
-	font-size: min(max(2.25rem, 3vw), 50px);
+	font-size: min(max(2.5rem, 4vw), 50px);
 }
 
 h3 {
@@ -495,6 +495,10 @@ $container-padding-mobile: 1.25rem;
 	padding: 125px $container-padding 0;
 }
 
+.container.med {
+	padding: 100px $container-padding 0;
+}
+
 .container.btm {
 	padding: 0 $container-padding 125px;
 }
@@ -659,11 +663,6 @@ $container-padding-mobile: 1.25rem;
 /* =================================
 	 INTRO
 ==================================== */
-
-#intro h1 {
-	font-size: 180%;
-}
-
 #home #intro h1 {
 	margin-bottom: 2rem;
 }
@@ -692,6 +691,10 @@ $container-padding-mobile: 1.25rem;
 .border-top {
 	border-top: var.$dark 1px solid;
 	padding-top: 1.5rem;
+}
+
+.border-top.sm {
+	padding-top: 0;
 }
 
 .absolute {

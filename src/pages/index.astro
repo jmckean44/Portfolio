@@ -66,20 +66,19 @@ import thomas from '../img/sites/7stthomas.webp';
 		<div class="container">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h1 class="border-top">Active Sites</h1>
+					<h2 class="border-top">Active Sites</h2>
 					<p class="justify width">
-						The following custom designed site examples were created for <a target=" _blank" href="https://pbmarketing.ca/" class="underline" aria-label="offsite link to
-						pbmarketing.ca"
-							>P&B Marketing</a
-						>, a full-service marketing and communications agency that provides a suite of marketing services, encompassing everything from strategy and planning to execution and analytics, covering
-						both digital and traditional channels, to developers in the real estate industry.
+						The following custom designed examples were created for <a target=" _blank" href="https://pbmarketing.ca/" class="underline" aria-label="offsite link to
+						pbmarketing.ca">P&B Marketing</a>, a
+						full-service marketing and communications agency that provides a suite of marketing services, encompassing everything from strategy and planning to execution and analytics, covering both
+						digital and traditional channels, to developers in the real estate industry.
 					</p>
 					<p class="justify width">Click on a site for details and a link to the live site.</p>
 					<br />
 				</div>
-				<div class="cell small-18 filter">
+				<div class="cell small-18 filter" id="filter-sites">
 					<p class="bold">Filter by build type:</p>
-					<div id="filter-sites">
+					<div>
 						<ul>
 							<li><button class="filter-btn">PHP</button></li>
 							<li><button class="filter-btn">Astro</button></li>
@@ -105,7 +104,7 @@ import thomas from '../img/sites/7stthomas.webp';
 					<h2 class="border-top">HTML Email Campaigns</h2>
 				</div>
 				<div class="cell small-18">
-					<p class="width">
+					<p class="width justify">
 						The following selection of <strong>HTML Email campaigns</strong> were hand-coded in Visusal Studio Code, tested in Litmus, and deployed through Mailchimp.
 					</p>
 					<div class="cell small-18 p-before-form">
@@ -172,18 +171,17 @@ import thomas from '../img/sites/7stthomas.webp';
 		<div class="flex padding-x">
 			<div class="cell small-18">
 				<h2 class="border-top">Featured Site</h2>
+				<p class="width justify">
+					The <strong><a class="underline" href="/mrc">Marina Resort Cavtat</a></strong> site is a multilingual registration landing page for an up and coming resort in Croatia. The full site (available
+					soon) is built using <a class="underline" target="_blank" href="https://astro.build/">Astro JS</a> and includes GSAP, Scrolltrigger, and SplitText parallaxing.
+				</p>
+				<p>The form is integrated with Salesforce Marketing Cloud through <a class="underline" target="_blank" href="https://onyx-technologies.com/">Onyx Technologies</a>.</p>
 			</div>
 		</div>
 	</div>
 
 	<section id="featured-site">
 		<div class="container btm featured-site-bg">
-			<p class="featured-details">
-				The <strong><a class="underline" href="/mrc">Marina Resort Cavtat</a></strong> site is a multilingual registration landing page for an up and coming resort in Croatia. The full site (available
-				soon) is built using <a class="underline" target="_blank" href="https://astro.build/">Astro JS</a> and includes GSAP, Scrolltrigger, and SplitText parallaxing.
-			</p>
-			<p>The form is integrated with Salesforce Marketing Cloud through <a class="underline" target="_blank" href="https://onyx-technologies.com/">Onyx Technologies</a>.</p>
-
 			<div class="flex display-formats">
 				<div class="laptop-container">
 					<Image src={laptop} class="device-mask" alt="Laptop" />
@@ -267,12 +265,26 @@ import thomas from '../img/sites/7stthomas.webp';
 			</div>
 			<div class="swiper-pagination"></div>
 		</div>
+	</section>
 
-		<div style="margin: 4rem auto 1rem; max-width:1200px;text-align:center;padding: 0 1.25rem;">
-			<video playsinline muted controls poster="" style="width: 100%; border: 1px #ccc solid;">
-				<source src="/S2-Video-Wall.mp4" type="video/mp4" />
-			</video>
-			<h3>Sales Centre 9 TV Video Wall Panel</h3>
+	<section id="current-sites">
+		<div class="container">
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h2 class="border-top">Sales Centre Video</h2>
+					<p class="justify width">
+						I was asked to create a 9 panel video wall for a Sales Centre in Mississauga based on what the client was looking for. It was was created in Adobe Premiere. Each panel in the video had to
+						match the 1080p TV monitor.
+					</p>
+				</div>
+			</div>
+			<div style="margin: 2rem auto 1rem; max-width:1400px;text-align:center;">
+				<video playsinline muted controls poster="" style="width: 100%; ">
+					<source src="/S2-Video-Wall.mp4" type="video/mp4" />
+				</video>
+				<br />
+				<h3>Sales Centre 9 TV Video Wall</h3>
+			</div>
 		</div>
 	</section>
 
@@ -281,7 +293,7 @@ import thomas from '../img/sites/7stthomas.webp';
 			<div class="flex padding-x">
 				<div class="cell">
 					<h2 class="border-top">Web Limbo</h2>
-					<p class="width">
+					<p class="width justify">
 						The following real estate developer projects have mostly been retired, although the first two are still active. The other projects with a dark background have marketing material examples
 						that can be seen if you click on them.
 					</p>
@@ -680,7 +692,7 @@ import thomas from '../img/sites/7stthomas.webp';
 			FEATURED SITE
 	================================================ */
 	#featured-site-heading {
-		margin: 50px auto 1rem;
+		margin: 50px auto 2rem;
 	}
 	#featured-site {
 		padding: 0 1.25rem;
@@ -692,8 +704,8 @@ import thomas from '../img/sites/7stthomas.webp';
 	}
 
 	#featured-site .container.featured-site-bg {
-		padding: 100px 0 0;
-		border-radius: 5px;
+		padding: 0;
+		border-radius: 2px;
 		background: rgba(0, 0, 0, 0.05);
 	}
 
@@ -775,7 +787,7 @@ import thomas from '../img/sites/7stthomas.webp';
 	@media (max-width: 1000px) {
 		.display-formats {
 			flex-direction: column;
-			gap: 3rem;
+			gap: 1rem;
 		}
 	}
 
