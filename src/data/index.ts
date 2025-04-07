@@ -193,7 +193,8 @@ export const items: Item[] = [
 		id: 9,
 		name: 'Clean Rooms Plus',
 		slug: 'cleanrooms',
-		description: 'Clean Rooms Plus build contaminate-free clean rooms for multiple industries across North America. ',
+		description:
+			'Clean Rooms Plus build contaminate-free clean rooms for multiple industries across North America. The desktop version of the homepage clean room image sits on top of two videos of people walking to give a sense of activity and movement in the hallways.',
 		details: 'jQuery, PHP, HTML, CSS, Adobe Suite, Homepage Video Underlay',
 		link: 'cleanroomsplus.ca',
 		website: 'https://www.cleanroomsplus.ca/',
