@@ -4,16 +4,8 @@ import { Picture } from 'astro:assets';
 import '../styles/swiper.scss';
 import { Image } from 'astro:assets';
 
-import anv from '../img/sites/anv.webp';
-import loki from '../img/sites/loki.webp';
-import riva from '../img/sites/riva.webp';
 import pdac from '../img/sites/pdac.webp';
 import ific from '../img/sites/ific.webp';
-import tkk from '../img/sites/tkk.webp';
-import rockcliff from '../img/sites/rockcliff.webp';
-import queenston from '../img/sites/qmi.webp';
-import harp from '../img/sites/harp.webp';
-import logos from '../img/sites/logos.webp';
 import pollock from '../img/pollock.webp';
 
 import bunny from '../img/drawings/bunny.webp';
@@ -44,14 +36,11 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 		<div class="container top-of-page">
 			<div class="flex padding-x not-dark">
 				<div class="cell small-18">
-					<h1>One Thing Leads to Another</h1>
+					<h1>About</h1>
 				</div>
 			</div>
 			<div id="intro" class="spacing-btm">
-				<p class="justify width">
-					After working in video production and post-production, I had the opportunity to work as a web designer for Exploration Link Ltd., a boutique web design company that provided print and web
-					services to companies in the Mining and Exploration Industry.
-				</p>
+				<p class="justify width">I had the opportunity to work as a web designer for a company that provided print and web services to companies in the Mining and Exploration Industry.</p>
 			</div>
 		</div>
 	</section>
@@ -62,29 +51,15 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				<div class="cell small-18 medium-9 large-9 small-order-2 medium-order-1">
 					<div class="swiper elink">
 						<div class="swiper-wrapper" id="mining">
-							<div class="swiper-slide"><Picture src={anv} formats={['avif', 'webp']} alt="Allied Nevada" /></div>
-							<div class="swiper-slide"><Picture src={loki} formats={['avif', 'webp']} alt="Loki Innovations" /></div>
-							<div class="swiper-slide"><Picture src={ific} formats={['avif', 'webp']} alt="IFIC" /></div>
-							<div class="swiper-slide"><Picture src={tkk} formats={['avif', 'webp']} alt="TKK" /></div>
-							<div class="swiper-slide"><Picture src={riva} formats={['avif', 'webp']} alt="Riva Modeling" /></div>
-							<div class="swiper-slide"><Picture src={tkk} formats={['avif', 'webp']} alt="Thundermin" /></div>
-							<div class="swiper-slide"><Picture src={logos} formats={['avif', 'webp']} alt="Logos" /></div>
-							<div class="swiper-slide"><Picture src={rockcliff} formats={['avif', 'webp']} alt="Rockcliff" /></div>
-							<div class="swiper-slide"><Picture src={queenston} formats={['avif', 'webp']} alt="Queenston Engineering" /></div>
 							<div class="swiper-slide"><Picture src={pdac} formats={['avif', 'webp']} alt="PDAC" /></div>
-							<div class="swiper-slide"><Picture src={harp} formats={['avif', 'webp']} alt="Harp Capital" /></div>
+							<div class="swiper-slide"><Picture src={ific} formats={['avif', 'webp']} alt="IFIC" /></div>
 						</div>
 					</div>
 				</div>
 				<div class="cell small-18 medium-9 large-9 small-order-1 medium-order-2">
 					<h2>Investor Relations Marketing</h2>
 					<p class="justify">
-						These brochure sites, although dated, are a few examples from my initial introduction to <strong>HTML, CSS, jQuery, web-design</strong>, and <strong>content management</strong> for companies
-						in the investor relations and software development industries.
-					</p>
-					<p class="justify">
-						I was asked to create and unify branding between print, web, and tradeshow booths, as well as build HTML tabled websites, post news releases, edit, modify and optimize video and images,
-						and create Adobe Flash animations for web and banner Ads.
+						I was asked to create and unify branding between print, web, and tradeshow booths, as well as post news releases, edit and optimize video and images, and create animated banner ads.
 					</p>
 					<!-- <p class="text-sm">
 						<em>
@@ -111,12 +86,8 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 				<div class="cell small-18 medium-18 large-8 intro">
 					<h2>Video Production</h2>
 					<p class="justify">
-						Prior to Exploration Link, I worked for <a class="underline" target="_blank" href="https://imageslifemedia.com/">Images Life Media</a>, an event management video production company with a
-						successful niche market in wedding biographies, corporate events, and commercial video services.
-					</p>
-					<p class="justify">
-						I was responsible for recording corporate and wedding videos, filming b+w 8mm & 16mm film, film to video transfers, video editing and effects, and incorporating mixed-media and photography
-						into client projects in the Greater Toronto Area.
+						I worked for <a class="underline" target="_blank" href="https://imageslifemedia.com/">Images Life Media</a>, an event management video production company with a successful niche market in
+						wedding biographies, corporate events, and commercial video services.
 					</p>
 				</div>
 				<div class="cell small-18 medium-18 large-10">
@@ -135,7 +106,6 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 			<div class="flex padding-x align-middle borders grey-bg">
 				<div class="cell small-18">
 					<h2>Side Projects</h2>
-					<p class="left">Discovering new and past works of art, particluarly regarding painting and film, has always been an interest.</p>
 					<p class="left">
 						The following examples are selections from a few side projects, including documenting my son and daughter in portraits as they have grown up, local urban and Google Maps "found"
 						landscapes, and illustrations inspired by drawing lessons at our kitchen table that began with a plush rabbit drying on our clothesline.
@@ -406,7 +376,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 			new Swiper('.elink', {
 				autoplay: true,
 				speed: 1000,
-				delay: 5000,
+				delay: 10000,
 				effect: 'fade',
 				pagination: {
 					el: '.swiper-pagination',

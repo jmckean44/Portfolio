@@ -117,19 +117,6 @@ export const items: Item[] = [
 		category: ItemCategory.Projects,
 	},
 	{
-		id: 17,
-		name: 'Shiu Pong Group',
-		slug: 'shiupong',
-		description:
-			'The Shiu Pong Group manages an extensive portfolio of residential, commercial, and retail properties on behalf of many condominium boards, independent clients, large institutions and investors',
-		details: 'Astro, HTML, CSS, Adobe Suite',
-		link: 'shiupong.com',
-		website: 'https://shiupong.com',
-		type: 'Astro',
-		image: '/shiupong.webp',
-		category: ItemCategory.Projects,
-	},
-	{
 		id: 14,
 		name: 'The Vanguard',
 		slug: 'vanguard',
@@ -212,19 +199,6 @@ export const items: Item[] = [
 		website: 'https://www.wilkinsonconstruction.ca',
 		type: 'PHP',
 		image: '/wilkinson.webp',
-		category: ItemCategory.Projects,
-	},
-	{
-		id: 11,
-		name: 'Kingsway By The River',
-		slug: 'kingsway',
-		description:
-			'Perfectly situated in the heart of Toronto’s prestigious Kingsway neighbourhood, development partners Urban Capital and Northam Realty Advisors created a classic, internationally styled community on the bank of the Humber River.',
-		details: 'jQuery, PHP, HTML, CSS, Adobe Suite',
-		link: 'kingswaybytheriver.ca',
-		website: 'https://kingswaybytheriver.ca/',
-		type: 'PHP',
-		image: '/kingsway.webp',
 		category: ItemCategory.Projects,
 	},
 ];

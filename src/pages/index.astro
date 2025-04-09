@@ -14,28 +14,6 @@ import htmlVanguard from '../img/htmls/vanguard.jpg';
 import kingsway2 from '../img/htmls/kingsway.webp';
 import laptop from '../img/laptop.png';
 import mobile from '../img/mobile.png';
-import aquavil from '../img/sites/aquavil.jpg';
-import barrington from '../img/sites/barrington.jpg';
-import boathaus from '../img/sites/boathaus.jpg';
-import brownstones from '../img/sites/brownstones.jpg';
-import delisle from '../img/sites/delisle.jpg';
-import designhaus from '../img/sites/designhaus.jpg';
-import fuse from '../img/sites/fuse.jpg';
-import genesis from '../img/sites/genesis.jpg';
-import guildwood from '../img/sites/guildwood.jpg';
-import jac from '../img/sites/jac.jpg';
-import kingsway from '../img/sites/kingsway.jpg';
-import mcmurray from '../img/sites/mcmurray.jpg';
-import northeast from '../img/sites/northeast.jpg';
-import peterSt from '../img/sites/peterSt.jpg';
-import ravine from '../img/sites/ravine.jpg';
-import shiplake from '../img/sites/shiplake.jpg';
-import sunrise from '../img/sites/sunrise.jpg';
-import todm from '../img/sites/todm.jpg';
-import union from '../img/sites/union.jpg';
-import url from '../img/sites/url.jpg';
-import arthaus from '../img/sites/arthaus.webp';
-import thomas from '../img/sites/7stthomas.webp';
 ---
 
 <Layout pageTitle="Past & Current Work" pageSiteTitles="">
@@ -49,13 +27,12 @@ import thomas from '../img/sites/7stthomas.webp';
 			<div class="flex padding-x">
 				<div class="cell small-18">
 					<p class="justify width">
-						With a background in <strong>Visual Arts</strong> and <strong>web design</strong>, I have a comprehensive understanding of the fundamentals of <strong class="bold">composition</strong> and
-						<strong>design</strong> and apply principles from these disciplines towards <strong>digital content creation</strong> and the process of converting designs into accessible, performant, device-tested,
-						responsive websites.
+						My name is <strong class="bold">Jeff</strong>. I have a background in <strong>Visual Arts</strong> and <strong>Multimedia</strong> and have been working as a <strong class="bold"
+							>Frontend Web Developer</strong
+						> for clients in the real estate development, engineering, and investor relations industries.
 					</p>
-					<p class="justify width">
-						Working for smaller marketing agencies has given me the opportunity as the principal <strong class="bold">Frontend Web Developer</strong> to manage a wide range of projects and responsibilities.
-						For more detailed information, please see my <a class="underline" href="./Jeff-McKean-Resume.pdf" target="_blank">resume</a>.
+					<p>
+						For more detailed information, please see my <a class="underline" href="./Jeff-McKean-Resume.pdf" target="_blank"><strong>resume</strong></a>.
 					</p>
 				</div>
 			</div>
@@ -68,10 +45,10 @@ import thomas from '../img/sites/7stthomas.webp';
 				<div class="cell small-18">
 					<h2 class="border-top">Active Sites</h2>
 					<p class="justify width">
-						The following custom designed examples were created for <a target=" _blank" href="https://pbmarketing.ca/" class="underline" aria-label="offsite link to
-						pbmarketing.ca">P&B Marketing</a>, a
-						full-service marketing and communications agency that provides a suite of marketing services, encompassing everything from strategy and planning to execution and analytics, covering both
-						digital and traditional channels, to developers in the real estate industry.
+						The following custom designed website examples were created for <a target=" _blank" href="https://pbmarketing.ca/" class="underline" aria-label="offsite link to
+						pbmarketing.ca"
+							><strong>P+B Marketing</strong></a
+						>, a full-service marketing and communications agency that specializes in branding lifestyles across the real estate, hospitality, and service industries.
 					</p>
 					<p class="justify width">Click on a site for details and a link to the live site.</p>
 					<br />
@@ -105,10 +82,12 @@ import thomas from '../img/sites/7stthomas.webp';
 				</div>
 				<div class="cell small-18">
 					<p class="width justify">
-						The following selection of <strong>HTML Email campaigns</strong> were hand-coded in Visusal Studio Code, tested in Litmus, and deployed through Mailchimp.
+						The following selection of <strong>HTML Email Ad campaigns</strong> were hand-coded in <strong>Visusal Studio Code</strong>, tested in <strong>Litmus</strong>, and deployed through <strong
+							>Mailchimp</strong
+						>.
 					</p>
 					<div class="cell small-18 p-before-form">
-						<p class="width">To receive a test in your inbox (not set up yet), please enter your email address, select one of the examples and click send.</p>
+						<!-- <p class="width">To receive a test in your inbox (not set up yet), please enter your email address, select one of the examples and click send.</p> -->
 					</div>
 				</div>
 			</div>
@@ -172,9 +151,10 @@ import thomas from '../img/sites/7stthomas.webp';
 			<div class="cell small-18">
 				<h2 class="border-top">Featured Site</h2>
 				<p class="width justify">
-					The <strong><a class="underline" href="/mrc">Marina Resort Cavtat</a></strong> site is a multilingual registration landing page for an up and coming resort in Croatia. The full site (available
-					soon) is built using <a class="underline" target="_blank" href="https://astro.build/">Astro JS</a> and includes GSAP, Scrolltrigger, and SplitText parallaxing.
+					<strong><a class="underline" href="/mrc">Marina Resort Cavtat</a></strong> is a multilingual registration landing page for an up and coming resort in Croatia (full site available soon) is built
+					using <a class="underline" target="_blank" href="https://astro.build/">Astro JS</a> and includes GSAP, Scrolltrigger, and SplitText parallaxing.
 				</p>
+				<p>The plane animation concept reveals distances to the resort from major cities and toggles between a mobile and desktop version 900 pixels.</p>
 				<p>The form is integrated with Salesforce Marketing Cloud through <a class="underline" target="_blank" href="https://onyx-technologies.com/">Onyx Technologies</a>.</p>
 			</div>
 		</div>
@@ -197,8 +177,9 @@ import thomas from '../img/sites/7stthomas.webp';
 				</div>
 			</div>
 			<div id="timeline">
-				<video class="timeline" autoplay playsinline muted loop poster="/timeline-poster.webp">
-					<source src="/timeline.mp4" type="video/mp4" />
+				<video class="timeline" playsinline autoplay muted loop style="pointer-events: none;" poster="/poster-desktop.webp">
+					<source src="/timeline-desktop.mp4" type="video/mp4" media="all and (min-width:850px)" />
+					<source src="/timeline-mobile.mp4" type="video/mp4" media="all and (max-width:849px)" />
 				</video>
 			</div>
 		</div>
@@ -210,8 +191,7 @@ import thomas from '../img/sites/7stthomas.webp';
 				<div class="cell small-18">
 					<h2 class="border-top">Social Media Ads</h2>
 					<p class="width">
-						These animated ads are the 1:1 aspect ratio versions from a number of Facebook and Google Ad campaigns. They contain a mixture of composited still image with video and vector graphic
-						animations using Adobe Animate.
+						These ads are (the 1:1 aspect ratio versions) from a number of Facebook and Google Ad campaigns with still image and vector graphics superimposed over video using Adobe Animate.
 					</p>
 					<br />
 				</div>
@@ -271,9 +251,9 @@ import thomas from '../img/sites/7stthomas.webp';
 		<div class="container">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h2 class="border-top">Sales Centre Video</h2>
+					<h2 class="border-top">9 Panel Video Wall</h2>
 					<p class="justify width">
-						I was asked to create a 9 panel video wall for a Sales Centre in Mississauga. The idea was to use an animated delay for each monitor as a transition between the renderings.
+						I was asked to create a 9 panel video wall for a Sales Centre in Mississauga. The idea was to reveal each rendering with an animated delay (for each panel) between transitions.
 					</p>
 				</div>
 			</div>
@@ -281,140 +261,9 @@ import thomas from '../img/sites/7stthomas.webp';
 				<video playsinline muted controls poster="" style="width: 100%; ">
 					<source src="/S2-Video-Wall.mp4" type="video/mp4" />
 				</video>
-				<br />
-				<h3>Sales Centre 9 TV Video Wall</h3>
 			</div>
 		</div>
 	</section>
-
-	<section id="graveyard">
-		<div class="container top">
-			<div class="flex padding-x">
-				<div class="cell">
-					<h2 class="border-top">Web Limbo</h2>
-					<p class="width justify">
-						The following real estate developer projects have mostly been retired, although the first two are still active. The other projects with a dark background have marketing material examples
-						that can be seen if you click on them.
-					</p>
-					<p class="width">
-						On top of the list below, there are a number of other projects that I have developed <a
-							target="_blank"
-							class="underline"
-							href="https://pbmarketing.ca/work.php"
-							aria-label="offsite link to pbmarketing.ca">here</a
-						>.
-					</p>
-					<br />
-				</div>
-			</div>
-			<div class="grid graveyard">
-				<div class="cell materials">
-					<a href="https://theravine.ca/" target="_blank" aria-label="offsite link to theravine.ca">
-						<Image src={ravine} class="" alt="The Ravine" />
-						<h3>The Ravine</h3>
-					</a>
-				</div>
-				<div class="cell materials">
-					<a href="https://kingswaybytheriver.ca/" target="_blank" aria-label="offsite link to kingswaybytheriver.ca">
-						<Image src={kingsway} class="" alt="Kingsway By The River" />
-						<h3>Kingsway By The River</h3>
-					</a>
-				</div>
-				<div class="cell materials">
-					<a href="https://pbmarketing.ca/work-shiplake.php" target="_blank" aria-label="offsite link to work-shiplake.php">
-						<Image src={shiplake} class="" alt="Shiplake Rental Management" />
-						<h3>Shiplake Rentals</h3>
-					</a>
-				</div>
-				<div class="cell materials">
-					<a href="https://pbmarketing.ca/work-7stThomas.php" target="_blank" aria-label="offsite link to work-7stThomas.php">
-						<Image src={thomas} class="" alt="7 St. Thomas" />
-						<h3>7 St. Thomas</h3>
-					</a>
-				</div><div class="cell materials">
-					<a href="https://pbmarketing.ca/work-arthaus.php" target="_blank" aria-label="offsite link to work-arthaus.php">
-						<Image src={arthaus} class="" alt="Arthaus" />
-						<h3>Arthaus</h3>
-					</a>
-				</div>
-				<div class="cell materials">
-					<a href="https://pbmarketing.ca/work-delisle.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-delisle.php">
-						<Image src={delisle} class="" alt="Delisle Dentistry" />
-						<h3>Delisle Dentistry</h3>
-					</a>
-				</div>
-				<div class="cell materials">
-					<a href="http://jacjacobson.com" target="_blank" aria-label="offsite link to jacjacobson.com">
-						<Image src={jac} class="" alt="Jack Jacobson Photography" />
-						<h3>Jack Jacobson Photography</h3>
-					</a>
-				</div>
-				<div class="cell materials">
-					<a href="https://pbmarketing.ca/work-boathaus.php" target="_blank" aria-label="offsite link to pbmarketing.ca/work-boathaus.php">
-						<Image src={boathaus} class="" alt="Boathaus" />
-						<h3>Boathaus</h3>
-					</a>
-				</div>
-				<div class="cell">
-					<Image src={peterSt} class="" alt="117 Peter Street" />
-					<h3>117 Peter Street</h3>
-				</div>
-				<div class="cell">
-					<Image src={barrington} class="" alt="The Barrington" />
-					<h3>The Barrington</h3>
-				</div>
-				<div class="cell">
-					<Image src={brownstones} class="" alt="Brownstones" />
-					<h3>Brownstones</h3>
-				</div>
-				<div class="cell">
-					<Image src={designhaus} class="" alt="Designhaus" />
-					<h3>Designhaus</h3>
-				</div>
-				<div class="cell">
-					<Image src={fuse} class="" alt="Fuse Consos" />
-					<h3>Fuse Consos</h3>
-				</div>
-				<div class="cell">
-					<Image src={genesis} class="" alt="Genesis Condos" />
-					<h3>Genesis Condos</h3>
-				</div>
-				<div class="cell">
-					<Image src={guildwood} class="" alt="Guildwood Condos" />
-					<h3>Guildwood Condos</h3>
-				</div>
-				<div class="cell">
-					<Image src={aquavil} class="" alt="Aquavil" />
-					<h3>Aquavil</h3>
-				</div>
-				<div class="cell">
-					<Image src={northeast} class="" alt="Northeast Midstream Energ" />
-					<h3>Northeast Midstream Energy</h3>
-				</div>
-				<div class="cell">
-					<Image src={sunrise} class="" alt="Sunrise Condos" />
-					<h3>Sunrise Condos</h3>
-				</div>
-				<div class="cell">
-					<Image src={todm} class="" alt="Towns of Don Mills" />
-					<h3>Towns of Don Mills</h3>
-				</div>
-				<div class="cell">
-					<Image src={union} class="" alt="Union Villas" />
-					<h3>Union Villas</h3>
-				</div>
-				<div class="cell">
-					<Image src={url} class="" alt="URL Condos" />
-					<h3>URL Condos</h3>
-				</div>
-				<div class="cell">
-					<Image src={mcmurray} class="" alt="McMurray Residences" />
-					<h3>McMurray Residences</h3>
-				</div>
-			</div>
-		</div>
-	</section>
-	<video class="fireworks" src="./fireworks-wh.mp4" autoplay playsinline muted loop poster=""></video>
 </Layout>
 
 <style>
@@ -566,29 +415,38 @@ import thomas from '../img/sites/7stthomas.webp';
 	});
 </script>
 
-<!-- <script is:inline>
-	document.addEventListener('astro:page-load', () => {
-		const video = document.querySelector('.fireworks');
+<script is:inline>
+	const mainVideo = document.querySelector('.timeline');
+	const desktopVideo = '/timeline-desktop.mp4';
+	const mobileVideo = '/timeline-mobile.mp4';
+	const desktopPoster = '/timeline-poster-desktop.webp';
+	const mobilePoster = '/timeline-poster-mobile.webp';
+	const winWidth = window.innerWidth;
 
-		function updateVideoSource() {
-			if (localStorage.getItem('theme') === 'dark') {
-				video.setAttribute('src', './fireworks-drk.mp4');
+	//console.log(videoSource);
+
+	if (mainVideo) {
+		if (winWidth < 901) {
+			mainVideo.setAttribute('poster', mobilePoster);
+		} else {
+			mainVideo.setAttribute('poster', desktopPoster);
+		}
+	}
+
+	window.addEventListener('resize', function () {
+		const winWidth = window.innerWidth;
+
+		if (mainVideo) {
+			if (winWidth < 901) {
+				mainVideo.setAttribute('poster', mobilePoster);
+				mainVideo.setAttribute('src', mobileVideo);
 			} else {
-				video.setAttribute('src', './fireworks-wh.mp4');
+				mainVideo.setAttribute('poster', desktopPoster);
+				mainVideo.setAttribute('src', desktopVideo);
 			}
 		}
-		
-		updateVideoSource();
-	
-		document.getElementById('themeToggle').addEventListener('click', () => {	
-			const currentTheme = localStorage.getItem('theme');
-			const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-			localStorage.setItem('theme', newTheme);
-
-			updateVideoSource();
-		});
 	});
-</script> -->
+</script>
 
 <style>
 	:root {
@@ -633,11 +491,6 @@ import thomas from '../img/sites/7stthomas.webp';
 				modules: [Pagination],
 				freeMode: true,
 				speed: 1000,
-				// loop: true,
-				// autoplay: {
-				// 	delay: 5000,
-				// 	disableOnInteraction: true,
-				// },
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true,

@@ -18,7 +18,7 @@ header {
 
 .curve {
 	position: absolute;
-	margin-top: -10%;
+	margin-top: -1%;
 	left: 0;
 	right: 0;
 	width: 100%;
@@ -33,23 +33,21 @@ header {
 	width: 100%;
 }
 
-#home .curve path {
-	fill: rgba(0, 0, 0, 0.05);
+#home .curve,
+#about .curve,
+#contact .curve {
+	display: none !important;
 }
 
-#about .curve path {
-	fill: rgb(244, 229, 242);
-}
+// #new .curve path {
+// 	fill: rgba(0, 0, 0, 0.04);
+// }
 
-#contact .curve path {
-	fill: rgb(230, 235, 247);
-}
-
-@media (max-width: 800px) {
-	.curve {
-		margin-top: 0%;
-	}
-}
+// @media (max-width: 800px) {
+// 	.curve {
+// 		margin-top: 0%;
+// 	}
+// }
 
 /* =============================================
    HEADROOM
@@ -118,7 +116,7 @@ html.light #header.header.headroom.headroom--not-bottom.headroom--pinned.headroo
 #header.headroom--not-bottom.headroom--not-top.headroom--pinned .nav-links li a,
 #header.headroom--not-top.headroom--bottom .nav-links li a {
 	//font-size: 2rem;
-	font-size: min(max(1.5rem, 2.5vw), 36px);
+	font-size: min(max(2rem, 2.5vw), 36px);
 	padding: 2.25rem 1rem 0.8rem;
 	background: #fff;
 	background-size: auto 3%;

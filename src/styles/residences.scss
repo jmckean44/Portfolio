@@ -20,8 +20,8 @@
 }
 
 #floorplans {
-	background: #f2f2f2;
-	padding: 100px 1.25rem;
+	//background: #f2f2f2;
+	padding: 0 1.25rem 20px;
 	max-width: 1350px;
 	margin: 0 auto;
 	border-radius: 3px;
@@ -35,7 +35,7 @@
 #floorplans .select-below h3 {
 	color: var.$dark;
 	font-family: var.$theme-font;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	font-weight: 600;
 	font-style: normal;
 	text-transform: uppercase;

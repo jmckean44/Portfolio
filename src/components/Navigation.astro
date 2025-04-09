@@ -8,15 +8,15 @@ const { bodyId } = Astro.props;
 <ThemeIcon />
 <div class="container">
 	<nav>
-		<ul class="nav-links">
+		<ul class="nav-links wow slideInDown" data-wow-duration="2s">
 			<li>
 				<a class={['/', 'new', 'about', 'contact'].includes(currentPath) ? '/' : 'active'} href="/"><span>Current</span>Work</a>
 			</li>
 			<li>
-				<a class={currentPath === 'new' ? 'active' : ''} href="/new"><span>Learning</span>Curve</a>
+				<a class={currentPath === 'about' ? 'active' : ''} href="/about"><span>My</span>Bio</a>
 			</li>
 			<li>
-				<a class={currentPath === 'about' ? 'active' : ''} href="/about"><span>A Brief</span>Story</a>
+				<a class={currentPath === 'new' ? 'active' : ''} href="/new"><span>Learning</span>Curve</a>
 			</li>
 			<li>
 				<a class={currentPath === 'contact' ? 'active' : ''} href="/contact"><span>Send a</span>MSG</a>

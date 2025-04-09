@@ -604,7 +604,7 @@ $container-padding-mobile: 1.25rem;
 	}
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
 	#current-sites #sites {
 		padding: 0 1.25rem;
 	}
@@ -683,6 +683,12 @@ $container-padding-mobile: 1.25rem;
 
 .spacing-btm {
 	padding-bottom: 80px;
+}
+
+@media (max-width: 800px) {
+	.spacing-btm {
+		padding-bottom: 50px;
+	}
 }
 
 /* =====================
@@ -979,7 +985,7 @@ p a {
 
 #graveyard .graveyard .cell.materials {
 	background: #3a3a42;
-	overflow: hidden;
+	//overflow: hidden;
 	border: 1px #3a3a42 solid;
 }
 #graveyard .graveyard .cell.materials img {
@@ -1028,6 +1034,10 @@ p a {
 /* =============================================
 	NEW PAGE
 ================================================ */
+#new .container.top.btm {
+	padding: 80px 1.25rem 100px;
+}
+
 #new .project {
 	padding: 2rem 1.5rem 2rem;
 	background: #f9f9f9;
