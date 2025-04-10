@@ -337,18 +337,18 @@ import mobile from '../img/mobile.png';
 
 		form.addEventListener('submit', async function (e) {
 			//const formData = new FormData(form);
-			const isRadioChecked = Array.from(radioButtons).some((radio) => radio.checked);
+			//const isRadioChecked = Array.from(radioButtons).some((radio) => radio.checked);
 			e.preventDefault();
 
 			const responseDiv = document.querySelector('.response');
 
-			if (!isRadioChecked) {
-				responseDiv.innerHTML = `<p style="color: red;">Please select one of the HTMLs below and try again.</p>`;
-				return;
-			}
+			// if (!isRadioChecked) {
+			// 	responseDiv.innerHTML = `<p style="color: #ff8000;">Please select one of the HTMLs below and try again.</p>`;
+			// 	return;
+			// }
 
 			try {
-				const response = await fetch('./netlify/functions/sendMailchimpEmail.js', {
+				const response = await fetch('/netlify/functions/sendMailchimpEmail', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
