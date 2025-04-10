@@ -1034,8 +1034,8 @@ p a {
 /* =============================================
 	NEW PAGE
 ================================================ */
-#new .container.top.btm {
-	padding: 80px 1.25rem 0;
+#new .container.top.btm-sm {
+	padding: 80px 1.25rem 70px;
 }
 
 #new .project {
@@ -1050,6 +1050,15 @@ p a {
 	background: #fff;
 	border-radius: 3px;
 	//border: 1px #ccc solid;
+}
+
+#new .plan-examples {
+	margin: 0 0 0 1rem;
+}
+
+#new .plan-examples span {
+	font-family: sans-serif;
+	font-weight: normal;
 }
 
 #new .project#generate-user img {
