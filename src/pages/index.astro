@@ -300,15 +300,6 @@ import mobile from '../img/mobile.png';
 
 <script is:inline>
 	document.addEventListener('astro:page-load', () => {
-		const form = document.getElementById('htmls');
-		const email = form.querySelector('input[name="email"]').value;
-		const radioButtons = document.querySelectorAll('.radio-input');
-
-		if (!form) {
-			console.error('Form element not found');
-			return;
-		}
-
 		// radioButtons.forEach((radio) => {
 		// 	radio.addEventListener('change', function () {
 		// 		console.log(`${radio.value}`);
@@ -335,8 +326,11 @@ import mobile from '../img/mobile.png';
 
 		//console.log(form);
 
+		const form = document.getElementById('htmls');
+
 		form.addEventListener('submit', async function (e) {
-			//const formData = new FormData(form);
+			const email = form.querySelector('input[name="email"]').value;
+			//const radioButtons = document.querySelectorAll('.radio-input');
 			//const isRadioChecked = Array.from(radioButtons).some((radio) => radio.checked);
 			e.preventDefault();
 
@@ -348,13 +342,15 @@ import mobile from '../img/mobile.png';
 			// }
 
 			try {
-				const response = await fetch('/netlify/functions/sendMailchimpEmail', {
+				const response = await fetch('./netlify/functions/sendMailchimpEmail.js', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
 					},
 					body: JSON.stringify({ email }),
 				});
+
+				console.log(email);
 
 				const result = await response.json();
 				if (result.success) {
