@@ -176,9 +176,9 @@ import mobile from '../img/mobile.png';
 				</div>
 			</div>
 			<div id="timeline">
-				<video class="timeline" playsinline autoplay muted loop style="pointer-events: none;" poster="/poster-desktop.webp">
-					<source src="/timeline-desktop.mp4" type="video/mp4" media="all and (min-width:850px)" />
-					<source src="/timeline-mobile.mp4" type="video/mp4" media="all and (max-width:849px)" />
+				<video class="timeline" preload="none" playsinline autoplay muted loop style="pointer-events: none;" poster="./timeline-poster-desktop.webp">
+					<source src="./timeline-desktop.mp4" type="video/mp4" media="all and (min-width:850px)" />
+					<source src="./timeline-mobile.mp4" type="video/mp4" media="all and (max-width:849px)" />
 				</video>
 			</div>
 		</div>
@@ -414,18 +414,16 @@ import mobile from '../img/mobile.png';
 	});
 </script>
 
-<script is:inline>
+<script>
 	const mainVideo = document.querySelector('.timeline');
-	const desktopVideo = '/timeline-desktop.mp4';
-	const mobileVideo = '/timeline-mobile.mp4';
-	const desktopPoster = '/timeline-poster-desktop.webp';
-	const mobilePoster = '/timeline-poster-mobile.webp';
+	const desktopVideo = './timeline-desktop.mp4';
+	const mobileVideo = './timeline-mobile.mp4';
+	const desktopPoster = './timeline-poster-desktop.webp';
+	const mobilePoster = './timeline-poster-mobile.webp';
 	const winWidth = window.innerWidth;
 
-	//console.log(videoSource);
-
 	if (mainVideo) {
-		if (winWidth < 901) {
+		if (winWidth < 850) {
 			mainVideo.setAttribute('poster', mobilePoster);
 		} else {
 			mainVideo.setAttribute('poster', desktopPoster);
@@ -436,7 +434,7 @@ import mobile from '../img/mobile.png';
 		const winWidth = window.innerWidth;
 
 		if (mainVideo) {
-			if (winWidth < 901) {
+			if (winWidth < 850) {
 				mainVideo.setAttribute('poster', mobilePoster);
 				mainVideo.setAttribute('src', mobileVideo);
 			} else {
