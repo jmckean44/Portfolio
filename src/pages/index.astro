@@ -38,6 +38,9 @@ import mobile from '../img/mobile.png';
 		</div>
 	</section>
 
+	<!-- <video class="video-bg" playsinline autoplay muted loop style="width: 100%;position:absolute;top:0;left:0;z-index:0;pointer-events:none" poster="">
+		<source src="./video-bg3.mp4" type="video/mp4" />
+	</video> -->
 	<section id="current-sites">
 		<div class="container">
 			<div class="flex padding-x">
@@ -91,50 +94,50 @@ import mobile from '../img/mobile.png';
 				</div>
 			</div>
 			<div>
-				<form id="htmls" action="/mailchimp.php" method="POST">
+				<form id="htmls" method="POST">
 					<input type="email" name="email" class="email" placeholder="Email" required />
-					<input class="btn" name="submit" type="submit" value="SEND" />
 					<div class="response"></div>
+					<input class="btn" name="submit" type="submit" value="SEND" />
 
 					<div id="campaigns">
 						<div>
 							<label class="label" for="dale">
-								<input type="radio" name="campaign[]" value="dale" id="dale" class="radio-input" />
+								<input type="radio" name="campaign" value="dale" id="dale" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={html7Dale} formats={['avif', 'webp']} alt="7 Dale" />
 						</div>
 						<div>
 							<label class="label" for="mrc">
-								<input type="radio" name="campaign[]" value="mrc" id="mrc" class="radio-input" />
+								<input type="radio" name="campaign" value="mrc" id="mrc" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={htmlMRC} formats={['avif', 'webp']} alt="Marina Resort Cavtat" />
 						</div>
 						<div>
 							<label class="label" for="winslow">
-								<input type="radio" name="campaign[]" value="winslow" id="winslow" class="radio-input" />
+								<input type="radio" name="campaign" value="winslow" id="winslow" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={htmlWinslow} formats={['avif', 'webp']} alt="The Winslow" />
 						</div>
 						<div>
 							<label class="label" for="vanguard">
-								<input type="radio" name="campaign[]" value="vanguard" id="vanguard" class="radio-input" />
+								<input type="radio" name="campaign" value="vanguard" id="vanguard" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={htmlVanguard} formats={['avif', 'webp']} alt="The Vanguard" />
 						</div>
 						<div>
 							<label class="label" for="diamond">
-								<input type="radio" name="campaign[]" value="diamond" id="diamond" class="radio-input" />
+								<input type="radio" name="campaign" value="diamond" id="diamond" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={htmlDiamond} formats={['avif', 'webp']} alt="The Diamond Rentals" />
 						</div>
 						<div>
 							<label class="label" for="kingsway">
-								<input type="radio" name="campaign[]" value="kingsway" id="kingsway" class="radio-input" />
+								<input type="radio" name="campaign" value="kingsway" id="kingsway" class="radio-input" />
 								<div class="radio-design"></div>
 							</label>
 							<Picture src={kingsway2} formats={['avif', 'webp']} alt="Kingsway By The River" />
@@ -298,6 +301,7 @@ import mobile from '../img/mobile.png';
 <script is:inline>
 	document.addEventListener('astro:page-load', () => {
 		const form = document.getElementById('htmls');
+		const email = form.querySelector('input[name="email"]').value;
 		const radioButtons = document.querySelectorAll('.radio-input');
 
 		if (!form) {
@@ -305,29 +309,29 @@ import mobile from '../img/mobile.png';
 			return;
 		}
 
-		radioButtons.forEach((radio) => {
-			radio.addEventListener('change', function () {
-				console.log(`${radio.value}`);
-				if (radio.checked) {
-					if (radio.value === 'dale') {
-						form.action = './htmls/dale.php';
-						console.log(`${form.action}`);
-					} else if (radio.value === 'mrc') {
-						form.action = './htmls/mrc.php';
-					} else if (radio.value === 'winslow') {
-						form.action = './htmls/winslow.php';
-					} else if (radio.value === 'vanguard') {
-						form.action = './htmls/vanguard.php';
-					} else if (radio.value === 'diamond') {
-						form.action = './htmls/diamond.php';
-					} else if (radio.value === 'kingsway') {
-						form.action = './htmls/kingsway.php';
-					} else {
-						form.action = '';
-					}
-				}
-			});
-		});
+		// radioButtons.forEach((radio) => {
+		// 	radio.addEventListener('change', function () {
+		// 		console.log(`${radio.value}`);
+		// 		if (radio.checked) {
+		// 			if (radio.value === 'dale') {
+		// 				form.action = './htmls/dale.php';
+		// 				console.log(`${form.action}`);
+		// 			} else if (radio.value === 'mrc') {
+		// 				form.action = './htmls/mrc.php';
+		// 			} else if (radio.value === 'winslow') {
+		// 				form.action = './htmls/winslow.php';
+		// 			} else if (radio.value === 'vanguard') {
+		// 				form.action = './htmls/vanguard.php';
+		// 			} else if (radio.value === 'diamond') {
+		// 				form.action = './htmls/diamond.php';
+		// 			} else if (radio.value === 'kingsway') {
+		// 				form.action = './htmls/kingsway.php';
+		// 			} else {
+		// 				form.action = '';
+		// 			}
+		// 		}
+		// 	});
+		// });
 
 		//console.log(form);
 
@@ -344,13 +348,16 @@ import mobile from '../img/mobile.png';
 			}
 
 			try {
-				const response = await fetch(form.action, {
+				const response = await fetch('/.netlify/functions/sendMailchimpEmail', {
 					method: 'POST',
-					body: formData,
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({ email }),
 				});
-				const result = await response.json();
 
-				if (result.status === 'success') {
+				const result = await response.json();
+				if (result.success) {
 					responseDiv.innerHTML = `<p style="color: green;">${result.message}</p>`;
 				} else {
 					responseDiv.innerHTML = `<p style="color: red;">${result.message}</p>`;

@@ -685,6 +685,11 @@ $container-padding-mobile: 1.25rem;
 	padding-bottom: 80px;
 }
 
+.video-bg {
+	opacity: 0.5;
+	mix-blend-mode: multiply;
+}
+
 @media (max-width: 800px) {
 	.spacing-btm {
 		padding-bottom: 50px;
