@@ -348,7 +348,7 @@ import mobile from '../img/mobile.png';
 			}
 
 			try {
-				const response = await fetch('/netlify/functions/sendMailchimpEmail.js', {
+				const response = await fetch('./netlify/functions/sendMailchimpEmail.js', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
