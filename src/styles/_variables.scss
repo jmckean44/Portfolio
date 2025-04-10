@@ -6,10 +6,10 @@ $mobile: 700px;
 $mobile-sm: 500px;
 
 // THEME
-$theme-clr: #ff9000;
+$theme-clr: #ff8000;
 $dark: #3a3a42;
 $theme-clr-header: rgba(38, 69, 100, 0.1);
-$highlight: #ff9000;
+$highlight: $theme-clr;
 $highlight-light: #cca5a1;
 $nav-clr: #fff;
 $light: rgba(255, 255, 255, 1);
