@@ -36,11 +36,11 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 		<div class="container top-of-page">
 			<div class="flex padding-x not-dark">
 				<div class="cell small-18">
-					<h1>Previous Work & Side Projects</h1>
+					<h1>Marketing & More</h1>
 				</div>
 			</div>
 			<div id="intro" class="spacing-btm">
-				<p class="justify width">I had the opportunity to work as a web designer for a company that provided print and web services to companies in the Mining and Exploration Industry.</p>
+				<p class="justify width">Prior to working in marketing for the real estate development industry, I worked as a web designer and in video production.</p>
 			</div>
 		</div>
 	</section>
@@ -57,9 +57,10 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 					</div>
 				</div>
 				<div class="cell small-18 medium-9 large-9 small-order-1 medium-order-2">
-					<h2>Investor Relations Marketing</h2>
+					<h2>Investor Relations Industry</h2>
+					<p class="justify width">I had the opportunity to work as a web designer for a company that provided print and web services to companies in the Mining and Exploration Industry.</p>
 					<p class="justify">
-						I was asked to create and unify branding between print, web, and tradeshow booths, as well as post news releases, edit and optimize video and images, and create animated banner ads.
+						I was asked to create and unify branding between print, web, and tradeshow booths, as well as post news releases, edit and optimize video and images, and create animated banner Ads.
 					</p>
 					<!-- <p class="text-sm">
 						<em>
@@ -239,7 +240,7 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 		<div class="container border-container article">
 			<div class="flex padding-x align-middle borders grey-bg">
 				<div class="cell small-18 medium-10 large-10">
-					<h1>An Interest in Colour</h1>
+					<h2>An Interest in Colour</h2>
 					<p class="width justify">
 						Learning about the effects of colour in context to each other, when mixed together to achieve a particluar hue or tone, and discovering the "<a
 							target="_blank"
@@ -373,16 +374,10 @@ import liam2014 from '../img/portraits/liam-2014.webp';
 	<script>
 		document.addEventListener('astro:page-load', () => {
 			new Swiper('.elink', {
-				autoplay: true,
 				effect: 'fade',
 				speed: 1000,
-				delay: 5000,
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true,
-					renderBullet: function (className: string) {
-						return '<span class="' + className + '"></span>';
-					},
+				autoplay: {
+					delay: 8000,
 				},
 			});
 
