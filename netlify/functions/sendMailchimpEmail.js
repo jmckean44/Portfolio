@@ -16,9 +16,14 @@ client.setConfig({
 const sendTestEmail = async (recipientEmail) => {
 	try {
 		// Trigger the test email
-		const response = await client.campaigns.sendTestEmail(templateId, {
-			test_emails: [recipientEmail],
-			send_type: 'html',
+		const response = await client.messages.sendTemplate({
+			template_name: templateId,
+			template_content: [],
+			message: {
+				to: [{ email: recipientEmail, type: 'to' }],
+				from_email: 'jmckean44@gmail.com', // Replace with your sender email
+				subject: 'Test Email',
+			},
 		});
 		console.log('Test email sent successfully:', response);
 	} catch (error) {
