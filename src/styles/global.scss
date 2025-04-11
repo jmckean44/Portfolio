@@ -146,11 +146,11 @@ html {
 
 body {
 	overflow-x: hidden !important;
-	line-height: 1.6;
+	line-height: 1.5;
 	margin: 0;
 	font-family: var.$font-sans-serif;
 	font-weight: normal;
-	font-size: min(max(1.8rem, 2.5vw), 21px);
+	font-size: min(max(2rem, 2.7vw), 22px);
 	height: 100%;
 	background: var.$bg-clr;
 	position: relative;
@@ -668,7 +668,7 @@ $container-padding-mobile: 1.25rem;
 }
 
 #intro p {
-	font-size: min(max(1.8rem, 2.75vw), 24px);
+	font-size: min(max(2.2rem, 3vw), 26px);
 }
 
 .width {
@@ -748,11 +748,11 @@ p a {
 	height: auto;
 	line-height: 1;
 	color: #fff;
-	border-radius: 3px;
+	border-radius: 2px;
 	margin-right: 1rem;
 	padding: 0.6rem 1rem 0.5rem;
 	cursor: pointer;
-	font-size: 0.9rem;
+	font-size: 1rem;
 	font-family: 'CalibriBold', sans-serif;
 	text-transform: uppercase;
 	transition: all ease 0.5s;
@@ -766,8 +766,7 @@ p a {
 @media (max-width: 400px) {
 	#home #filter-sites ul button {
 		margin-right: 0.5rem;
-		padding: 0.6rem 0.5rem 0.5rem;
-		font-size: 0.8rem;
+		padding: 0.6rem 0.75rem 0.5rem;
 	}
 }
 
@@ -892,7 +891,7 @@ p a {
 	width: 100%;
 	margin-bottom: 1rem;
 	border: 1px #ccc solid;
-	border-radius: 3px;
+	border-radius: 2px;
 }
 
 #htmls form {
@@ -946,7 +945,7 @@ p a {
 
 .video-container > div {
 	border: 1px #ccc;
-	border-radius: 5px;
+	border-radius: 3px;
 }
 
 @media (max-width: var.$tablet) {
@@ -954,86 +953,6 @@ p a {
 	.swiper.elink {
 		margin-top: 2rem;
 	}
-}
-
-/* =============================================
-		WEB GRAVEYARD
-================================================ */
-#graveyard .graveyard {
-	margin-bottom: 2rem;
-}
-
-#graveyard .grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-	align-content: center;
-	gap: 1.5rem;
-}
-
-#graveyard .graveyard .cell {
-	border: 1px #ccc solid;
-	background: #fff;
-	border-radius: 3px;
-	padding: 5px;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-#graveyard .graveyard .cell img {
-	margin-bottom: 0.75rem;
-}
-
-#graveyard h3 {
-	text-align: center;
-	font-size: 1.25rem;
-	margin-bottom: 0.75rem;
-}
-
-#graveyard .graveyard .cell.materials {
-	background: #3a3a42;
-	//overflow: hidden;
-	border: 1px #3a3a42 solid;
-}
-#graveyard .graveyard .cell.materials img {
-	transition: all ease 0.5s;
-}
-#graveyard .graveyard .cell.materials img:hover {
-	transform: scale(1.2) translate(0, -12px);
-	transition: all ease 0.5s;
-}
-#graveyard .graveyard .cell.materials h3 {
-	color: #fff;
-}
-
-@media (max-width: 550px) {
-	#graveyard .grid {
-		grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-	}
-	#graveyard h3 {
-		font-size: 1rem;
-	}
-}
-
-/* =============================================
-	 CLIPPATH POLYGON
-================================================ */
-.clip-path .no-padding {
-	padding: 0;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.clip-path .padding {
-	padding: 100px 1.5rem 0;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.clip-path .padding img {
-	max-width: 1400px;
-}
-
-.clip-path .no-padding img {
-	max-width: 100%;
 }
 
 /* =============================================
@@ -1046,7 +965,7 @@ p a {
 #new .project {
 	padding: 2rem 1.5rem 2rem;
 	background: #f9f9f9;
-	border-radius: 3px;
+	border-radius: 2px;
 	border: 1rem #fff solid;
 }
 
@@ -1058,7 +977,7 @@ p a {
 }
 
 #new .plan-examples {
-	margin: 0 0 0 1rem;
+	margin: 0;
 }
 
 #new .plan-examples span {
@@ -1076,7 +995,7 @@ p a {
 }
 
 #new #generate-user p {
-	font-size: 1rem;
+	font-size: 1.2rem;
 }
 
 #new #sitemap {
@@ -1110,7 +1029,7 @@ p a {
 
 .borders {
 	border: 1px #ccc solid;
-	border-radius: 5px;
+	border-radius: 3px;
 	padding: 2.5rem 1%;
 }
 
