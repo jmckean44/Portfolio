@@ -246,7 +246,7 @@ html html.dark #header.headroom--not-bottom.headroom--not-top .nav-links li a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	right: 1rem;
+	right: 0.75rem;
 	top: 0.5rem;
 	z-index: 9999999999;
 	transition: 1s ease all;
@@ -300,6 +300,6 @@ html html.dark #header.headroom--not-bottom.headroom--not-top .nav-links li a {
 
 @media (max-width: 500px) {
 	.controls {
-		margin-top: 100px;
+		margin-top: 85px;
 	}
 }
