@@ -101,7 +101,7 @@ import mobile from '../img/mobile.png';
 					</div>
 					<div>
 						<form id="htmls" method="POST">
-							<div>
+							<div class="email-container">
 								<input type="email" name="email" class="email" placeholder="Email" required />
 								<span class="helperText">EMAIL</span>
 							</div>
@@ -322,7 +322,7 @@ import mobile from '../img/mobile.png';
 			});
 
 			// CULTURE 3 PICS
-			smoother.effects('#sites.easing > a, #htmls .easing > div', {
+			smoother.effects('#htmls .easing > div', {
 				speed: 1,
 				lag: (i) => i * 0.02,
 			});

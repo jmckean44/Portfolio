@@ -927,6 +927,13 @@ p a {
 	z-index: 999999;
 }
 
+#htmls .email-container {
+	max-width: 300px;
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+
 #htmls .email {
 	max-width: 300px;
 }
@@ -936,6 +943,12 @@ p a {
 	margin-bottom: 1rem;
 	border: 1px #ccc solid;
 	border-radius: 2px;
+}
+
+#htmls form {
+	margin: 2rem 0 0;
+	padding: 0 0 2rem;
+	max-width: 300px;
 }
 
 #htmls form {
