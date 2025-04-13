@@ -277,15 +277,6 @@ import mobile from '../img/mobile.png';
 	</div>
 </div>
 
-<style>
-	.video {
-		position: fixed;
-		width: 100vw;
-		height: 100vh;
-		object-fit: cover;
-	}
-</style>
-
 <script>
 	document.addEventListener('astro:page-load', () => {
 		const date = new Date();
@@ -307,21 +298,19 @@ import mobile from '../img/mobile.png';
 	});
 </script>
 
-<script is:inline src="/gsap.min.js"></script>
+<!-- <script is:inline src="/gsap.min.js"></script>
 <script is:inline src="/ScrollSmoother.min.js"></script>
-<script is:inline src="/ScrollTrigger.min.js"></script>
-
+<script is:inline src="/ScrollTrigger.min.js"></script> -->
+<!-- 
 <script is:inline>
 	document.addEventListener('astro:page-load', () => {
 		function initAnimations() {
-			// SCROLLSMOOTHER DEFAULTS
+
 			let smoother = ScrollSmoother.create({
 				smooth: 1,
 				effects: true,
-				//smoothTouch: 0.05,
 			});
 
-			// CULTURE 3 PICS
 			smoother.effects('#htmls .easing > div', {
 				speed: 1,
 				lag: (i) => i * 0.02,
@@ -340,10 +329,14 @@ import mobile from '../img/mobile.png';
 		}
 		initAnimations();
 	});
-</script>
+</script> -->
 
 <script is:inline>
 	document.addEventListener('astro:page-load', () => {
+		const form = document.getElementById('htmls');
+		const radioButtons = document.querySelectorAll('.radio-input');
+		const isRadioChecked = Array.from(radioButtons).some((radio) => radio.checked);
+
 		radioButtons.forEach((radio) => {
 			radio.addEventListener('change', function () {
 				console.log(`${radio.value}`);
@@ -366,45 +359,41 @@ import mobile from '../img/mobile.png';
 					}
 				}
 			});
-		});
 
-		console.log(form);
+			console.log(form);
 
-		const form = document.getElementById('htmls');
+			form.addEventListener('submit', async function (e) {
+				e.preventDefault();
 
-		form.addEventListener('submit', async function (e) {
-			const email = form.querySelector('input[name="email"]').value;
-			const radioButtons = document.querySelectorAll('.radio-input');
-			const isRadioChecked = Array.from(radioButtons).some((radio) => radio.checked);
-			e.preventDefault();
+				const email = form.querySelector('input[name="email"]').value;
+				const responseDiv = document.querySelector('.response');
 
-			const responseDiv = document.querySelector('.response');
-
-			if (!isRadioChecked) {
-				responseDiv.innerHTML = `<p style="color: #ff8000;">Please select one of the HTMLs below and try again.</p>`;
-				return;
-			}
-
-			try {
-				const response = await fetch('/.netlify/functions/dale.php', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify({ email }),
-				});
-
-				console.log(email);
-
-				const result = await response.json();
-				if (result.success) {
-					responseDiv.innerHTML = `<p style="color: #ff8000;">${result.message}</p>`;
-				} else {
-					responseDiv.innerHTML = `<p style="color: #ff8000;">${result.message}</p>`;
+				if (!isRadioChecked) {
+					responseDiv.innerHTML = `<p style="color: #ff8000;">Please select one of the HTMLs below and try again.</p>`;
+					return;
 				}
-			} catch (error) {
-				responseDiv.innerHTML = `<p style="color: red;">An error occurred. Please try again later.</p>`;
-			}
+
+				// try {
+				// 	const response = await fetch('/.netlify/functions/dale.php', {
+				// 		method: 'POST',
+				// 		headers: {
+				// 			'Content-Type': 'application/json',
+				// 		},
+				// 		body: JSON.stringify({ email }),
+				// 	});
+
+				// 	console.log(email);
+
+				// 	const result = await response.json();
+				// 	if (result.success) {
+				// 		responseDiv.innerHTML = `<p style="color: #ff8000;">${result.message}</p>`;
+				// 	} else {
+				// 		responseDiv.innerHTML = `<p style="color: #ff8000;">${result.message}</p>`;
+				// 	}
+				// } catch (error) {
+				// 	responseDiv.innerHTML = `<p style="color: red;">An error occurred. Please try again later.</p>`;
+				// }
+			});
 		});
 	});
 </script>
