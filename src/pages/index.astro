@@ -344,49 +344,49 @@ import mobile from '../img/mobile.png';
 
 <script is:inline>
 	document.addEventListener('astro:page-load', () => {
-		// radioButtons.forEach((radio) => {
-		// 	radio.addEventListener('change', function () {
-		// 		console.log(`${radio.value}`);
-		// 		if (radio.checked) {
-		// 			if (radio.value === 'dale') {
-		// 				form.action = './htmls/dale.php';
-		// 				console.log(`${form.action}`);
-		// 			} else if (radio.value === 'mrc') {
-		// 				form.action = './htmls/mrc.php';
-		// 			} else if (radio.value === 'winslow') {
-		// 				form.action = './htmls/winslow.php';
-		// 			} else if (radio.value === 'vanguard') {
-		// 				form.action = './htmls/vanguard.php';
-		// 			} else if (radio.value === 'diamond') {
-		// 				form.action = './htmls/diamond.php';
-		// 			} else if (radio.value === 'kingsway') {
-		// 				form.action = './htmls/kingsway.php';
-		// 			} else {
-		// 				form.action = '';
-		// 			}
-		// 		}
-		// 	});
-		// });
+		radioButtons.forEach((radio) => {
+			radio.addEventListener('change', function () {
+				console.log(`${radio.value}`);
+				if (radio.checked) {
+					if (radio.value === 'dale') {
+						form.action = './htmls/dale.php';
+						console.log(`${form.action}`);
+					} else if (radio.value === 'mrc') {
+						form.action = './htmls/mrc.php';
+					} else if (radio.value === 'winslow') {
+						form.action = './htmls/winslow.php';
+					} else if (radio.value === 'vanguard') {
+						form.action = './htmls/vanguard.php';
+					} else if (radio.value === 'diamond') {
+						form.action = './htmls/diamond.php';
+					} else if (radio.value === 'kingsway') {
+						form.action = './htmls/kingsway.php';
+					} else {
+						form.action = '';
+					}
+				}
+			});
+		});
 
-		//console.log(form);
+		console.log(form);
 
 		const form = document.getElementById('htmls');
 
 		form.addEventListener('submit', async function (e) {
 			const email = form.querySelector('input[name="email"]').value;
-			//const radioButtons = document.querySelectorAll('.radio-input');
-			//const isRadioChecked = Array.from(radioButtons).some((radio) => radio.checked);
+			const radioButtons = document.querySelectorAll('.radio-input');
+			const isRadioChecked = Array.from(radioButtons).some((radio) => radio.checked);
 			e.preventDefault();
 
 			const responseDiv = document.querySelector('.response');
 
-			// if (!isRadioChecked) {
-			// 	responseDiv.innerHTML = `<p style="color: #ff8000;">Please select one of the HTMLs below and try again.</p>`;
-			// 	return;
-			// }
+			if (!isRadioChecked) {
+				responseDiv.innerHTML = `<p style="color: #ff8000;">Please select one of the HTMLs below and try again.</p>`;
+				return;
+			}
 
 			try {
-				const response = await fetch('/.netlify/functions/sendMailchimpEmail', {
+				const response = await fetch('/.netlify/functions/dale.php', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -652,7 +652,7 @@ import mobile from '../img/mobile.png';
 	.display-formats .laptop-container {
 		flex: 1 1 0;
 		position: relative;
-		padding: 10% 0;
+		padding: 100px 0 150px;
 	}
 
 	.display-formats .mobile-container {
@@ -684,6 +684,9 @@ import mobile from '../img/mobile.png';
 		.display-formats {
 			flex-direction: column;
 			gap: 1rem;
+		}
+		.display-formats .laptop-container {
+			padding: 50px 0 50px;
 		}
 	}
 
