@@ -38,7 +38,11 @@
 }
 
 #floorplan-ui .plan-examples {
-	margin-bottom: 1.5rem;
+	line-height: 1.5;
+	margin-bottom: 3rem;
+	margin-top: 1rem;
+	margin-left: 1.5rem;
+	font-size: 1rem;
 }
 
 #floorplans h3 {
@@ -50,7 +54,7 @@
 	font-weight: 600;
 	font-style: normal;
 	text-transform: uppercase;
-	margin-top: 4rem;
+
 	margin-bottom: 2rem;
 	letter-spacing: 0.5px;
 }
