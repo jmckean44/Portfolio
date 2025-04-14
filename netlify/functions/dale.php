@@ -1,34 +1,64 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Get form data
-  $name = htmlspecialchars($_POST['name']);
-  $email = htmlspecialchars($_POST['email']);
-  $message = htmlspecialchars($_POST['message']);
+fd
 
-  // Validate email
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "Invalid email format";
-    exit;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+function handler($event, $context)
+{
+  // Parse the request body
+  $data = json_decode($event['body'], true);
+  $email = $data['email'] ?? null;
+
+  if (!$email) {
+    return [
+      'statusCode' => 400,
+      'body' => json_encode(['success' => false, 'message' => 'Email is required.']),
+    ];
   }
 
-  // Email details
-  $to = "jmckean44@gmail.com";
-  $subject = "New message from $name";
-  $headers = "From: $email\r\n";
-  $headers .= "Reply-To: $email\r\n";
-  $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+  // Create the email content
+  $htmlContent = "
+        <html>
+        <head>
+            <title>Test Email</title>
+        </head>
+        <body>
+            <h1>Hello!</h1>
+            <p>This is a test email sent using PHP and Netlify Functions.</p>
+        </body>
+        </html>
+    ";
 
-  // Email body
-  $body = "Name: $name\n";
-  $body .= "Email: $email\n\n";
-  $body .= "Message:\n$message\n";
+  try {
+    // Configure PHPMailer
+    $mail = new PHPMailer(true);
+    $mail->isSMTP();
+    $mail->Host = 'smtp.mailtrap.io'; // Replace with your SMTP server
+    $mail->SMTPAuth = true;
+    $mail->Username = 'your-username'; // Replace with your SMTP username
+    $mail->Password = 'your-password'; // Replace with your SMTP password
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
 
-  // Send email
-  if (mail($to, $subject, $body, $headers)) {
-    echo "Email sent successfully!";
-  } else {
-    echo "Failed to send email.";
+    // Set email parameters
+    $mail->setFrom('your-email@example.com', 'Your Name');
+    $mail->addAddress($email);
+    $mail->isHTML(true);
+    $mail->Subject = 'Test Email';
+    $mail->Body = $htmlContent;
+
+    // Send the email
+    $mail->send();
+
+    return [
+      'statusCode' => 200,
+      'body' => json_encode(['success' => true, 'message' => 'Email sent successfully!']),
+    ];
+  } catch (Exception $e) {
+    return [
+      'statusCode' => 500,
+      'body' => json_encode(['success' => false, 'message' => 'Failed to send email. Error: ' . $mail->ErrorInfo]),
+    ];
   }
-} else {
-  echo "Invalid request method.";
 }

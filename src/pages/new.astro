@@ -1,14 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import '../styles/residences.scss';
-import PictureComponent from '../components/PictureComponent.astro';
 
 //import { Image } from 'astro:assets';
 //import { getImage } from 'astro:assets';
 //import { Picture } from 'astro:assets';
-
-import placeholder from '../img/residences-placeholder.webp';
-import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 ---
 
 <Layout pageTitle="Learning Curve" pageSiteTitles="">
@@ -78,75 +73,19 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 		</div>
 	</section>
 
-	<!-- <section>
+	<section>
 		<div class="container top med films">
 			<div class="flex padding-x align-middle">
 				<div class="cell small-18">
 					<h2 class="border-top">Flixx Movie Search</h2>
+					<p>
+						<strong>Coming soon. </strong>
+					</p>
 					<p class="width justify">
-						Coming soon.
-						Flixx movie search component was built using The Movie Database API, which uses the open source mobile touch slider <a target="_blank" href="https://swiperjs.com/" class="underline"
-							>Swiper</a
-						>, pagination, .......
+						The Flixx movie search component is built using The Movie Database API, which uses <a target="_blank" href="https://swiperjs.com/" class="underline">Swiper</a>, an open source mobile touch
+						slider.
 					</p>
 				</div>
-			</div>
-		</div>
-	</section> -->
-
-	<section id="floorplan-ui">
-		<div class="container top btm-sm">
-			<div class="flex padding-x">
-				<div class="cell small-18">
-					<h2 class="border-top">Resort Floor Plan UI</h2>
-				</div>
-			</div>
-
-			<div class="flex padding-x">
-				<div class="cell small-18">
-					<p class="width justify">
-						I was asked to create a User Interface for the floor plans page of a <a href="https://marinaresortcavtat.com/" class="underline" target="_blank">Croatian Resort website</a> to guide users through
-						the floor plan selection process.
-					</p>
-					<p class="width justify">
-						The <strong>NUMBER OF BEDROOMS</strong> has to be chosen first, followed by a <strong>RESIDENCE TYPE</strong> and a
-						<strong>SUITE NUMBER</strong>, which loads the chosen floor plan.
-					</p>
-					<p class="width justify">
-						There are two floor plan examples available:
-						<p class="plan-examples">
-							<strong
-								>2 Bedrooms <span>•</span> D1 <span>•</span> 601<br />
-								4 Bedrooms <span>•</span> Seaside Villas <span>•</span> A1</strong
-							>
-						</p>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div id="floorplans">
-			<div class="select-below">
-				<h3>Select A Bedroom Number</h3>
-			</div>
-			<div class="residence-choice">
-				<select name="bedroomNumber" id="bedroomNumber">
-					<option value="disabled">NUMBER OF BEDROOMS</option>
-					<option value="1 Bedroom">1 Bedroom</option>
-					<option value="2 Bedrooms">2 Bedrooms</option>
-					<option value="3 Bedrooms">3 Bedrooms</option>
-					<option value="4 Bedrooms">4 Bedrooms</option>
-				</select>
-				<select name="residenceType" id="residenceType" disabled>
-					<option value="disabled">RESIDENCE TYPE</option>
-				</select>
-				<select name="suites" id="suites" disabled>
-					<option value="disabled">SELECT SUITE</option>
-				</select>
-			</div>
-
-			<div class="residence-plans">
-				<PictureComponent mobileImgUrl={placeholderMobile} desktopImgUrl={placeholder} loading="lazy" className="clip-image" alt="Marina Resort Cavtat" />
 			</div>
 		</div>
 	</section>
@@ -190,38 +129,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 			</div>
 		</div>
 	</section>
-
-	<!-- <section>
-		<div class="container top">
-			<div class="flex padding-x">
-				<div class="cell small-18">
-					<h2 class="border-top">Resort Site Plan UI</h2>
-				</div>
-			</div>
-
-			<div class="flex padding-x">
-				<div class="cell small-18">
-					<p class="width justify">
-						This Site Plan UI is a modified version of a real estate <a href="https://mapplic.com/case-study/real-estate" target="_blank" class="underline"><strong>site plan plugin</strong></a> that displays
-						an aerial view of the property, hotels, and amenities.
-					</p>
-					<p class="width justify">
-						Each marker has its own zoom level option, which the client chose to use to avoid instances where markers that are closer to the perimeter of the image shifting beyond the edge of the
-						container when zoomed in.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
-	<!-- <section>
-		<div id="sitemap">
-			<div><mapplic-map data-json="/sitemap/data-res.json"></mapplic-map></div>
-		</div>
-	</section> -->
 </Layout>
-<!-- <script is:inline src="/sitemap/mapplic-res.js"></script> -->
-<script is:inline src="/residences.js"></script>
 
 <style>
 	#sitemap {

@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PictureComponent from '../components/PictureComponent.astro';
 import { Picture } from 'astro:assets';
 import { Image } from 'astro:assets';
 import { items } from '../data/index.ts';
 import '../styles/form.scss';
 import '../styles/swiper.scss';
+import '../styles/residences.scss';
 import ItemCard from '../components/ItemCard.astro';
 import resume from '../img/resume.webp';
 import html7Dale from '../img/htmls/7dale.jpg';
@@ -15,152 +17,151 @@ import htmlVanguard from '../img/htmls/vanguard.jpg';
 import kingsway2 from '../img/htmls/kingsway.webp';
 import laptop from '../img/laptop.png';
 import mobile from '../img/mobile.png';
+import placeholder from '../img/residences-placeholder.webp';
+import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 ---
 
-<div id="smooth-wrapper">
-	<div id="smooth-content">
-		<Layout pageTitle="Past & Current Work" pageSiteTitles="">
-			<section>
-				<div class="container top-of-page btm" id="intro">
-					<div class="flex padding-x">
-						<div class="cell small-18">
-							<h1 id="greeting" class="slideInUp"></h1>
-						</div>
-					</div>
-					<div class="flex padding-x">
-						<div class="cell small-18">
-							<p class="justify width">
-								With years of experience as a <strong class="bold">Frontend Web Developer</strong>, I have developed user-friendly, performant, responsive registration websites for clients in the <strong
-									>Real Estate</strong
-								>, <strong>Resort</strong>, and <strong>Investor Relations</strong> industries.
-							</p>
-							<p>
-								<em>For more detailed information</em>, please see my <span class="tooltip resume"
-									><a href="./Jeff-McKean-Resume.pdf" target="_blank"><strong>resume</strong><span class="tooltip-text"><Image src={resume} alt="resume" /></span></a></span
-								>.
-							</p>
-						</div>
-					</div>
+<Layout pageTitle="Past & Current Work" pageSiteTitles="">
+	<section>
+		<div class="container top-of-page btm" id="intro">
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h1 id="greeting" class="slideInUp"></h1>
 				</div>
-			</section>
+			</div>
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<p class="justify width">
+						With years of experience as a <strong class="bold">Frontend Web Developer</strong>, I have developed user-friendly, performant, responsive registration websites for clients in the <strong
+							>Real Estate</strong
+						>, <strong>Resort</strong>, and <strong>Investor Relations</strong> industries.
+					</p>
+					<p>
+						<em>For more detailed information</em>, please see my <span class="tooltip resume"
+							><a href="./Jeff-McKean-Resume.pdf" target="_blank"><strong>resume</strong><span class="tooltip-text"><Image src={resume} alt="resume" /></span></a></span
+						>.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
-			<!-- <video class="video-bg" playsinline autoplay muted loop style="width: 100%;position:absolute;top:0;left:0;z-index:0;pointer-events:none" poster="">
-		<source src="./video-bg3.mp4" type="video/mp4" />
-	</video> -->
-			<section id="current-sites">
-				<div class="container">
-					<div class="flex padding-x">
-						<div class="cell small-18">
-							<h2 class="border-top">Active Sites</h2>
-							<p class="justify width">
-								The following custom designed sites were created for <a target="_blank" href="https://pbmarketing.ca" class="underline" aria-label="offsite link to
+	<section id="current-sites">
+		<div class="container">
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h2 class="border-top">Active Sites</h2>
+					<p class="justify width">
+						The following custom designed sites were created for <a target="_blank" href="https://pbmarketing.ca" class="underline" aria-label="offsite link to
 						pbmarketing.ca"
-									><strong>P+B Marketing</strong></a
-								>, a full-service marketing and communications agency that specializes in branding lifestyles across the real estate, hospitality, and service industries.
-							</p>
-							<p class="justify width">Click on a site for details and a link to the live site.</p>
-							<br />
-						</div>
-						<div class="cell small-18 filter" id="filter-sites">
-							<p class="bold">Filter by build type:</p>
-							<div>
-								<ul>
-									<li><button class="filter-btn">PHP</button></li>
-									<li><button class="filter-btn">Astro</button></li>
-									<li><button class="filter-btn">CMS</button></li>
-								</ul>
-							</div>
+							><strong>P+B Marketing</strong></a
+						>, a full-service marketing and communications agency that specializes in branding lifestyles across the real estate, hospitality, and service industries.
+					</p>
+					<p class="justify width">Click on a site for details and a link to the live site.</p>
+					<br />
+				</div>
+				<div class="cell small-18 filter" id="filter-sites">
+					<p class="bold">Filter by build type:</p>
+					<div>
+						<ul>
+							<li><button class="filter-btn">PHP</button></li>
+							<li><button class="filter-btn">Astro</button></li>
+							<li><button class="filter-btn">CMS</button></li>
+						</ul>
+					</div>
 
-							<!-- <div class="flex" id="sites">
+					<!-- <div class="flex" id="sites">
 						{items.map((item) => <ItemCard {item} />)}
 					</div> -->
-						</div>
+				</div>
+			</div>
+		</div>
+		<div class="flex easing" id="sites">
+			{items.map((item) => <ItemCard {item} />)}
+		</div>
+	</section>
+
+	<section id="htmls-container">
+		<div class="container top">
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h2 class="border-top">HTML Email Campaigns</h2>
+				</div>
+				<div class="cell small-18">
+					<p class="width justify">
+						This selection of <strong>HTML Email Ad campaigns</strong> were hand-coded in <strong>Visusal Studio Code</strong>, tested in <strong>Litmus</strong>, and deployed through <strong
+							>Mailchimp</strong
+						>.
+					</p>
+					<div class="cell small-18 p-before-form">
+						<!-- <p class="width">To receive a test in your inbox (not set up yet), please enter your email address, select one of the examples and click send.</p> -->
 					</div>
 				</div>
-				<div class="flex easing" id="sites">
-					{items.map((item) => <ItemCard {item} />)}
-				</div>
-			</section>
+			</div>
+			<div>
+				<form id="htmls" method="POST">
+					<div class="email-container">
+						<input type="email" name="email" class="email" placeholder="Email (not set up yet)" required />
+						<span class="helperText">EMAIL</span>
+					</div>
+					<div class="response"></div>
+					<input class="btn" name="submit" type="submit" value="SEND" />
 
-			<section id="htmls-container">
-				<div class="container top">
-					<div class="flex padding-x">
-						<div class="cell small-18">
-							<h2 class="border-top">HTML Email Campaigns</h2>
+					<div id="campaigns" class="easing">
+						<div>
+							<label class="label" for="dale">
+								<input type="radio" name="campaign" value="dale" id="dale" class="radio-input" />
+								<div class="radio-design"></div>
+							</label>
+							<Picture src={html7Dale} formats={['avif', 'webp']} alt="7 Dale" />
 						</div>
-						<div class="cell small-18">
-							<p class="width justify">
-								This selection of <strong>HTML Email Ad campaigns</strong> were hand-coded in <strong>Visusal Studio Code</strong>, tested in <strong>Litmus</strong>, and deployed through <strong
-									>Mailchimp</strong
-								>.
-							</p>
-							<div class="cell small-18 p-before-form">
-								<!-- <p class="width">To receive a test in your inbox (not set up yet), please enter your email address, select one of the examples and click send.</p> -->
-							</div>
+						<div>
+							<label class="label" for="mrc">
+								<input type="radio" name="campaign" value="mrc" id="mrc" class="radio-input" />
+								<div class="radio-design"></div>
+							</label>
+							<Picture src={htmlMRC} formats={['avif', 'webp']} alt="Marina Resort Cavtat" />
+						</div>
+						<div>
+							<label class="label" for="winslow">
+								<input type="radio" name="campaign" value="winslow" id="winslow" class="radio-input" />
+								<div class="radio-design"></div>
+							</label>
+							<Picture src={htmlWinslow} formats={['avif', 'webp']} alt="The Winslow" />
+						</div>
+						<div>
+							<label class="label" for="vanguard">
+								<input type="radio" name="campaign" value="vanguard" id="vanguard" class="radio-input" />
+								<div class="radio-design"></div>
+							</label>
+							<Picture src={htmlVanguard} formats={['avif', 'webp']} alt="The Vanguard" />
+						</div>
+						<div>
+							<label class="label" for="diamond">
+								<input type="radio" name="campaign" value="diamond" id="diamond" class="radio-input" />
+								<div class="radio-design"></div>
+							</label>
+							<Picture src={htmlDiamond} formats={['avif', 'webp']} alt="The Diamond Rentals" />
+						</div>
+						<div>
+							<label class="label" for="kingsway">
+								<input type="radio" name="campaign" value="kingsway" id="kingsway" class="radio-input" />
+								<div class="radio-design"></div>
+							</label>
+							<Picture src={kingsway2} formats={['avif', 'webp']} alt="Kingsway By The River" />
 						</div>
 					</div>
-					<div>
-						<form id="htmls" method="POST">
-							<div class="email-container">
-								<input type="email" name="email" class="email" placeholder="Email" required />
-								<span class="helperText">EMAIL</span>
-							</div>
-							<div class="response"></div>
-							<input class="btn" name="submit" type="submit" value="SEND" />
+				</form>
+			</div>
+		</div>
+	</section>
 
-							<div id="campaigns" class="easing">
-								<div>
-									<label class="label" for="dale">
-										<input type="radio" name="campaign" value="dale" id="dale" class="radio-input" />
-										<div class="radio-design"></div>
-									</label>
-									<Picture src={html7Dale} formats={['avif', 'webp']} alt="7 Dale" />
-								</div>
-								<div>
-									<label class="label" for="mrc">
-										<input type="radio" name="campaign" value="mrc" id="mrc" class="radio-input" />
-										<div class="radio-design"></div>
-									</label>
-									<Picture src={htmlMRC} formats={['avif', 'webp']} alt="Marina Resort Cavtat" />
-								</div>
-								<div>
-									<label class="label" for="winslow">
-										<input type="radio" name="campaign" value="winslow" id="winslow" class="radio-input" />
-										<div class="radio-design"></div>
-									</label>
-									<Picture src={htmlWinslow} formats={['avif', 'webp']} alt="The Winslow" />
-								</div>
-								<div>
-									<label class="label" for="vanguard">
-										<input type="radio" name="campaign" value="vanguard" id="vanguard" class="radio-input" />
-										<div class="radio-design"></div>
-									</label>
-									<Picture src={htmlVanguard} formats={['avif', 'webp']} alt="The Vanguard" />
-								</div>
-								<div>
-									<label class="label" for="diamond">
-										<input type="radio" name="campaign" value="diamond" id="diamond" class="radio-input" />
-										<div class="radio-design"></div>
-									</label>
-									<Picture src={htmlDiamond} formats={['avif', 'webp']} alt="The Diamond Rentals" />
-								</div>
-								<div>
-									<label class="label" for="kingsway">
-										<input type="radio" name="campaign" value="kingsway" id="kingsway" class="radio-input" />
-										<div class="radio-design"></div>
-									</label>
-									<Picture src={kingsway2} formats={['avif', 'webp']} alt="Kingsway By The River" />
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</section>
-
-			<div class="container" id="featured-site-heading">
+	<section id="featured-site">
+		<div class="container featured-site-bg">
+			<div class="intro">
 				<div class="flex padding-x">
 					<div class="cell small-18">
-						<h2 class="border-top">Featured Site</h2>
+						<h2>Featured Site</h2>
 						<p class="width justify">
 							<strong><a class="underline" href="/mrc">Marina Resort Cavtat</a></strong> is a multi-lingual registration landing page for an up and coming resort in Croatia. The full site, available soon,
 							is built using <a class="underline" target="_blank" href="https://astro.build/">Astro JS</a> and includes GSAP, Scrolltrigger, and SplitText parallaxing.
@@ -171,111 +172,151 @@ import mobile from '../img/mobile.png';
 				</div>
 			</div>
 
-			<section id="featured-site">
-				<div class="container btm featured-site-bg">
-					<div class="flex display-formats">
-						<div class="laptop-container">
-							<Image src={laptop} class="device-mask" alt="Laptop" />
-							<video class="site-video" autoplay playsinline muted loop poster="">
-								<source src="/mrc-laptop.mp4" type="video/mp4" />
-							</video>
-						</div>
-						<div class="mobile-container">
-							<Image src={mobile} class="device-mask" alt="Mobile Mask" />
-							<video class="mobile-video" autoplay playsinline muted loop poster="">
-								<source src="/mrc-mobile.mp4" type="video/mp4" />
-							</video>
-						</div>
-					</div>
-					<div id="timeline">
-						<video class="timeline" preload="none" playsinline autoplay muted loop style="pointer-events: none;" poster="./timeline-poster-desktop.webp">
-							<source src="./timeline-desktop.mp4" type="video/mp4" media="all and (min-width:850px)" />
-							<source src="./timeline-mobile.mp4" type="video/mp4" media="all and (max-width:849px)" />
-						</video>
-					</div>
+			<div class="flex display-formats">
+				<div class="laptop-container">
+					<Image src={laptop} class="device-mask" alt="Laptop" />
+					<video class="site-video" autoplay playsinline muted loop poster="">
+						<source src="/mrc-laptop.mp4" type="video/mp4" />
+					</video>
 				</div>
-			</section>
+				<div class="mobile-container">
+					<Image src={mobile} class="device-mask" alt="Mobile Mask" />
+					<video class="mobile-video" autoplay playsinline muted loop poster="">
+						<source src="/mrc-mobile.mp4" type="video/mp4" />
+					</video>
+				</div>
+			</div>
+			<div id="timeline">
+				<video class="timeline" preload="none" playsinline autoplay muted loop style="pointer-events: none;" poster="./timeline-poster-desktop.webp">
+					<source src="./timeline-desktop.mp4" type="video/mp4" media="all and (min-width:850px)" />
+					<source src="./timeline-mobile.mp4" type="video/mp4" media="all and (max-width:849px)" />
+				</video>
+			</div>
 
-			<section id="featured-videos">
-				<div class="container top">
-					<div class="flex padding-x">
-						<div class="cell small-18">
-							<h2 class="border-top">Social Media Ads</h2>
-							<p class="width">These Ads are (the 1:1 aspect ratio versions) from a number of Facebook and Google Ad campaigns using Adobe Animate.</p>
-							<br />
-						</div>
-					</div>
-				</div>
+			<div id="floorplan-ui">
+				<div id="floorplans">
+					<div class="select-below">
+						<h2>Resort Floor Plan UI</h2>
+						<p class="width justify">
+							I was asked to create a User Interface for the floor plans page of a <a href="https://marinaresortcavtat.com/" class="underline" target="_blank">Croatian Resort website</a> to guide users
+							through the floor plan selection process.
+						</p>
+						<p class="width justify">
+							The <strong>NUMBER OF BEDROOMS</strong> has to be chosen first, followed by a <strong>RESIDENCE TYPE</strong> and a
+							<strong>SUITE NUMBER</strong>, which loads the chosen floor plan.
+						</p>
+						<p class="width plan-examples"><em>The two working examples below, are:</em></p>
 
-				<div class="swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<video playsinline muted controls poster="">
-								<source src="/diamond-mobile.mp4" type="video/mp4" />
-							</video>
-							<h3>Residential Highrise Rentals</h3>
-						</div>
-						<div class="swiper-slide">
-							<video playsinline muted controls poster="">
-								<source src="/Fortune-District-Ad-1.mp4" type="video/mp4" />
-							</video>
-							<h3>Commercial Space</h3>
-						</div>
-						<div class="swiper-slide">
-							<video playsinline muted controls poster="">
-								<source src="/Greehaus-1080.mp4" type="video/mp4" />
-							</video>
-							<h3>Condominiums</h3>
-						</div>
-						<div class="swiper-slide">
-							<video playsinline muted controls poster="">
-								<source src="/MRC-Facebook.mp4" type="video/mp4" />
-							</video>
-							<h3>Resort</h3>
-						</div>
-						<div class="swiper-slide">
-							<video playsinline muted controls poster="">
-								<source src="/Greenhaus-sky.mp4" type="video/mp4" />
-							</video>
-							<h3>Condominiums</h3>
-						</div>
-						<div class="swiper-slide">
-							<video playsinline muted controls poster="">
-								<source src="/MRC-Ad-1.mp4" type="video/mp4" />
-							</video>
-							<h3>Resort</h3>
-						</div>
-						<div class="swiper-slide">
-							<video playsinline muted controls poster="">
-								<source src="/BlueVista-Summer.mp4" type="video/mp4" />
-							</video>
-							<h3>Residential Community</h3>
-						</div>
+						<p>
+							<strong
+								>2 Bedrooms <span>•</span> D1 <span>•</span> 601<br />
+								4 Bedrooms <span>•</span> Seaside Villas <span>•</span> A1</strong
+							>
+						</p>
 					</div>
-					<div class="swiper-pagination"></div>
-				</div>
-			</section>
+					<h3>Select A Bedroom Number</h3>
+					<div class="residence-choice">
+						<select name="bedroomNumber" id="bedroomNumber">
+							<option value="disabled">NUMBER OF BEDROOMS</option>
+							<option value="1 Bedroom">1 Bedroom</option>
+							<option value="2 Bedrooms">2 Bedrooms</option>
+							<option value="3 Bedrooms">3 Bedrooms</option>
+							<option value="4 Bedrooms">4 Bedrooms</option>
+						</select>
+						<select name="residenceType" id="residenceType" disabled>
+							<option value="disabled">RESIDENCE TYPE</option>
+						</select>
+						<select name="suites" id="suites" disabled>
+							<option value="disabled">SELECT SUITE</option>
+						</select>
+					</div>
 
-			<section id="current-sites">
-				<div class="container">
-					<div class="flex padding-x">
-						<div class="cell small-18">
-							<h2 class="border-top">9 Panel Video Wall</h2>
-							<p class="justify width">
-								I was asked to create a 9 panel video wall for a Sales Centre. The idea was to reveal each rendering with an animated delay for each panel between transitions.
-							</p>
-						</div>
-					</div>
-					<div style="margin: 2rem auto 1rem; max-width:1400px;text-align:center;">
-						<video playsinline muted controls poster="" style="width: 100%; ">
-							<source src="/S2-Video-Wall.mp4" type="video/mp4" />
-						</video>
+					<div class="residence-plans">
+						<PictureComponent mobileImgUrl={placeholderMobile} desktopImgUrl={placeholder} loading="lazy" className="clip-image" alt="Marina Resort Cavtat" />
 					</div>
 				</div>
-			</section>
-		</Layout>
-	</div>
-</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="featured-videos">
+		<div class="container top">
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h2 class="border-top">Social Media Ads</h2>
+					<p class="width">These Ads are (the 1:1 aspect ratio versions) from a number of Facebook and Google Ad campaigns using Adobe Animate.</p>
+					<br />
+				</div>
+			</div>
+		</div>
+
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/diamond-mobile.mp4" type="video/mp4" />
+					</video>
+					<h3>Residential Highrise Rentals</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/Fortune-District-Ad-1.mp4" type="video/mp4" />
+					</video>
+					<h3>Commercial Space</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/Greehaus-1080.mp4" type="video/mp4" />
+					</video>
+					<h3>Condominiums</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/MRC-Facebook.mp4" type="video/mp4" />
+					</video>
+					<h3>Resort</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/Greenhaus-sky.mp4" type="video/mp4" />
+					</video>
+					<h3>Condominiums</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/MRC-Ad-1.mp4" type="video/mp4" />
+					</video>
+					<h3>Resort</h3>
+				</div>
+				<div class="swiper-slide">
+					<video playsinline muted controls poster="">
+						<source src="/BlueVista-Summer.mp4" type="video/mp4" />
+					</video>
+					<h3>Residential Community</h3>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="flex padding-x">
+				<div class="cell small-18">
+					<h2 class="border-top">9 Panel Video Wall</h2>
+					<p class="justify width">I was asked to create a 9 panel video wall for a Sales Centre. The idea was to reveal each rendering with an animated delay for each panel between transitions.</p>
+				</div>
+			</div>
+			<div style="margin: 2rem auto 1rem; max-width:1400px;text-align:center;">
+				<video playsinline muted controls poster="" style="width: 100%; ">
+					<source src="/S2-Video-Wall.mp4" type="video/mp4" />
+				</video>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<script is:inline src="/residences.js"></script>
 
 <script>
 	document.addEventListener('astro:page-load', () => {
@@ -330,6 +371,36 @@ import mobile from '../img/mobile.png';
 		initAnimations();
 	});
 </script> -->
+
+<script is:inline>
+	gsap.registerPlugin(ScrollTrigger);
+
+	const coolVideo = document.querySelector('video');
+
+	let tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: 'video',
+			start: 'top top',
+			end: 'bottom+=200% bottom',
+			scrub: 2,
+			markers: true,
+		},
+	});
+
+	// wait until video metadata is loaded, so we can grab the proper duration before adding the onscroll animation. Might need to add a loader for loonng videos
+	coolVideo.onloadedmetadata = function () {
+		tl.to(coolVideo, { currentTime: coolVideo.duration });
+	};
+
+	// Dealing with devices
+	function isTouchDevice() {
+		return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+	}
+	if (isTouchDevice()) {
+		coolVideo.play();
+		coolVideo.pause();
+	}
+</script>
 
 <script is:inline>
 	document.addEventListener('astro:page-load', () => {
@@ -576,22 +647,26 @@ import mobile from '../img/mobile.png';
 	/* =============================================
 			FEATURED SITE
 	================================================ */
-	#featured-site-heading {
-		margin: 50px auto 2rem;
-	}
-	#featured-site {
-		padding: 0 1.25rem;
+	#featured-site .container.featured-site-bg {
+		margin-top: 75px;
+		padding: 0 0 1rem;
+		max-width: 1360px;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(242, 242, 242, 1) 100%);
+		border-radius: 5px;
+		border: 3px #ccc solid;
 	}
 
 	#featured-site .container {
-		padding: 50px 0 50px;
-		max-width: 1360px;
+		padding-top: 50px;
 	}
 
-	#featured-site .container.featured-site-bg {
-		padding: 50px 0 0;
-		border-radius: 2px;
-		background: rgba(0, 0, 0, 0.05);
+	#featured-site .intro {
+		padding: 50px 2rem;
+	}
+
+	#featured-site .container .plan-examples span {
+		font-family: 'CalibriRegular';
+		font-size: 1.1rem;
 	}
 
 	#featured-site .flex {
@@ -599,10 +674,7 @@ import mobile from '../img/mobile.png';
 	}
 
 	#featured-site p {
-		text-align: center;
-		margin: 0 auto 1rem;
-		max-width: 750px;
-		padding: 0 1.25rem;
+		margin-bottom: 1rem;
 	}
 
 	#timeline {
@@ -618,14 +690,26 @@ import mobile from '../img/mobile.png';
 		width: 100%;
 	}
 
-	@media (max-width: 700px) {
-		#featured-site {
-			padding: 0;
-		}
-		#featured-site .container {
+	@media (max-width: 1400px) {
+		#featured-site .container.featured-site-bg {
+			backfround: #f5f5f5;
+			margin-top: 0;
+			padding: 0 0 1.5rem;
+			border-radius: 0;
 			border: 0;
-			background: none;
-			padding: 0 0 1.25rem;
+		}
+		#featured-site .intro {
+			padding: 50px 1.25rem;
+		}
+		#featured-site .intro h2 {
+			border-top: 1px #3a3a42 solid;
+			padding-top: 1.5rem;
+		}
+		#featured-site #floorplans {
+			padding: 0 1.25rem;
+		}
+		#floorplans .residence-choice select {
+			max-width: 350px;
 		}
 	}
 

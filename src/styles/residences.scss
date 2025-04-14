@@ -13,6 +13,7 @@
 	 SELECT PLANS
 =============================== */
 #floorplan-ui {
+	padding-top: 80px;
 	ul {
 		margin: 0 0 1rem 1.5rem;
 		list-style: outside;
@@ -21,27 +22,36 @@
 
 #floorplans {
 	//background: #f2f2f2;
-	padding: 0 1.25rem 20px;
+	padding: 0 2rem 20px;
 	max-width: 1400px;
 	margin: 0 auto;
 	border-radius: 3px;
 }
 
-#floorplans .select-below {
-	//max-width: 1200px;
-	margin: 0 auto;
+// #floorplans .select-below {
+// 	margin: 0 auto;
+// 	max-width: 700px;
+// }
+
+#floorplan-ui h2 {
+	margin-bottom: 3rem;
 }
 
-#floorplans .select-below h3 {
+#floorplan-ui .plan-examples {
+	margin-bottom: 1.5rem;
+}
+
+#floorplans h3 {
 	color: var.$dark;
 	font-family: var.$theme-font;
-	font-size: 2rem;
+	border-top: 1px var.$dark solid;
+	padding-top: 1.5rem;
+	font-size: 1.75rem;
 	font-weight: 600;
 	font-style: normal;
 	text-transform: uppercase;
-	border-bottom: 1px var.$dark solid;
-	padding-bottom: 0.6rem;
-	margin-bottom: 1.75rem;
+	margin-top: 4rem;
+	margin-bottom: 2rem;
 	letter-spacing: 0.5px;
 }
 
@@ -57,7 +67,7 @@
 	color: #fff;
 	font-size: 0.9rem;
 	font-family: 'CalibriBold', ans-serif;
-	padding: 0.4rem 0.75rem 0.3rem;
+	padding: 0.55rem 0.75rem 0.45rem;
 	background: #bc955b url('../img/arrow-down-select-wh.svg') no-repeat right 10px center;
 	background-size: 17px;
 	margin: 0 0 0.45rem;
@@ -68,7 +78,10 @@
 	letter-spacing: 1px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1400px) {
+	#floorplans {
+		padding: 0 0 20px;
+	}
 	#floorplans .residence-choice {
 		flex-direction: column;
 		margin: 0;
@@ -106,6 +119,7 @@
 #floorplans .residence-plans .details ul {
 	list-style: none;
 	margin-left: 0.5rem;
+	font-size: 1.1rem;
 }
 
 #floorplans .residence-plans .details ul li {
@@ -196,12 +210,6 @@
 	width: 100%;
 	max-width: 200px;
 	letter-spacing: 1px;
-}
-
-@media (max-width: 800px) {
-	#floorplans .residence-plans .details #floorLevel {
-		max-width: 350px;
-	}
 }
 
 #floorplans .residence-plans .details .viewbook,
