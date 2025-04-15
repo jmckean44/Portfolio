@@ -204,9 +204,10 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 							<ol>
 								<li>Select a <strong>NUMBER OF BEDROOMS</strong></li>
 								<li>Select a <strong>RESIDENCE TYPE</strong></li>
-								<li>Select a <strong>SUITE NUMBER</strong> (and choose either of the two options below) to load a floor plan.</li>
+								<li>Select a <strong>SUITE NUMBER</strong></li>
 							</ol>
 						</p>
+						<p><em>Choose either of the two options below to load a floor plan:</em></p>
 						<p class="width plan-examples">
 							2 Bedrooms <span>•</span> D1 <span>•</span> 601<br />
 							4 Bedrooms <span>•</span> Seaside Villas <span>•</span> A1
@@ -228,7 +229,6 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 							<option value="disabled">SELECT SUITE</option>
 						</select>
 					</div>
-
 					<div class="residence-plans">
 						<PictureComponent mobileImgUrl={placeholderMobile} desktopImgUrl={placeholder} loading="lazy" className="clip-image" alt="Marina Resort Cavtat" />
 					</div>
@@ -698,12 +698,6 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 		#featured-site .intro h2 {
 			border-top: 1px #3a3a42 solid;
 			padding-top: 1.5rem;
-		}
-		#featured-site #floorplans {
-			padding: 0 1.25rem;
-		}
-		#floorplans .residence-choice select {
-			max-width: 350px;
 		}
 	}
 

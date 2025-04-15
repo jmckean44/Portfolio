@@ -66,11 +66,11 @@
 	width: 100%;
 	color: #999999;
 	font-family: 'Courier New', Courier, monospace, sans-serif;
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 }
 
 .swiper-pagination-v .swiper-pagination-bullet {
-	padding: 0.6rem 1rem 0.5rem;
+	padding: 0.6rem 0.8rem 0.5rem;
 	width: auto !important;
 	height: auto;
 	line-height: 1;
@@ -148,7 +148,6 @@
 
 #swiper-vertical-nav .swiper-pagination {
 	display: flex;
-	//justify-content: center;
 	gap: 1rem;
 	margin-bottom: 3rem;
 }

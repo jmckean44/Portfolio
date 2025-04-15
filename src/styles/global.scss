@@ -146,7 +146,7 @@ html {
 
 body {
 	overflow-x: hidden !important;
-	line-height: 1.5;
+	line-height: 1.4;
 	margin: 0;
 	font-family: var.$font-sans-serif;
 	font-weight: normal;
@@ -342,10 +342,11 @@ ol {
 	font-family: inherit;
 }
 
-ol {
-	margin-left: 1.4rem;
-	list-style-position: inside !important;
-}
+// ol {
+// 	margin-left: 1.4rem;
+// 	list-style-position: inside !important;
+// 	border: 1px red solid;
+// }
 
 header ul,
 footer ul {
