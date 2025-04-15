@@ -661,7 +661,7 @@ $container-padding-mobile: 1.25rem;
 	bottom: 125%;
 	left: 0;
 	margin-right: -50px;
-	max-width: 300px;
+	max-width: 150px;
 	opacity: 0;
 	transition: 0.3s;
 	transform: translate3d(0px, 20px, 0px);
@@ -1145,10 +1145,6 @@ p a {
 #about #about-intro {
 	text-align: center;
 	padding-bottom: 100px;
-}
-
-.width.filmo {
-	max-width: 850px;
 }
 
 @media (max-width: 750px) {
