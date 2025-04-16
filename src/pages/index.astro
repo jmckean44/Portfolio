@@ -368,65 +368,35 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 </script> -->
 
 <script is:inline>
-	gsap.registerPlugin(ScrollTrigger);
-
-	const coolVideo = document.querySelector('video');
-
-	let tl = gsap.timeline({
-		scrollTrigger: {
-			trigger: 'video',
-			start: 'top top',
-			end: 'bottom+=200% bottom',
-			scrub: 2,
-			markers: true,
-		},
-	});
-
-	// wait until video metadata is loaded, so we can grab the proper duration before adding the onscroll animation. Might need to add a loader for loonng videos
-	coolVideo.onloadedmetadata = function () {
-		tl.to(coolVideo, { currentTime: coolVideo.duration });
-	};
-
-	// Dealing with devices
-	function isTouchDevice() {
-		return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
-	}
-	if (isTouchDevice()) {
-		coolVideo.play();
-		coolVideo.pause();
-	}
-</script>
-
-<script is:inline>
 	document.addEventListener('astro:page-load', () => {
 		const form = document.getElementById('htmls');
-		const radioButtons = document.querySelectorAll('.radio-input');
-		const isRadioChecked = Array.from(radioButtons).some((radio) => radio.checked);
+		// const radioButtons = document.querySelectorAll('.radio-input');
+		// const isRadioChecked = Array.from(radioButtons).some((radio) => radio.checked);
 
-		radioButtons.forEach((radio) => {
-			radio.addEventListener('change', function () {
-				console.log(`${radio.value}`);
-				if (radio.checked) {
-					if (radio.value === 'dale') {
-						form.action = './netlify/functions/dale.php';
-						console.log(`${form.action}`);
-					} else if (radio.value === 'mrc') {
-						form.action = './htmls/mrc.php';
-					} else if (radio.value === 'winslow') {
-						form.action = './htmls/winslow.php';
-					} else if (radio.value === 'vanguard') {
-						form.action = './htmls/vanguard.php';
-					} else if (radio.value === 'diamond') {
-						form.action = './htmls/diamond.php';
-					} else if (radio.value === 'kingsway') {
-						form.action = './htmls/kingsway.php';
-					} else {
-						form.action = '';
-					}
-				}
-			});
+		// radioButtons.forEach((radio) => {
+		// 	radio.addEventListener('change', function () {
+		// 		console.log(`${radio.value}`);
+		// 		if (radio.checked) {
+		// 			if (radio.value === 'dale') {
+		// 				form.action = './netlify/functions/dale.php';
+		// 				console.log(`${form.action}`);
+		// 			} else if (radio.value === 'mrc') {
+		// 				form.action = './htmls/mrc.php';
+		// 			} else if (radio.value === 'winslow') {
+		// 				form.action = './htmls/winslow.php';
+		// 			} else if (radio.value === 'vanguard') {
+		// 				form.action = './htmls/vanguard.php';
+		// 			} else if (radio.value === 'diamond') {
+		// 				form.action = './htmls/diamond.php';
+		// 			} else if (radio.value === 'kingsway') {
+		// 				form.action = './htmls/kingsway.php';
+		// 			} else {
+		// 				form.action = '';
+		// 			}
+		// 		}
+		// 	});
 
-			console.log(form);
+			//console.log(form);
 
 			form.addEventListener('submit', async function (e) {
 				e.preventDefault();
