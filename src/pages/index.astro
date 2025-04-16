@@ -429,7 +429,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 			console.log(form);
 
 			form.addEventListener('submit', async function (e) {
-				//e.preventDefault();
+				e.preventDefault();
 
 				const email = form.querySelector('input[name="email"]').value;
 				const responseDiv = document.querySelector('.response');
@@ -439,26 +439,26 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 					return;
 				}
 
-				// try {
-				// 	const response = await fetch('/.netlify/functions/dale.php', {
-				// 		method: 'POST',
-				// 		headers: {
-				// 			'Content-Type': 'application/json',
-				// 		},
-				// 		body: JSON.stringify({ email }),
-				// 	});
+				try {
+					const response = await fetch('/.netlify/functions/sendEmail.php', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify({ email }),
+					});
 
-				// 	console.log(email);
+					console.log(email);
 
-				// 	const result = await response.json();
-				// 	if (result.success) {
-				// 		responseDiv.innerHTML = `<p style="color: #ff8000;">${result.message}</p>`;
-				// 	} else {
-				// 		responseDiv.innerHTML = `<p style="color: #ff8000;">${result.message}</p>`;
-				// 	}
-				// } catch (error) {
-				// 	responseDiv.innerHTML = `<p style="color: red;">An error occurred. Please try again later.</p>`;
-				// }
+					const result = await response.json();
+					if (result.success) {
+						responseDiv.innerHTML = `<p style="color: #ff8000;">${result.message}</p>`;
+					} else {
+						responseDiv.innerHTML = `<p style="color: #ff8000;">${result.message}</p>`;
+					}
+				} catch (error) {
+					responseDiv.innerHTML = `<p style="color: red;">An error occurred. Please try again later.</p>`;
+				}
 			});
 		});
 	});

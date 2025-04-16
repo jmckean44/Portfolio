@@ -1,0 +1,7 @@
+{
+	"name": "jeff/portfolio",
+	"description": "A project to send emails using PHP and Netlify Functions",
+	"require": {
+		"phpmailer/phpmailer": "^6.9"
+	}
+}

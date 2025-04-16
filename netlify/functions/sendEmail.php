@@ -1,5 +1,5 @@
 <?php
-fd
+require 'vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -34,15 +34,15 @@ function handler($event, $context)
     // Configure PHPMailer
     $mail = new PHPMailer(true);
     $mail->isSMTP();
-    $mail->Host = 'smtp.mailtrap.io'; // Replace with your SMTP server
+    $mail->Host = getenv('SMTP_HOST');
     $mail->SMTPAuth = true;
-    $mail->Username = 'your-username'; // Replace with your SMTP username
-    $mail->Password = 'your-password'; // Replace with your SMTP password
+    $mail->Username = getenv('SMTP_USERNAME');
+    $mail->Password = getenv('SMTP_PASSWORD');
     $mail->SMTPSecure = 'tls';
-    $mail->Port = 587;
+    $mail->Port = getenv('SMTP_PORT');
 
     // Set email parameters
-    $mail->setFrom('your-email@example.com', 'Your Name');
+    $mail->setFrom('jmckean44@gmail.com', 'Jeff');
     $mail->addAddress($email);
     $mail->isHTML(true);
     $mail->Subject = 'Test Email';
