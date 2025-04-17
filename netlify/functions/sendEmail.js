@@ -16,15 +16,20 @@ export const handler = async (event) => {
 		const transporter = nodemailer.createTransport({
 			host: process.env.SMTP_HOST,
 			port: process.env.SMTP_PORT,
+			secure: process.env.SMTP_PORT === '465', // Use SSL for port 465
 			auth: {
 				user: process.env.SMTP_USERNAME,
 				pass: process.env.SMTP_PASSWORD,
+			},
+			tls: {
+				rejectUnauthorized: false, // Allow self-signed certificates (if applicable)
 			},
 		});
 
 		// Define email content based on campaignId
 		let htmlContent;
-		if (campaignId === 'No7dale') {
+
+		if (campaignId === 'Dale') {
 			htmlContent = `
 				<!DOCTYPE html>
 				<html xmlns="http://www.w3.org/1999/xhtml">
@@ -675,9 +680,7 @@ export const handler = async (event) => {
 										</table>
 										<![endif]-->
 									</div>
-									<!--MAX-WIDTH 5%-->
-
-          
+									<!--MAX-WIDTH 5%-->          
 
 									<div style="font-size:0;margin:0 auto;background:#ffffff">
 										<!--[if mso]>
@@ -864,8 +867,6 @@ export const handler = async (event) => {
 													<br><br>
 													*This project is being marketed and commercialized exclusively by Blueprint Global*
 												</p>
-
-
 
 											</td>
 										</tr>
