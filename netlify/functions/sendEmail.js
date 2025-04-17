@@ -1,6 +1,6 @@
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
-exports.handler = async (event) => {
+export const handler = async (event) => {
 	try {
 		// Parse the request body
 		const { email } = JSON.parse(event.body);
@@ -26,7 +26,7 @@ exports.handler = async (event) => {
 		const mailOptions = {
 			from: '"Jeff" jmckean44@gmail.com',
 			to: email,
-			cc: 'jeff@pbmarketing.ca',
+			cc: email,
 			subject: 'Test Email',
 			html: `
 						<!DOCTYPE html>
