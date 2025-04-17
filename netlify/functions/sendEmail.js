@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 export const handler = async (event) => {
 	try {
 		// Parse the request body
-		const { email } = JSON.parse(event.body);
+		const { email, campaignId } = JSON.parse(event.body);
 
 		if (!email) {
 			return {
