@@ -3,7 +3,7 @@ import { type Item, items } from '../../data';
 import Layout from '../../layouts/Layout.astro';
 import ItemCard from '../../components/ItemCard.astro';
 import { getImage } from 'astro:assets';
-import myImage from '../../img/close.svg';
+import myImage from '../../img/arrow-back.svg';
 const close = await getImage({ src: myImage });
 const { slug } = Astro.params;
 
@@ -33,6 +33,7 @@ if (!item) {
 				>
 			</div>
 			<div>
+				<a href="/#filter-sites" class="close" transition:name={`${slug} close`} role="button" style={`background-image: url('${close.src}')`}>BACK</a>
 				<h1>
 					{item.name}
 				</h1>
@@ -48,9 +49,8 @@ if (!item) {
 
 				<a href={item.website} transition:name={`${slug} website`} target="_blank" role="button" aria-label="New tab link to website" class="website button">WEBSITE</a>
 				<!-- <a href={item.featured} type="button" role="button" aria-label="Link to featured video" class="website" class="button">Featured Video</a> -->
-				<div>
-					<a href="/#filter-sites" class="close" transition:name={`${slug} close`} role="button" style={`background-image: url('${close.src}')`}></a>
-				</div>
+				<!-- 
+				<a href="/#filter-sites" class="close" transition:name={`${slug} close`} role="button" style={`background-image: url('${close.src}')`}>BACK</a> -->
 			</div>
 		</div>
 	</div>
@@ -125,17 +125,18 @@ if (!item) {
 			color: #fff;
 			background: #ff8000;
 			border-radius: 2px;
-			padding: 0.6rem 1rem 0.5rem;
+			padding: 0.7rem 1rem 0.7rem;
+			font-family: 'SteelfishRegular', sans-serif;
 			font-weight: bold;
-			font-size: 1rem;
+			font-size: 1.3rem;
 			display: inline-block;
-			letter-spacing: 1px;
+			letter-spacing: 2px;
 			line-height: 1;
 			cursor: pointer;
 		}
 
 		.website:hover {
-			background: #26262d;
+			background: #3a3a42;
 		}
 
 		a {
@@ -145,27 +146,31 @@ if (!item) {
 		h4 {
 			animation: animate-in 0.5s ease-in-out;
 		}
+		.close-container {
+			float: right;
+		}
 		.close {
-			margin-top: 2rem;
-			padding: 1rem;
-			background-image: url('../../img/close.svg') no-repeat !important;
-			background-size: 15px;
+			/* margin-top: 2rem; */
+			padding: 0.5rem 0.75rem 0.5rem 1.7rem;
+			background-size: 22px;
 			background-repeat: no-repeat;
-			background-position: center;
-			background-color: #fff;
-			border: 1px #ccc solid;
+			background-position: center left 4px;
+			background-color: #3a3a42;
 			display: inline-block;
-			border-radius: 30px;
-			position: absolute;
+			border-radius: 2px;
+			color: #fff;
+			float: right;
+			font-family: 'SteelfishRegular', sans-serif;
+			letter-spacing: 2px;
+			/* position: absolute;
 			bottom: 0;
-			right: 0;
+			right: 0; */
 		}
 		.close:hover {
-			background-image: url('../../img/close-wh.svg') no-repeat !important;
-			background-color: #f2f2f2;
-			background-size: 15px;
-			background-position: center;
-			border: 1px #ccc solid;
+			background-size: 22px !important;
+			background: #ff8000;
+			background-repeat: no-repeat;
+			background-position: center left 0;
 		}
 
 		@media (max-width: 400px) {
