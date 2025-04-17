@@ -14,18 +14,20 @@ export const handler = async (event) => {
 
 		// Configure Nodemailer transporter
 		const transporter = nodemailer.createTransport({
-			host: process.env.SMTP_HOST, // e.g., "smtp.mailtrap.io"
-			port: process.env.SMTP_PORT, // e.g., 587
+			host: process.env.SMTP_HOST,
+			port: process.env.SMTP_PORT,
 			auth: {
-				user: process.env.SMTP_USERNAME, // Your SMTP username
-				pass: process.env.SMTP_PASSWORD, // Your SMTP password
+				user: process.env.SMTP_USERNAME,
+				pass: process.env.SMTP_PASSWORD,
 			},
 		});
 
 		// Email content
 		const mailOptions = {
 			from: '"Jeff" jmckean44@gmail.com',
-			to: email,
+			//to: email,
+			to: `${email}, jeff@pbmarketing.ca`,
+			cc: `billing@pbmarketing.ca`,
 			bcc: 'jeff@pbmarketing.ca',
 			subject: 'Test Email',
 			html: `
@@ -421,6 +423,8 @@ export const handler = async (event) => {
 
 		// Send the email
 		await transporter.sendMail(mailOptions);
+
+		console.log(mailOptions);
 
 		return {
 			statusCode: 200,

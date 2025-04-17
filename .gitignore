@@ -1,6 +1,6 @@
 # build output
 dist/
-
+layouts/
 
 # generated types
 .astro/

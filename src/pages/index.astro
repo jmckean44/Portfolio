@@ -100,7 +100,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 			<div>
 				<form id="htmls" method="POST">
 					<div class="email-container">
-						<input type="email" name="email" class="email" placeholder="Email (not set up yet)" required />
+						<input type="email" name="email" class="email" placeholder="Email (not set up yet)" />
 						<span class="helperText">EMAIL</span>
 					</div>
 					<div class="response"></div>
@@ -427,7 +427,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 					responseDiv.innerHTML = `<p style="color: #ff8000;">${result.message}</p>`;
 				}
 			} catch (error) {
-				responseDiv.innerHTML = `<p style="color: red;">An error occurred. Please try again later.</p>`;
+				responseDiv.innerHTML = `<p style="color: red;">An error occurred. Please try again.</p>`;
 			}
 		});
 	});
