@@ -13,14 +13,14 @@ export const handler = async (event) => {
 		}
 
 		// Configure Nodemailer transporter
-		// const transporter = nodemailer.createTransport({
-		// 	host: process.env.SMTP_HOST,
-		// 	port: process.env.SMTP_PORT,
-		// 	auth: {
-		// 		user: process.env.SMTP_USERNAME,
-		// 		pass: process.env.SMTP_PASSWORD,
-		// 	},
-		// });
+		const transporter = nodemailer.createTransport({
+			host: process.env.SMTP_HOST,
+			port: process.env.SMTP_PORT,
+			auth: {
+				user: process.env.SMTP_USERNAME,
+				pass: process.env.SMTP_PASSWORD,
+			},
+		});
 
 		// Email content
 		const mailOptions = {
