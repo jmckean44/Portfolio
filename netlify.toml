@@ -1,4 +1,3 @@
-#need for correct deploy path 
 [build]
 command = "npm run build"
 publish = "dist/client"
