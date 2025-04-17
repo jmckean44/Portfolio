@@ -1,7 +1,7 @@
 @use 'variables' as var;
 
 $input-font: var.$font-sans-serif;
-$input-font-size: 0.85rem;
+$input-font-size: 1rem;
 $input-font-size-button: 1rem;
 $input-font-clr: var.$dark;
 $input-font-spacing: 0.5px;
@@ -214,8 +214,8 @@ button {
 	width: auto;
 	color: #fff;
 	border: none;
-	border-radius: 3px;
-	padding: 0.5rem 1rem 0.4rem;
+	border-radius: 2px;
+	padding: 0.5rem 1rem 0.45rem;
 	cursor: pointer;
 	margin-top: 1rem;
 	text-align: center;

@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import '../styles/spinner.css';
 //import { Image } from 'astro:assets';
 //import { getImage } from 'astro:assets';
 //import { Picture } from 'astro:assets';
@@ -101,7 +101,7 @@ import Layout from '../layouts/Layout.astro';
 					<h3>Random User Generator</h3>
 					<div id="user"></div>
 					<button id="generate" class="btn">
-						<div class="spinner" style="display: none;"></div>
+						<div class="spinner hidden"></div>
 						Generate User
 					</button>
 					<script src="../scripts/generate-user.js"></script>
@@ -189,8 +189,9 @@ import Layout from '../layouts/Layout.astro';
 		color: #fff;
 		border: none;
 		border-radius: 3px;
-		padding: 0.5rem 0.75rem;
+		padding: 0.5rem 1rem;
 		cursor: pointer;
+		position: relative;
 	}
 
 	.btn:hover {

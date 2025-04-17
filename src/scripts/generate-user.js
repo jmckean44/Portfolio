@@ -12,7 +12,7 @@ document.addEventListener('astro:page-load', () => {
 	function displayUser(user) {
 		const userDisplay = document.querySelector('#user');
 		const placeholderBG = document.querySelector('#generate-user');
-		//const btn = document.querySelector('#generate-user .btn');
+		const btn = document.querySelector('#generate-user .btn');
 
 		if (user.gender === 'female') {
 			placeholderBG.style.backgroundColor = '#f4e5f2';

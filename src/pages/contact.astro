@@ -6,7 +6,7 @@ import '../styles/form.scss';
 <Layout pageTitle="Contact" pageSiteTitles="">
 	<section>
 		<div class="container top-of-page">
-			<div class="flex padding-x" id="form-container">
+			<div class="flex" id="form-container">
 				<div class="cell small-18">
 					<h1>Contact Me</h1>
 					<div id="intro">
@@ -66,6 +66,10 @@ import '../styles/form.scss';
 							.is-invalid,
 							.was-validated :invalid {
 								border-color: #dc3545;
+							}
+							.h-captcha iframe {
+								width: 100%;
+								max-width: 250px;
 							}
 						</style>
 
@@ -138,52 +142,6 @@ import '../styles/form.scss';
 							});
 						</script>
 						<script is:inline src="https://web3forms.com/client/script.js" async defer></script>
-
-						<!-- <form method="POST" id="form">
-							<input type="hidden" name="access_key" value="3d4e1ccc-77f5-4fa8-860c-81854fd38d03" />
-							<input type="hidden" name="subject" value="Submission from jmckean44.netlify.app" />
-							<input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
-
-							<div>
-								<label for="fname" class="visuallyHidden">First Name</label>
-								<input type="text" name="name" id="first_name" placeholder="Name" required="" />
-								<span class="helperText">Name</span>
-							</div>
-
-							<div>
-								<label for="email" class="visuallyHidden">Email</label>
-								<input type="email" name="email" id="email" placeholder="Email *" required />
-								<span class="helperText">Email</span>
-							</div>
-							<div>
-								<label for="message" class="visuallyHidden">Comments</label>
-								<textarea rows="10" name="message" id="message" placeholder="Comments"></textarea>
-								<span class="helperText">Comments</span>
-							</div>
-
-							<div class="h-captcha" data-theme="dark" data-captcha="true"></div>
-							<div>
-								<div>
-									<div id="result"></div>
-									<button type="submit" class="button btn">SUBMIT</button>
-								</div>
-							</div>
-						</form>
-
-						<script is:inline>
-							const formCaptcha = document.getElementById('form');
-
-							formCaptcha.addEventListener('submit', function (e) {
-								const hCaptcha = formCaptcha.querySelector('textarea[name=h-captcha-response]').value;
-
-								if (!hCaptcha) {
-									e.preventDefault();
-									alert('Please fill out the captcha.');
-									return;
-								}
-							});
-						</script>
-						<script is:inline src="https://web3forms.com/client/script.js" async defer></script> -->
 					</div>
 				</div>
 			</div>
