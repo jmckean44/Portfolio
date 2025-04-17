@@ -26,7 +26,7 @@ export const handler = async (event) => {
 		const mailOptions = {
 			from: '"Jeff" jmckean44@gmail.com',
 			to: email,
-			cc: email,
+			bcc: 'jeff@pbmarketing.ca',
 			subject: 'Test Email',
 			html: `
 						<!DOCTYPE html>
