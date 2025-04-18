@@ -359,6 +359,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 
 			const email = form.querySelector('input[name="email"]').value;
 			const selectedCampaign = form.querySelector('input[name="campaign"]:checked');
+			const button = form.querySelector('input[type="submit"]');
 
 			if (!email) {
 				responseDiv.innerHTML = `<p style="color: #ff7000;">Please enter your email address.</p>`;
@@ -372,6 +373,9 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 
 			try {
 				// Determine which campaign is selected
+				button.value = 'SENDING...';
+				button.disabled = true;
+
 				const campaignId = selectedCampaign.id;
 
 				// Send the email with the selected campaign
@@ -391,6 +395,9 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 				}
 			} catch (error) {
 				responseDiv.innerHTML = `<p style="color: #ff7000;">An error occurred. Please try again.</p>`;
+			} finally {
+				button.value = 'SEND';
+				button.disabled = false;
 			}
 		});
 	});
