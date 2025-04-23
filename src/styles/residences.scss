@@ -41,10 +41,6 @@
 	font-size: 1rem;
 }
 
-#floorplan-ui h2 {
-	margin-bottom: 3rem;
-}
-
 #floorplan-ui .plan-examples {
 	line-height: 1.5;
 	margin-bottom: 3rem;
@@ -56,7 +52,7 @@
 #floorplans h3 {
 	color: var.$dark;
 	font-family: var.$theme-font;
-	border-top: 1px var.$dark solid;
+	//border-top: 1px var.$dark dashed;
 	padding-top: 1.5rem;
 	font-size: 1.75rem;
 	font-weight: 600;
