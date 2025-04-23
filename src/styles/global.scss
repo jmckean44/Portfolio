@@ -431,39 +431,52 @@ body {
 button {
 	font-family: var.$theme-font;
 	border: none;
-	background: var.$theme-clr;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 	cursor: pointer;
 	transition: var.$transition-time;
 	margin-top: 1rem;
-	border-radius: 2px;
 	padding: 0;
 }
 
-button a {
+button a,
+.btn {
 	font-family: var.$theme-font;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 	font-weight: 600;
 	line-height: 1;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	padding: 0.5rem;
 	border: none;
 	border-radius: 2px;
-	background: var.$theme-clr;
+	padding: 0.6rem 1rem;
+	cursor: pointer;
+	position: relative;
+	background: var.$dark;
 	color: #fff !important;
 	cursor: pointer;
-	display: block;
+	display: inline-block;
 }
 
+button:hover,
+.btn:hover {
+	background: #ff9000;
+	color: #fff;
+}
+
+button.remove-item {
+	background: url('../img/icon-close.svg') no-repeat right center;
+	background-size: 15px;
+	width: 30px !important;
+	height: 32px !important;
+	display: inline-block !important;
+	padding: 10px !important;
+	cursor: pointer;
+}
+
+button,
 button a:hover {
-	background: var.$dark;
-	display: block;
-	padding: 0.5rem;
-}
-
-.filter-btn,
-.btn {
-	color: #fff !important;
+	background: var.$theme-clr;
 }
 
 /* =================================
@@ -612,12 +625,61 @@ $container-padding-mobile: 1.25rem;
 }
 
 /* =================================
-	 COLOURS
+	 GREETING
 ==================================== */
-#greeting {
-	color: var.$theme-clr;
+
+.dot-flashing {
+	position: relative;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: var.$dark;
+	color: var.$dark;
+	animation: dot-flashing 1s infinite linear alternate;
+	animation-delay: 0.5s;
+}
+.dot-flashing::before,
+.dot-flashing::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	margin-left: 1rem;
+}
+.dot-flashing::before {
+	left: -15px;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: var.$dark;
+	color: var.$dark;
+	animation: dot-flashing 1s infinite alternate;
+	animation-delay: 0s;
+}
+.dot-flashing::after {
+	left: 15px;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: var.$dark;
+	color: var.$dark;
+	animation: dot-flashing 1s infinite alternate;
+	animation-delay: 1s;
 }
 
+@keyframes dot-flashing {
+	0% {
+		background-color: var.$dark;
+	}
+	50%,
+	100% {
+		background-color: rgba(152, 128, 255, 0.2);
+	}
+}
+
+/* =================================
+	 MISC
+==================================== */
 .paragraph-bg {
 	background: rgba(0, 0, 0, 0.1);
 	padding: 1.5rem;
@@ -795,10 +857,11 @@ p a {
 	color: #fff;
 	border-radius: 2px;
 	margin-right: 1rem;
-	padding: 0.6rem 1rem 0.5rem;
+	padding: 0.6rem 1rem;
 	cursor: pointer;
-	font-size: 1rem;
-	font-family: 'CalibriBold', sans-serif;
+	font-size: 1.4rem;
+	font-weight: bold;
+	font-family: var.$theme-font;
 	text-transform: uppercase;
 	transition: all ease 0.5s;
 }
@@ -811,7 +874,7 @@ p a {
 @media (max-width: 400px) {
 	#home #filter-sites ul button {
 		margin-right: 0.5rem;
-		padding: 0.6rem 0.75rem 0.5rem;
+		padding: 0.6rem 0.75rem;
 	}
 }
 

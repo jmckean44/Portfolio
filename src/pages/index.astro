@@ -23,7 +23,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 		<div class="container top-of-page btm" id="intro">
 			<div class="flex padding-x">
 				<div class="cell small-18">
-					<h1 id="greeting" class="slideInUp"></h1>
+					<h1 id="greeting" class="dot-flashing"></h1>
 				</div>
 			</div>
 			<div class="flex padding-x">
@@ -299,7 +299,7 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 	document.addEventListener('astro:page-load', () => {
 		const date = new Date();
 		const timeOfDay = date.getHours();
-		let greeting;
+		let greeting: string;
 
 		if (timeOfDay < 12) {
 			greeting = 'Good morning,';
@@ -310,6 +310,14 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 		}
 
 		const greetingElement = document.getElementById('greeting');
+
+		if (greetingElement) {
+			setTimeout(() => {
+				greetingElement.textContent = greeting;
+				greetingElement.classList.remove('dot-flashing');
+			}, 0);
+		}
+
 		if (greetingElement) {
 			greetingElement.innerHTML = '<h1>' + greeting + '</h1>';
 		}

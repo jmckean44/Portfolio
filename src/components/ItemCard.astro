@@ -11,7 +11,16 @@ const transitionName = item.slug;
 
 <a href={`/${item.slug}`} data-category={item.type} class="site">
 	<div>
-		<img src={item.image} alt={item.name} width="2000" height="1336" transition:name={`${transitionName} image`} class="image" />
+		<img
+			src={item.image}
+			alt={item.name}
+			width="2000"
+			height="1336"
+			transition:name={`${transitionName} image`}
+			class="image"
+			role="link"
+			aria-label={`offsite link to the ${transitionName} website`}
+		/>
 	</div>
 	<div>
 		<h2 transition:name={`${transitionName} title`}>

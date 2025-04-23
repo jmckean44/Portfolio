@@ -28,12 +28,12 @@ if (!item) {
 	<div class="container" id="grid-work-container">
 		<div class="grid work">
 			<div>
-				<a href={item.website} target="_blank" role="button" aria-label="New tab link to website" class="button">
+				<a href={item.website} target="_blank" role="link" aria-label={`offsite link to ${slug} website`} class="button">
 					<img src={item.image} alt={item.name} class="website-img" transition:name={`${slug} image`} /></a
 				>
 			</div>
 			<div>
-				<a href="/#filter-sites" class="close" transition:name={`${slug} close`} role="button" style={`background-image: url('${close.src}')`}>BACK</a>
+				<a href="/#filter-sites" class="close" transition:name={`${slug} close`} role="link" aria-label="back button" style={`background-image: url('${close.src}')`}>BACK</a>
 				<h1>
 					{item.name}
 				</h1>
@@ -47,10 +47,10 @@ if (!item) {
 					{item.details}
 				</p>
 
-				<a href={item.website} transition:name={`${slug} website`} target="_blank" role="button" aria-label="New tab link to website" class="website button">WEBSITE</a>
-				<!-- <a href={item.featured} type="button" role="button" aria-label="Link to featured video" class="website" class="button">Featured Video</a> -->
+				<a href={item.website} transition:name={`${slug} website`} target="_blank" role="link" aria-label={`offsite link to ${slug} website`} class="website button">WEBSITE</a>
+				<!-- <a href={item.featured} type="button" role="link" aria-label="Link to featured video" class="website" class="button">Featured Video</a> -->
 				<!-- 
-				<a href="/#filter-sites" class="close" transition:name={`${slug} close`} role="button" style={`background-image: url('${close.src}')`}>BACK</a> -->
+				<a href="/#filter-sites" class="close" transition:name={`${slug} close`} role="link" style={`background-image: url('${close.src}')`}>BACK</a> -->
 			</div>
 		</div>
 	</div>
@@ -170,7 +170,7 @@ if (!item) {
 			background-size: 22px !important;
 			background: #ff8000;
 			background-repeat: no-repeat;
-			background-position: center left 0;
+			background-position: center left 2px;
 		}
 
 		@media (max-width: 400px) {

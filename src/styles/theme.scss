@@ -263,13 +263,30 @@ html html.dark #header.headroom--not-bottom.headroom--not-top .nav-links li a {
 }
 
 .github {
-	width: 15px;
+	width: 20px;
+	transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.linkedin path,
+.github path {
+	transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.github:hover path {
+	fill: var.$theme-clr;
+	transition: fill 0.3s ease, stroke 0.3s ease;
 }
 
 .linkedin {
-	width: 15px;
+	width: 20px;
 	margin-left: 1rem;
 	margin-right: 0.75rem;
+}
+
+.linkedin:hover path {
+	stroke: var.$theme-clr;
+	fill: var.$theme-clr;
+	transition: fill 0.3s ease, stroke 0.3s ease;
 }
 
 .sun {
@@ -300,6 +317,6 @@ html html.dark #header.headroom--not-bottom.headroom--not-top .nav-links li a {
 
 @media (max-width: 500px) {
 	.controls {
-		margin-top: 85px;
+		margin-top: 90px;
 	}
 }
