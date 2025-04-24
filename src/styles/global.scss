@@ -146,7 +146,7 @@ html {
 
 body {
 	overflow-x: hidden !important;
-	line-height: 1.4;
+	line-height: 1.6;
 	margin: 0;
 	font-family: var.$font-sans-serif;
 	font-weight: normal;
@@ -460,7 +460,7 @@ button a,
 
 button:hover,
 .btn:hover {
-	background: #ff9000;
+	background: var.$theme-clr;
 	color: #fff;
 }
 
@@ -627,12 +627,12 @@ $container-padding-mobile: 1.25rem;
 /* =================================
 	 GREETING
 ==================================== */
-
 .dot-flashing {
 	position: relative;
 	width: 10px;
 	height: 10px;
 	border-radius: 5px;
+	margin-left: 15px;
 	background-color: var.$dark;
 	color: var.$dark;
 	animation: dot-flashing 1s infinite linear alternate;
@@ -644,7 +644,6 @@ $container-padding-mobile: 1.25rem;
 	display: inline-block;
 	position: absolute;
 	top: 0;
-	margin-left: 1rem;
 }
 .dot-flashing::before {
 	left: -15px;
@@ -673,7 +672,7 @@ $container-padding-mobile: 1.25rem;
 	}
 	50%,
 	100% {
-		background-color: rgba(152, 128, 255, 0.2);
+		background-color: #dedede;
 	}
 }
 
@@ -845,16 +844,18 @@ p a {
 #home #filter-sites ul {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	margin: 0 0 2rem 0;
 }
 
+#home #filter-sites ul li {
+	display: inline-block;
+}
+
 #home #filter-sites ul button {
-	background: var.$theme-clr;
-	margin-inline: auto;
-	height: auto;
+	background: var.$dark;
 	line-height: 1;
-	color: #fff;
+	color: #fff !important;
 	border-radius: 2px;
 	margin-right: 1rem;
 	padding: 0.6rem 1rem;
@@ -868,7 +869,7 @@ p a {
 
 #home #filter-sites ul button.active,
 #home #filter-sites ul button:hover {
-	background: var.$dark;
+	background: var.$theme-clr;
 }
 
 @media (max-width: 400px) {

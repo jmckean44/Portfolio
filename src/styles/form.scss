@@ -206,6 +206,7 @@ textarea::placeholder {
 button {
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	color: #fff !important;
 }
 
 .btn {
@@ -215,7 +216,7 @@ button {
 	color: #fff;
 	border: none;
 	border-radius: 2px;
-	padding: 0.5rem 1rem 0.45rem;
+	padding: 0.6rem 1rem;
 	cursor: pointer;
 	margin-top: 1rem;
 	text-align: center;
@@ -225,8 +226,9 @@ button {
 	transition: all ease 0.5s;
 }
 
+button:hover,
 .btn:hover {
-	background: #ff9000;
+	background: var.$theme-clr;
 	color: #fff;
 }
 
