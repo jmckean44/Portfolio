@@ -1991,14 +1991,14 @@ export const handler = async (event) => {
 											<td style="width:50%;text-align:center" valign="middle">
 											<![endif]-->
 															<div class="col-50" style="width:100%;max-width:360px;display:inline-block;vertical-align:middle;text-align:left">
-																<img class="bdr-left" src="workout.jpg" border="0" width="100%" alt="The Diamond Rental Living" />
+																<img class="bdr-left" src="https://jmckean44.netlify.app/htmls/workout.jpg" border="0" width="100%" alt="The Diamond Rental Living" />
 															</div>
 															<!--[if mso]>
 											</td>
 											<td style="width:50%;text-align:center" valign="middle">
 											<![endif]-->
 															<div class="col-50" style="width:100%;max-width:360px;display:inline-block;vertical-align:middle;text-align:right">
-																<img class="bdr-right" src="swimming.jpg" border="0" width="100%" alt="The Diamond Rental Living" />
+																<img class="bdr-right" src="https://jmckean44.netlify.app/htmls/swimming.jpg" border="0" width="100%" alt="The Diamond Rental Living" />
 															</div>
 															<!--[if mso]>
 											</td>
