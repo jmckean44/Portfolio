@@ -1685,21 +1685,21 @@ export const handler = async (event) => {
 							<tr>
 								<td>
 									<a href="https://jmckean44.netlify.app/diamond/">
-										<img src="/htmls/logo.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+										<img src="./htmls/logo.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
 									</a>
 								</td>
 							</tr>
 							<tr>
 								<td>
 									<a href="https://jmckean44.netlify.app/diamond/">
-										<img src="/htmls/couple.jpg" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+										<img src="../htmls/couple.jpg" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
 									</a>
 								</td>
 							</tr>
 							<tr>
 								<td style="padding: 30px 0 0">
 									<a href="https://jmckean44.netlify.app/diamond/">
-										<img src="/htmls/move-in.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+										<img src="../../htmls/move-in.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
 									</a>
 								</td>
 							</tr>
