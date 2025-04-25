@@ -1685,21 +1685,21 @@ export const handler = async (event) => {
 							<tr>
 								<td>
 									<a href="https://jmckean44.netlify.app/diamond/">
-										<img src="./htmls/logo.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+										<img src="https://jmckean44.netlify.app/htmls/logo.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
 									</a>
 								</td>
 							</tr>
 							<tr>
 								<td>
 									<a href="https://jmckean44.netlify.app/diamond/">
-										<img src="../htmls/couple.jpg" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+										<img src="https://jmckean44.netlify.app/htmls/couple.jpg" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
 									</a>
 								</td>
 							</tr>
 							<tr>
 								<td style="padding: 30px 0 0">
 									<a href="https://jmckean44.netlify.app/diamond/">
-										<img src="../../htmls/move-in.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+										<img src="https://jmckean44.netlify.app/htmls/move-in.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
 									</a>
 								</td>
 							</tr>
@@ -1750,7 +1750,7 @@ export const handler = async (event) => {
 							<tr>
 								<td>
 									<a href="https://jmckean44.netlify.app/diamond/">
-										<img src="/htmls/plan.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+										<img src="https://jmckean44.netlify.app/htmls/plan.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
 									</a>
 									<p style="font-size:28px;line-height:28px;color:#000000;margin:0 0 20px;text-align:center;font-weight:bold;letter-spacing: 3px">SUITE A</p>
 								</td>
@@ -1758,7 +1758,7 @@ export const handler = async (event) => {
 							<tr>
 								<td>
 									<a href="https://jmckean44.netlify.app/diamond/">
-										<img src="/htmls/floorplan.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+										<img src="https://jmckean44.netlify.app/htmls/floorplan.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
 									</a>
 								</td>
 							</tr>
@@ -1937,7 +1937,7 @@ export const handler = async (event) => {
 						<![endif]-->
 							<div class="col-90" style="max-width:648px;display:inline-block;width:100%;">
 								<a href="https://jmckean44.netlify.app/diamond/">
-									<img src="/htmls/setting.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+									<img src="https://jmckean44.netlify.app/htmls/setting.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
 								</a>
 							</div>
 							<!--[if mso]>
@@ -2050,7 +2050,7 @@ export const handler = async (event) => {
 								</table>
 								<!--SPACER-->
 								<a href="https://jmckean44.netlify.app/diamond/">
-									<img src="/htmls/pricing.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+									<img src="https://jmckean44.netlify.app/htmls/pricing.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
 								</a>
 								<!--SPACER-->
 								<table width="100%" style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
@@ -2078,7 +2078,7 @@ export const handler = async (event) => {
 							<tr>
 								<td>
 									<a href="https://jmckean44.netlify.app/diamond/">
-										<img src="/htmls/building.jpg" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+										<img src="https://jmckean44.netlify.app/htmls/building.jpg" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
 									</a>
 								</td>
 							</tr>
@@ -2140,7 +2140,7 @@ export const handler = async (event) => {
 
 								<p style="text-align:center">
 									<a href="https://milborne.com/">
-										<img src="/htmls/logo-milborne.png" border="0" width="200" style="display:inline-block;width:200px;max-width:200px;" alt="Milborne Group" />
+										<img src="https://jmckean44.netlify.app/htmls/logo-milborne.png" border="0" width="200" style="display:inline-block;width:200px;max-width:200px;" alt="Milborne Group" />
 									</a>
 								</p>
 
