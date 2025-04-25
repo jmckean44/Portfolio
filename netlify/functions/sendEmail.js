@@ -1386,6 +1386,810 @@ export const handler = async (event) => {
 						</html>
 
 						`;
+		} else if (campaignId === 'Diamond') {
+			htmlContent = `
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name=”x-apple-disable-message-reformatting”>
+	<title></title><!-- LEAVE EMPTY -->
+
+	<!--[if mso]>
+<style type="text/css">
+	table {border-collapse:collapse;border-spacing:0;margin:0;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;}
+	div, td {padding:0;}
+	div {margin:0 !important;}
+</style>
+<noscript>
+	<xml>
+		<o:OfficeDocumentSettings>
+			<o:PixelsPerInch>96</o:PixelsPerInch>
+		</o:OfficeDocumentSettings>
+	</xml>
+</noscript>
+<![endif]-->
+
+	<!--[if gte mso 9]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+
+	<style type="text/css">
+		img {
+			border: 0;
+			outline: none;
+			text-decoration: none !important;
+			-ms-interpolation-mode: bicubic;
+		}
+
+		a img {
+			border: none;
+		}
+
+		table {
+			border-spacing: 0;
+			border-collapse: collapse !important;
+		}
+
+		td {
+			border-collapse: collapse !important;
+			vertical-align: top;
+		}
+
+		table,
+		tr,
+		td {
+			padding: 0;
+			border: none;
+			border-spacing: 0px;
+			border-collapse: collapse;
+		}
+
+		div[style="margin: 16px 0;"] {
+			margin: 0 !important;
+		}
+
+		body {
+			font-family: 'Helvetica', Arial, sans-serif !important;
+			font-size: 100% !important;
+			color: #666666;
+			background: #ffffff;
+			width: 100% !important;
+			min-width: 100%;
+			height: 100% !important;
+			margin: 0 auto !important;
+			Margin: 0 !important;
+			padding: 0 !important;
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			word-spacing: normal;
+		}
+
+		html {
+			min-height: 100%;
+		}
+
+		table,
+		td {
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+
+		h1 {
+			font-family: 'Helvetica', Arial, sans-serif !important;
+			font-weight: bold;
+			color: #ef4136;
+		}
+
+		/* UPDATE FONT HERE & ADD INLINE!! */
+		[style*="abril-display"] {
+			font-family: 'abril-display', Times New Roman, serif !important;
+		}
+
+
+		a {
+			text-decoration: none !important;
+		}
+
+		#outlook a {
+			padding: 0;
+		}
+
+		.appleLinks a {
+			color: #ef4136 !important;
+			text-decoration: none;
+		}
+
+		.appleLinksWhite a {
+			color: #efece4 !important;
+			text-decoration: none;
+		}
+
+		.appleLinksBlack a {
+			color: #666666 !important;
+			text-decoration: none;
+		}
+
+		u+#body a,
+		a[x-apple-data-detectors] {
+			color: inherit !important;
+			text-decoration: none !important;
+			font-size: inherit !important;
+			font-family: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+		}
+
+		.bdr-left {
+			width: 99%;
+		}
+
+		.bdr-right {
+			width: 99%;
+		}
+
+		.col-5 {
+			max-width: 5% !important;
+			height: 0
+		}
+
+		.col-90 {
+			max-width: 90% !important;
+		}
+
+		.col-10 {
+			max-width: 10% !important;
+			height: 0
+		}
+
+		.col-80 {
+			max-width: 80% !important;
+		}
+
+		.col-15 {
+			max-width: 15% !important;
+			height: 0
+		}
+
+		.col-70 {
+			max-width: 70% !important;
+		}
+
+		.col-20 {
+			max-width: 20% !important;
+			height: 0
+		}
+
+		.col-60 {
+			max-width: 60% !important;
+		}
+
+		.col-25 {
+			max-width: 25% !important;
+			height: 0
+		}
+
+		.col-50 {
+			max-width: 46% !important;
+		}
+
+		.col-30 {
+			max-width: 30% !important;
+		}
+
+		.col-33 {
+			max-width: 33.3% !important;
+		}
+
+		.col-40 {
+			max-width: 40% !important;
+		}
+
+		.col-50 {
+			max-width: 50% !important;
+		}
+
+		.col-60 {
+			max-width: 60% !important;
+		}
+
+		.col-70 {
+			max-width: 70% !important;
+		}
+
+		@media screen and (max-width: 550px) {
+
+			.col-5,
+			.col-10,
+			.col-15,
+			.col-20,
+			.col-25,
+			.col-60,
+			.col-70,
+			.col-80,
+			.col-90 {
+				max-width: 100% !important;
+			}
+
+			.bdr-right {
+				width: 100% !important;
+				display: block !important;
+			}
+
+			.bdr-left {
+				width: 100% !important;
+				display: block !important;
+				border-bottom: 6px solid #efece4 !important;
+			}
+
+
+			.col-30 {
+				max-width: 100% !important;
+				display: block !important;
+			}
+
+			.col-33 {
+				max-width: 100% !important;
+				display: block !important;
+			}
+
+			.col-40 {
+				max-width: 100% !important;
+				display: block !important;
+			}
+
+			.col-50 {
+				max-width: 100% !important;
+				display: block !important;
+			}
+
+			.col-60 {
+				max-width: 100% !important;
+				display: block !important;
+			}
+
+			.col-70 {
+				max-width: 100% !important;
+				display: block !important;
+			}
+		}
+	</style>
+
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" id="body">
+
+	<div role="article" aria-roledescription="email" lang="en" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;background-color:#ffffff;">
+
+		<table width="100%" style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+			<tr>
+				<td align="center;background:#efece4;">
+
+					<!--[if mso]>
+				<table width="720" bgcolor="#efece4" style="width:720px;" align="center" role="presentation">
+				<tr>
+				<td>
+				<![endif]-->
+
+					<div style="width:100%;max-width:720px;margin:0 auto;">
+
+						<table align="center" bgcolor="#efece4" style="width:100%;background:#efece4;" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+									<a href="https://jmckean44.netlify.app/diamond/">
+										<img src="/htmls/logo.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://jmckean44.netlify.app/diamond/">
+										<img src="/htmls/couple.jpg" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding: 30px 0 0">
+									<a href="https://jmckean44.netlify.app/diamond/">
+										<img src="/htmls/move-in.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+									</a>
+								</td>
+							</tr>
+						</table>
+
+						<table align="center" bgcolor="#efece4" style="width:100%;" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td style="padding: 0 5%">
+									<!--MAX-WIDTH 5% -->
+									<div style="font-size:0;margin:0 auto;background:#efece4;">
+										<!--[if mso]>
+									<table width="100%" bgcolor="#efece4" style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+									<tr>
+									<td style="width:36px;text-align:center" valign="middle">
+									<![endif]-->
+										<div class="col-5" style="max-width:36px;display:inline-block;width:100%;"></div>
+										<!--[if mso]>
+									</td>
+									<td style="width:648px; text-align:center;" valign="middle">
+									<![endif]-->
+										<div class="col-90" style="max-width:648px;display:inline-block;width:100%;">
+											<p style="font-size:18px;line-height:28px;color:#000000;margin:0 0 40px;text-align:justify;">
+												Overlooking the Junction, The Diamond is Toronto’s freshest new
+												purpose-built rental community. From fabulous open-concept
+												floor plans to 20,000 sq. ft. of amenities for a modern city lifestyle,
+												The Diamond checks off all the right boxes – location, design,
+												amenities and transit. Here the choice is yours.
+											</p>
+										</div>
+										<!--[if mso]>
+									</td>
+									<td style="width:36px;text-align:center" valign="middle">
+									<![endif]-->
+										<div class="col-5" style="max-width:36px;display:inline-block;width:100%;"></div>
+										<!--[if mso]>
+									</td>
+									</tr>
+									</table>
+									<![endif]-->
+									</div>
+									<!--MAX-WIDTH 5%-->
+								</td>
+							</tr>
+						</table>
+
+
+						<table bgcolor="#efece4" align="center" style="width:100%;" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+									<a href="https://jmckean44.netlify.app/diamond/">
+										<img src="/htmls/plan.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+									</a>
+									<p style="font-size:28px;line-height:28px;color:#000000;margin:0 0 20px;text-align:center;font-weight:bold;letter-spacing: 3px">SUITE A</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://jmckean44.netlify.app/diamond/">
+										<img src="/htmls/floorplan.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+									</a>
+								</td>
+							</tr>
+						</table>
+
+						<table align="center" bgcolor="#efece4" style="width:100%;background:#efece4;" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td style="text-align:center; color:#ef4136; font-size:24px; font-weight:bold; padding: 50px 5% 10px;line-height:24px;">
+									Open Concept living
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:center; padding: 10px 5% 10px">
+									<!--LINE W PADDING-->
+									<table align="center" style="width:100%;max-width: 350px;" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+										<tr>
+											<td style="padding:0 5%;">
+												<div style="font-size:0;margin:0 auto;">
+													<!--[if mso]>
+												<table width="100%" bgcolor="#efece4;" style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+												<tr>
+												<td style="padding:0 5%;height:1px !important; background: #000000;font-size:1px;color:#000000">
+												<![endif]-->
+													<div style="padding:0 5%;height:1px !important; background: #000000;font-size:1px;color:#000000">.</div>
+													<!--[if mso]>
+												</td>
+												</tr>
+												</table>
+												<![endif]-->
+												</div>
+											</td>
+										</tr>
+									</table>
+									<!--LINE W PADDING-->
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:center; color:#ef4136; font-size:24px; font-weight:bold; padding: 10px 5% 10px;line-height:24px">
+									Custom Designed Kitchen & Bath Cabinetry
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:center; padding: 10px 5% 10px">
+									<!--LINE W PADDING-->
+									<table align="center" style="width:100%;max-width: 350px;" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+										<tr>
+											<td style="padding:0 5%;">
+												<div style="font-size:0;margin:0 auto;">
+													<!--[if mso]>
+												<table width="100%" style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+												<tr>
+												<td style="padding:0 5%;height:1px !important; background: #000000;font-size:1px;color:#000000">
+												<![endif]-->
+													<div style="padding:0 5%;height:1px !important; background: #000000;font-size:1px;color:#000000">.</div>
+													<!--[if mso]>
+												</td>
+												</tr>
+												</table>
+												<![endif]-->
+												</div>
+											</td>
+										</tr>
+									</table>
+									<!--LINE W PADDING-->
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:center; color:#ef4136; font-size:24px; font-weight:bold; padding: 10px 5% 10px;line-height:24px">
+									5 Brand Name Appliances <br>
+									<em style="font-weight: normal;font-size:18px;">(Fridge, Stove, Dishwasher, Microwave, Washer & Dryer)</em>
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:center; padding: 10px 5% 10px">
+									<!--LINE W PADDING-->
+									<table align="center" style="width:100%;max-width: 350px;" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+										<tr>
+											<td style="padding:0 5%;">
+												<div style="font-size:0;margin:0 auto;">
+													<!--[if mso]>
+												<table width="100%" style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+												<tr>
+												<td style="padding:0 5%;height:1px !important; background: #000000;font-size:1px;color:#000000">
+												<![endif]-->
+													<div style="padding:0 5%;height:1px !important; background: #000000;font-size:1px;color:#000000">.</div>
+													<!--[if mso]>
+												</td>
+												</tr>
+												</table>
+												<![endif]-->
+												</div>
+											</td>
+										</tr>
+									</table>
+									<!--LINE W PADDING-->
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:center; color:#ef4136; font-size:24px; font-weight:bold; padding: 10px 5% 10px;line-height:24px">
+									Ensuite Stacked Washer & Dryer
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:center; padding: 10px 5% 10px">
+									<!--LINE W PADDING-->
+									<table align="center" style="width:100%;max-width: 350px;" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+										<tr>
+											<td style="padding:0 5%;">
+												<div style="font-size:0;margin:0 auto;">
+													<!--[if mso]>
+												<table width="100%" style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+												<tr>
+												<td style="padding:0 5%;height:1px !important; background: #000000;font-size:1px;color:#000000">
+												<![endif]-->
+													<div style="padding:0 5%;height:1px !important; background: #000000;font-size:1px;color:#000000">.</div>
+													<!--[if mso]>
+												</td>
+												</tr>
+												</table>
+												<![endif]-->
+												</div>
+											</td>
+										</tr>
+									</table>
+									<!--LINE W PADDING-->
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:center; color:#ef4136; font-size:24px; font-weight:bold; padding: 10px 5% 10px;line-height:24px">
+									Window Coverings
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:center; padding: 10px 5% 10px">
+									<!--LINE W PADDING-->
+									<table align="center" style="width:100%;max-width: 350px;" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+										<tr>
+											<td style="padding:0 5%;">
+												<div style="font-size:0;margin:0 auto;">
+													<!--[if mso]>
+												<table width="100%" style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+												<tr>
+												<td style="padding:0 5%;height:1px !important; background: #000000;font-size:1px;color:#000000">
+												<![endif]-->
+													<div style="padding:0 5%;height:1px !important; background: #000000;font-size:1px;color:#000000">.</div>
+													<!--[if mso]>
+												</td>
+												</tr>
+												</table>
+												<![endif]-->
+												</div>
+											</td>
+										</tr>
+									</table>
+									<!--LINE W PADDING-->
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:center; color:#ef4136; font-size:24px; font-weight:bold; padding: 10px 5% 50px;line-height:24px">
+									Private Balcony
+								</td>
+							</tr>
+						</table>
+
+						<!--MAX-WIDTH 5% -->
+						<div style="font-size:0;margin:0 auto;background:#efece4;">
+							<!--[if mso]>
+						<table width="100%" bgcolor="#efece4;" style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+						<tr>
+						<td style="width:36px;text-align:center" valign="middle">
+						<![endif]-->
+							<div class="col-5" style="max-width:36px;display:inline-block;width:100%;"></div>
+							<!--[if mso]>
+						</td>
+						<td style="width:648px; text-align:center;" valign="middle">
+						<![endif]-->
+							<div class="col-90" style="max-width:648px;display:inline-block;width:100%;">
+								<a href="https://jmckean44.netlify.app/diamond/">
+									<img src="/htmls/setting.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+								</a>
+							</div>
+							<!--[if mso]>
+						</td>
+						<td style="width:36px;text-align:center" valign="middle">
+						<![endif]-->
+							<div class="col-5" style="max-width:36px;display:inline-block;width:100%;"></div>
+							<!--[if mso]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+						</div>
+						<!--MAX-WIDTH 5%-->
+
+
+						<table align="center" bgcolor="#efece4" style="width:100%;" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td style="padding: 10px 5%">
+
+
+									<!--MAX-WIDTH 5% -->
+									<div style="font-size:0;margin:0 auto;background:#efece4;">
+										<!--[if mso]>
+						<table width="100%" bgcolor="#efece4" style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+						<tr>
+						<td style="width:36px;text-align:center" valign="middle">
+						<![endif]-->
+										<div class="col-5" style="max-width:36px;display:inline-block;width:100%;"></div>
+										<!--[if mso]>
+						</td>
+						<td style="width:648px; text-align:center;" valign="middle">
+						<![endif]-->
+										<div class="col-90" style="max-width:648px;display:inline-block;width:100%;">
+											<p style="font-size:18px;line-height:28px;color:#000000;margin:0 0 40px;text-align:justify;">
+												Complete your lifestyle with Club Diamond, our 20,000 sf recreational club
+												that includes 5-star amenities, such as the indoor pool, a fully-equipped
+												gym with cardio, weights and a yoga room and a co-working space.
+												The Diamond is also topped off by a theatre room, games room and an
+												independent daycare centre. Come home to The Diamond.
+											</p>
+
+											<table align="center" style="width:100%;" border="0" cellspacing="0" cellpadding="0">
+												<tr>
+													<td>
+														<!--TWO COL-->
+														<div style="font-size:0; margin:0 auto">
+															<!--[if mso]>
+											<table width="100%" style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+											<tr>
+											<td style="width:50%;text-align:center" valign="middle">
+											<![endif]-->
+															<div class="col-50" style="width:100%;max-width:360px;display:inline-block;vertical-align:middle;text-align:left">
+																<img class="bdr-left" src="workout.jpg" border="0" width="100%" alt="The Diamond Rental Living" />
+															</div>
+															<!--[if mso]>
+											</td>
+											<td style="width:50%;text-align:center" valign="middle">
+											<![endif]-->
+															<div class="col-50" style="width:100%;max-width:360px;display:inline-block;vertical-align:middle;text-align:right">
+																<img class="bdr-right" src="swimming.jpg" border="0" width="100%" alt="The Diamond Rental Living" />
+															</div>
+															<!--[if mso]>
+											</td>
+											</tr>
+											</table>
+											<![endif]-->
+														</div>
+														<!--END OF TWO COL-->
+													</td>
+												</tr>
+											</table>
+
+										</div>
+										<!--[if mso]>
+						</td>
+						<td style="width:36px;text-align:center" valign="middle">
+						<![endif]-->
+										<div class="col-5" style="max-width:36px;display:inline-block;width:100%;"></div>
+										<!--[if mso]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+									</div>
+									<!--MAX-WIDTH 5%-->
+
+								</td>
+							</tr>
+						</table>
+
+						<!--MAX-WIDTH 10% -->
+						<div style="font-size:0;margin:0 auto;background:#efece4;">
+							<!--[if mso]>
+						<table width="100%" bgcolor="#efece4;" style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+						<tr>
+						<td style="width:72px;text-align:center" valign="middle">
+						<![endif]-->
+							<div class="col-10" style="max-width:72px;display:inline-block;width:100%;"></div>
+							<!--[if mso]>
+						</td>
+						<td style="width:576px; text-align:center;" valign="middle">
+						<![endif]-->
+							<div class="col-80" style="max-width:576px;display:inline-block;width:100%;">
+								<!--SPACER-->
+								<table width="100%" style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+									<tr>
+										<td height="40" style="height:40px"></td>
+									</tr>
+								</table>
+								<!--SPACER-->
+								<a href="https://jmckean44.netlify.app/diamond/">
+									<img src="/htmls/pricing.png" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+								</a>
+								<!--SPACER-->
+								<table width="100%" style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+									<tr>
+										<td height="40" style="height:40px"></td>
+									</tr>
+								</table>
+								<!--SPACER-->
+							</div>
+							<!--[if mso]>
+						</td>
+						<td style="width:72px;text-align:center" valign="middle">
+						<![endif]-->
+							<div class="col-10" style="max-width:72px;display:inline-block;width:100%;"></div>
+							<!--[if mso]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+						</div>
+						<!--MAX-WIDTH 10%-->
+
+
+						<table align="center" bgcolor="#efece4" style="width:100%;" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+									<a href="https://jmckean44.netlify.app/diamond/">
+										<img src="/htmls/building.jpg" border="0" width="100%" style="display:block;width:100%;" alt="The Diamond Rental Living" />
+									</a>
+								</td>
+							</tr>
+						</table>
+
+						<div style="font-size:0;margin:0 auto;">
+							<!--[if mso]>
+						<table width="100%" style="width:100%" bgcolor="#efece4" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" dir="ltr">
+						<tr>
+						<td style="padding: 60px 5% 50px; text-align:justify;font-size:16px;line-height:28px;color:#000000;background:#efece4" valign="middle">
+						<![endif]-->
+							<div style="padding:60px 5% 50px; text-align:justify;font-size:16px;line-height:28px;color:#000000;background:#efece4" class="appleLinks">
+
+								<h1 style="text-align:center; font-size:34px; line-height:34px;">STAY TUNED FOR <br>FURTHER INFORMATION</h1>
+
+
+
+								<!-- START CENTERED BUTTON -->
+								<center>
+									<table width="100%">
+										<tr>
+											<td>
+												<table border="0" cellpadding="0" cellspacing="0">
+													<tr>
+														<td height="20" width="100%" style="font-size: 20px; line-height: 20px;">
+															&nbsp;
+														</td>
+													</tr>
+												</table>
+												<table border="0" align="center" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+													<tbody>
+														<tr>
+															<td align="center">
+																<table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+																	<tr>
+																		<td align="center" bgcolor="#ef4136" width="260" style="border-radius: 2px;color: #efece4 !important" class="appleLinksWhite">
+																			<a href="*|FORWARD|*" style="background: #ef4136;border: 1px solid #ef4136; padding: 12px;width:250px;display: block;text-decoration: none;border:0;text-align: center;font-weight: bold;font-size: 20px;line-height:20px;letter-spacing:1px;color: #efece4 !important;border-radius: 2px; box-shadow: 0 0 7px #cccccc;">
+																				SHARE WITH FRIEND
+																			</a>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table border="0" cellpadding="0" cellspacing="0">
+													<tr>
+														<td height="20" width="100%" style="font-size: 20px; line-height: 20px;">
+															&nbsp;
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</center>
+								<!-- END CENTERED BUTTON -->
+
+								<p style="text-align:center">
+									<a href="https://milborne.com/">
+										<img src="/htmls/logo-milborne.png" border="0" width="200" style="display:inline-block;width:200px;max-width:200px;" alt="Milborne Group" />
+									</a>
+								</p>
+
+								<h1 style="text-align:center; font-size:20px; line-height:24px;">
+									<a href="tel:6472786867" style="text-decoration:none;color:#ef4136;">647 278 6867</a>
+									<br>
+									<a style="text-decoration:none;color:#ef4136;font-size:20px; line-height:24px;" href="https://junctionrentals.ca">JUNCTIONRENTALS.CA</a>
+								</h1>
+
+							</div>
+							<!--[if mso]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+						</div>
+
+						<table align="center" style="width:100%;" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td style="color:#555555;text-align:center;font-size:11px; line-height:15px;padding: 30px 5% 40px;">
+									<strong>NEUDORFER CORP</strong>
+									<br>
+									Specifications are subject to change without notice.
+									<br>
+									Daycare centre independently operated available at extra costs. *See leasing agent for rental guarantee rate information.
+									<br>
+									Renderings are for mood and impression only. E.&O.E. 2024
+								</td>
+							</tr>
+							<tr>
+								<td style="font-size:10px;line-height:12px;padding:0 5% 50px;color:#555555;text-align:center;">Please <a style="border:none;color:#666666;text-decoration:none;" href="*|UNSUB|*"><strong>UNSUBSCRIBE ME</strong></a> from this mailing list.</td>
+							</tr>
+						</table>
+
+					</div>
+
+					<!--[if mso]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
+`;
 		} else {
 			return {
 				statusCode: 400,

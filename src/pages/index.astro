@@ -10,6 +10,7 @@ import '../styles/residences.scss';
 import ItemCard from '../components/ItemCard.astro';
 import resume from '../img/resume.webp';
 import html7Dale from '../img/htmls/7dale.jpg';
+import htmlDiamond from '../img/htmls/diamond.webp';
 import htmlMRC from '../img/htmls/mrc.jpg';
 import kingsway2 from '../img/htmls/kingsway.webp';
 import laptop from '../img/laptop.png';
@@ -126,7 +127,13 @@ import placeholderMobile from '../img/residences-placeholder-mobile.webp';
 							</label>
 							<Picture src={htmlMRC} formats={['avif', 'webp']} alt="Marina Resort Cavtat" />
 						</div>
-
+						<div>
+							<label class="label" for="Diamond">
+								<input type="radio" name="campaign" value="mrc" id="Diamond" class="radio-input" />
+								<div class="radio-design"></div>
+							</label>
+							<Picture src={htmlDiamond} formats={['avif', 'webp']} alt="The Diamond" />
+						</div>
 						<div>
 							<label class="label" for="Kingsway">
 								<input type="radio" name="campaign" value="kingsway" id="Kingsway" class="radio-input" />
